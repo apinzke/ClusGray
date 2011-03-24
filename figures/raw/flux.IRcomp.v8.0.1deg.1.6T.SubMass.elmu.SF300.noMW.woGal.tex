@@ -1,0 +1,19 @@
+\documentclass[dvips]{article}
+
+\usepackage{graphicx}
+\usepackage{txfonts}
+%\usepackage[T1]{fontenc}
+\usepackage{psfrag}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\size}{\Large}%{\tiny}%{\scriptsize}
+
+\begin{figure}
+  \psfrag{Eg2dFg\/dEg \[GeV cm-2 s-1\]}[c][c]{\size $E_\gamma^2\frac{\mathrm{d}F_\gamma}{\mathrm{d}E_\gamma}\,[\mathrm{GeV}\,\mathrm{cm}^{-2}\,\mathrm{s}^{-1}]$}
+  
+    \includegraphics[width=\textwidth]{flux.IRcomp.v8.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal_raw.eps}
+\end{figure}
+
+\end{document}

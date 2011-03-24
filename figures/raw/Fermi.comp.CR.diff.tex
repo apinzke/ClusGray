@@ -1,0 +1,19 @@
+\documentclass[dvips]{article}
+
+\usepackage{graphicx}
+\usepackage{txfonts}
+%\usepackage[T1]{fontenc}
+\usepackage{psfrag}
+
+\begin{document}
+\pagestyle{empty}
+
+\newcommand{\size}{\scriptsize}%{\small}%{\tiny}%{\scriptsize}
+\newcommand{\sizee}{\large}
+
+\begin{figure}
+  \psfrag{E2dF\(\>Eg\) \[GeV cm-2 s-1\]}[c][c]{\size $E_\gamma^2\frac{\displaystyle \mathrm{d}F_\gamma}{\displaystyle \mathrm{d}E_\gamma}\,[\mathrm{GeV}\,\mathrm{cm}^{-2}\,\mathrm{s}^{-1}]$}
+    \includegraphics[width=\textwidth]{Fermi.comp.CR.diff_raw.eps}
+\end{figure}
+
+\end{document}
