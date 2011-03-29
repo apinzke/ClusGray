@@ -26,40 +26,45 @@
 \newcommand{\jcap}{JCAP}
 
 %NEW
+\newcommand{\rmn}{\mathrm}
 \newcommand{\bx}{{\bf x}}
 \newcommand{\fg}{{F_\gamma}}
 \newcommand{\sg}{{S_\gamma}}
 \newcommand{\psf}{\theta_\rmn{res}}
-\newcommand{\ph}{{\rm ph}}
+\newcommand{\ph}{\rmn{ph}}
 \newcommand{\eph}{E_\ph}
 \newcommand{\nph}{N_\ph}
-\newcommand{\vir}{{\rmn vir}}
-\newcommand{\gal}{{\rmn gal}}
-\newcommand{\iruv}{{\rmn sd}}
-\newcommand{\clu}{{\rmn cl}}
-\newcommand{\sfe}{{\rmn sfe}}
-\newcommand{\sub}{{\rmn sub}}
-\newcommand{\msun}{{M_\odot}}
+\newcommand{\vir}{\rmn{vir}}
+\newcommand{\gal}{\rmn{gal}}
+\newcommand{\sd}{\rmn{SD}}
+\newcommand{\clu}{\rmn{cl}}
+\newcommand{\sfe}{\rmn{sfe}}
+\newcommand{\sub}{\rmn{sub}}
+\newcommand{\msun}{M_\odot}
+\newcommand{\ee}{E_\rmn{e}}
+\newcommand{\stars}{\rmn{stars}}
+\newcommand{\dust}{\rmn{dust}}
+\newcommand{\lx}{L_\rmn{X}}
+\newcommand{\s}{\rmn{s}}
 
 %OLD
 \newcommand{\beq}{\begin{equation}}
 \newcommand{\eeq}{\end{equation}}
-\newcommand{\rmn}{\mathrm}
-\newcommand{\GeV}{\,{\rm GeV}}
-\newcommand{\TeV}{\,{\rm TeV}}
-\newcommand{\eV}{\,{\rm eV}}
-\newcommand{\dd}{\mathrm{d}}
+\newcommand{\gev}{\rm{GeV}}
+\newcommand{\tev}{\rm{TeV}}
+\newcommand{\ev}{\rm{eV}}
+\newcommand{\dd}{\rmn{d}}
 \newcommand{\mx}{\ensuremath{m_{\chi}}}
 \newcommand{\ga}{\gamma}
 \newcommand{\ngamma}{\ensuremath{N_{\gamma}}}
 \newcommand{\ngammaj}{\ensuremath{N_{\gamma,j}}}
 \newcommand{\sigmaannv}{\ensuremath{\langle\sigma v\rangle}}
 \newcommand{\sigv}{\ensuremath{\sigma_v}}
-\newcommand{\ic}{\mathrm{IC}}
+\newcommand{\ic}{\rmn{IC}}
 \newcommand{\egamma}{\ensuremath{E_{\gamma}}}
-\newcommand{\dic}{\mathrm{dIC}}
-\newcommand{\fsr}{\mathrm{FSR}}
-\newcommand{\CR}{\mathrm{CR}}
+\newcommand{\dic}{\rmn{dIC}}
+\newcommand{\fsr}{\rmn{FSR}}
+\newcommand{\CR}{\rmn{CR}}
 \newcommand{\rhos}{\ensuremath{\rho_s}}
 \newcommand{\rs}{\ensuremath{r_s}}
 \newcommand{\rvir}{r_{200}}
@@ -246,7 +251,7 @@ distribution follow a Gaussian:
 \quad \rmn{where}\quad \theta=\psi'-\psi \,.
 \end{equation}
 We denote the total source function by $q_{\rm sum}(\eg,r)$, where we
-include contributions from four main processes; leptophilic DM
+include contributions from five main processes; leptophilic DM
 annihilating to $\mu^+/\mu^-$ decaying to $\rm{e}^+/\rm{e}^-$ pairs
 that up-scatter background photons (IC), leptophilic DM emitting final
 state radiation (FSR), DM benchmark models where neutralino
@@ -258,41 +263,45 @@ source function is given by
 q_\rmn{sum} (\eg,r) = q_{\pi^0-\gamma}(\eg,r)+
 \sum_i \,q_{\rmn{sm},i}(\eg,r)\,\B_{\rmn{tot},i}(\sigv,r)
 \end{equation}
-where $ q_{\pi^0-\gamma}(\eg,r)$ denotes the CR to gamma-ray source
-function (see Sect.~\ref{sect:CRs} and \cite{2010MNRAS.409..449P}
-for more details). The total differerntial boost factor for DM is the
-product of enhancement factors from SFE $\B_\sfe(\sigv)$ (see
-Sect.~\ref{sect:LP}) and from substructure enhancement over the
-smooth halo contribution $\B_{\sub,i}(r) = 1+q_\sub(r)/q_{\rmn{sm},i}(r)$
+where the subscript $i$ runs over the gamma-ray producing DM
+channels. The differential CR to gamma-ray source function is denoted
+by $q_{\pi^0-\gamma}(\eg,r)$, where we refer the reader to
+Sect.~\ref{sect:CRs} and \cite{2010MNRAS.409..449P} for further
+details. The total differential boost factor for DM is the product of
+enhancement factors from SFE $\B_\sfe(\sigv)$ (see
+Sect.~\ref{sect:LP}) and from substructure enhancement over the smooth
+halo contribution $\B_{\sub,i}(r) = 1+q_\sub(r)/q_{\rmn{sm},i}(r)$
 (see Sect.~\ref{sect:subst}) and is denoted by
 $\B_{\rmn{tot},i}(r,\sigv) = \B_\sfe(\sigv)\,\B_{\sub,i}(r)$. The DM
 source function from the smooth halo for each process is written on
 the form:
 \begin{equation}
-\quad q_{\rmn{sm},i} (\egamma,r) = \sum_j
+\label{eq:q_sm}
+q_{\rmn{sm},i} (\egamma,r) = \sum_j
 \frac{\dd \ngammaj}{\dd E_\gamma} \Gamma_j(r)\,.
 \end{equation}
-We represent the annihilation rate density with $\Gamma_j =
-(\rho/\mx)^2 \, \sigmaannv_j/2$, where $j$ runs over all $\gamma$-ray
-producing channels each with the spectrum $\frac{\dd
-  \ngammaj}{\dd\eg}$ and annihilation cross-section $\sigmaannv_j$.
-The DM density is modeled by an Einasto density profile
+Here the annihilation rate density is given by 
 \begin{equation}
-\rho_{\rm ein}(r) = \rho_{-2}\,\exp\left\{-\frac{2}{\alpha}
-  \left[\left(\frac{r}{r_{-2}}\right)^\alpha -1 \right] \right\},\,
-\alpha=0.17 \,,
+\label{eq:ann_rate}
+\Gamma_j(r) = \frac{1}{2} \left(\frac{\rho(r)}{\mx}\right)^2 
+\, \sigmaannv_j\,
 \end{equation}
-that is slightly shallower than the conventional Navaro-Frenk-White
-(NFW) profile in the center, but provide a better fit to simulated DM
-halos \cite{2010MNRAS.402...21N}. We denote the density where the
-profile has a slope of $-2$ by $\rho_{-2}$, and the radius by
-$r_{-2}$. Assuming that all the flux from an NFW profile originate
-from within the scale radius $\rs=\rvir/c$, and all the flux from an
-Einasto profile originate within $r_{-2}=\rvir/c$, it follows that
-$\rho_{-2} = \rhos/4$. The virial radius $\rvir$ of a halo is defined
-to be the radius at which the mean density within is a factor
-$\Delta=200$ times the critical density $\rhoc$ of the universe. The
-characteristic density of the NFW profile $\rhos=(\Delta\rhoc/3)\,
+where the subscript $j$ runs over all kinematically allowed gamma-ray
+producing channels each with the spectrum $\frac{\dd
+  \ngammaj}{\dd\eg}$ and annihilation cross-section $\sigmaannv_j$. We
+denote the DM mass with $\mx$ and the DM density profile with
+$\rho(r)$. Typically the universal Navarro-Frenk-White (NFW) density
+profile provide a good fit to both the observed and simulated
+clusters. It can be considered as a special case of the 5-parameter profile:
+\begin{equation}
+\rho(r) = \frac{\rho_\s}{\left(r/r_\s+\right)^\gamma
+  \left[1+\left(r/r_\s\right)^\alpha\right]^\delta}\,,\quad
+\delta=\frac{\beta-\gamma}{\alpha}\,,
+\label{eq:rho_nfw}
+\end{equation}
+where a cuspy NFW profile is given by
+$(\alpha,\beta,\gamma)=(1,3,1)$. The scaling radius is given by $r_\s$
+and the characteristic density by $\rhos=(\Delta\rhoc/3)\,
 c^3/(\log(1+c)-(c/(1+c)))$, where the halo mass dependent
 concentration parameter $c$ is derived from a power-law fit to
 cosmological simulations with $\mvir \gtrsim 10^{10} \msun$
@@ -303,23 +312,43 @@ cosmological simulations with $\mvir \gtrsim 10^{10} \msun$
 \end{equation}
 This mass scaling agrees well with \cite{2009ApJ...707..354Z} for
 cluster-mass halos after converting the concentration definitions
-according to \cite{2003ApJ...584..702H}.
+according to \cite{2003ApJ...584..702H}. In this work we choose to
+model the DM density by an Einasto density profile
+\begin{equation}
+\rho_{\rm ein}(r) = \rho_{-2}\,\exp\left\{-\frac{2}{\alpha}
+  \left[\left(\frac{r}{r_{-2}}\right)^\alpha -1 \right] \right\},\,
+\alpha=0.17 \,,
+\end{equation}
+that is slightly shallower in the center than the conventional
+Navarro-Frenk-White (NFW) profile, but provide a better fit to
+simulated DM halos \cite{2010MNRAS.402...21N}. We denote the density
+where the profile has a slope of $-2$ by $\rho_{-2}$, and the radius
+by $r_{-2}$. Assuming that all the flux from an NFW profile originate
+from within the scale radius $\rs=\rvir/c$, and all the flux from an
+Einasto profile originate within $r_{-2}=\rvir/c$, it follows that
+$\rho_{-2} = \rhos/4$. The virial radius $\rvir$ of a halo is defined
+to be the radius at which the mean density within is a factor
+$\Delta=200$ times the critical density $\rhoc$ of the universe.
+
 
 \subsubsection{Substructures}
 \label{sect:subst}
-High-resolution DM simulations of the Milky Way (MW) find vast amount
-of substrucures in the periphery of DM halos. Since the rate of which
-DM is annihilating depends on the density squared, the resulting flux
-is boosted compared to the smooth density distribution. Recent
-simulations suggest a boost from substructures of the order of ten up
-to a few 100 \cite{2008MNRAS.391.1685S, 2008JPhCS.125a2008K} for a MW
-size halo. Based on the result from \cite{2008Natur.456...73S}, we
-find the best fit\footnote{Our approach of fitting the scaling
-  behavior of $\rmn{L_{sub}}(<r)$ directly from numerical simulations
+High-resolution DM only simulations of Milky Way (MW) type halos find
+substantial amount of substructures in the periphery of DM halos,
+while the substructures in the center are erased due to dynamical
+disruption. Since the rate of which DM is annihilating depends on the
+density squared, the resulting flux is boosted compared to the smooth
+density distribution. Recent simulations suggest a flux enhancement
+from substructures of the order of ten up to a few 100
+\cite{2008MNRAS.391.1685S, 2008JPhCS.125a2008K} for a MW size
+halo. Using the Aquarius simulations \cite{2008Natur.456...73S}, we
+fit \footnote{Our approach of fitting the scaling behavior of
+  $\rmn{L_{sub}}(<r)$ directly from numerical simulations
   self-consistently accounts for the radial dependence of the
   substructure concentration \cite{2008MNRAS.391.1685S}.} to the
 luminosity from smooth substructures (i.e. substructures within
-substructures are not included) inside radius $r$ with
+substructures are not included) inside radius $r$. The best fit is
+given by
 \begin{equation}
   {\rm L_{sub}}(<r)= 0.76\,C_1\,C_2(\mvir)\,{\rm L_{200sm}}\,x^{0.95
     \displaystyle{x}^{-0.27}}\,,
@@ -328,7 +357,7 @@ substructures are not included) inside radius $r$ with
 where ${\rm L_{200sm}}$ is the luminosity from the smooth halo without
 substructures within $\rvir$ and $x=
 \left(\frac{r}{\rvir}\right)$. The first normalization constant is
-given by
+derived from the simulations:
 \begin{equation}
   C_1=\left(\frac{M_{\rm res,sim}}{M_{\rm lim}}\right)^{0.226}\,,
    \label{eq:C1}
@@ -336,12 +365,12 @@ given by
 where $M_{\rm res,sim}=10^5\msun$ is the minimum subhalo mass in the
 MW simulation, and $M_{\rm lim}$ the free streaming mass. Here we
 assume that the power-law scaling relation in Eq.~(\ref{eq:C1}) is
-valid down to the minimum mass of DM halos, which is conventionaly in
+valid down to the minimum mass of DM halos, which is conventionally in
 the cold dark matter universe
 \cite{2001PhRvD..64h3507H,2005JCAP...08..003G} taken to be
 $10^{-6}\msun$. Note that potentially the power-law could flatten
-torwards smaller mass scales although current simulations show no hits
-of such a behaviour and in addition we are approaching the asymptotic
+towards smaller mass scales although current simulations show no hits
+of such a behavior and in addition we are approaching the asymptotic
 behavior in the power spectrum on these scales(CHECK). For DM halos
 more (less) massive than the MW we expect a larger (smaller) boost
 from substructures, simply because of the larger (smaller) mass range
@@ -351,15 +380,33 @@ dependence with the second normalization in Eq.~(\ref{eq:LSub}):
 C_2(\mvir)=\left(\frac{\mvir}{M_{\rm 200sim}}\right)^{0.226}\,,
  \label{eq:C2}
 \end{equation}
-where $M_{\rm 200,sim}=1.9\times10^{12}\msun$ is the mass of the MW
+where $M_{\rm 200sim}=1.9\times10^{12}\msun$ is the mass of the MW
 halo in the simulation \cite{2008Natur.456...73S}. 
 
-large uncertaint observationally in density profiles
-
-In Fig.~\ref{fig:radial_lum} we compare the radial dependence of the
-accumulative luminosity from different smooth cluster density profiles
-to the substructure boosted luminosity at different mass scles. The
-
+Recent detailed galaxy cluster observations find a core like density
+profile with an inner slope of $\beta=0.6$, where $\beta\gtrsim 1$ can
+be ruled out to a $>95$\% confidence \cite{2011ApJ...728L..39N}. This
+finding is hard to reconcile with simulations that typically prefere a
+steeper central profile. The different density profiles have a large
+impact on the luminosity from annihilating DM, although the details of
+the density profile can be neglected compared to the dominating boost
+from substructures. In Fig.~\ref{fig:radial_lum} we compare the radial
+dependence of the accumulative luminosity from different smooth
+cluster density profiles to the substructure boosted luminosity at
+different mass scales. We recalculate the density contrast for the
+core like density profile $\rhos$ and rescale the concentration
+parameter in Eq.~(\ref{eq:cfit}) with $300/160$
+\cite{2011ApJ...728L..39N} to account for the more centralized scale
+radius in a core like cluster. The emission coming from the core
+compared to a cuspy like density profile is about 30\% larger within
+$\rvir$. This difference is build up within 10\% of $\rvir$
+(i.e. close to $r_\rmn{s}$). The emission from an Einasto density
+profile is about 50\% larger than the cuspy NFW profile in the
+periphery of the cluster, where the difference is mainly build up at a
+few percent of $\rvir$. The substructure boosted luminosities is
+neglible in the center of halos, but integrated out to $\rvir$ the
+boost is about; 10 for dwarf galaxies, $10^2$ for galaxies, and $10^3$
+for galaxy clusters.
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/dens.prof.eps}
 \caption{\it Radial dependence of various luminosity
@@ -373,24 +420,39 @@ to the substructure boosted luminosity at different mass scles. The
   cluster (red), an $\mvir=10^{12}\,\msun$ galaxy (orange), and an
   $\mvir=10^{8}\,\msun$ dwarf galaxy (green). All luminosities have
   been normalized with the luminosity within $\rvir$ from a cuspy NFW
-  profile. Note the large expected boost from substructures in
-  clusters ($\sim1000$), and the relative small boost in dwarf
-  galaxies ($\sim20$).}
+  profile. We have assumed the standard value for the limiting
+  substructure mass of $10^{-6}\,\msun$. Note the large expected
+  boost from substructures in clusters ($\sim1000$), and the relative
+  small boost in dwarf galaxies ($\sim20$).}
  \label{fig:radial_lum}
 \end{figure}
 
+Even though the bulk of substructures have been erased in the central
+regions of DM halos, a cluster in projection has a significant
+enhancement due to substructures at a radius of just a few percent of
+$\rvir$. In Fig.~\ref{fig:radial_emis} we show the luminosity
+dominating radius for substructures and smooth density profiles, both
+for three different mass scales. It clearly shows how that the main
+contribution from the substructures is coming from outer parts of the
+DM halos, while the main contribution from the smooth density profiles
+peaks around the scale radius. NOT QUITE, ALSO FIGURE IS SHOWING DIFF
+VOLUME, FAC 3 DIFFERENCE, WHAT DO WE REALLY LEARN FROM THE FIGURE
 \begin{figure}
   \includegraphics[width=0.99\columnwidth]{figures/emissiv.sub.eps}
-  \caption{\it Volume weighted luminosity for different at different
-    scales. The solid lines show the emissivity from a NFW density
-    profile for three different mass scales; a $\mvir=10^{15}\,\msun$
-    galaxy cluster (red), a $\mvir=10^{12}\,\msun$ galaxy (orange), a
+  \caption{\it Radial dependence of differential luminosity at
+    different mass scales. The solid lines show the emissivity from a
+    cuspy $\beta=1.0$ NFW density profile for three different mass
+    scales; an $\mvir=10^{15}\,\msun$ galaxy cluster (red), an
+    $\mvir=10^{12}\,\msun$ galaxy (orange), and an
     $\mvir=10^{8}\,\msun$ dwarf galaxy (green). The dashed lines show
     the emissivity from substructures for the same three mass
     scales. All emissivities have been normalized with the luminosity
-    from a NFW profile within $\rvir$.}
-  \label{fig2}
+    within $\rvir$ from a cuspy NFW profile. We have assumed the
+    standard value for the limiting substructure mass of
+    $10^{-6}\,\msun$.}
+  \label{fig:radial_emis}
 \end{figure}
+
 
 \subsubsection{Cosmic-ray induced gamma-ray emission}
 \label{sect:CRs}
@@ -412,7 +474,7 @@ radio emission is expected to emerge from synchrotron emitting
 cosmic-ray electrons whose precise origin in especially relics and
 giant radio halos is still not settled. However, due to the smoothness
 of the extended emission and the observed power-law slope it seems
-quite natural that they are of hadronic origin. Especilly since the
+quite natural that they are of hadronic origin. Especially since the
 long cooling time of cosmic ray protons (CRs) allows for both an
 extended and large population of CRs to build up over the cluster
 history \cite{1997ApJ...487..529B}.
@@ -428,17 +490,18 @@ sensitivity for the central parts of close by clusters. Detecting the
 cluster gamma-ray emission is crucial in this respect as it
 potentially provides the unique and unambiguous evidence of CR
 populations in clusters through observing the $\pi^0$ bump at about
-100~MeV in the spectra. We adopt the spectrally and spatially
-universal gamma-ray model developed by Pinzke \& Pfrommer
-\cite{2010MNRAS.409..449P} to estimate the emission from decaying
-$\pi^0$:s that dominates over the inverse Compton emission from
-primary and secondary electrons above 100~MeV in clusters. The
-gamma-ray formalism was derived from high resolution simulations of
-clusters of galaxies that included radiative hydrodynamics, star
-formation, supernova feedback, and followed CR physics using a novel
-formulation that trace the most important injection and loss processes
-self-consistently while accounting for the CR pressure in the equation
-of motion
+100~MeV in the spectra. 
+
+We adopt the spectrally and spatially universal gamma-ray model
+developed by Pinzke \& Pfrommer \cite{2010MNRAS.409..449P} to estimate
+the emission from decaying $\pi^0$:s that dominates over the inverse
+Compton emission from primary and secondary electrons above 100~MeV in
+clusters. The gamma-ray formalism was derived from high resolution
+simulations of clusters of galaxies that included radiative
+hydrodynamics, star formation, supernova feedback, and followed CR
+physics using a novel formulation that trace the most important
+injection and loss processes self-consistently while accounting for
+the CR pressure in the equation of motion
 \cite{2008A&A...481...33J,2007A&A...473...41E,2006MNRAS.367..113P}.
 We note that the overall normalization of the CR and gamma-ray
 distribution scales with the maximum acceleration efficiency at
@@ -451,12 +514,13 @@ for weaker shocks \cite{2007A&A...473...41E}.
  
 
 \subsection{Particle physics}
+\label{sect:PF}
 
 \subsubsection{Leptophilic models}
 \label{sect:LP}
 Sommerfeld enhancement, electron spectra
 
-\subsubsection{Supersymetric dark matter}
+\subsubsection{Supersymmetric dark matter}
 neutralino, benchmark models, continuum emission, electron spectra 
 
 \subsubsection{Final state radiation}
@@ -480,221 +544,443 @@ for fermions.
 
 
 \subsection{Radiative processes}
+In this section we outline the basics of inverse Compton (IC)
+emission. As target radiation fields we consider both cosmic microwave
+background (CMB) photons, and the light from stars and dust (SD). We
+derive a semi-analytic model from which we can estimate the SD
+spectral and spatial distributions as a simple function of cluster
+mass.
 
 \subsubsection{Inverse Compton}
-The source function of inverse Compton emission resulting from DM
-annihilating is given by
-\begin{equation}
-  q_{\rm IC}\left(E_\gamma, r\right) = \int
-  \dd E_\e\, \frac{\dd n_\e}{\dd E_\e} 
-  P_{\rm IC}\left(E_\gamma,E_\e\right) ,
-  \label{eq:ICemiss}
-\end{equation}
-where $P_{\rm IC}$ is derived by convolving the IC cross-section with
-the differential target photon number density:
+\label{sect:IC}
+The standard IC source function is given by
+\cite{1979rpa..book.....R}:
 \begin{eqnarray}
-\label{eq:KN_spec}
-P_\rmn{IC} &=&
-\frac{3\sigma_\rmn{T}m^2_\e c^5}{4E_\e^2}
-\int\frac{n_\rmn{ph}(\eph)\dd \eph}{\eph}\nonumber \\
-&\times&\left[2q
-  \ln{q}+(1+2q)(1-q)+ \frac{1}{2}\frac{\left(\Gamma_\e q\right)^2}
-     {1+\Gamma_\e q}\left(1-q\right)\right]\,,\nonumber \\
-&&
+  q_{\rmn IC}(\eg, r) &=&  \frac{\dd^3 N_\gamma}{\dd V\,\dd t\,\dd \eg} = 
+ \frac{3}{4}c\,\sigma_\rmn{T}
+\int\dd \eph \frac{n_\rmn{ph}(\eph)}{\eph}\nonumber\\
+&\times& \int \dd \ee\,\frac{\dd n_\e}{\dd \ee}(\ee,r)\,
+ \frac{\left(m_\e c^2\right)^2}{\ee^2}G(\Gamma_\e,q)\,,\nonumber\\
+  \label{eq:ICemiss}
 \end{eqnarray}
+where $\ee$ is the energy of the upscattering electrons and $\eph$ is
+the energy of the background photon field. We represent the Thomson
+cross-section with $\sigma_\rmn{T}$ and the full differential
+Klein-Nishina (KN) cross-section is captured by
+\cite{1970RvMP...42..237B}:
+\begin{equation}
+\label{eq:KN_spec}
+G(\Gamma_\e,q) = 2q\ln{q}+(1+2q)(1-q)+ 
+\frac{1}{2}\frac{\left(\Gamma_\e q\right)^2\left(1-q\right)}
+     {1+\Gamma_\e q}\,,
+\end{equation}
 where
 \begin{equation}
-\Gamma_\e=\frac{4\eph E_\e}{\left(m_\e c^2\right)^2}\,,\qquad \rmn{and} \qquad  
-q=\frac{\eg}{\Gamma_\e(E_\e-\eg)}\,.
+\Gamma_\e=\frac{4\eph \ee}{\left(m_\e c^2\right)^2}\,,\qquad \rmn{and} \qquad  
+q=\frac{\eg}{\Gamma_\e\left(\ee-\eg\right)}\,.
 \end{equation}
-We account for two major contributions to the radiative background
-field $n_\ph$; the IR and UV light coming from emitting dust and
-starlight where $n_\ph\equiv\frac{\dd^2 N_\ph^\clu}{\dd V \,\dd
-  \eph}(\eph,r)= \frac{u_\iruv^\clu(\eph,r)}{\eph^2}$ and
-$u_\iruv^\clu(\eph,r)$ is given by Eq.~(\ref{eq:E_IR_UV}). We model the
-CMB photon spectrum as a photon gas that is isotropically distributed and
-follows a black body spectrum with temperature $T$:
+The full KN cross-section accounts for the less efficient energy
+transfer between the photon and electron and results in a steepening
+of the IC gamma-ray spectrum. In the low energy Thomson regime the IC
+spectrum is given by $E_\gamma^{-(\alpha_\e-1)/2}$, however when
+$\Gamma_\e \gg 1$ the IC spectrum steepens due to the KN suppression
+to $\eg^{-\alpha_\e}\log(\eg)$ .
+
+We account for two major contributions to the number density of
+radiative background fields $n_\ph$; the cosmic microwave background
+(CMB) photons and the infra-red (IR) to ultra-violet (UV) light
+emitted by starlight and dust (SD). The number density for the SD is
+given by $n_\ph\equiv\frac{\dd^2 N_\ph}{\dd V \,\dd
+  \eph}(\eph,r)= \frac{u_\sd(\eph,r)}{\eph^2}$ where the SD
+energy density $u_\sd(\eph,r)$ is given in Eq.~(\ref{eq:U_SD}). We
+model the CMB photon spectrum as a photon gas that is isotropically
+distributed and follows a black body spectrum with the temperature
+$T=2.73\,$~K:
 \begin{equation}
 \label{eq:photon_gas}
   n_\rmn{ph}(\eph) = \frac{\dd^2 N_\ph}{\dd V \,\dd \eph} =
   \frac{1}{\pi^2(\hbar c)^3}\frac{\eph^2}{\exp(\eph/k_\B T)-1}\,.
 \end{equation}
-Here the the typical energy of a photon before scattering is given by
-$<E_\ph>=\epsilon_\ph/n_\ph\approx\,2.70 k_\B T$, where $n_\ph$ and
-$\epsilon_\ph$ are the number- and energy-density derived by
-integrating $n_\ph(E_\ph)$ and $E_\ph n_\ph(\eph)$ over the photon
-energy $\eph$, respectively.
+Note that the typical energy of a black body photon before scattering
+is given by $<\eph>=\epsilon_\ph/\tilde{n}_\ph\approx\,2.70 k_\B T$,
+where $\tilde{n}_\ph$ and $\epsilon_\ph$ are the number- and
+energy-density derived by integrating $n_\ph(\eph)$ and $\eph
+n_\ph(\eph)$ over the photon energy $\eph$, respectively.
 
-The equilibrium spectrum of the electrons plus positrons in
-Eq.~(\ref{eq:ICemiss}) is given by $\frac{\dd n_\e}{\dd E_\e}$ and
-derived from the CRe diffusion equation:
+The electrons injected from annihilating DM also suffer from diffusive
+and radiative losses. Hence we have to calculate the equilibrium
+spectrum of the electrons plus positrons denoted by $\frac{\dd
+  n_\e}{\dd \ee}$ in Eq.~(\ref{eq:ICemiss}). We derive this stationary
+solution using the CR transport equation (neglecting convection and
+re-acceleration effects):
 \begin{eqnarray}
 \label{eq:CRdiffusion}
-\frac{\partial}{\partial t}\left(\frac{\dd n_\e}{\dd E_\e}\right) = 
-&\nabla& \left[D\left(E_\e,\bx\right)\nabla\frac{\dd n_\e}{\dd E_\e}\right] + 
-\frac{\partial}{\partial E_\e}
-\left[b\left(E_\e,\bx\right) \frac{\dd n_\e}{\dd E_\e}\right]
+\frac{\partial}{\partial t}\left(\frac{\dd n_\e}{\dd \ee}\right) = 
+&\nabla& \left[D\left(\ee,\bx\right)\nabla\frac{\dd n_\e}{\dd \ee}\right] + 
+\frac{\partial}{\partial \ee}
+\left[b\left(\ee,\bx\right) \frac{\dd n_\e}{\dd \ee}\right]
  \nonumber \\
-&+& Q(E_\e,\bx)\,,
+&+& q_\e(\ee,\bx)\,,
 \end{eqnarray}
-where $D(E_\e,\bx)$ the diffusion coefficient and $b(E_\e,\bx)$ the
-electron energy loss term. The source function $Q(E_\e,\bx)$ shows
-the number of particles produced per unit time, energy and volume
-element that are produced at the position $\bx$:
+where $D(\ee,\bx)$ denotes the diffusion coefficient and $b(\ee,\bx)$
+the energy loss term. The source function $q_\e(\ee,\bx)$ yields the
+number of electrons and positrons produced per unit time, energy and
+volume element at the position $\bx$:
 \begin{equation}
-Q(E_\e,r)=\sum_f\frac{\dd N_\e^f}{\dd E_\e}(E_\e) B_f \Gamma(r)\,.
+q_\e(\ee,r)=\sum_f\frac{\dd N_{\e,f}}{\dd \ee}(\ee) B_f \Gamma_f(r) \,,
 \end{equation}
-The subscript $f$ ...(see cola), and $B_f$ is the branching factor.
-Here $\frac{\dd N_\e^f}{\dd E_\e}$ denote the differential number of
-electrons plus positrons resulting from an annihilation event. For
-neutralinos annihilating directly into an electron and positron we
-model the differential spectrum with $\frac{\dd N_\e^f}{\dd E_\e}=
-2\delta(E_\e-m_\chi c^2)$. We use DarkSUSY to compute both the spectra
-when neutralinos annihilate directly into a $\mu^+$ and $\mu^-$ in
-the leptophilic model as well as in the four BM models where a
-fraction of the annihilating neutralinos is converted into electrons
-and positrons (see \cite{2009JCAP...01..016B} and references therein,
-also see fit).  
+where the annihilation rate density $\Gamma_f(r)$ is defined in
+Eq.~(\ref{eq:ann_rate}). The sum runs over the kinematically allowed
+annihilation final states $f$, each with a branching ratio $B_f$ and a
+differential spectrum $\frac{\dd N_\e^f}{\dd \ee}$ that represents the
+number of electrons plus positrons resulting from an annihilation
+event. For neutralinos annihilating directly into electrons and
+positrons we model the spectral distribution with $\frac{\dd
+  N_\e^f}{\dd \ee}= 2\delta(\ee-m_\chi c^2)$. We use DarkSUSY to
+compute both the spectra when neutralinos annihilate directly into a
+$\mu^+$ and $\mu^-$ in the leptophilic model as well as in the four BM
+models where a fraction of the annihilating neutralinos is converted
+into electrons and positrons (see Sect.~\ref{sect:PF} for further
+details).
+%(see \cite{2009JCAP...01..016B} and references therein,
+%also see fit).  
 
 The electrons and positrons loose their energy on a timescale that is
 shorter than the diffusive timescale in the ICM of galaxy clusters for
-CRe energies above MeV (CHECK). Hence, we neglect the first term of
-the r.h.s. in Eq.~\ref{eq:CRdiffusion}, and derive an expression for
-the equilibrium number density:
+CR electrons with $\ee \gtrsim\,$~MeV (CHECK). Hence, we neglect the
+first term of the r.h.s. in Eq.~(\ref{eq:CRdiffusion}), and derive an
+expression for the equilibrium number density:
 \begin{eqnarray}
-{\frac{\dd n_\e}{\dd E_\e}}\left(E_\e, r \right) &=&
- \frac{1}{b(E_\e, r)} \int_{E_\e}^{\mx c^2} \dd E_\e' \, 
-  Q(E_\e', r),
+{\frac{\dd n_\e}{\dd \ee}}\left(\ee, r \right) &=&
+ \frac{1}{b(\ee, r)} \int_{\ee}^{\mx c^2} \dd \ee' \, 
+  Q(\ee', r),
 \label{eq:nds}\\
-b(E_\e,r) &=& \tilde{b}
-\left[\frac{B^2_{\rm CMB}}{8\pi}+\frac{B^2(r)}{8\pi}+u_\iruv(r)\right] E_\e^2\,,
+b(\ee,r) &=& \tilde{b}
+\left[\frac{B^2_{\rm CMB}}{8\pi}+\frac{B^2(r)}{8\pi}+u_\sd(r)\right] \ee^2\,,
 \\\tilde{b}&=&\frac{4\sigma_{\rm T}c}{3(m_{\rm e}c^2)^2}\,.
 \end{eqnarray}
-Here we have included three main loss processes for the electrons;
-$B_{\rm CMB}=3.24(1+z)^2\mu {\rm G}$ denotes the equivalent field
-strength of the CMB, we parameterize the magnetic field of the galaxy
-cluster by $B(r) = 3\mu\rmn{G} \,[n_{\rm e}(r)/n_{\rm e}(0)]^{0.7}$,
-which follows from flux frozen magnetic fields. In the following
-subsection we derive a semi-analytic formula that estimates the
-energy density of the dust and starlight component $u_\iruv(r)$
-given by Eq.~(\ref{eq:E_IR_UV}).
+Here we include the three main radiative loss processes for the CR
+electrons and positrons: (1) IC losses on CMB photons where the
+equivalent field strength of the CMB is denoted by $B_{\rm
+  CMB}=3.24(1+z)^2\mu\rmn{G}$. (2) Synchrotron losses on ambient
+magnetic fields where we parameterize the magnetic field in the galaxy
+cluster by $B(r) = 3\mu\rmn{G} \,[n_{\rm e}(r)/n_{\rm
+    e}(0)]^{\alpha_\B}$, which follows from flux frozen magnetic
+fields. We adopt a magnetic decline of $\alpha_\B=0.7$ in this
+work. (3) IC losses on starlight and dust with an energy density
+$u_\sd(r)$ given by Eq.~(\ref{eq:U_SD}), which we derive in the
+following subsection.
 
-{\it IC -- dust and starlight}\\
-Galaxy clusters are typically characterized by the hot gas in the ICM
-and the collection of gravitationally bound galaxies. The emission in
-the IR and UV wavelengths emerge from dust and starlight in both the
-galaxies and the ICM (e.g. \cite{2006ApJ...648L..29P} and
-\cite{2009MNRAS.399.1694G}). Most of this radiation leaks out from the
-galaxy into the ICM, which explains the very similar spectral shape
-for these wavelengths. We use the light from galactic dust and
-starlight that is emitted in the IR and UV band and is accurately
-measured for the ISM \cite{2006ApJ...648L..29P}. We model these
-spectra through a fit to the galactic spectra presented in
-\cite{2006ApJ...648L..29P}. We extract the spatial cluster profile of
-the emission from a stacked analysis of Sloan Digital Sky Survey
-(SDSS) data at the redshift $\sim 0.25$
-\cite{2005MNRAS.358..949Z}. Finally, we derive the normalization for
-the emission from the galaxy cluster using the IR to X-ray luminosity
-relation presented in the IR cluster luminosity analysis
-\cite{2008A&A...490..547G}.
+{\it IC -- dust and starlight}\\ Galaxy clusters are typically
+characterized by the hot gas in the ICM and the collection of
+gravitationally bound galaxies. The emission in the IR and UV
+wavelengths emerge from dust and starlight in both the galaxies and
+the ICM (e.g. \cite{2006ApJ...648L..29P} and
+\cite{2009MNRAS.399.1694G}). Much of the radiation leaks out from the
+galaxy into the ICM, which give rise to similar spectral distributions
+for the galaxies and the ICM in these wavelengths. Hence, we use the
+accurately measured light from galactic dust and starlight for the ISM
+to model the ICM. We characterize the spectra through a fit to the
+galactic spectra presented in \cite{2006ApJ...648L..29P}. The spatial
+distribution of the SD light in clusters is extracted from a stacked
+emission analysis of Sloan Digital Sky Survey (SDSS) data at the
+redshift $\sim 0.25$ \cite{2005MNRAS.358..949Z}. Finally, we fix the
+normalization for the light from stars and dust in an galaxy cluster
+individually using using the IR to X-ray luminosity scaling relation
+found in \cite{2008A&A...490..547G}. The X-ray luminosities for the
+clusters used in this work are listed in the extended HIghest X-ray
+FLUx Galaxy Cluster Sample (HIFLUGCS) \cite{2002ApJ...567..716R} from
+the Rosat all-sky survey. Note that we have added the Virgo cluster to
+the sample that we nevertheless refer to as extended HIFLUGCS
+catalogue in the following.
 
-{\it Spectra -- galactic} \\
-best fit, IR with a power-law function, UV with three power laws,
-similar to Porter, vary normalization to account for uncertainties,
-taken at $r=0$ in the galaxy
-\begin{eqnarray}
-  \eph^2\frac{\dd^2 N_\ph^\gal}{\dd \eph \dd V}
-  &\equiv& u_\iruv^\gal(\eph) \nonumber \\ 
-  &=& u_\rmn{ir}^\gal(\eph) +  u_\rmn{uv}^\gal(\eph)  \nonumber \\ 
-  \\
-  u_\rmn{uv}^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
-  \left(\frac{1.23\,\rmn{eV}}{\eph}\right)^{1.9} \nonumber \\
-  &\times&\left[1+\left(\frac{2.04\,\rmn{eV}}{\eph}\right)^{20}\right]
-  ^{-\frac{1.9}{20}}\nonumber \\
-  &\times& \left[1+\left(\frac{0.78\,\rmn{eV}}{\eph}\right)^{20}\right]^{-\frac{2.6}{20}} \\
-  u_\rmn{ir}^\gal(\eph) &=& 
-  \frac{40\,\rmn{eV}}{\rmn{cm}^3} 
-  \left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{4.9}\nonumber \\
-  &\times& \left[1+\left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{1.9}\right]^{-4.9}\,,
-\end{eqnarray}
+{\it Spatial distribution -- stars and dust}\\ Our goal in this
+section is to derive a simple spatial model for the distribution of
+stars and dust in galaxy clusters. For this reason we use stacked
+cluster observations by Sloan in the $r$-band that trace the stars. We
+assume that the dust trace the stars in the clusters, which should be
+accurate to the order of magnitude estimate that we are interested in
+here. The stacked surface brightness profiles in
+\cite{2005MNRAS.358..949Z} are measured at redshift $z \sim 0.25$ with
+an average mass of the clusters of $4.0\times10^{13}\,\msun$. The
+profiles are build up out of three components; diffuse intracluster
+light (ICL), galaxies, and the brightest cluster galaxy (BCG) in the
+center of clusters. However, the total volume overlap of the ISM to
+the cluster is very small compared to the ICL- and BCG overlap with
+the cluster, thus the relative contribution of the galaxies to the IC
+emission is suppressed. To remove this bias we cut out the galaxies
+that have been smoothed over the cluster in the stacked analysis. In
+Fig.~\ref{fig:SD_spatial} we show the SDSS stacked brightness profiles
+as well as the fitted profiles\footnote{The measured brightness is
+  converted into units of $\rmn{erg}\,\rmn{s}^{-1}$ using
+  \cite{2010...book} $S(\rmn{mag}\,''^{-2}) =
+  \mathcal{M}_\odot+21.572-2.5\rmn{log}_{10}S(L_\odot\,\rmn{pc}^{-2})$,
+  where the sun's absolute magnitude in the $r$-band is given by
+  $\mathcal{M}_\odot=27.1$ \cite{2000asqu.book..339L} and the
+  luminosity of the sun by $L_\odot=3.85\,10^{33}
+  \rmn{erg}\,\rmn{s}^{-1}$.}. Our benchmark spatial model are show
+with the solid black line, and include the contribution from the ICL
+and BCG.
 
+\begin{figure}%[t]
+ \includegraphics[width=0.99\columnwidth]{figures/SB.photon.eps}
+\caption{\it Spatial dependence of light from stars and dust. We show
+  2D surface brightness profiles in the $r$-band ($\sim 1\,\ev$)
+  obtained from stacked clusters in the Sloan Digital Sky Survey
+  (SDSS) at the redshift $z \sim 0.25$ \cite{2005MNRAS.358..949Z}. The
+  brightness profiles have been weighted with the $\rvir$ normalized
+  area inside radius $r$, and trace the radial dependence of the
+  luminosity from stars and galaxies. The crosses show the total
+  observed star light including the diffuse intracluster (ICL), the
+  galaxies, and the brightest cluster galaxy (BCG) in the center of
+  the cluster. The diamonds denote the observed star light from the
+  ICL and the BCG. The solid line show the fit to the data of the
+  total light including the ICL, the BCG, and the galaxies, while the
+  smooth component is represented by the dashed line that is fitted to
+  only the ICL and the BCG.}
+ \label{fig:SD_spatial}
+\end{figure}
 
-{\it Spatial distribution - galaxy cluster}\\
- Instead of modelling the surface brightness with a de Vauocouleurs
- with the addition of a power law, we use a double beta profile model
- for simplicity of deprojection.
-
+Instead of modelling the surface brightness with a de Vaucouleur
+profile with the addition of a power-law, we use a double beta profile
+model for simplicity of deprojection given by:
 \begin{equation}
- S(\rmn{mag}\,\rmn{arcsec}^{-2}) = 
-\mathcal{M}_\odot+21.572-2.5\rmn{log}_{10}S(L_\odot\,\rmn{pc}^{-2})
-\end{equation}
-\cite{2010...book} where the sun's absolute magnitude in the red ban is given by
-$\mathcal{M}_\odot=27.1$ \cite{2000asqu.book..339L}, and the luminosity
-of the sun by $L_\odot=3.85\,10^{33} \rmn{erg}\,\rmn{s}^{-1}$.
-
-surface brightness double $\beta$ models
-\begin{equation}
-S_\mathrm{IR} (r_\bot)= \sum_{i=1}^2 \,S_i\, 
+S_\sd (r_\bot)= \sum_{i=1}^2 \,S_i\, 
 \left[1 + \left( \frac{r_\bot}{r_{\mathrm{c}_i}}\right)^2\right]
-^{-3\beta_i + 1/2},
+^{-3\beta_i + 1/2}\,,
 \label{double_beta}
 \end{equation}
-where we found the following values as the best fit,
+where we found the following best fitted central brightness ($S_i$),
+core radius ($r_{\mathrm{c}_i}$), and slope ($\beta_i$):
 \begin{eqnarray}
  S_1&=&1.4\times10^{-5}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
 r_{\mathrm{c}_1}=210\,\rmn{kpc},\,
 \beta_1=0.44\nonumber\\
  S_2&=&6.0\times10^{-3}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
 r_{\mathrm{c}_2}=2.8\,\rmn{kpc},\,
-\beta_2=0.45\nonumber\\
+\beta_2=0.45\,.\nonumber\\
 \label{fit_spatial_IR}
 \end{eqnarray}
-%\begin{eqnarray}
-% S = 1.8\times10^{-5}\left(1+\left(\frac{R}{0.4\,\rmn{Mpc}}\right)^{-2.4}+
-% 3\times10^{-3}\left(1+\left(\frac{R}{0.004\,\rmn{Mpc}}\right)^{4.1}\right)^{-0.4}
-%\end{eqnarray}
-
-deprojection
+The 3D spatial profile is derived by deprojecting the surface
+brightness in Eq.~(\ref{double_beta}) (see
+e.g. \cite{2004A&A...413...17P} for details about the deprojection):
 \begin{eqnarray}
   j(r)  = \sum_{i=1}^2 \frac{S_i}{2\pi\,r_{\mathrm{c}_i}}\,
   \frac{6 \beta_i - 1}{\left(1 + r^2/r^2_{\mathrm{c}_i}\right)^{3\beta_i}}\,
   \mathcal{B}\left(\frac{1}{2},3\beta_i\right)\,,
 \end{eqnarray}
-where $\mathcal{B}(a,b)$ denotes the beta-function (abrahamovich and
-stegun).  (Pfrommer and ensslin 2003)
+where $\mathcal{B}(a,b)$ denotes the beta-function
+\cite{1965hmfw.book.....A}.
 
 
-{\it Normalization}\\
-The spatial and spectral part of the IR and UV have an arbitrary
-normalization where the specific energy density is given by
-$u_\iruv^\clu(\eph, r) \propto u_\iruv^\gal(\eph)\,j(r)/j(0)$. We fix the
-unitless normalization $N$ using the total IR energy
-($E_{\ir,\vir}$) within $\rvir$
-\begin{eqnarray} 
-  E_{\ir,\vir} &=& L_\ir \frac{\rvir}{c} \nonumber \\
-  &=&N\int_{\rvir} \int_{\ir} \,\frac{j(r)}{j(0)} 
-  \frac{u_\ir^\gal(\eph)}{\eph}\,\dd V\dd \eph\,,\nonumber \\
-\end{eqnarray}
-where we in the first equality sign approximate the total energy of
-the IR photons within $\rvir$ with the IR luminosity $L_\ir$
-\cite{2008A&A...490..547G} times the typical timescale it takes for a
-photon to propagate through the cluster (we assume that the cluster is
-optically thin). From \cite{2008A&A...490..547G} we derive the
-following luminosity scaling relation, $L_\ir=10^{21.7}\times
-(L_\rmn{X}/\rmn{erg\,s}^{-1})^{0.53}\,\rmn{erg\,s}^{-1}$, where
-$L_\rmn{X}$ is the X-ray luminosity within $\rvir$.
+{\it Spectral distribution -- stars and dust} \\ Our goal in this
+section is to derive a simple spectral model for stars and dust in
+galaxy clusters. Since the radiation from galaxies are expected to
+leak out into the ICM, we expect similar spectral distributions, at
+least to the order of magnitude that we are interested in here. Hence, we
+use the IR to UV spectrum derived in \cite{2006ApJ...648L..29P} for a
+MW type galaxy to characterize the spectral distribution of dust and
+starlight in a cluster. Note, however, that we only keep the spectral
+shape, and renormalize the spectral distribution using the luminosity
+from stars and dust.
 
-
-{\it Energy density}\\
-The energy density from starlight and dust in al galaxy cluster is given by
+In Fig.~\ref{fig:SD_spectra} we show the SD spectral distribution
+together with the CMB black-body distribution in a galaxy cluster,
+both at the radius $r=0.071\rvir$ where the smooth energy density of
+the SD light (see Fig.~\ref{fig:SD_Edens}) equals the energy density
+of the CMB. We have renormalized both the spectral SD data and the
+fitted SD spectra using the luminosity from stars and dust
+individually (see below for further details about the
+renormalization).
+\begin{figure}%[t]
+ \includegraphics[width=0.99\columnwidth]{figures/fit.porter.v2.eps}
+\caption{\it Spectral dependence of radiation fields in a cluster of
+  galaxies. The black dotted line in the left peak show the spectrum
+  of CMB photons using a black body with a temperature of 2.73 K. The
+  crosses in the middle and right peaks represent the measured spectra
+  from stars and dust (SD), respectively, and are derived in
+  \cite{2006ApJ...648L..29P} for a galaxy. We normalize the individual
+  SD spectrum separately using the observed luminosity from SD in
+  clusters. The SD luminosity is related to the cluster mass through
+  Eq, where we use have used the mass $\mvir=4.0\,10^{13}\msun$ in
+  this figure. Finally we renormalize the SD spectra to the radius
+  $r=0.071\rvir$, where the smooth energy density of the SD light (see
+  fig~\ref{fig:SD_Edens}) equals the energy density of the CMB. The
+  red dashed lines show the fitted SD spectral model.}
+ \label{fig:SD_spectra}
+\end{figure}
+We choose to fit the spectrum of the dust that peaks at about
+$10^{-2}\,\ev$ with a double power-law, and the slightly wider
+spectral distribution of the stars that peaks at about $1\,\ev$ with a
+tipple power-law. We find the best fit spectra for the SD in a
+cluster through:
 \begin{eqnarray}
-\label{eq:E_IR_UV}
-u_\iruv^\clu(r) &=& \int \dd \eph \frac{\dd^2 N_\ph^\clu}{\dd \eph \dd V}\,\eph
-=\int \dd \eph \frac{u_\iruv^\clu(\eph, r)}{\eph}
-\nonumber \\
-&=&  N\frac{j(r)}{j(0)} \int \dd \eph \frac{u_\iruv^\gal(\eph)}{\eph}\,. \nonumber \\
+  \eph^2\frac{\dd^2 N_\ph}{\dd \eph \dd V}
+  &\equiv& u_\sd(\eph) =  \sum_i N_i(\lx) u_i^\gal(\eph)\,,\nonumber \\ 
+\rmn{where}\quad i&=&\{\rmn{stars,dust}\} \qquad \rmn{and}\\ 
+% &=&  N_\dust(\lx) u_\dust^\gal(\eph) + N_\stars(\lx) u_\stars^\gal(\eph)  \nonumber \\ 
+%  \\
+  u_\stars^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
+  \left(\frac{1.23\,\rmn{eV}}{\eph}\right)^{1.9} \nonumber \\
+  &\times&\left[1+\left(\frac{2.04\,\rmn{eV}}{\eph}\right)^{20}\right]
+  ^{-\frac{1.9}{20}}\nonumber \\
+  &\times& \left[1+\left(\frac{0.78\,\rmn{eV}}{\eph}\right)^{20}\right]^{-\frac{2.6}{20}}\,, \\
+  u_\dust^\gal(\eph) &=& 
+  \frac{40\,\rmn{eV}}{\rmn{cm}^3} 
+  \left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{4.9}\nonumber \\
+  &\times& \left[1+\left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{1.9}\right]^{-4.9}\,.
 \end{eqnarray}
 
+
+{\it Normalization}\\ HARD TO READ, TO MUCH DETAIL, MOVE TO APPENDIX?,
+MABEY KEEP NORM CONSTATS AND A VERY SHORT SUMMARY?? The spatial and
+spectral distribution functions of the light from stars and dust in a
+cluster are both normalized with a constant determined from the
+luminosity in each respective wavelength. The specific energy density
+is given by
+\begin{eqnarray} 
+u_\sd(\eph, r) &=& \frac{j(r)}{j(0)}\,u_\sd(\eph) \nonumber\\
+&=& \frac{j(r)}{j(0)}\,\sum_i N_i(\lx) u_i^\gal(\eph)\,,
+\end{eqnarray}
+where we fix the unitless normalization $N_i(\lx)$ using the total
+energy of the light in stars and dust ($E_{i,\vir}$) within $\rvir$:
+\begin{eqnarray} 
+  E_{i,\vir} &=& L_i \frac{\rvir}{c} \nonumber \\
+  &=&N_i(\lx)\int_{\rvir} \int_i \,\frac{j(r)}{j(0)} 
+  \frac{u_i^\gal(\eph)}{\eph}\,\dd V\dd \eph\,,\nonumber \\
+ &\rmn{for}&\qquad i=\{\rmn{stars,dust}\}\,.
+\label{eq:E_SD}
+\end{eqnarray}
+Here we approximate the total energy of the photons within $\rvir$
+with the luminosity $L_i$ \cite{2008A&A...490..547G} times the typical
+timescale it takes for a photon to propagate through the cluster (we
+assume that the cluster is optically thin). Once we estimated the SD
+luminosities for a well representative cluster, we use a IR to X-ray
+scaling relation to estimate the luminosity from an arbitrary cluster
+with mass $\mvir$:
+\begin{equation}
+L=1.05\times10^{45}\,\rmn{erg\,s}^{-1}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,,
+\label{eq:SD-X}
+\end{equation}
+where $\lx$ is the luminosity of the X-ray emitting gas within
+$\rvir$.
+
+The normalization constant for the star light [$N_\stars(\lx)$] is derived
+in the following three steps: (1) We use the average apparent magnitude
+in the $(r+i)$-band $m_{(r+i),0.25}\approx 15.5$
+\cite{2005MNRAS.358..949Z} of a cluster with the average mass
+$\mvir=4.0\times10^{13}\msun$ at a redshift $z=0.25$ to derive the
+luminosity from the stars:
+\begin{equation}
+L_\stars=10^{\frac{m_\odot-m_{(r+i),0.25}}{2.5}}
+\left(\frac{d_\clu}{d_\odot}\right)^2 L_\odot
+\approx 7.1\times10^{44}\,\rmn{erg}\,\rmn{s}^{-1}\,,
+\label{eq:L_star}
+\end{equation}
+where the apparent magnitude of the sun $m_\odot\approx -27.1$, the
+distance to the sun $d_\odot=4.85\times10^{-6}\,\rmn{pc}$, the
+luminosity of the sun $L_\odot=3.85\times10^{34}\,\rmn{erg\,s}^{-1}$,
+and the distance to the cluster $d_\clu=1.26\times10^9\,\rmn{pc}$. (2)
+We use the IR to X-ray scaling relation in Eq.~(\ref{eq:SD-X}) to find
+a more general form of the luminosity from stars in
+Eq.~(\ref{eq:L_star}) that is valid for an arbitrary cluster mass. The
+cluster X-ray luminosities are found in the extended HIFLUGCS
+catalogue \cite{2002ApJ...567..716R} to which we have added the Virgo
+cluster. (3) The normalization constant for the stars is
+determined from the above steps together with Eq.~(\ref{eq:E_SD})
+where we integrate over the cluster volume and spectral distribution
+of the stars. It is given by
+\begin{equation}
+ N_\stars(\lx) = 1.2\times10^{-9}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
+\label{eq:N_stars}
+\end{equation}
+Note that since the luminosities include the contribution from
+galaxies, we have integrated the spatial distribution including
+galaxies to derive the normalization. Once the normalization is fixed,
+the SD energy densities are derived from the spatial distribution
+where galaxies have been excluded.
+
+The normalization constant for the dust [$N_\dust(\lx)$] is derived in the
+following four steps: (1) We use a cluster with the the average mass
+$\mvir=4.0\times10^{13}\msun$ and estimate the X-ray luminosity from
+the X-ray to mass scaling relations derived for the Representative
+XMM-Newton Cluster Structure Survey (REXCESS) in
+\cite{2009A&A...498..361P}:
+\begin{equation}
+\lx=1.18\times 10^{44}\,\rmn{erg\,s}^{-1}
+\left(\frac{M_{200}}{10^{14}\msun}\right)^{1.81}\,,
+\end{equation}
+where we have used that $M_\rmn{200} \approx 1.58\,M_\rmn{500}$ for a
+small cluster \footnote{We derive the factor 1.58 using
+  $M_\rmn{200}/M_\rmn{500}$ for the clusters in the HIFLUGCS catalogue
+  with a mass similar to $\mvir=4.0\times10^{13}\msun$ that we use to
+  derive the luminosity from dust.}. (2) From the IR to X-ray scaling
+relation in Eq.~(\ref{eq:SD-X}) we can now estimate calculate the
+luminosity from the dust for a $\mvir=4.0\times10^{13}\msun$ cluster;
+$L_\dust=4.7\times10^{44}\,\rmn{erg\,s}^{-1}$. (3) We generalize
+Eq.~(\ref{eq:L_star}) to an arbitrary cluster mass using
+Eq.~(\ref{eq:SD-X}) together with the cluster X-ray luminosities in
+the extended HIFLUGCS catalogue. (4) The normalization constant for
+the dust can now be determined from from the above steps together with
+Eq.~(\ref{eq:E_SD}) where we integrate over the cluster volume and
+spectral distribution of the dust. It is given by
+\begin{equation}
+ N_\dust(\lx) = 1.4\times10^{-9}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
+\label{eq:N_stars}
+\end{equation}
+Note that since the luminosities include the contribution from
+galaxies, we have integrated the spatial distribution including
+galaxies to derive the normalization. Once the normalization is fixed,
+the SD energy densities are derived from the spatial distribution
+where galaxies have been excluded.
+
+{\it Energy density}\\ The energy density from starlight and dust in
+a galaxy cluster is given by
+\begin{eqnarray}
+\label{eq:U_SD}
+u_\sd(r) &=& \int \dd \eph \frac{\dd^2 N_\ph}{\dd \eph \dd V}\,\eph
+=\int \dd \eph \frac{u_\sd(\eph, r)}{\eph}
+\nonumber \\
+&=&  \frac{j(r)}{j(0)} \int \dd \eph \sum_i 
+N_i(\lx) u_i^\gal(\eph)\,. \nonumber \\
+\end{eqnarray}
+In Fig.~\ref{fig:SD_Edens} we compare the energy densities from
+different radiation fields in a galaxy cluster with the mass
+$\mvir=4.0\times10^{13}\msun$. We use two different profiles for the
+SD energy density, where the total includes the ICL, the BCG and all
+the galaxies, while the galaxies are excluded in the smooth
+contribution. We find that even for a cluster with a relative small
+mass the energy density of the SD components dominates over the CMB
+and the magnetic fields (with a central B field of 3~$\mu G$) within
+about 10\% of $\rvir$. Outside this radius the CMB is dominating the
+energy density of the cluster, hence the density of the magnetic
+fields are always subdominant in the cluster and can safely be removed
+from cluster IC calculations for reasonable central densities and
+spectral index. Although, in this work we keep its contribution to the
+total energy density for consistency.
+
+\begin{figure}%[t]
+ \includegraphics[width=0.99\columnwidth]{figures/ucool.eps}
+ \caption{\it Spatial dependence of the energy density of radiation
+   fields in a cluster of galaxies. The energy density of the CMB,
+   shown by the blue dotted line, is isotropic throughout the cluster,
+   hence represented by a flat profile with
+   $u_\rmn{cmb}=0.26\,\rmn{eV}\,\rmn{cm}^{-3}$. The energy density of
+   the light from stars and dust (SD) is denoted by the red dashed
+   line and the solid purple line for the total SD light and the
+   smooth SD light, respectively. The SD light has been renormalized
+   to a cluster with the mass $\mvir=4.0\,10^{13}\msun$. Finally we
+   show the energy density two magnetic field models with a central
+   magnetic field of 3~$\mu G$. The magnetic field scales with the gas
+   density to the power $\alpha_\rmn{B}$; green dash-dotted line
+   ($\alpha_\rmn{B}=0.5$) and orange dash-dotted line
+   ($\alpha_\rmn{B}=0.7$). Note that the SD radiation is dominating
+   the energy density inside $\sim0.1\,\rvir$.}
+ \label{fig:SD_Edens}
+\end{figure}
 
 
 \del{In this section we present the formalism for the different
@@ -702,8 +988,6 @@ galaxy cluster emission components and show their contribution to the
 total dark matter gamma-ray spectrum. We account for the emission
 radiated both by final state radiation and inverse Compton where we
 allow for upscattering through CMB, starlight, and dust.}
-
-
 
 
 %Using a typical
@@ -715,82 +999,13 @@ allow for upscattering through CMB, starlight, and dust.}
 
 \section{Spectral gamma-ray distribution}
 
-\section{Surface brightness profiles}
-
-\section{Population studies}
-Model predictions
-
-%-) Consider having one figure where we compare the Einasto profile, to
-%NFW, NFW w/ beta 0.6, and also the effect of a different concentration
-%mass-scaling relation
-%
-%-) also, plot BM flux vs. psf, for models w/ and w/o substructures
-
-%***********************************************
-
-
-\begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/SB.photon.eps}
-\caption{\it Spatial dependence of light from dust and stars. We show
-  2D surface brightness profiles obtained from stacked clusters in the
-  Sloan Digital Sky Survey (SDSS) at the redshift $z \sim 0.25$
-  \cite{2005MNRAS.358..949Z}. The brightness profiles have been
-  weighted with the $\rvir$ normalized area inside radius $r$, and
-  trace the radial dependence of the luminosity from stars and
-  galaxies. The crosses show the total observed light including the
-  diffuse intracluster (ICL), the galaxies, and the brightest cluster
-  galaxy (BCG) in the center of the cluster. The diamonds denote the
-  observed light from the ICL and the BCG. The solid line show the fit
-  to the data of the total light including the ICL, the BCG, and the
-  galaxies, while the smooth component is represented by the dashed
-  line that is fitted to only the ICL and the BCG.}
- \label{fig3}
-\end{figure}
-
-\begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/fit.porter.v2.eps}
-\caption{\it Spectral dependence of radiation fields in a cluster of
-  galaxies. The black dotted line in the left peak show the spectrum
-  of CMB photons using a black body with a temperature of 2.7 K. The
-  crosses in the middle and right peaks represent the measured spectra
-  from dust and stars (SD), respectively, and are derived in
-  \cite{2006ApJ...648L..29P} for a galaxy. We normalize the individual
-  spectra from SD separately using the observed luminosity from SD in
-  clusters. The SD luminosity is related to the cluster mass through
-  Eq, where we use have used the mass $\mvir=4.0\,10^{13}\msun$ in this
-  figure. Finally we renormalize the SD spectra to the radius
-  $r=0.071\rvir$, where the smooth energy density of the SD light (see
-  fig~\ref{fig3}) equals the energy density of the CMB. The red dashed
-  lines show the fitted SD spectral model.}
- \label{fig4}
-\end{figure}
-
-\begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/ucool.eps}
-\caption{\it Spatial dependence of the energy density of radiation
-  fields in a cluster of galaxies. The energy density of the CMB, shown
-  by the blue dotted line, is isotropic throughout the cluster, hence
-  represented by a flat profile with
-  $u_\rmn{cmb}=0.26\,\rmn{eV}\,\rmn{cm}^{-3}$. The energy density of
-  the light from dust and stars (SD) is denoted by the red dashed line
-  and the solid purple line for the total SD light and the smooth SD
-  light, respectively. The SD light has been renormalized to a cluster
-  with the mass $\mvir=4.0\,10^{13}\msun$. Finally we show the energy density
-  two magnetic field models with a central magnetic field of 3~$\mu
-  G$. The magnetic field scales with the gas density to the power
-  $\alpha_\rmn{B}$; green dash-dotted line ($\alpha_\rmn{B}=0.5$) and
-  orange dash-dotted line ($\alpha_\rmn{B}=0.7$). Note that the SD
-  radiation is dominating the energy density inside $\sim0.1\,\rvir$.}
- \label{fig5}
-\end{figure}
-
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
- \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompI.v8.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJ.v8.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompK.v8.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJs.v8.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompI.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJ.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompK.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJs.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
 \caption{\it Comparing the differential flux from different models: we
   show the continuum emission from DM benchmark (BM) models
   (blue), electrons and positrons from DM BM models that inverse
@@ -812,18 +1027,18 @@ Model predictions
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.v8.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.BMv8.0.1deg.SubMass.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.v9.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.BMv9.0.1deg.SubMass.noMW.woGal.eps}
 \caption{\it Comparing the differential flux from different inverse
   Compton upscattered radiation fields in the Fornax cluster. We show
-  the inverse Compton emissin induced by leptophilic DM in the left
+  the inverse Compton emission induced by leptophilic DM in the left
   panel and by the $\Km$ benchmark model in the right panel. The
   contribution from each individual radiation field from top line to
   bottom line; CMB (green dashed-double-dotted), dust (blue dashed),
   stars (purple dashed-dotted). The sum of the three components are
   shown with the orange solid line. The black dotted line represents
-  the upscattered CMB photons without any cooling from dust and
-  stars. The red solid line show the CR induced gamma-ray flux. The
+  the upscattered CMB photons without any cooling from stars and
+  dust. The red solid line show the CR induced gamma-ray flux. The
   black arrow show the differential upper limit from Fermi ADD
   REF. All fluxes are calculated within $\rvir$ with a point spread
   function of $0.1\deg$. The boost from Sommerfeld is ..., and from
@@ -833,7 +1048,7 @@ Model predictions
 \end{figure*}
 
 \begin{figure}
- \includegraphics[width=0.99\columnwidth]{figures/flux.int.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/flux.int.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Comparing the energy integrated flux from different
   models: we show the emission from leptophilic (LP) models with green
   lines, $\Km$ benchmark model (BM) with blue lines, and the CR
@@ -852,10 +1067,10 @@ Model predictions
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
- \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Fornax.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Coma.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Virgo.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Perseus.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Fornax.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Coma.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Virgo.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Perseus.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 
 \caption{\it Comparing the emission from different clusters. The
   emission from the clusters is calculated using a point spread
@@ -878,17 +1093,20 @@ Model predictions
 \end{minipage}
 \end{figure*}
 
+
+\section{Surface brightness profiles}
+
 \begin{figure}
- \includegraphics[width=0.99\columnwidth]{figures/SB.v8.1GeV.SF300.SubMass.elmu.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/SB.v9.1GeV.SF300.SubMass.elmu.eps}
 \caption{\it Comparing the surface brightness from different
   clusters. We show the surface brightness above the energy 1~GeV. The
-  boost from substructures is included and we usie a point spread
+  boost from substructures is included and we use a point spread
   function of $0.1\deg$.}
  \label{fig20}
 \end{figure}
 
 \begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v8.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Constraining leptophilic boost factors using flux upper
   limits. The emission is derived within $\rvir$ using a point spread
   function of $0.1\deg$. In order not to overproduce the Fermi
@@ -908,7 +1126,7 @@ Model predictions
 \end{figure}
 
 \begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/SB.resolved.v8.1GeV.SF300.noSuB.vs.SubMass.elmu.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/SB.resolved.v9.1GeV.SF300.noSuB.vs.SubMass.elmu.eps}
 \caption{\it The impact of substructures on surface brightness. We
   show the surface brightness at 1~GeV for the Fornax cluster using a
   very small point spread function of $10^{-5}\deg$ that reveals the
@@ -923,8 +1141,8 @@ Model predictions
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.v8.1GeV.SF300.noSuB.elmu.eps}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.fornax.v8.1GeV.SF300.noSuB.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.v9.1GeV.SF300.noSuB.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.fornax.v9.1GeV.SF300.noSuB.elmu.eps}
 \caption{\it The surface brightness without substructures. We show the
   CR induced emission (red), leptophilic emission (green), and
   emission from the $\Km$ benchmark model (blue). The surface
@@ -934,7 +1152,7 @@ Model predictions
   (dotted), Virgo (dashed), and Perseus (dash-dotted).  RIGHT PANEL:
   compare different emission components in Fornax; dotted lines show
   the inverse Compton (IC) upscattered CMB photons, dashed lines show
-  the IC upscattered photons from dust and stars, and blue solid line
+  the IC upscattered photons from stars and dust, and blue solid line
   show the continuum emission from the $\Km$ benchmark
   model. \del{Since cooling is dominated by IR and UV processes in the
     center, the spatial dependence of the equilibrium electron spectra
@@ -951,8 +1169,8 @@ Model predictions
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.Fornax.v8.SF300.SubMass.elmu.eps}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.Virgo.v8.SF300.SubMass.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.Fornax.v9.SF300.SubMass.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.Virgo.v9.SF300.SubMass.elmu.eps}
 \caption{\it Surface brightness predicted for Cherenkov telescopes. We
   show the emission above $\eg=100$~GeV, include the boost from
   substructures and use a point spread function of $0.1\deg$. Left
@@ -968,6 +1186,9 @@ Model predictions
  \label{fig13}
 \end{minipage}
 \end{figure*}
+
+\section{Population studies}
+Model predictions
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -995,7 +1216,7 @@ Model predictions
     energy range $E_\gamma=1-10$~GeV for 32 clusters. The Fermi upper
     limits are shown with black arrows. The blue boxes show the
     gamma-ray emission from CR induced $\pi^0$\:s decaying, where the
-    upper bound shows the estimates for an optemistic model and the
+    upper bound shows the estimates for an optimistic model and the
     lower bound a more conservative model excluding point sources (the
     realistic case is more likely in between, see
     \cite{2010MNRAS.409..449P} for details). Note that there is
@@ -1012,6 +1233,13 @@ Model predictions
 
 \smallskip
 We wish to thank...
+
+%-) Consider having one figure where we compare the Einasto profile, to
+%NFW, NFW w/ beta 0.6, and also the effect of a different concentration
+%mass-scaling relation
+%
+%-) also, plot BM flux vs. psf, for models w/ and w/o substructures
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{-0.7cm}
@@ -1032,7 +1260,7 @@ We wish to thank...
   differential continuum spectra for four different DM benchmark (BM)
   models; $\Imm$ model (red), $\Jmm$ (orange), $\Km$ (green), and
   $\Jm$ (blue). RIGHT PANEL: number of electron and positron per DM
-  annihilation above the electron energy $E_\e$ for different dark
+  annihilation above the electron energy $\ee$ for different dark
   matter models; $\Imm$ BM model (red), $\Jmm$ BM model (orange),
   $\Km$ BM model (green), and $\Jm$ BM model (blue), leptophilic (LP)
   DM annihilating into electrons and positrons (purple), and LP DM
