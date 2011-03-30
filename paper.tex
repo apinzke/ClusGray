@@ -46,6 +46,10 @@
 \newcommand{\dust}{\rmn{dust}}
 \newcommand{\lx}{L_\rmn{X}}
 \newcommand{\s}{\rmn{s}}
+\newcommand{\Kp}{\rmn{K}`}
+\newcommand{\Ip}{\rmn{I}`}
+\newcommand{\Js}{\rmn{J}^*}
+\newcommand{\Jp}{\rmn{J}`}
 
 %OLD
 \newcommand{\beq}{\begin{equation}}
@@ -74,10 +78,6 @@
 \newcommand{\e}{\rmn{e}}
 \newcommand{\eg}{E_\gamma}
 \newcommand{\ir}{\rmn{ir}}
-\newcommand{\Km}{\rmn{K}`}
-\newcommand{\Imm}{\rmn{I}`}
-\newcommand{\Jm}{\rmn{J}^*}
-\newcommand{\Jmm}{\rmn{J}`}
 
 \begin{document}
 
@@ -294,18 +294,22 @@ $\rho(r)$. Typically the universal Navarro-Frenk-White (NFW) density
 profile provide a good fit to both the observed and simulated
 clusters. It can be considered as a special case of the 5-parameter profile:
 \begin{equation}
-\rho(r) = \frac{\rho_\s}{\left(r/r_\s+\right)^\gamma
+\rho(r) = \frac{\rhos}{\left(r/r_\s+\right)^\gamma
   \left[1+\left(r/r_\s\right)^\alpha\right]^\delta}\,,\quad
 \delta=\frac{\beta-\gamma}{\alpha}\,,
 \label{eq:rho_nfw}
 \end{equation}
 where a cuspy NFW profile is given by
 $(\alpha,\beta,\gamma)=(1,3,1)$. The scaling radius is given by $r_\s$
-and the characteristic density by $\rhos=(\Delta\rhoc/3)\,
-c^3/(\log(1+c)-(c/(1+c)))$, where the halo mass dependent
-concentration parameter $c$ is derived from a power-law fit to
-cosmological simulations with $\mvir \gtrsim 10^{10} \msun$
-\cite{2008MNRAS.391.1940M},
+and the characteristic density by 
+\begin{equation}
+\rhos(c)=\frac{\Delta\,\rhoc}{3}\,\frac{c^3}
+{\log\left(1+c\right)-c/(1+c)}\,,
+\label{eq:rho_s}
+\end{equation}
+ where the halo mass dependent concentration parameter $c$ is derived
+ from a power-law fit to cosmological simulations with $\mvir \gtrsim
+ 10^{10} \msun$ \cite{2008MNRAS.391.1940M},
 \begin{equation}
 \label{eq:cfit}
   c=3.56 \times \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-0.098}\,.
@@ -400,7 +404,7 @@ parameter in Eq.~(\ref{eq:cfit}) with $300/160$
 radius in a core like cluster. The emission coming from the core
 compared to a cuspy like density profile is about 30\% larger within
 $\rvir$. This difference is build up within 10\% of $\rvir$
-(i.e. close to $r_\rmn{s}$). The emission from an Einasto density
+(i.e. close to $r_\s$). The emission from an Einasto density
 profile is about 50\% larger than the cuspy NFW profile in the
 periphery of the cluster, where the difference is mainly build up at a
 few percent of $\rvir$. The substructure boosted luminosities is
@@ -464,7 +468,7 @@ protons to high energies. On smaller scales, such as galaxies, there
 is convincing evidence of such non-thermal populations. Especially, in
 the MW, the cosmic rays are observed directly as well as indirectly
 through radio, X-ray, and gamma-ray emission. On larger scales of the
-order of few 100 kpc up to Mpc, there are a vast number of
+order of few 100~kpc up to Mpc, there are a vast number of
 observations of radio emission coming from radio mini halos in the
 center of cooling flow clusters, radio relics in the periphery of
 clusters \cite{2004rcfg.proc..335K} as well smooth giant radio halos
@@ -582,9 +586,10 @@ q=\frac{\eg}{\Gamma_\e\left(\ee-\eg\right)}\,.
 The full KN cross-section accounts for the less efficient energy
 transfer between the photon and electron and results in a steepening
 of the IC gamma-ray spectrum. In the low energy Thomson regime the IC
-spectrum is given by $E_\gamma^{-(\alpha_\e-1)/2}$, however when
+spectrum $F_\gamma\sim E_\gamma^{-(\alpha_\e-1)/2}$, however when
 $\Gamma_\e \gg 1$ the IC spectrum steepens due to the KN suppression
-to $\eg^{-\alpha_\e}\log(\eg)$ .
+to $\eg^{-\alpha_\e}\log(\eg)$. Here we denote the steady
+state electon spectrum by $\alpha_\e$.
 
 We account for two major contributions to the number density of
 radiative background fields $n_\ph$; the cosmic microwave background
@@ -731,9 +736,9 @@ and BCG.
   brightness profiles have been weighted with the $\rvir$ normalized
   area inside radius $r$, and trace the radial dependence of the
   luminosity from stars and galaxies. The crosses show the total
-  observed star light including the diffuse intracluster (ICL), the
+  observed starlight including the diffuse intracluster (ICL), the
   galaxies, and the brightest cluster galaxy (BCG) in the center of
-  the cluster. The diamonds denote the observed star light from the
+  the cluster. The diamonds denote the observed starlight from the
   ICL and the BCG. The solid line show the fit to the data of the
   total light including the ICL, the BCG, and the galaxies, while the
   smooth component is represented by the dashed line that is fitted to
@@ -771,7 +776,6 @@ e.g. \cite{2004A&A...413...17P} for details about the deprojection):
 \end{eqnarray}
 where $\mathcal{B}(a,b)$ denotes the beta-function
 \cite{1965hmfw.book.....A}.
-
 
 {\it Spectral distribution -- stars and dust} \\ Our goal in this
 section is to derive a simple spectral model for stars and dust in
@@ -866,7 +870,7 @@ L=1.05\times10^{45}\,\rmn{erg\,s}^{-1}\,
 where $\lx$ is the luminosity of the X-ray emitting gas within
 $\rvir$.
 
-The normalization constant for the star light [$N_\stars(\lx)$] is derived
+The normalization constant for the starlight $N_\stars(\lx)$ is derived
 in the following three steps: (1) We use the average apparent magnitude
 in the $(r+i)$-band $m_{(r+i),0.25}\approx 15.5$
 \cite{2005MNRAS.358..949Z} of a cluster with the average mass
@@ -902,7 +906,7 @@ galaxies to derive the normalization. Once the normalization is fixed,
 the SD energy densities are derived from the spatial distribution
 where galaxies have been excluded.
 
-The normalization constant for the dust [$N_\dust(\lx)$] is derived in the
+The normalization constant for the dust $N_\dust(\lx)$ is derived in the
 following four steps: (1) We use a cluster with the the average mass
 $\mvir=4.0\times10^{13}\msun$ and estimate the X-ray luminosity from
 the X-ray to mass scaling relations derived for the Representative
@@ -998,7 +1002,37 @@ allow for upscattering through CMB, starlight, and dust.}
 %energy of the maximum IR energy density $E_\IR=0.011\,\rmn{eV}$.
 
 \section{Spectral gamma-ray distribution}
+Spectrally resolved indirect DM searches have the advantage of probing
+different DM models through their characteristic spectral
+distributions. In this section we focus on the gamma-ray flux from
+clusters its spectral distribution. We use both a leptophilic model
+that give rise to substantial amounts of electrons and positrons that
+IC upscatter background radiation fields to high energies as well as a
+few supersymmetric DM models with a high gamma-ray yield in the form of
+continuum emission. In addition to the annihilating DM, we estimate
+the gamma-ray flux induced by shock accelerated CR protons.
 
+In Fig.~\ref{fig:diff_BM} we show the differential flux from the
+Fornax cluster which is one of the best clusters for inderect DM
+serches due to its relative high DM fluxes. We derive the flux from
+four different supersymmetric BM models and compare the flux to both
+the emission induced by CRs as well as to the differential gamma-ray
+upper limits set by Fermi-LAT after 18 months of observations
+\cite{2010ApJ...717L..71A}. The upper limits are not violated,
+although the predicted DM flux that is dominated by the continuum
+emission from $\Kp$ and $\Ip$ (shown in the left panels) are close to
+the upper limits and can potentially be probed by the Fermi 3 year
+data. Furthermore, the expected masking gamma-ray signal induced by
+CRs is about a factor 10 below the DM continuum flux from the $\Kp$
+and $\Ip$ BM models aound 10~GeV. It is also important to note that IC
+emission from upscattered CMB and SD photons is at least a factor 10
+lower than the expected flux from CRs above 100~MeV, making it very
+hard to distinguish such a signal from the foreground due to the
+similar spectral index. Below the pion bump, however, we expect the IC
+emission coming from shock accelerated electrons to be dominating
+\cite{2010MNRAS.409..449P}. Hence the IC emission from SUSY DM in
+clusters can for most applications safeley be neglected compared to
+the CRs and continuum emission.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1007,43 +1041,62 @@ allow for upscattering through CMB, starlight, and dust.}
 \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompK.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
 \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJs.v9.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
 \caption{\it Comparing the differential flux from different models: we
-  show the continuum emission from DM benchmark (BM) models
-  (blue), electrons and positrons from DM BM models that inverse
-  Compton upscattered both CMB photons (orange) as well as dust and
-  star photons (green), and CR induced gamma-ray emission (red
-  solid). The various linestyles are associated with individual DM BM
-  models; $\Imm$ (dotted), $\Km$ (dashed), and $\Jm$
-  (dash-dotted). The emission is calculated for the Fornax cluster
+  show the continuum emission from DM benchmark (BM) models (blue
+  dashed), electrons and positrons from DM BM models that inverse
+  Compton upscattere both CMB photons (orange dash-dotted) as well as
+  dust and star photons (green dotted), and CR induced gamma-ray
+  emission (red solid). Each panel is associated with an individual DM
+  BM model; upper left $\Ip$, lower left $\Kp$, upper right $\Jp$, and
+  lower right $\Js$. The emission is calculated for the Fornax cluster
   using a point spread function of $0.1\deg$ and a boost from
   substructures of ...  We find bright prospects for detecting the
   continuum emission that is dominating the total emission in the GeV
-  energy range. Also note that, above 100 MeV the total inverse
+  energy range. Also note that, above 100~MeV the total inverse
   Compton emission is at least a factor 10 smaller than the emission
   expected from both the continuum emission and the emission coming
   from CRs.}
- \label{fig7}
+ \label{fig:diff_BM}
 \end{minipage}
 \end{figure*}
+
+In Fig.~\ref{fig:IR_comp} we show the total IC emission as well as its
+individual contributions from different IC upscattered radiation
+fields. The left panel show the gamma-ray emission from the LP model
+and the right panel from the $\Kp$ BM model, for comparison we
+overplot the emission expected from the CRs. We find that the IC
+upscattered CMB pfortons for the LP model overproduce the upper
+gamma-ray limits set by Fermi. This puts tight constraints on the
+boost from substructures as well as the Sommerfeld enhancement. 
+
+.........
+Fermi can put tight limits on IC-CMB, much harder for IACTs to
+constrain the flux due to the relative small SD flux and the lack of
+substructures in the central cluster region
+
+PHYSICS
+100 MeV photons requre 30 GeV electrons, which are supressed from dust
+(dust require higher electron energies to upscatter photons to he same
+energy, these are KN supressed.), also discuss spectral index
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
 \includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.v9.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal.eps}
 \includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.BMv9.0.1deg.SubMass.noMW.woGal.eps}
-\caption{\it Comparing the differential flux from different inverse
-  Compton upscattered radiation fields in the Fornax cluster. We show
-  the inverse Compton emission induced by leptophilic DM in the left
-  panel and by the $\Km$ benchmark model in the right panel. The
-  contribution from each individual radiation field from top line to
-  bottom line; CMB (green dashed-double-dotted), dust (blue dashed),
-  stars (purple dashed-dotted). The sum of the three components are
-  shown with the orange solid line. The black dotted line represents
-  the upscattered CMB photons without any cooling from stars and
-  dust. The red solid line show the CR induced gamma-ray flux. The
-  black arrow show the differential upper limit from Fermi ADD
-  REF. All fluxes are calculated within $\rvir$ with a point spread
-  function of $0.1\deg$. The boost from Sommerfeld is ..., and from
-  substructures is .}
- \label{fig6}
+\caption{\it Comparing the flux from different inverse Compton
+  upscattered radiation fields. We show the differential inverse
+  Compton emission induced by leptophilic DM in the left panel and by
+  the $\Kp$ benchmark model in the right panel. The contribution from
+  each individual radiation field from top line to bottom line; CMB
+  (green dashed-double-dotted), dust (blue dashed), stars (purple
+  dashed-dotted). The sum of the three components are shown with the
+  orange solid line. The black dotted line represents the upscattered
+  CMB photons without any cooling from stars and dust. The red solid
+  line show the CR induced gamma-ray flux. The black arrow show the
+  differential upper limit from Fermi \cite{2010ApJ...717L..71A}. All
+  fluxes are calculated for the Fornax cluster within $\rvir$ using a
+  point spread function of $0.1\deg$. The boost from Sommerfeld is
+  ..., and from substructures is .}
+ \label{fig:IR_comp}
 \end{minipage}
 \end{figure*}
 
@@ -1051,7 +1104,7 @@ allow for upscattering through CMB, starlight, and dust.}
  \includegraphics[width=0.99\columnwidth]{figures/flux.int.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Comparing the energy integrated flux from different
   models: we show the emission from leptophilic (LP) models with green
-  lines, $\Km$ benchmark model (BM) with blue lines, and the CR
+  lines, $\Kp$ benchmark model (BM) with blue lines, and the CR
   induced emission with a red line. The dotted and dashed lines show
   the inverse Compton (IC) upscattered CMB photons and star and dust
   photons, respectively. The green solid line show the final state
@@ -1064,6 +1117,8 @@ allow for upscattering through CMB, starlight, and dust.}
   upscattered CMB photons overproduce the upper limit by a factor 3.}
  \label{fig8}
 \end{figure}
+Fornax is a great target for indirect DM studies because the relative
+ low flux from CRs and high flux from DM
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1079,9 +1134,9 @@ allow for upscattering through CMB, starlight, and dust.}
   Coma (upper right), Virgo (lower left), and Perseus (lower
   right). The different linestyles show; CR induced emission (solid),
   leptophilic models (LP) include both final state radiation and IC
-  upscattered CMB, dust and star light (dotted), and benchmark $\Km$
+  upscattered CMB, dust and starlight (dotted), and benchmark $\Kp$
   models (BM) include continuum emission, and IC upscattered CMB, dust
-  and star light (dashed). The arrows have colors matching each
+  and starlight (dashed). The arrows have colors matching each
   cluster and show the differential upper limits set by Fermi in the
   energy ranges $0.2-1$~GeV, $1-10$~GeV, and $10-100$~GeV from left to
   right. For visualization we offset the arrows by increasing the mean
@@ -1092,7 +1147,10 @@ allow for upscattering through CMB, starlight, and dust.}
  \label{fig9}
 \end{minipage}
 \end{figure*}
+Fornax is a great target for indirect DM studies because the relative
+ low flux from CRs and high flux from DM
 
+How are ul calculated, Fermy sees M87 (Virgo), NGC 1275 (Perseus), no improvment of the 5 GeV limit
 
 \section{Surface brightness profiles}
 
@@ -1104,6 +1162,9 @@ allow for upscattering through CMB, starlight, and dust.}
   function of $0.1\deg$.}
  \label{fig20}
 \end{figure}
+flat surface brightness profiles with substructures
+
+boost at small r due to projection from outer halo
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v9.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
@@ -1124,6 +1185,25 @@ allow for upscattering through CMB, starlight, and dust.}
   corresponding to a maximum SFE in the MW of about 10.}
  \label{fig10}
 \end{figure}
+ Fermi 3 year data will constrain the smallest mass of substructures
+ using the benchmark models
+
+How can we explain the difference between the clusters, 
+\begin{eqnarray}
+B_\rmn{LP}=B_\sfe B_\sub \propto M^{-1/3}M^{0.23} \propto M^{-0.1}\nonumber\\
+B_\rmn{BM}=B_\sub \propto M^{0.23}
+\end{eqnarray}
+
+\begin{eqnarray}
+L_\gamma \propto \int \dd V \rho(r)^2 \propto \frac{c^3}
+{\left[\log\left(1+c\right)-c/(1+c)\right]} \propto M^{0.83}\nonumber\\
+L_{\gamma,\rmn{sub tot}} \propto N\,L_{\gamma,\sub} \propto N\,M_\sub 
+ \propto M_\sub^{\left(A+1\right)}\,\frac{\dd N_\sub}{\dd M} \propto  M^{A-0.9}
+\end{eqnarray}
+Assuming that the concentration $c$ decrease for increasing mass as it
+does for the mass range $10^{12}-10^{14}\,\msun$ where
+$L_{\gamma,\sub} \propto N\,M_\sub^A$, where $A<1$.
+
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/SB.resolved.v9.1GeV.SF300.noSuB.vs.SubMass.elmu.eps}
@@ -1132,7 +1212,7 @@ allow for upscattering through CMB, starlight, and dust.}
   very small point spread function of $10^{-5}\deg$ that reveals the
   details of the spatial profiles. The emission induced by CRs is
   denoted by the red solid line, the leptophilic models by green
-  lines, and the DM $\Km$ benchmark model by blue lines. The dashed
+  lines, and the DM $\Kp$ benchmark model by blue lines. The dashed
   and dotted lines include and exclude substructures,
   respectively. Notice the nearly flat profiles when substructures are
   included, and the relative large boost at a percent of $\rvir$.}
@@ -1145,7 +1225,7 @@ allow for upscattering through CMB, starlight, and dust.}
   \includegraphics[width=0.49\columnwidth]{figures/SB.fornax.v9.1GeV.SF300.noSuB.elmu.eps}
 \caption{\it The surface brightness without substructures. We show the
   CR induced emission (red), leptophilic emission (green), and
-  emission from the $\Km$ benchmark model (blue). The surface
+  emission from the $\Kp$ benchmark model (blue). The surface
   brightness above 1~GeV is derived using a very small point spread
   function ($\theta_\rmn{psf}=10^{-5}\deg$). LEFT PANEL: compare the
   surface brightness for different clusters; Fornax (solid), Coma
@@ -1153,7 +1233,7 @@ allow for upscattering through CMB, starlight, and dust.}
   compare different emission components in Fornax; dotted lines show
   the inverse Compton (IC) upscattered CMB photons, dashed lines show
   the IC upscattered photons from stars and dust, and blue solid line
-  show the continuum emission from the $\Km$ benchmark
+  show the continuum emission from the $\Kp$ benchmark
   model. \del{Since cooling is dominated by IR and UV processes in the
     center, the spatial dependence of the equilibrium electron spectra
     cancels the spatial dependence on the upscattered IR photon,
@@ -1176,9 +1256,9 @@ allow for upscattering through CMB, starlight, and dust.}
   substructures and use a point spread function of $0.1\deg$. Left
   panel show the Fornax cluster and right panel the Virgo cluster. The
   emission is derived for the following components; CRs (red solid),
-  continuum emission from the DM $\Km$ benchmark model (blue
+  continuum emission from the DM $\Kp$ benchmark model (blue
   dash-dotted), as well as final state radiation (green dashed) and
-  inverse Compton upscattered dust and star light (green dotted) from
+  inverse Compton upscattered dust and starlight (green dotted) from
   leptophilic DM. \del{GeV energies give rise to small BM model fluxes
     but high LP fluxes, other words BM models good for Cerenkov
     telescopes and LP good for Fermi (although the flat LP spectra
@@ -1199,13 +1279,25 @@ Model predictions
     are shown with black arrows. The predicted fluxes are derived from
     both a leptophilic DM model that result in inverse Compton
     upscattered CMB photons (red), and the continuum emission from the
-    DM $\Km$ benchmark model (blue). The leptophilic fluxes are ruled
+    DM $\Kp$ benchmark model (blue). The leptophilic fluxes are ruled
     out by 14 of the clusters, with the strongest constraints set by
     Fornax and M49. We can not constrain the benchmark models,
     although our predictions are approaching the upper limits.}
  \label{fig14}
 \end{minipage}
 \end{figure*}
+ difficult to detect DM without a Sommerfeld boost with Cherenkov
+ telescopes since the boost from substructures is extended while the
+ sensitivity of Cherenkov telescopes drops linearly with radius
+ outside the point spread function (CHECK)
+
+we rule out the leptophilic models in present form in 14 clusters,
+ and limit the boost from Sommerfeld enhancement in the MW to less
+ than 10
+
+mention prime cluster candidates, LP under pressure, Fornax start
+being constraining, since only few clusters close to UL stacking will
+not increase the DM limits much
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1226,6 +1318,45 @@ Model predictions
  \label{fig15}
 \end{minipage}
 \end{figure*}
+
+the tightest limits on DM and CRs from Fermi are in the 1-10 GeV
+ regime, where Fornax, M49, and NGC4636 are the most constraining
+ "clusters" for the DM and Virgo, Coma and Norma are very close to the
+ predictions for the CRs
+
+using beta brofiles, discrapency with Norma cluster in Ackermann gone,
+Integrated flux similar
+
+AGN M87, effective area better in 1 GeV range
+
+
+CONCLUSIONS
+
+Some of the results (should discuss what we want to emphasize):
+--) the flux from annihilating DM is boosted by about a factor 1000 in
+ clusters
+--) flat surface brightness profiles with substructures
+--) Fornax is a great target for indirect DM studies because the relative
+ low flux from CRs and high flux from DM
+--) the IC upscattered photons from stars and dust are dominated in the
+ relevant energy regimes by the continuum emission for our DM
+ benchmark models
+--) Fermi 3 year data will constrain the smallest mass of substructures
+ using the benchmark models
+--) difficult to detect DM without a Sommerfeld boost with Cherenkov
+ telescopes since the boost from substructures is extended while the
+ sensitivity of Cherenkov telescopes drops linearly with radius
+ outside the point spread function (CHECK)
+--) we rule out the leptophilic models in present form in 14 clusters,
+ and limit the boost from Sommerfeld enhancement in the MW to less
+ than 10
+--) the tightest limits on DM and CRs from Fermi are in the 1-10 GeV
+ regime, where Fornax, M49, and NGC4636 are the most constraining
+ "clusters" for the DM and Virgo, Coma and Norma are very close to the
+ predictions for the CRs
+--) we provide a rather simple model to calculate the spatial and spectral
+ distribution of dust and stars in cluster (might be used for
+ galaxies? with different spatial profile)
 
 
 %------------------------------------------------------------------
@@ -1258,16 +1389,21 @@ We wish to thank...
   models. Crosses show the simulated data from DarkSUSY and the solid
   lines show the fit to the data using Eq.... LEFT PANEL: normalized
   differential continuum spectra for four different DM benchmark (BM)
-  models; $\Imm$ model (red), $\Jmm$ (orange), $\Km$ (green), and
-  $\Jm$ (blue). RIGHT PANEL: number of electron and positron per DM
+  models; $\Ip$ model (red), $\Jp$ (orange), $\Kp$ (green), and
+  $\Js$ (blue). RIGHT PANEL: number of electron and positron per DM
   annihilation above the electron energy $\ee$ for different dark
-  matter models; $\Imm$ BM model (red), $\Jmm$ BM model (orange),
-  $\Km$ BM model (green), and $\Jm$ BM model (blue), leptophilic (LP)
+  matter models; $\Ip$ BM model (red), $\Jp$ BM model (orange),
+  $\Kp$ BM model (green), and $\Js$ BM model (blue), leptophilic (LP)
   DM annihilating into electrons and positrons (purple), and LP DM
   annihilating into muons (black).}
  \label{fig17}
 \end{minipage}
 \end{figure*}
+Only LP models have energetic enough CRe such that IC emission
+powerfull to either constrain or be detected
+
+similar shape for BM continuum models
+
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/dens.fornax.eps}
@@ -1299,12 +1435,26 @@ We wish to thank...
   brightest clusters are written out. The lower panel show the
   relative difference between the gamma-ray flux predicted by
   mass-luminosity scaling relations compared to the flux computed
-  using the semi-analytically model CITE The name of the
-  clusters with the largest offset are printed out, which correlate
-  with cool core clusters.}
+  using the semi-analytically model \cite{2010MNRAS.409..449P}. The
+  name of the clusters with the largest offset are printed out, which
+  correlate with cool core clusters.}
  \label{fig19}
 \end{minipage}
 \end{figure*}
+if CC, then skewed torwards large X-ray fluxes; X-ray emission good
+proxies for gamam-ray emission --) The dust turns up at about a factor
+100 lower than the stars --) The other figure show the spectral shape
+of the IC-star with the same spectral shape as the dust, it shows the
+same gamma-ray slope as the dust --) The reason why there is only a
+factor 10 difference in the break in the gamma-ray emission between
+the star and dust is related to the KN. In our CR paper, the last
+figure shows that at $\eg=100\,\tev$, the spectra is suppressed with
+about a factor 10 (also depends on $\alpha_\e$). Since the dust
+photons have a factor 10 higher energy, I expect this suppression at
+about 10~TeV. For star photons the suppression should be at
+100~GeV. So the star photons are definitely KN suppressed, which
+explains the earlier break and the steeper slope.
+
 
 \begin{figure*}%[t]
 \begin{minipage}{2.0\columnwidth}
@@ -1312,7 +1462,7 @@ We wish to thank...
 \caption{\it Comparing the flux from clusters in the extended HIFLUGCS
   catalogue. We show the energy integrated gamma-ray fluxes derived
   from both leptophilic DM that result in inverse Compton upscattered
-  CMB photons (red), and the continuum emission from the DM $\Km$
+  CMB photons (red), and the continuum emission from the DM $\Kp$
   benchmark model (blue). The fluxes are calculated within $\rvir$
   for each of the 106 clusters included in the extended HIFLUGCS
   catalogue, and are derived using a single beta profile for each
@@ -1324,5 +1474,6 @@ We wish to thank...
  \label{fig21}
 \end{minipage}
 \end{figure*}
+
 
 \end{document}
