@@ -1,10 +1,10 @@
 \documentclass[10pt,aps,pra,reprint,amsmath,amsfonts,amssymb,showpacs]{revtex4-1}
 \usepackage{epsfig,psfrag,graphicx,bm,color}
 
-%\def\del#1{{}}
-\def\del#1{{\bf (DELETED TEXT)}}
-%\def\C#1{#1}
-\def\C#1{{\bf #1}}
+\def\del#1{{}}
+%\def\del#1{{\bf (DELETED TEXT)}}
+\def\C#1{#1}
+%\def\C#1{{\bf #1}}
 
 
 % --- journals --- %
@@ -208,7 +208,7 @@ For previous work related to dark matter in clusters, see, e.g.,
 {\bf Anders, insert your flux table for various clusters, and discuss it}
 
 This yields Fornax ($\mvir=10^{14}\,\msun$) and Virgo
-($\mvir=2.1\times10^{14}\,\msun$) \cite{} as the prime targets for DM
+($\mvir=2.1\times10^{14}\,\msun$) \del{\cite{}} as the prime targets for DM
 observations, Perseus ($\mvir=7.7\times10^{14}\,\msun$) for CR induced
 emission and we additionally decide in favor of the well studied
 cluster Coma ($\mvir=1.4\times10^{15}\,\msun$) for comparison.
@@ -1578,35 +1578,142 @@ AGN M87, effective area better in 1 GeV range
 %
 %-) also, plot BM flux vs. psf, for models w/ and w/o substructures
 
+\clearpage 
 
 \section{Conclusions}
 
+In this paper, we study the possibility for detecting $\gamma$-ray emission in
+galaxy clusters. We consider benchmark and leptophilic models of supersymmetric
+dark matter as well as cosmic ray induced pion decay which is thought to
+dominate the astrophysical signal from clusters. Once supersymmetric cold dark
+matter decouples from the expanding universe it streams freely and smooths over
+any potentially present smaller scales. This imprints as a characteristic
+minimum halo mass $M_\mathrm{min}$ into the hierarchy of structure formation and
+should still survive until the present time as substructure within larger
+halos. It turns out that the boost due to substructures dominates over the
+smooth component for halo masses $M>10^3 \msun$ and contributes a constant
+luminosity for each decade in halo mass. The ratio of halo-to-minimum subhalo
+mass $M_{200}/M_\mathrm{min}$ is maximized for the largest systems that had time
+to collapse and virialize since the Big Bang -- galaxy clusters. The
+corresponding substructure boost can reach values exceeding $10^3$ which should
+make nearby clusters the brightest DM annihilation sources after the Milky May
+center and hypothetical very close-by DM substructures. Since the substructures
+are distributed according to an Einasto profile, the contribution to the
+annihilation emission from substructures peaks around the virial radius. This
+implies an almost flat surface brightness profile of the annihilation emission
+which makes it necessary to have the entire cluster in the field-of-view to take
+advantage of the entire substructure boost.  This property makes it difficult to
+detect DM annihilation emission without an enhancement of the particle physics
+cross section over its standard value of $\sigma v\sim 3\times 10^{-26}
+~\mathrm{cm}^3~\mathrm{s}^{-1}$ with imaging air Cherenkov telescopes due to the
+spatially extended boost from substructures of angular extend $\sim
+0.5-1\deg$. In contrast, the sensitivity of Cherenkov telescopes drops linearly
+with radius outside the point spread function $\sim0.1\deg$.
+
+We identify Fornax to be the best cluster/group candidate for indirect DM
+studies as it is expected to emit the brightest annihilation flux and more
+importantly, has a comparably low CR induced $\gamma$-ray flux.  This in
+principle should allow to detect or constrain some benchmark models that have
+been chosen for the large $\gamma$-ray flux yield with three-year Fermi data
+(or constrain the substructure boost factor). Other nearby bright sources of the
+extended HIFLUCGS sample of nearby bright X-ray cluster/groups are M49,
+Centaurus, and NGC~4636.  The non-detection of $\gamma$-ray emission by Fermi in
+a total of 14 clusters/groups (the mentioned clusters as well as Virgo, Coma,
+Hydra, and Norma among others) considerably constrains leptophilic models for DM
+annihilation which were introduced to explain the increasing positron-to-lepton
+ratio beyond 10 GeV. Assuming that the minimum DM substructure mass extends down
+to an Earth mass, we can rule out these leptophilic models based on the
+non-observation of $\gamma$-rays in any of the fore-mentioned
+clusters/groups. Alternatively, assuming the leptophilic models to be correct,
+we limit the minimum substructure mass to $4~\msun$ in Fornax. Assuming
+universality of the DM model, this corresponds to a minimum substructure mass of
+$10~\msun$ in the Milky Way due to the larger Sommerfeld boost factor in smaller
+mass halos which have a lower circular velocity which enhances the particle
+cross section.
+
+In this work, we thoroughly study the spectral emission characteristics of the
+DM emission. In general there are different radiation mechanism that emit in the
+$\gamma$-ray regime, namely (i) continuum emission following the hadronization
+of the annihilating neutralinos in benchmark models which leads to the
+production of charged and neutral mesons which decay finally into electrons,
+neutrinos, and gammas, and (ii) inverse Compton (IC) emission by the leptons in
+the final state which up-scatter radiation fields from the cosmic microwave
+background, dust, and starlight, and (iii) final state radiation or internal
+bremsstrahlung which dominates the highest energy emission close to the rest
+mass of the self-annihilating neutralinos (if present in the model under
+consideration). We construct a rather simple semi-analytic model for the spatial
+and spectral distribution of dust and starlight in clusters which can be used
+for the annihilation emission in galaxies with a different spatial profile.  We
+find that in benchmark models, the continuum emission dominates over the IC
+emission of any available radiation field. In the leptophilic models, where the
+continuum emission is absent, the IC up-scattering of the CMB dominate below 30
+GeV. For energies $30~\mathrm{GeV} \lesssim E_\gamma \lesssim 300~\mathrm{GeV}$,
+the IC up-scattering of the dust emission dominates and is followed by the final
+state radiation for energies up to $m_\chi c^2 \sim 1$~TeV. The IC emission of
+starlight remains always subdominant. We stress, that the inclusion of the dust
+and starlight radiation fields are important in the cooling function for the
+leptons and a failure to do so biases the inferred CMB IC flux high by a factor
+of two.
+
+We substantially improve the modelling of the expected $\gamma$-ray signal from
+pion-decay resulting from hadronic CR interactions with gas protons. We employ
+the semi-analytic model of the CR spectrum and spatial distribution, recently
+developed by \citet{2010MNRAS.409..449P} that is based on cosmological
+hydrodynamical simulations that self-consistently follow the evolution of CRs in
+cosmic structure formation. Adopting the model for all clusters in the HIFLUGCS
+sample of flux-limited X-ray clusters, we compare the expected $\gamma$-ray
+emission to that inferred from using $L_\gamma$-cluster mass scaling
+relation. We note that the predictions of our ``optimistic'' model are perfectly
+in agreement with Fermi upper limits for all clusters.  The hint of a tension
+that the scaling relation modeling showed for Norma \citep{2010ApJ...717L..71A}
+could not be confirmed due to the apparently lower gas density of this cluster
+relative to the average.  As expected, the semi-analytic model adds ``scatter''
+to the scaling relation and biases the $\gamma$-ray flux high for prominent cool
+core clusters by up to a factor of 3.5 relative to the expectation from the
+scaling relation. This is due to the high target gas densities and associated CR
+densities in those cool cores that shape the spatial emission characteristic to
+be very similar to that observed in thermal X-rays. We caution that these
+predictions only apply for the case of negligible CR transport such as streaming
+and diffusion relative to the gas and might be considerably modified in those
+cluster that do not show an extended diffuse radio(-mini) halo that might point
+to a centrally concentrated CR distribution \citep{2011A&A...527A..99E}. The CR
+spectrum $E^2 dN/dE$ shows the characteristic pion bump at energies around
+1~GeV. It is expected to dominate the DM annihilation signal in the benchmark
+models for all clusters/groups but Fornax. We conclude that it will be possible
+to rule out the leptophilic model with eight-years of Fermi data and start to
+constrain some benchmark DM models. Hence this should nicely complement direct
+and accelerator searches for the nature of dark matter.
+
+
+
+
+\del{
 Some of the results (should discuss what we want to emphasize):
---) the flux from annihilating DM is boosted by about a factor 1000 in
+O) the flux from annihilating DM is boosted by about a factor 1000 in
  clusters
---) flat surface brightness profiles with substructures
---) Fornax is a great target for indirect DM studies because the relative
+O) flat surface brightness profiles with substructures
+O) Fornax is a great target for indirect DM studies because the relative
  low flux from CRps and high flux from DM
---) the IC upscattered photons from stars and dust are dominated in the
+O) the IC upscattered photons from stars and dust are dominated in the
  relevant energy regimes by the continuum emission for our DM
  benchmark models
---) Fermi 3 year data will constrain the smallest mass of substructures
+O) Fermi 3 year data will constrain the smallest mass of substructures
  using the benchmark models
---) difficult to detect DM without a Sommerfeld boost with Cherenkov
+O) difficult to detect DM without a Sommerfeld boost with Cherenkov
  telescopes since the boost from substructures is extended while the
  sensitivity of Cherenkov telescopes drops linearly with radius
  outside the point spread function (CHECK)
---) we rule out the leptophilic models in present form in 14 clusters,
+O) we rule out the leptophilic models in present form in 14 clusters,
  and limit the boost from Sommerfeld enhancement in the MW to less
  than 10
 --) the tightest limits on DM and CRps from Fermi are in the 1-10 GeV
  regime, where Fornax, M49, and NGC4636 are the most constraining
  "clusters" for the DM and Virgo, Coma and Norma are very close to the
  predictions for the CRps
---) we provide a rather simple model to calculate the spatial and spectral
+O) we provide a rather simple model to calculate the spatial and spectral
  distribution of dust and stars in cluster (might be used for
  galaxies? with different spatial profile)
-
+}
 
 %------------------------------------------------------------------
 
