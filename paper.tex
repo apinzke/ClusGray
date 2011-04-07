@@ -1491,8 +1491,10 @@ L_{\gamma,\rmn{sm}} \propto \int \dd V \rho(r)^2 \propto \frac{c^3}
 and the total DM luminosity including boost factors for the LP and
 the BM models are given by
 \begin{eqnarray}
+\label{eq:LP_scaling}
 L_{\gamma,\rmn{LP}} &=& L_{\gamma,\rmn{smLP}} \B_\rmn{LP} \propto \mvir^{0.73}\qquad
 \,\,\,\,\,\,\rmn{and}\\
+\label{eq:BM_scaling}
 L_{\gamma,\rmn{BM}} &=& L_{\gamma,\rmn{smBM}} \B_\rmn{BM} \propto  \mvir^{1.06}\,,\qquad
 \rmn{where} \\
 B_\rmn{LP}&=&B_\sfe B_\sub \propto \mvir^{-1/3}\mvir^{0.23} \propto
@@ -1791,63 +1793,115 @@ for more details).
 
 
 \section{Predictions and observational limits}
-Model predictions
 
-\begin{figure}
-  \includegraphics[width=0.99\columnwidth]{figures/MLscaling.eps}
-  \caption{\it Lum-scaling relations, mass dependence of SD cooling
-    have been neglected, actually a factor few difference for
-    groups. factor 2 for Fornax, and small difference for large
-    clusters}
- \label{fig:lum_mass_scaling}
-\end{figure}
+In this section, we compute the expected $\gamma$-ray fluxes from DM
+annihilation and CR interactions of the brightest clusters of the X-ray flux
+complete sample in the local universe. We confront these predictions to upper
+limits obtained by Fermi 1.5-year data and conclude on the viability of the
+underlying models and perspectives for the next years of Fermi observations.
+
+\begin{figure*}
+  \includegraphics[width=0.99\columnwidth]{figures/MLscaling.100M.eps}
+  \includegraphics[width=0.99\columnwidth]{figures/MLscaling.10G.eps}
+  \caption{\it Scaling relations of the cluster's virial mass $M_{200}$ and the
+    $\gamma$-ray luminosity for energies $E_\gamma>100$~MeV (left) and
+    $E_\gamma>10$~GeV (right).  Shown are the relations for the CR-induced
+    emission that is dominated by pion decay resulting from hadronic CR
+    interactions (solid), the leptophilic model of DM annihilations that
+    includes the scaling of the substructure and Sommerfeld boost factors with
+    custer mass from Equation~(\ref{eq:LP_scaling}) (dash-dotted) as well as the
+    benchmark model $K'$ of DM annihilation that includes the scaling of the
+    substructure boost with cluster mass of Equation~(\ref{eq:BM_scaling})
+    (dashed). Note that the scaling of this particular benchmark model is
+    indicative for all (non-Sommerfeld enhanced) DM annihilation models while
+    the normalization depends on the particular cross-section and neyralino
+    masses.}
+\label{fig:lum_mass_scaling}
+\end{figure*}
+
+First we focus on $\gamma$-ray flux-cluster mass scaling relations for DM
+annihilation and CR induced emission in Fig.~\ref{fig:lum_mass_scaling}.  The
+mass scaling of the substructure boost steepens the intrinsically shallower DM
+annihilation relation of benchmark models (Equation~(\ref{eq:BM_scaling})) while
+this steepening is in fact over-compensated by the inverse mass scaling of the
+Sommerfeld boost in leptophilic models that prefers smaller halos with a larger
+ratio of $c/v_\mathrm{circ}$ (Equation~(\ref{eq:LP_scaling})). In contrast, the
+CR scaling relation is considerably steeper as shown by reference
+\cite{2010MNRAS.409..449P}. [ANDERS: add CR scaling formula] This implies
+already a general strategy to minimize the CR-induced foreground for DM
+annihilation and argues for very nearby groups. We note that these simulations
+do not include AGn feedback that is thought to furthermore reduce the baryon
+fraction in groups relative to that in clusters \cite{2008ApJ...687L..53P}. The
+resulting smaller target density for hadronic CR interactions will furthermore
+steepen the $L_\gamma-M$ relation of CR induced emission, making the case for
+groups even stronger.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
   \includegraphics[width=0.99\columnwidth]{figures/Fermi.comp.DM.eps}
-  \caption{\it Fermi flux upper limits contrasted to the predicted DM
-    gamma-ray flux. We show the mean differential flux in the energy
-    range $E_\gamma=1-10$~GeV for 32 clusters. The Fermi-LAT upper
-    limits are shown with black arrows. The predicted fluxes are
-    derived from both a leptophilic DM model that result in inverse
-    Compton upscattered CMB photons (red), and the continuum emission
-    from the DM $\Kp$ benchmark model (blue). The leptophilic fluxes
-    are ruled out by 14 of the clusters, with the strongest
-    constraints set by Fornax and M49. We can not constrain the
-    benchmark models, although our predictions are approaching the
-    upper limits.}
+  \caption{\it Fermi flux upper limits are contrasted to the predicted DM
+    gamma-ray flux. We show the mean differential flux in the energy range
+    $E_\gamma=1-10$~GeV for 32 clusters. The Fermi-LAT upper limits are shown
+    with black arrows. The predicted fluxes are derived from the dominant
+    inverse Compton-scattering of CMB photons in a leptophilic DM model (red),
+    and the continuum emission from the DM $\Kp$ benchmark model
+    (blue). Assuming a boost factor due to substructures that has a mass
+    spectrum extending down to Earth masses, the expected leptophilic fluxes are
+    ruled out by lower upper limits in 14 of the clusters, with the strongest
+    constraints set by Fornax and M49. We can not yet constrain the benchmark
+    models, although our predictions are approaching the upper limits and will
+    allow to test these in the upcoming years with better data.}
  \label{fig14}
 \end{minipage}
 \end{figure*}
- difficult to detect DM without a Sommerfeld boost with Cherenkov
- telescopes since the boost from substructures is extended while the
- sensitivity of Cherenkov telescopes drops linearly with radius
- outside the point spread function (CHECK)
 
-we rule out the leptophilic models in present form in 14 clusters,
- and limit the boost from Sommerfeld enhancement in the MW to less
- than 10
-
-mention prime cluster candidates, LP under pressure, Fornax start
-being constraining, since only few clusters close to UL stacking will
-not increase the DM limits much
+Figure~\ref{fig14} compares Fermi upper limits on the $\gamma$-ray flux with
+predictions of DM annihilation fluxes in the leptophilic and benchmark models.
+To obtain the $\gamma$-ray fluxes, we scale the virial mass of clusters in the
+extended HIFLUGCS catalogue \cite{2002ApJ...567..716R} with our scaling
+relations of Equations~(\ref{eq:BM_scaling}) and (\ref{eq:LP_scaling}).  We
+assume a boost factor due to substructures that has a constant contribution per
+decade in substructure mass and has a mass spectrum extending down to Earth
+masses. Fermi limits rule out the leptophilic models in their present form with
+the mentioned assumptions in 14 clusters, and limit the boost from Sommerfeld
+enhancement to less than 4 [?] in Fornax. Assuming universality, this limits the
+Sommerfeld boost in the MW to less than 10 (see Fig.~\ref{fig:boost_const}).
+The flux level of the Fermi limits are an indirect measure of the ambient
+background flux in the $\gamma$-ray sky and/or the presence of strong point
+sources such as AGN in the immediate vicinity of the cluster position. Hence, the ratio of
+the Fermi upper limits to the predicted annihilation fluxes,
+$F_{\mathrm{UL}}/F_{\mathrm{scal}}$, is a good indication of the best cluster
+candidates for indirect DM experiments. We identify Fornax, M49, NGC4636, and
+Virgo to be prime candidates. Note however, that Virgo extends of $7\deg$ over
+the sky which implies a lower surface brightness and lower signal-to-noise.
+Fermi limits on individual clusters are expected to improve as $\sqrt{T/1.5
+  \mathrm{yr}}$, where $T$ is the total elapsed time of the Fermi mission. We
+emphasize that the very inhomogeneous distribution of $F_{\mathrm{UL}}/
+F_{\mathrm{scal}}$ makes it unlikely to dramatically improve the limits through
+a stacking analysis as the weak signal will dilute the average constraints.
+Assuming the projected sensitivity of the future Cherenkov telescope array (CTA)
+of [ANDERS: value?], we note that it will be difficult to detect the DM
+annihilation signal from clusters without a Sommerfeld boost by Cherenkov
+telescopes. This is because the boost from substructures is extended while the
+sensitivity of Cherenkov telescopes drops linearly with radius outside the point
+spread function.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
   \includegraphics[width=0.99\columnwidth]{figures/Fermi.comp.CR.diff.eps}
-  \caption{\it Fermi-LAT flux upper limits contrasted to the
-    predictions by the semi-analytic Pinzke and Pfrommer model for CRp
-    induced gamma-ray emission. We show the mean differential flux in
-    the energy range $E_\gamma=1-10$~GeV for 32 clusters. The Fermi
-    upper limits are shown with black arrows. The blue boxes show the
-    gamma-ray emission from CRp induced $\pi^0$\:s decaying, where the
-    upper bound shows the estimates for an optimistic model and the
-    lower bound a more conservative model excluding point sources (the
-    realistic case is more likely in between, see
-    \cite{2010MNRAS.409..449P} for details). Note that there is
-    currently no tension between our predictions and upper limits from
-    Fermi, although Virgo, Norma, and Coma are close and will in the
-    coming years enforce constraints on the hadronic models.}
+  \caption{\it Fermi-LAT flux upper limits are contrasted to the predictions by
+    the semi-analytic Pinzke and Pfrommer model for CRp induced gamma-ray
+    emission. We show the mean differential flux in the energy range
+    $E_\gamma=1-10$~GeV for 32 clusters. The Fermi upper limits are shown with
+    black arrows. The blue boxes show the gamma-ray emission from CRp induced
+    $\pi^0$-decay, where the upper bound shows the estimates for an optimistic
+    model and the lower bound a more conservative model excluding point sources
+    (note that both models assume the maximally allowed acceleration efficiency
+    for strong shocks and most likely will have to be corrected down, see
+    \cite{2010MNRAS.409..449P} for details). Note that there is currently no
+    tension between our predictions and upper limits from Fermi, although Virgo,
+    Norma, and Coma are coming close and will enforce constraints on the
+    hadronic models in the coming years.}
  \label{fig15}
 \end{minipage}
 \end{figure*}
@@ -1861,6 +1915,42 @@ using beta profiles, discrepancy with Norma cluster in Ackermann gone,
 Integrated flux similar
 
 AGN M87, effective area better in 1 GeV range
+
+\begin{figure*}%[t]
+\begin{minipage}{2.0\columnwidth}
+ \includegraphics[width=0.99\columnwidth]{figures/Flux.comp.CR.eps}
+ \caption{\it Comparison of the gamma-ray flux induced by CRps for the 106
+   clusters included in the extended HIFLUGCS catalogue. The fluxes are
+   calculated within $\rvir$, and are derived using a single beta profile for
+   each cluster's gas density profile as obtained by ROSAT X-ray
+   observations. The CR distribution follows the semi-analytically model derived
+   by hydrodynamical cosmological cluster simulations \cite{2010MNRAS.409..449P}
+   (see text for details). The upper panel shows the energy integrated flux
+   above 100~MeV (left side) and above 100~GeV (right side), both as a function
+   of HIFLUGCS cluster ID. The eight brightest clusters are labelled. The lower
+   panel shows the relative difference between the gamma-ray flux predicted by
+   the mass-luminosity scaling relation and to the flux computed using the
+   semi-analytical model \cite{2010MNRAS.409..449P}. The name of the clusters
+   with the largest offset are printed out, which correlate with cool core
+   clusters.}
+ \label{fig19}
+\end{minipage}
+\end{figure*}
+ best clusters, stacking unlikely to improve
+
+if CC, then skewed towards large X-ray fluxes; X-ray emission good
+proxies for gamma-ray emission --) The dust turns up at about a factor
+100 lower than the stars --) The other figure show the spectral shape
+of the IC-star with the same spectral shape as the dust, it shows the
+same gamma-ray slope as the dust --) The reason why there is only a
+factor 10 difference in the break in the gamma-ray emission between
+the star and dust is related to the KN. In our CRp paper, the last
+figure shows that at $\eg=100\,\tev$, the spectra is suppressed with
+about a factor 10 (also depends on $\alpha_\e$). Since the dust
+photons have a factor 10 higher energy, I expect this suppression at
+about 10~TeV. For star photons the suppression should be at
+100~GeV. So the star photons are definitely KN suppressed, which
+explains the earlier break and the steeper slope.
 
 
 
@@ -2070,39 +2160,6 @@ similar shape for BM continuum models
 \end{figure}
 
 
-\begin{figure*}%[t]
-\begin{minipage}{2.0\columnwidth}
- \includegraphics[width=0.99\columnwidth]{figures/Flux.comp.CR.eps}
-\caption{\it Comparing the flux from clusters in the extended HIFLUGCS
-  catalogue. We show the energy integrated gamma-ray flux induced by
-  CRps for the 106 clusters included in the extended HIFLUGCS
-  catalogue. The fluxes are calculated within $\rvir$, and are derived
-  using a single beta profile for each cluster's gas density profile
-  (see text for details). The upper panel show the energy integrated
-  flux above 100~MeV (left side) and above 100~GeV (right side), both
-  as a function of HIFLUGCS cluster ID. The name of the eight
-  brightest clusters are written out. The lower panel show the
-  relative difference between the gamma-ray flux predicted by
-  mass-luminosity scaling relations compared to the flux computed
-  using the semi-analytically model \cite{2010MNRAS.409..449P}. The
-  name of the clusters with the largest offset are printed out, which
-  correlate with cool core clusters.}
- \label{fig19}
-\end{minipage}
-\end{figure*}
-if CC, then skewed towards large X-ray fluxes; X-ray emission good
-proxies for gamma-ray emission --) The dust turns up at about a factor
-100 lower than the stars --) The other figure show the spectral shape
-of the IC-star with the same spectral shape as the dust, it shows the
-same gamma-ray slope as the dust --) The reason why there is only a
-factor 10 difference in the break in the gamma-ray emission between
-the star and dust is related to the KN. In our CRp paper, the last
-figure shows that at $\eg=100\,\tev$, the spectra is suppressed with
-about a factor 10 (also depends on $\alpha_\e$). Since the dust
-photons have a factor 10 higher energy, I expect this suppression at
-about 10~TeV. For star photons the suppression should be at
-100~GeV. So the star photons are definitely KN suppressed, which
-explains the earlier break and the steeper slope.
 
 
 \begin{figure*}%[t]

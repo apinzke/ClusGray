@@ -9,7 +9,7 @@ default: paper.ps
 
 %.ps :  $(FIGURES) %.tex
 	$(LATEX) $*.tex
-	TEXINPUTS=:.// BSTINPUTS=:.// bibtex $*
+#	TEXINPUTS=:.// BSTINPUTS=:.// bibtex $*
 	cat $*.bbl | sed 's/, \\&/, /' > tmp.bbl
 	mv tmp.bbl $*.bbl
 	$(LATEX) $*.tex
