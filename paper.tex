@@ -989,35 +989,6 @@ the Rosat all-sky survey. Note that we have added the Virgo cluster to
 the sample that we nevertheless refer to as extended HIFLUGCS
 catalogue in the following.
 
-{\it Spatial distribution -- stars and dust}\\ Our goal in this
-section is to derive a simple spatial model for the distribution of SD
-in galaxy clusters. For this reason we use stacked cluster
-observations by Sloan in the $r$-band that trace the stars. We assume
-that the dust trace the stars in the clusters, which should be
-accurate to the order of magnitude estimate that we are interested in
-here. The stacked surface brightness profiles in
-\cite{2005MNRAS.358..949Z} are measured at redshift $z \sim 0.25$ with
-an average mass of the clusters of $4.0\times10^{13}\,\msun$. The
-profiles are build up out of three components; diffuse intracluster
-light (ICL), galaxies, and the brightest cluster galaxy (BCG) in the
-center of clusters. However, the total volume overlap of the ISM to
-the cluster is very small compared to the ICL- and BCG overlap with
-the cluster, thus the relative contribution of the galaxies to the IC
-emission is suppressed. To remove this bias we cut out the galaxies
-that have been smoothed over the cluster in the stacked analysis. In
-Fig.~\ref{fig:SD_spatial} we show the SDSS stacked brightness profiles
-as well as the fitted profiles\footnote{The measured brightness is
-  converted into units of $\rmn{erg}\,\rmn{s}^{-1}$ using
-  \cite{2010...book} $S(\rmn{mag}\,''^{-2}) =
-  \mathcal{M}_\odot+21.572-2.5\rmn{log}_{10}S(L_\odot\,\rmn{pc}^{-2})$,
-  where the sun's absolute magnitude in the $r$-band is given by
-  $\mathcal{M}_\odot=27.1$ \cite{2000asqu.book..339L} and the
-  luminosity of the sun by $L_\odot=3.85\,10^{33}
-  \rmn{erg}\,\rmn{s}^{-1}$.}, both scaled with the unitless $\rvir$
-normalized area to resembele the expected luminosity at radius
-$r$. Our benchmark spatial model is shown with the solid black line,
-and include the contribution from the ICL and BCG.
-
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/SB.photon.eps}
 \caption{\it Spatial dependence of light from stars and dust. We show
@@ -1036,56 +1007,6 @@ and include the contribution from the ICL and BCG.
   only the ICL and the BCG.}
  \label{fig:SD_spatial}
 \end{figure}
-
-Instead of modelling the surface brightness with a de Vaucouleur
-profile with the addition of a power-law, we use a double beta profile
-model for simplicity of deprojection given by:
-\begin{equation}
-S_\sd (r_\bot)= \sum_{i=1}^2 \,S_i\, 
-\left[1 + \left( \frac{r_\bot}{r_{\mathrm{c}_i}}\right)^2\right]
-^{-3\beta_i + 1/2}\,,
-\label{double_beta}
-\end{equation}
-where we found the following best fitted central brightness ($S_i$),
-core radius ($r_{\mathrm{c}_i}$), and slope ($\beta_i$):
-\begin{eqnarray}
- S_1&=&1.4\times10^{-5}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
-r_{\mathrm{c}_1}=210\,\rmn{kpc},\,
-\beta_1=0.44\nonumber\\
- S_2&=&6.0\times10^{-3}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
-r_{\mathrm{c}_2}=2.8\,\rmn{kpc},\,
-\beta_2=0.45\,.\nonumber\\
-\label{fit_spatial_IR}
-\end{eqnarray}
-The 3D spatial profile is derived by deprojecting the surface
-brightness in Eq.~(\ref{double_beta}) (see
-e.g. \cite{2004A&A...413...17P} for details about the deprojection):
-\begin{eqnarray}
-  j(r)  = \sum_{i=1}^2 \frac{S_i}{2\pi\,r_{\mathrm{c}_i}}\,
-  \frac{6 \beta_i - 1}{\left(1 + r^2/r^2_{\mathrm{c}_i}\right)^{3\beta_i}}\,
-  \mathcal{B}\left(\frac{1}{2},3\beta_i\right)\,,
-\end{eqnarray}
-where $\mathcal{B}(a,b)$ denotes the beta-function
-\cite{1965hmfw.book.....A}.
-
-{\it Spectral distribution -- stars and dust} \\ Our goal in this
-section is to derive a simple spectral model for SD in galaxy
-clusters. Since the radiation from galaxies are expected to leak out
-into the ICM, we expect similar spectral distributions, at least to
-the order of magnitude that we are interested in here. Hence, we use
-the IR to UV spectrum derived in \cite{2006ApJ...648L..29P} for a MW
-type galaxy to characterize the spectral distribution of light from SD
-in a cluster. Note, however, that we only keep the spectral shape, and
-renormalize the spectral distribution using the luminosity from SD.
-
-In Fig.~\ref{fig:SD_spectra} we show the spectral distribution of the
-light from SD together with the CMB black-body distribution in a
-galaxy cluster, both at the radius $r=0.071\rvir$ where the energy
-density of the smooth light from SD (see Fig.~\ref{fig:SD_Edens})
-equals the energy density of the CMB. We have renormalized both the
-spectral data and the fitted spectra using the luminosity from stars
-and dust individually (see the normalization section below for further
-details).
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/fit.porter.v2.eps}
 \caption{\it Spectral dependence of radiation fields in a cluster of
@@ -1104,161 +1025,6 @@ details).
   spectral model.}
  \label{fig:SD_spectra}
 \end{figure}
-We choose to fit the spectrum of the dust that peaks at about
-$10^{-2}\,\ev$ with a double power-law, and the slightly wider
-spectral distribution of the stars that peaks at about $1\,\ev$ with a
-tipple power-law. We find the best fit spectra for the SD in a
-cluster through:
-\begin{eqnarray}
-  \eph^2\frac{\dd^2 N_\ph}{\dd \eph \dd V}
-  &\equiv& u_\sd(\eph) =  \sum_i N_i(\lx) u_i^\gal(\eph)\,,\nonumber \\ 
-\rmn{where}\quad i&=&\{\rmn{stars,dust}\} \qquad \rmn{and}\\ 
-% &=&  N_\dust(\lx) u_\dust^\gal(\eph) + N_\stars(\lx) u_\stars^\gal(\eph)  \nonumber \\ 
-%  \\
-  u_\stars^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
-  \left(\frac{1.23\,\rmn{eV}}{\eph}\right)^{1.9} \nonumber \\
-  &\times&\left[1+\left(\frac{2.04\,\rmn{eV}}{\eph}\right)^{20}\right]
-  ^{-\frac{1.9}{20}}\nonumber \\
-  &\times& \left[1+\left(\frac{0.78\,\rmn{eV}}{\eph}\right)^{20}\right]^{-\frac{2.6}{20}}\,, \\
-  u_\dust^\gal(\eph) &=& 
-  \frac{40\,\rmn{eV}}{\rmn{cm}^3} 
-  \left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{4.9}\nonumber \\
-  &\times& \left[1+\left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{1.9}\right]^{-4.9}\,.
-\end{eqnarray}
-
-
-{\it Normalization}\\ The spatial and spectral distribution functions
-of the light from SD in a cluster are both normalized with a constant
-determined from the luminosity in each respective wavelength. The
-specific energy density is given by
-\begin{eqnarray} 
-u_\sd(\eph, r) &=& \frac{j(r)}{j(0)}\,u_\sd(\eph) \nonumber\\
-&=& \frac{j(r)}{j(0)}\,\sum_i N_i(\lx) u_i^\gal(\eph)\,,
-\end{eqnarray}
-where we fix the unitless normalization $N_i(\lx)$ using the total
-energy of the light in SD  within $\rvir$:
-\begin{eqnarray} 
-  E_{i,\vir} &=& L_i \frac{\rvir}{c} \nonumber \\
-  &=&N_i(\lx)\int_{\rvir} \int_i \,\frac{j(r)}{j(0)} 
-  \frac{u_i^\gal(\eph)}{\eph}\,\dd V\dd \eph\,,\nonumber \\
- \rmn{for}\quad i&=&\{\rmn{stars,dust}\}\,.
-\label{eq:E_SD}
-\end{eqnarray}
-Here we approximate the total energy of the photons within $\rvir$
-($E_{i,\vir}$) with the luminosity $L_i$ \cite{2008A&A...490..547G}
-times the typical timescale it takes for a photon to propagate through
-the cluster (we assume that the cluster is optically thin). Once we
-derived the SD luminosities for a well representative cluster, we use
-a IR to X-ray scaling relation to estimate the luminosity from an
-arbitrary cluster:
-\begin{equation}
-L_\ir=1.05\times10^{45}\,\rmn{erg\,s}^{-1}\,
-\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,,
-\label{eq:SD-X}
-\end{equation}
-where $\lx$ is the luminosity of the X-ray emitting gas within
-$\rvir$.
-
-The normalization constant for the starlight $N_\stars(\lx)$ is derived
-in the following three steps: (1) We use the average apparent magnitude
-in the $(r+i)$-band $m_{(r+i),0.25}\approx 15.5$
-\cite{2005MNRAS.358..949Z} of a cluster with the average mass
-$\mvir=4.0\times10^{13}\msun$ at a redshift $z=0.25$ to derive the
-luminosity from the stars:
-\begin{equation}
-L_\stars=10^{\frac{m_\odot-m_{(r+i),0.25}}{2.5}}
-\left(\frac{D_\clu}{D_\odot}\right)^2 L_\odot
-\approx 7.1\times10^{44}\,\rmn{erg}\,\rmn{s}^{-1}\,,
-\label{eq:L_star}
-\end{equation}
-where the apparent magnitude of the sun $m_\odot\approx -27.1$, the
-distance to the sun $D_\odot=4.85\times10^{-6}\,\rmn{pc}$, the
-luminosity of the sun $L_\odot=3.85\times10^{34}\,\rmn{erg\,s}^{-1}$,
-and the distance to the cluster $D_\clu=1.26\times10^9\,\rmn{pc}$. (2)
-We use the IR to X-ray scaling relation in Eq.~(\ref{eq:SD-X}) to derive
-a more general form of the luminosity from stars in
-Eq.~(\ref{eq:L_star}) that is valid for an arbitrary cluster mass. The
-cluster X-ray luminosities are found in the extended HIFLUGCS
-catalogue \cite{2002ApJ...567..716R} to which we have added the Virgo
-cluster. (3) The normalization constant for the stars is
-determined from the above steps together with Eq.~(\ref{eq:E_SD})
-where we integrate over the cluster volume and spectral distribution
-of the stars. It is given by
-\begin{equation}
- N_\stars(\lx) = 1.2\times10^{-9}\,
-\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
-\label{eq:N_stars}
-\end{equation}
-Note that since the luminosities include the contribution from
-galaxies, we have integrated the spatial distribution including
-galaxies to derive the normalization. Once the normalization is fixed,
-the SD energy densities are derived from the spatial distribution
-where galaxies have been excluded.
-
-The normalization constant for the dust $N_\dust(\lx)$ is derived in the
-following four steps: (1) We use a cluster with the the average mass
-$\mvir=4.0\times10^{13}\msun$ and estimate the X-ray luminosity from
-the X-ray to mass scaling relations derived for the Representative
-XMM-Newton Cluster Structure Survey (REXCESS) in
-\cite{2009A&A...498..361P}:
-\begin{equation}
-\lx=1.18\times 10^{44}\,\rmn{erg\,s}^{-1}
-\left(\frac{M_{200}}{10^{14}\msun}\right)^{1.81}\,,
-\end{equation}
-where we have used that $M_\rmn{200} \approx 1.58\,M_\rmn{500}$ for a
-small cluster \footnote{We derive the factor 1.58 using
-  $M_\rmn{200}/M_\rmn{500}$ for the clusters in the HIFLUGCS catalogue
-  with a mass similar to $\mvir=4.0\times10^{13}\msun$ that we use to
-  derive the luminosity from dust.}. (2) From the IR to X-ray scaling
-relation in Eq.~(\ref{eq:SD-X}) we can now estimate calculate the
-luminosity from the dust for a $\mvir=4.0\times10^{13}\msun$ cluster;
-$L_\dust=4.7\times10^{44}\,\rmn{erg\,s}^{-1}$. (3) We generalize
-Eq.~(\ref{eq:L_star}) to an arbitrary cluster mass using
-Eq.~(\ref{eq:SD-X}) together with the cluster X-ray luminosities in
-the extended HIFLUGCS catalogue. (4) The normalization constant for
-the dust can now be determined from from the above steps together with
-Eq.~(\ref{eq:E_SD}) where we integrate over the cluster volume and
-spectral distribution of the dust. It is given by
-\begin{equation}
- N_\dust(\lx) = 1.4\times10^{-9}\,
-\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
-\label{eq:N_dust}
-\end{equation}
-Note that since the luminosities include the contribution from
-galaxies, we have integrated the spatial distribution including
-galaxies to derive the normalization. Once the normalization is fixed,
-the SD energy densities are derived from the spatial distribution
-where galaxies have been excluded.
-
-{\it Energy density}\\ The spatial distribution of the SD energy
-density is an important quantity since it impacts the steady state
-electron and positron spectra through cooling. A higher density of SD
-in a cluster suppresses the spectra of the upscattering particles. With
-the formalism presented above, we can now derive the energy density
-from starlight and dust in a galaxy cluster through
-\begin{eqnarray}
-\label{eq:U_SD}
-u_\sd(r) &=& \int \dd \eph \frac{\dd^2 N_\ph}{\dd \eph \dd V}\,\eph
-=\int \dd \eph \frac{u_\sd(\eph, r)}{\eph}
-\nonumber \\
-&=&  \frac{j(r)}{j(0)}  \int \dd \eph \sum_i 
-N_i(\lx) \frac{u_i^\gal(\eph)}{\eph}\,. \nonumber \\
-\end{eqnarray}
-In Fig.~\ref{fig:SD_Edens} we compare the energy densities from
-different radiation fields in a galaxy cluster with the mass
-$\mvir=4.0\times10^{13}\msun$. We use two different profiles for the
-SD energy density, where the total profile includes the contribution
-from the ICL, the BCG and all the galaxies, while the galaxies are
-excluded in the smooth profile. We find that even for a cluster with a
-relative small mass the energy density of the SD components dominates
-over the CMB and the magnetic fields (with a central B field of 3~$\mu
-G$) within about 10\% of $\rvir$. Outside this radius the CMB is
-dominating the energy density of the cluster, hence the magnetic
-fields are always subdominant in the cluster and can safely be removed
-from cluster IC calculations for a reasonable central B-field and
-spectral index. Note that in this work we keep the contribution
-from B-fields to the total energy density for consistency.
-
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/ucool.eps}
  \caption{\it Spatial dependence of the energy density of radiation
@@ -1278,21 +1044,6 @@ from B-fields to the total energy density for consistency.
    the energy density inside $\sim0.1\,\rvir$.}
  \label{fig:SD_Edens}
 \end{figure}
-
-
-\del{In this section we present the formalism for the different
-galaxy cluster emission components and show their contribution to the
-total dark matter gamma-ray spectrum. We account for the emission
-radiated both by final state radiation and inverse Compton where we
-allow for upscattering through CMB, starlight, and dust.}
-
-
-%Using a typical
-%X-ray luminosity of $L_\rmn{X}=10^{44}\,\rmn{erg\,s}^{-1}$ results in a
-%IR energy density
-%$N\,E_\IR\,f_\rmn{tot}(E_\IR)\,j(20\,\rmn{kpc})=u_\IR\simeq 4\,\rmn{erg\,
-%  cm}^{-1}$ in the region around 20~kpc from the cluster center at the
-%energy of the maximum IR energy density $E_\IR=0.011\,\rmn{eV}$.
 
 \section{Spectral gamma-ray distribution}
 \label{sect:spectral}
@@ -1794,6 +1545,7 @@ for more details).
 
 \section{Predictions and observational limits}
 
+
 In this section, we compute the expected $\gamma$-ray fluxes from DM
 annihilation and CR interactions of the brightest clusters of the X-ray flux
 complete sample in the local universe. We confront these predictions to upper
@@ -2119,6 +1871,247 @@ Anders Pinzke acknowledges NSF grant AST 0908480 for support.
 
 \clearpage
 \appendix
+
+{\it Spatial distribution -- stars and dust}\\ Our goal in this
+section is to derive a simple spatial model for the distribution of SD
+in galaxy clusters. For this reason we use stacked cluster
+observations by Sloan in the $r$-band that trace the stars. We assume
+that the dust trace the stars in the clusters, which should be
+accurate to the order of magnitude estimate that we are interested in
+here. The stacked surface brightness profiles in
+\cite{2005MNRAS.358..949Z} are measured at redshift $z \sim 0.25$ with
+an average mass of the clusters of $4.0\times10^{13}\,\msun$. The
+profiles are build up out of three components; diffuse intracluster
+light (ICL), galaxies, and the brightest cluster galaxy (BCG) in the
+center of clusters. However, the total volume overlap of the ISM to
+the cluster is very small compared to the ICL- and BCG overlap with
+the cluster, thus the relative contribution of the galaxies to the IC
+emission is suppressed. To remove this bias we cut out the galaxies
+that have been smoothed over the cluster in the stacked analysis. In
+Fig.~\ref{fig:SD_spatial} we show the SDSS stacked brightness profiles
+as well as the fitted profiles\footnote{The measured brightness is
+  converted into units of $\rmn{erg}\,\rmn{s}^{-1}$ using
+  \cite{2010...book} $S(\rmn{mag}\,''^{-2}) =
+  \mathcal{M}_\odot+21.572-2.5\rmn{log}_{10}S(L_\odot\,\rmn{pc}^{-2})$,
+  where the sun's absolute magnitude in the $r$-band is given by
+  $\mathcal{M}_\odot=27.1$ \cite{1998gaas.book.....B} and the
+  luminosity of the sun by $L_\odot=3.85\,10^{33}
+  \rmn{erg}\,\rmn{s}^{-1}$.}, both scaled with the unitless $\rvir$
+normalized area to resembele the expected luminosity at radius
+$r$. Our benchmark spatial model is shown with the solid black line,
+and include the contribution from the ICL and BCG.
+
+
+
+Instead of modelling the surface brightness with a de Vaucouleur
+profile with the addition of a power-law, we use a double beta profile
+model for simplicity of deprojection given by:
+\begin{equation}
+S_\sd (r_\bot)= \sum_{i=1}^2 \,S_i\, 
+\left[1 + \left( \frac{r_\bot}{r_{\mathrm{c}_i}}\right)^2\right]
+^{-3\beta_i + 1/2}\,,
+\label{double_beta}
+\end{equation}
+where we found the following best fitted central brightness ($S_i$),
+core radius ($r_{\mathrm{c}_i}$), and slope ($\beta_i$):
+\begin{eqnarray}
+ S_1&=&5.0\times10^{-6}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
+r_{\mathrm{c}_1}=130\,\rmn{kpc},\,
+\beta_1=0.54\nonumber\\
+ S_2&=&3.9\times10^{-3}\,\rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1},\,
+r_{\mathrm{c}_2}=2.8\,\rmn{kpc},\,
+\beta_2=0.53\,.\nonumber\\
+\label{fit_spatial_IR}
+\end{eqnarray}
+The 3D spatial profile is derived by deprojecting the surface
+brightness in Eq.~(\ref{double_beta}) (see
+e.g. \cite{2004A&A...413...17P} for details about the deprojection):
+\begin{eqnarray}
+  j(r)  = \sum_{i=1}^2 \frac{S_i}{2\pi\,r_{\mathrm{c}_i}}\,
+  \frac{6 \beta_i - 1}{\left(1 + r^2/r^2_{\mathrm{c}_i}\right)^{3\beta_i}}\,
+  \mathcal{B}\left(\frac{1}{2},3\beta_i\right)\,,
+\end{eqnarray}
+where $\mathcal{B}(a,b)$ denotes the beta-function
+\cite{1965hmfw.book.....A}.
+
+{\it Spectral distribution -- stars and dust} \\ Our goal in this
+section is to derive a simple spectral model for SD in galaxy
+clusters. Since the radiation from galaxies are expected to leak out
+into the ICM, we expect similar spectral distributions, at least to
+the order of magnitude that we are interested in here. Hence, we use
+the IR to UV spectrum derived in \cite{2006ApJ...648L..29P} for a MW
+type galaxy to characterize the spectral distribution of light from SD
+in a cluster. Note, however, that we only keep the spectral shape, and
+renormalize the spectral distribution using the luminosity from SD.
+
+In Fig.~\ref{fig:SD_spectra} we show the spectral distribution of the
+light from SD together with the CMB black-body distribution in a
+galaxy cluster, both at the radius $r=0.071\rvir$ where the energy
+density of the smooth light from SD (see Fig.~\ref{fig:SD_Edens})
+equals the energy density of the CMB. We have renormalized both the
+spectral data and the fitted spectra using the luminosity from stars
+and dust individually (see the normalization section below for further
+details).
+
+We choose to fit the spectrum of the dust that peaks at about
+$10^{-2}\,\ev$ with a double power-law, and the slightly wider
+spectral distribution of the stars that peaks at about $1\,\ev$ with a
+tipple power-law. We find the best fit spectra for the SD in a
+cluster through:
+\begin{eqnarray}
+  \eph^2\frac{\dd^2 N_\ph}{\dd \eph \dd V}
+  &\equiv& u_\sd(\eph) =  \sum_i N_i(\lx) u_i^\gal(\eph)\,,\nonumber \\ 
+\rmn{where}\quad i&=&\{\rmn{stars,dust}\} \qquad \rmn{and}\\ 
+% &=&  N_\dust(\lx) u_\dust^\gal(\eph) + N_\stars(\lx) u_\stars^\gal(\eph)  \nonumber \\ 
+%  \\
+  u_\stars^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
+  \left(\frac{1.23\,\rmn{eV}}{\eph}\right)^{1.9} \nonumber \\
+  &\times&\left[1+\left(\frac{2.04\,\rmn{eV}}{\eph}\right)^{20}\right]
+  ^{-\frac{1.9}{20}}\nonumber \\
+  &\times& \left[1+\left(\frac{0.78\,\rmn{eV}}{\eph}\right)^{20}\right]^{-\frac{2.6}{20}}\,, \\
+  u_\dust^\gal(\eph) &=& 
+  \frac{40\,\rmn{eV}}{\rmn{cm}^3} 
+  \left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{4.9}\nonumber \\
+  &\times& \left[1+\left(\frac{0.0144\,\rmn{eV}}{\eph}\right)^{1.9}\right]^{-4.9}\,.
+\end{eqnarray}
+
+
+{\it Normalization}\\ The spatial and spectral distribution functions
+of the light from SD in a cluster are both normalized with a constant
+determined from the luminosity in each respective wavelength. The
+specific energy density is given by
+\begin{eqnarray} 
+u_\sd(\eph, r) &=& \frac{j(r)}{j(0)}\,u_\sd(\eph) \nonumber\\
+&=& \frac{j(r)}{j(0)}\,\sum_i N_i(\lx) u_i^\gal(\eph)\,,
+\end{eqnarray}
+where we fix the unitless normalization $N_i(\lx)$ using the total
+energy of the light in SD  within $\rvir$:
+\begin{eqnarray} 
+  E_{i,\vir} &=& L_i \frac{\rvir}{c} \nonumber \\
+  &=&N_i(\lx)\int_{\rvir} \int_i \,\frac{j(r)}{j(0)} 
+  \frac{u_i^\gal(\eph)}{\eph}\,\dd V\dd \eph\,,\nonumber \\
+ \rmn{for}\quad i&=&\{\rmn{stars,dust}\}\,.
+\label{eq:E_SD}
+\end{eqnarray}
+Here we approximate the total energy of the photons within $\rvir$
+($E_{i,\vir}$) with the luminosity $L_i$ \cite{2008A&A...490..547G}
+times the typical timescale it takes for a photon to propagate through
+the cluster (we assume that the cluster is optically thin). Once we
+derived the SD luminosities for a well representative cluster, we use
+a IR to X-ray scaling relation to estimate the luminosity from an
+arbitrary cluster:
+\begin{equation}
+L_\ir=1.05\times10^{45}\,\rmn{erg\,s}^{-1}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,,
+\label{eq:SD-X}
+\end{equation}
+where $\lx$ is the luminosity of the X-ray emitting gas within
+$\rvir$.
+
+The normalization constant for the starlight $N_\stars(\lx)$ is derived
+in the following three steps: (1) We use the average apparent magnitude
+in the $(r+i)$-band $m_{(r+i),0.25}\approx 15.5$
+\cite{2005MNRAS.358..949Z} of a cluster with the average mass
+$\mvir=4.0\times10^{13}\msun$ at a redshift $z=0.25$ to derive the
+luminosity from the stars:
+\begin{equation}
+L_\stars=10^{\frac{m_\odot-m_{(r+i),0.25}}{2.5}}
+\left(\frac{D_\clu}{D_\odot}\right)^2 L_\odot
+\approx 7.1\times10^{44}\,\rmn{erg}\,\rmn{s}^{-1}\,,
+\label{eq:L_star}
+\end{equation}
+where the apparent magnitude of the sun $m_\odot\approx -27.1$, the
+distance to the sun $D_\odot=4.85\times10^{-6}\,\rmn{pc}$, the
+luminosity of the sun $L_\odot=3.85\times10^{33}\,\rmn{erg\,s}^{-1}$,
+and the distance to the cluster $D_\clu=1.26\times10^9\,\rmn{pc}$. (2)
+We use the IR to X-ray scaling relation in Eq.~(\ref{eq:SD-X}) to derive
+a more general form of the luminosity from stars in
+Eq.~(\ref{eq:L_star}) that is valid for an arbitrary cluster mass. The
+cluster X-ray luminosities are found in the extended HIFLUGCS
+catalogue \cite{2002ApJ...567..716R} to which we have added the Virgo
+cluster. (3) The normalization constant for the stars is
+determined from the above steps together with Eq.~(\ref{eq:E_SD})
+where we integrate over the cluster volume and spectral distribution
+of the stars. It is given by
+\begin{equation}
+ N_\stars(\lx) = 1.2\times10^{-9}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
+\label{eq:N_stars}
+\end{equation}
+Note that since the luminosities include the contribution from
+galaxies, we have integrated the spatial distribution including
+galaxies to derive the normalization. Once the normalization is fixed,
+the SD energy densities are derived from the spatial distribution
+where galaxies have been excluded.
+
+The normalization constant for the dust $N_\dust(\lx)$ is derived in the
+following four steps: (1) We use a cluster with the the average mass
+$\mvir=4.0\times10^{13}\msun$ and estimate the X-ray luminosity from
+the X-ray to mass scaling relations derived for the Representative
+XMM-Newton Cluster Structure Survey (REXCESS) in
+\cite{2009A&A...498..361P}:
+\begin{equation}
+\lx=1.18\times 10^{44}\,\rmn{erg\,s}^{-1}
+\left(\frac{M_{200}}{10^{14}\msun}\right)^{1.81}\,,
+\end{equation}
+where we have used that $M_\rmn{200} \approx 1.58\,M_\rmn{500}$ for a
+small cluster \footnote{We derive the factor 1.58 using
+  $M_\rmn{200}/M_\rmn{500}$ for the clusters in the HIFLUGCS catalogue
+  with a mass similar to $\mvir=4.0\times10^{13}\msun$ that we use to
+  derive the luminosity from dust.}. (2) From the IR to X-ray scaling
+relation in Eq.~(\ref{eq:SD-X}) we can now estimate calculate the
+luminosity from the dust for a $\mvir=4.0\times10^{13}\msun$ cluster;
+$L_\dust=4.7\times10^{44}\,\rmn{erg\,s}^{-1}$. (3) We generalize
+Eq.~(\ref{eq:L_star}) to an arbitrary cluster mass using
+Eq.~(\ref{eq:SD-X}) together with the cluster X-ray luminosities in
+the extended HIFLUGCS catalogue. (4) The normalization constant for
+the dust can now be determined from from the above steps together with
+Eq.~(\ref{eq:E_SD}) where we integrate over the cluster volume and
+spectral distribution of the dust. It is given by
+\begin{equation}
+ N_\dust(\lx) = 1.4\times10^{-9}\,
+\left(\frac{\lx}{10^{44}\rmn{erg\,s}^{-1}}\right)^{0.53}\,.
+\label{eq:N_dust}
+\end{equation}
+Note that since the luminosities include the contribution from
+galaxies, we have integrated the spatial distribution including
+galaxies to derive the normalization. Once the normalization is fixed,
+the SD energy densities are derived from the spatial distribution
+where galaxies have been excluded.
+
+{\it Energy density}\\ The spatial distribution of the SD energy
+density is an important quantity since it impacts the steady state
+electron and positron spectra through cooling. A higher density of SD
+in a cluster suppresses the spectra of the upscattering particles. With
+the formalism presented above, we can now derive the energy density
+from starlight and dust in a galaxy cluster through
+\begin{eqnarray}
+\label{eq:U_SD}
+u_\sd(r) &=& \int \dd \eph \frac{\dd^2 N_\ph}{\dd \eph \dd V}\,\eph
+=\int \dd \eph \frac{u_\sd(\eph, r)}{\eph}
+\nonumber \\
+&=&  \frac{j(r)}{j(0)}  \int \dd \eph \sum_i 
+N_i(\lx) \frac{u_i^\gal(\eph)}{\eph}\,. \nonumber \\
+\end{eqnarray}
+In Fig.~\ref{fig:SD_Edens} we compare the energy densities from
+different radiation fields in a galaxy cluster with the mass
+$\mvir=4.0\times10^{13}\msun$. We use two different profiles for the
+SD energy density, where the total profile includes the contribution
+from the ICL, the BCG and all the galaxies, while the galaxies are
+excluded in the smooth profile. We find that even for a cluster with a
+relative small mass the energy density of the SD components dominates
+over the CMB and the magnetic fields (with a central B field of 3~$\mu
+G$) within about 10\% of $\rvir$. Outside this radius the CMB is
+dominating the energy density of the cluster, hence the magnetic
+fields are always subdominant in the cluster and can safely be removed
+from cluster IC calculations for a reasonable central B-field and
+spectral index. Note that in this work we keep the contribution
+from B-fields to the total energy density for consistency.
+
+
+%***********************************************
+
+
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
