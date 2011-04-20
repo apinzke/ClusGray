@@ -1,7 +1,7 @@
 # Makefile to produce the article.
 LATEX  =  TEXINPUTS=.//: BSTINPUTS=.//: latex
 DVIPS  =  dvips
-FIGURES = figures/Fermi.comp.CR.eps
+FIGURES = figures/Fermi.comp.CR.diff.eps
 
 .PRECIOUS: $(FIGURES)
 
