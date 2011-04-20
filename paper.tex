@@ -241,8 +241,9 @@ where
 and $\sg(\psi, >\eg)$ denotes the surface brightness above the photon
 energy $\eg$.  The integration along the line-of-sight $l$, in the
 direction $\psi$ that the detector is pointing, is parameterized such
-that the radius of the source $r=\sqrt{l^2+D^2-2 D l\cos\Psi}$, where
-$D$ is the distance to the source from the galactic center and
+that the radius of the source $r=\sqrt{l^2+D_\clu^2-2 D_\clu
+  l\cos\Psi}$, where $D_\clu$ is the distance to the source from the
+galactic center and
 $\cos\Psi\equiv\cos\theta\cos\psi-\cos\varphi\sin\theta\sin\psi$. The
 angular integration $\dd \Omega= \sin\theta\dd \theta \,\dd \varphi$
 is performed over a cone centered around $\psi$ and the opening angle
@@ -368,11 +369,17 @@ luminosity from the smooth component of substructures
 radius $r$ which is determined for the Aquarius simulations
 \cite{2008MNRAS.391.1685S,2008Natur.456...73S}. Our best fit is given
 by
-\begin{equation}
-  {\rm L_{sub}}(<r)= 0.76\,C_1\,C_2(\mvir)\,{\rm L_{200sm}}\,x^{0.95
-    \displaystyle{x}^{-0.27}}\,,
-  \label{eq:LSub}
-\end{equation}
+\begin{eqnarray}
+  {\rm L_{sub}}(<r) &=& 0.76\,C_1\,C_2(\mvir)\,{\rm L_{200sm}}\,x^{a_0
+    \displaystyle{x}^{a_1}}\quad\rmn{where} \nonumber\\
+  a_0 = 0.95\,,\quad  a_1 = -0.27 \qquad \rmn{and} \nonumber\\
+  C(\mvir) = C_1\left(\frac{\mvir}{M_{\rm lim}}\right)^{0.226}\,.
+C_1  
+\label{eq:LSub}
+\end{eqnarray}
+Here 
+
+
 where ${\rm L_{200sm}}$ is the luminosity from the smooth halo without
 substructures within $\rvir$ and $x=
 \left(\frac{r}{\rvir}\right)$. The first normalization constant is
@@ -448,7 +455,7 @@ for galaxy clusters.
 In Fig.~\ref{fig:radial_emis} we show the radius with the maximum
 luminosity for substructures and smooth density profiles, both for
 three different mass scales. We find that the smooth luminosity per
-logarithmic radial bin peaks at $x \dd^2 L/\dd x^2+\dd L/\dd x == 0
+logarithmic radial bin peaks at $x \dd^2 L/\dd x^2+\dd L/\dd x = 0
 \rightarrow r \propto \rvir/3c$. Hence the main contribution to the
 luminosity for large mass scales, which are usually associated with a
 low concentrated DM halos, is focused to the regime around 10\% of
@@ -1074,10 +1081,10 @@ CRps and DM continuum emission.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
- \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompI.v10.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJ.v10.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompK.v10.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJs.v10.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.49\columnwidth]{figures/flux.BMcompI.v11.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJ.v11.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompK.v11.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.BMcompJs.v11.0.1deg.1.6T.SubMass.IR2.noMW.woGal.eps}
 \caption{\it Comparing the differential flux from different models: we
   show the continuum emission from DM benchmark (BM) models (blue
   dashed), electrons and positrons from DM BM models that inverse
@@ -1143,8 +1150,8 @@ EXPERT).
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.v10.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.BMv10.0.1deg.SubMass.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.v11.0.1deg.1.6T.SubMass.elmu.SF300.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.IRcomp.BMv11.0.1deg.SubMass.noMW.woGal.eps}
 \caption{\it Comparing the flux from different inverse Compton
   upscattered radiation fields. We show the differential inverse
   Compton emission induced by leptophilic DM in the left panel and by
@@ -1180,7 +1187,7 @@ CRps in the $1-100$~GeV energy regime accessible both to Fermi and
 Cherenkov telescopes.
 
 \begin{figure}
- \includegraphics[width=0.99\columnwidth]{figures/flux.int.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/flux.int.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Comparing the energy integrated flux from different
   models. We show the emission from; CRp induced emission (red solid),
   leptophilic models (LP) that include both final state radiation and
@@ -1265,10 +1272,10 @@ $L_{\gamma,\sub} \propto N\,M_\sub^A$, where $A<1$.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
- \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Fornax.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Coma.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Virgo.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
-\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Perseus.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Fornax.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Coma.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Virgo.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+\includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Perseus.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Comparing the emission from different clusters. We show
   the differential flux from four clusters; Fornax (upper left), Coma
   (upper right), Virgo (lower left), and Perseus (lower right). The
@@ -1317,7 +1324,7 @@ SFE in the MW of about 10.
 
 
 \begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v10.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v11.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
 \caption{\it Constraining boost factors using flux upper limits. The
   leptophilic (LP) gamma-ray emission is derived within $\rvir$ using
   a point spread function of $0.1\deg$. In order not to overproduce
@@ -1382,7 +1389,7 @@ galaxies. Although, it might be a problem for Cherenkov telescopes
 looking for a DM in the center of Fornax.
 
 \begin{figure}
- \includegraphics[width=0.99\columnwidth]{figures/SB.v10.1GeV.SF300.SubMass.elmu.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/SB.v11.1GeV.SF300.SubMass.elmu.eps}
 \caption{\it Comparing the surface brightness from different
   clusters. We show the CRp induced emission (red), leptophilic
   emission (green), and emission from the $\Kp$ benchmark model
@@ -1410,7 +1417,7 @@ extent of the cluster, even though Fornax has one of the highest
 ratios of DM/CRp gamma-ray brightness.
 
 \begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/SB.resolved.v10.1GeV.SF300.noSuB.vs.SubMass.elmu.eps}
+ \includegraphics[width=0.99\columnwidth]{figures/SB.resolved.v11.1GeV.SF300.noSuB.vs.SubMass.elmu.eps}
 \caption{\it The impact of substructures on surface brightness. We
   show the surface brightness at 1~GeV for the Fornax cluster using a
   very small point spread function of $10^{-5}\deg$ that reveals the
@@ -1470,8 +1477,8 @@ all clusters.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.v10.1GeV.SF300.noSuB.elmu.eps}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.fornax.v10.1GeV.SF300.noSuB.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.v11.1GeV.SF300.noSuB.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.fornax.v11.1GeV.SF300.noSuB.elmu.eps}
 \caption{\it The surface brightness without substructures. We show the
   CRp induced emission (red), leptophilic emission (green), and
   emission from the $\Kp$ benchmark model (blue). The surface
@@ -1511,8 +1518,8 @@ for more details).
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.Fornax.v10.SF300.SubMass.elmu.eps}
-  \includegraphics[width=0.49\columnwidth]{figures/SB.Virgo.v10.SF300.SubMass.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.Fornax.v11.SF300.SubMass.elmu.eps}
+  \includegraphics[width=0.49\columnwidth]{figures/SB.Virgo.v11.SF300.SubMass.elmu.eps}
 \caption{\it Surface brightness predicted for Cherenkov telescopes at
   high energies. We show the emission above $100$~GeV and include the
   boost from substructures. We use a point spread function of
