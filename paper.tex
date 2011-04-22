@@ -54,6 +54,7 @@
 \newcommand{\bsub}{\B_\rmn{sub}}
 \newcommand{\qCR}{q_{\rmn{CR}-\ensuremath{\pi^0}}}
 \newcommand{\ds}{{\sc DarkSUSY}}
+\newcommand{\mlim}{M_\rmn{lim}}
 
 %OLD
 \newcommand{\beq}{\begin{equation}}
@@ -107,7 +108,9 @@
 
 
 \begin{abstract}
-... to be written...
+... to be written...  if $\mlim \approx 10^{-6}\,\msun$ then the boost
+  from SFE is smaller than about a factor 5 in the MW and 2 in Fornax, or
+  alternatively if SFE corrext then $\mlim > 10^2\,\msun$.
 \end{abstract}
 
 \maketitle
@@ -218,337 +221,38 @@ cluster Coma ($\mvir=1.4\times10^{15}\,\msun$) for comparison.
   the radius at which the mean density within is a factor $\Delta=200$
   times the critical density $\rhoc$ of the universe.}
 
+This work studies the prospects for detecting extended gamma-ray
+emission from galaxy clusters induced by both DM as well as CR
+protons. In section two we discuss the theory of DM and gamma-rays. In
+particular, we focus one the leptophilic and supersymmetric DM models
+used in this work, and outline the framework for estimating the
+gamma-ray emission from various radiative processes. In section three
+we calculate the gamma-ray fluxes and spectral distributions from four
+clusters and compare it to upper limits set by Fermi-LAT. For the same
+clusters we derive the gamma-ray surface brightness profiles in
+section four. To extend the analysis to more clusters and find
+promesing targets we estimate the fluxes from DM and CRs of all
+clusters in the extended HIFLUGCS sample in section five. In section
+six we conclude and discuss our results.
+
 % --- section:  --- %
 \section{Theory}
 \label{sect:theory}
+We start the section by discussing two different, but well motivated DM
+models; leptophilic and supersymmetric DM. In addition we present the
+gamma-ray framework that is used to calculate the emission for these DM
+models using an Einasto DM density profile and the expected
+enhancement from DM substructures. In the end of this sections we
+outline the framework of inverse Compton emission on both CMB photons
+as well as photons from stars and dust.
 
-\subsection{Astrophysics}
-\label{sect:AP}
-
-The differential photon flux within a given solid angle $\Delta
-\Omega$ along a line-of-sight (los) is given by
-\begin{equation}
-\label{eq:dflux}
-\frac{\dd \fg}{\dd \eg} \equiv \frac{\dd^3 \ngamma}{\dd A \,\dd t\, \dd
-  \egamma} = \frac{1}{2}\int_{\Delta\Omega} \dd\psi \sin\psi \frac{\dd \sg}{\dd \eg}(\psi,\eg)\,,
-\end{equation}
-where
-\begin{equation}
-\label{eq:dtildeflux}
-\frac{\dd \sg}{\dd \eg}(\psi,\eg) = \int_{\Delta\Omega} \dd\Omega \int_{\rm los}
-\dd l\, q_{\rm sum}\left(\eg,r\right)\Lambda(\theta)\,,
-\end{equation}
-and $\sg(\psi, >\eg)$ denotes the surface brightness above the photon
-energy $\eg$.  The integration along the line-of-sight $l$, in the
-direction $\psi$ that the detector is pointing, is parameterized such
-that the radius of the source $r=\sqrt{l^2+D_\clu^2-2 D_\clu
-  l\cos\Psi}$, where $D_\clu$ is the distance to the source from the
-galactic center and
-$\cos\Psi\equiv\cos\theta\cos\psi-\cos\varphi\sin\theta\sin\psi$. The
-angular integration $\dd \Omega= \sin\theta\dd \theta \,\dd \varphi$
-is performed over a cone centered around $\psi$ and the opening angle
-$\Delta \Omega$ is typically taken to be a few times the point spread
-function (PSF) $\psf$. The limited angular resolution results in a
-probability that a photon coming from a direction $\psi$' is instead
-reconstructed to a direction $\psi$, where the underlying probability
-distribution follow a Gaussian:
-\begin{equation}
-\Lambda(\theta)=\frac{1}{2\pi\psf^2}
-\,\rmn{exp}\left[-\frac{\theta^2}{2\psf^2}\right]\,,
-\quad \rmn{where}\quad \theta=\psi'-\psi \,.
-\end{equation}
-We denote the total differential source function by $q_{\rm
-  sum}(\eg,r)$, where we include contributions from five main
-processes; leptophilic DM annihilating either indirectly through
-$\mu^+/\mu^-$ to $\rmn{e}^+/\rmn{e}^-$ or directly to
-$\rmn{e}^+/\rmn{e}^-$ pairs that inverse Compton upscatter background
-photons (LP-IC), leptophilic DM emitting final state radiation
-(LP-FSR), supersymmetric DM benchmark models where annihilating
-neutralinos generate $\rmn{e}^+/\rmn{e}^-$ pairs that upscatter
-background photons (BM-IC) and emit a continuum as well as final state
-radiation (BM-Cont), and CR proton induced $\pi^0$:s decaying into
-gamma-rays (CR-$\pi^0$). The source function is given by
-\begin{equation}
-q_\rmn{sum} (\eg,r) = \qCR(\eg,r)+
-\sum_i \,q_{\rmn{sm},i}(\eg,r)\,\B_{\rmn{tot},i}(\sigv,r)
-\end{equation}
-the differential CR to gamma-ray source function is denoted by
-$\qCR(\eg,r)$ (see Sect.~\ref{sect:CRs} and \cite{2010MNRAS.409..449P}
-for further details). The subscript $i$ runs over the gamma-ray
-producing DM channels and the total differential boost factor for DM
-is given by $\B_{\rmn{tot},i}(r,\sigv) =
-\B_\sfe(\sigv)\,\B_{\sub,i}(r)$. It is the product of enhancement factors
-from SFE $\B_\sfe(\sigv)$ (see Sect.~\ref{sect:LP}) and from
-substructure enhancement over the smooth halo contribution
-$\B_{\sub,i}(r) = 1+q_\sub(r)/q_{\rmn{sm},i}(r)$ (see
-Sect.~\ref{sect:subst}). The DM source function from the smooth halo
-for each process is written on the form:
-\begin{equation}
-\label{eq:q_sm}
-q_{\rmn{sm},i} (\egamma,r) = \sum_j
-\frac{\dd \ngammaj}{\dd E_\gamma} \Gamma_j(r)\,,
-\end{equation}
-where the annihilation rate density is given by 
-\begin{equation}
-\label{eq:ann_rate}
-\Gamma_j(r) = \frac{1}{2} \left[\frac{\rho(r)}{\mx}\right]^2 
-\, \sigmaannv_j\,.
-\end{equation}
-Here the subscript $j$ runs over all kinematically allowed gamma-ray
-producing channels each with the spectrum $\frac{\dd
-  \ngammaj}{\dd\eg}$ and annihilation cross-section $\sigmaannv_j$. We
-denote the DM mass with $\mx$ and the DM density profile with
-$\rho(r)$. Typically the universal Navarro-Frenk-White (NFW) density
-profile provide a good fit to both the observed and simulated
-clusters. It can be considered as a special case of the more general
-5-parameter profile:
-\begin{equation}
-\rho(r) = \frac{\rhos}{\left(r/r_\s+\right)^\gamma
-  \left[1+\left(r/r_\s\right)^\alpha\right]^\delta}\,,\quad
-\delta=\frac{\beta-\gamma}{\alpha}\,,
-\label{eq:rho_nfw}
-\end{equation}
-where a cuspy NFW profile is given by
-$(\alpha,\beta,\gamma)=(1,3,1)$. The scaling radius is given by $r_\s$
-and the characteristic overdensity by 
-\begin{equation}
-\rhos(c)=\frac{\Delta\,\rhoc}{3}\,\frac{c^3}
-{\log\left(1+c\right)-c/(1+c)}\,,
-\label{eq:rho_s}
-\end{equation}
- where the halo mass dependent concentration parameter $c$ is derived
- from a power-law fit to cosmological simulations with $\mvir \gtrsim
- 10^{10} \msun$ \cite{2008MNRAS.391.1940M},
-\begin{equation}
-\label{eq:cfit}
-  c=3.56 \times \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-0.098}\,.
-\end{equation}
-This mass scaling agrees well with \cite{2009ApJ...707..354Z} for
-cluster-mass halos after converting the concentration definitions
-according to \cite{2003ApJ...584..702H}. In this work we choose to
-model the DM density by an Einasto density profile
-\begin{equation}
-\label{eq:dens_ein}
-\rho_{\rm ein}(r) = \rho_{-2}\,\exp\left\{-\frac{2}{\alpha}
-  \left[\left(\frac{r}{r_{-2}}\right)^\alpha -1 \right] \right\},\,
-\alpha=0.17 \,,
-\end{equation}
-that is slightly shallower in the center than the conventional
-Navarro-Frenk-White (NFW) profile, but provide a better fit to recent
-simulated high resolution DM halos \cite{2010MNRAS.402...21N}. It
-should also be noted that recent detailed galaxy cluster observations
-find a core like density profile with an inner slope of $\beta=0.6$,
-where $\beta\gtrsim 1$ can be ruled out to a $>95$\% confidence
-\cite{2011ApJ...728L..39N}. In Eq.~(\ref{eq:dens_ein}) we denote the
-density where the profile has a slope of $-2$ by $\rho_{-2}$, and the
-radius by $r_{-2}$. Assuming that all the flux from an NFW profile
-originate from within the scale radius $\rs=\rvir/c$, and all the flux
-from an Einasto profile originate within $r_{-2}=\rvir/c$, it follows
-that $\rho_{-2} = \rhos/4$.
-
-%However, this finding is hard to reconcile with simulations that
-%typically prefere a steeper central profile.
-
-\subsubsection{Substructures}
-\label{sect:subst}
-High-resolution DM only simulations of Milky Way (MW) type halos find
-substantial amount of substructures in the periphery of DM halos,
-while the substructures in the center are erased due to dynamical
-disruption. Since the rate of which DM is annihilating depends on the
-density squared, the resulting flux from substructures is boosted
-compared to the smooth density distribution. Recent high resolution
-simulations suggest a flux enhancement from substructures of the order
-of ten up to a few 100 \cite{2008MNRAS.391.1685S, 2008JPhCS.125a2008K}
-for a MW size halo. We use a double power-law function to
-fit \footnote{Our approach of fitting the scaling behavior of
-  $\rmn{L_{sub}}(<r)$ directly from numerical simulations
-  self-consistently accounts for the radial dependence of the
-  substructure concentration \cite{2008MNRAS.391.1685S}.} the
-luminosity from the smooth component of substructures
-(i.e. substructures within substructures are not included) inside
-radius $r$ which is determined for the Aquarius simulations
-\cite{2008MNRAS.391.1685S,2008Natur.456...73S}. Our best fit is given
-by
-\begin{eqnarray}
-  {\rm L_{sub}}(<r) &=& C(\mvir)\,{\rm L_{200sm}}(\mvir)\,x^{a_0
-    \displaystyle{x}^{a_1}}\quad\rmn{where} \nonumber\\
-  a_0 &=& 0.95\,,\quad  a_1 = -0.27 \qquad \rmn{and} \nonumber\\
-  C(\mvir) &=& 0.017\,\left(\frac{\mvir}{M_{\rm lim}}\right)^{0.226}\,.
-\label{eq:LSub}
-\end{eqnarray}
-Here 
-
-
-where ${\rm L_{200sm}}$ is the luminosity from the smooth halo without
-substructures within $\rvir$ and $x=
-\left(\frac{r}{\rvir}\right)$. The first normalization constant is
-derived from the simulations:
-\begin{equation}
-  C_1=\left(\frac{M_{\rm res,sim}}{M_{\rm lim}}\right)^{0.226}\,,
-   \label{eq:C1}
-\end{equation}
-where $M_{\rm res,sim}=10^5\msun$ is the mass of the smallest resolved
-subhalos in the MW simulation, and $M_{\rm lim}$ is the theoretical
-smallest mass of subhalos determined from free streaming length of DM
-(CHECK). Here we assume that the power-law scaling relation in
-Eq.~(\ref{eq:C1}) is valid down to the free streaming mass of DM
-halos, which is conventionally in the cold dark matter universe
-\cite{2001PhRvD..64h3507H,2005JCAP...08..003G} taken to be
-$10^{-6}\msun$. Note that potentially the power-law could flatten
-towards smaller mass scales although current simulations show no hits
-of such a behavior and in addition we are approaching the asymptotic
-behavior in the power spectrum on these scales(CHECK). For DM halos
-more (less) massive than the MW we expect a larger (smaller) boost
-from substructures, simply because of the larger (smaller) mass range
-down to the minimum mass $M_\rmn{lim}$. We capture this halo mass
-dependence with the second normalization in Eq.~(\ref{eq:LSub}):
-\begin{equation}
-C_2(\mvir)=\left(\frac{\mvir}{M_{\rm 200sim}}\right)^{0.226}\,,
- \label{eq:C2}
-\end{equation}
-where $M_{\rm 200sim}=1.9\times10^{12}\msun$ is the mass of the MW
-halo in the simulation \cite{2008Natur.456...73S}. 
-
-The different density profiles have a large impact on the luminosity
-from annihilating DM, although the details of the density profile can
-be neglected compared to the dominating boost from substructures. In
-Fig.~\ref{fig:radial_lum} we compare the radial dependence of the
-accumulative luminosity from different smooth cluster density profiles
-to the substructure boosted luminosity at different mass scales. We
-recalculate the density contrast for the core like NFW density profile
-$\rhos$ and rescale the concentration parameter in Eq.~(\ref{eq:cfit})
-with $300/160$ \cite{2011ApJ...728L..39N} to account for the more
-centralized scale radius in cluster with a softer cusp. The emission
-coming from the core like NFW density profile ($\beta=0.6$) compared
-to a cuspy ($\beta=1.0$) is about 30\% larger within $\rvir$. This
-difference is build up within 10\% of $\rvir$ (i.e. close to
-$r_\s$). Hence the slope of the central part of a cluster is
-unimportant for the DM luminosity inside $\rvir$, instead the
-important factor is the scale radius. The emission from an Einasto
-density profile is about 50\% larger than the cuspy NFW profile in the
-periphery of the cluster, where the difference is mainly build up at a
-few percent of $\rvir$. The substructure boosted luminosities is
-neglible in the center of halos, but integrated out to $\rvir$ the
-boost is about; 10 for dwarf galaxies, $10^2$ for galaxies, and $10^3$
-for galaxy clusters.
-\begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/dens.prof.eps}
-\caption{\it Radial dependence of various luminosity
-  contributions. The solid lines show the accumulative smooth
-  luminosity from a cluster with the mass $\mvir=10^{15}\,\msun$ for
-  three different density profiles; an Einasto profile with
-  $\alpha=0.17$ (light blue), a cuspy NFW profile with $\beta=1.0$
-  (dark blue), and a core NFW profile with $\beta=0.6$ (purple). The
-  dashed lines show the accumulative luminosity from substructures for
-  three different mass scales; an $\mvir=10^{15}\,\msun$ galaxy
-  cluster (red), an $\mvir=10^{12}\,\msun$ galaxy (orange), and an
-  $\mvir=10^{8}\,\msun$ dwarf galaxy (green). All luminosities have
-  been normalized with the luminosity within $\rvir$ from a cuspy NFW
-  profile. We have assumed the standard value for the limiting
-  substructure mass of $M_\rmn{lim}=10^{-6}\,\msun$. Note the large
-  expected boost from substructures in clusters ($\sim1000$), and the
-  relative small boost in dwarf galaxies ($\sim20$).}
- \label{fig:radial_lum}
-\end{figure}
-
-In Fig.~\ref{fig:radial_emis} we show the radius with the maximum
-luminosity for substructures and smooth density profiles, both for
-three different mass scales. We find that the smooth luminosity per
-logarithmic radial bin peaks at $x \dd^2 L/\dd x^2+\dd L/\dd x = 0
-\rightarrow r \propto \rvir/3c$. Hence the main contribution to the
-luminosity for large mass scales, which are usually associated with a
-low concentrated DM halos, is focused to the regime around 10\% of
-$\rvir$.  It clearly shows how that the main contribution from the
-substructures is coming from outer parts of the DM halos, while the
-main contribution from the smooth density profiles peaks around the
-scale radius. Not that, even though the bulk of substructures have
-been erased in the central regions of DM halos, a cluster in
-projection has a significant enhancement due to substructures at a
-radius of just a few percent of $\rvir$.
-\begin{figure}
-  \includegraphics[width=0.99\columnwidth]{figures/emissiv.sub.eps}
-  \caption{\it Luminosity dominated radius for different mass
-    scales. The solid lines show the emissivity from a cuspy
-    $\beta=1.0$ NFW density profile for three different mass scales;
-    an $\mvir=10^{15}\,\msun$ galaxy cluster (red), an
-    $\mvir=10^{12}\,\msun$ galaxy (orange), and an
-    $\mvir=10^{8}\,\msun$ dwarf galaxy (green). The dashed lines show
-    the emissivity from substructures for the same three mass
-    scales. All emissivities have been normalized with the luminosity
-    within $\rvir$ from a cuspy NFW profile. We have assumed the
-    standard value for the limiting substructure mass of
-    $M_\rmn{lim}=10^{-6}\,\msun$.}
-  \label{fig:radial_emis}
-\end{figure}
-
-
-\subsubsection{Cosmic-ray induced gamma-ray emission}
-\label{sect:CRs}
-On small astrophysical scales, such as supernovae remnants and
-galaxies, there are convincing evidences of non-thermal
-populations. Especially, in the MW, the cosmic rays are observed
-directly as well as indirectly through radio, X-ray, and gamma-ray
-emission. On larger scales of the order of few 100~kpc up to Mpc,
-there are currently a vast number of observations of radio emission
-coming from radio mini halos in the center of cooling flow clusters,
-radio relics in the periphery of clusters \cite{2004rcfg.proc..335K}
-as well as smooth giant radio halos that have been observed in more
-than 50 clusters \cite{2003ASPC..301..143F,2008SSRv..134...93F}. This
-type of emission is expected in clusters since the formation process
-of a galaxy cluster is a very energetic processes that induces both
-turbulence as well as frequently occurring merging and accretion
-shocks which both are thought to accelerate large quantities of
-relativistic non-thermal protons and radio emitting electrons to high
-energies. Thus most of the observed radio emission in clusters is
-expected to emerge from cosmic-ray electron induced radio synchrotron
-emission. The precise origin of these electrons, in especially relics
-and giant radio halos, is still not settled. However, due to the
-smoothness of the extended emission and the observed power-law slope
-it seems quite natural that they are of hadronic origin. Especially
-since the long cooling time of cosmic ray protons (CRps) allows for
-both an extended and large population of CRps to build up over the
-cluster history \cite{1997ApJ...487..529B}.
-
-When the CRps interact with ambient gas protons, it results in the
-production of both charged and neutral pions that decay into
-electrons, neutrinos, and gamma-rays. The production of these
-secondaries depend both on the gas and CRp densities in the cluster,
-where the CRp density roughly trace the gas outside the core regime and
-is slightly enhanced in the center. This density scaling implies that
-clusters are great targets for Cherenkov telescopes with a high
-sensitivity for the central parts of close by clusters. Detecting the
-cluster gamma-ray emission is crucial in this respect as it
-potentially provides the unique and unambiguous evidence of CRp
-populations in clusters through observing the $\pi^0$ bump at about
-100~MeV in the spectra. 
-
-We adopt the spectrally and spatially universal gamma-ray model
-developed by Pinzke \& Pfrommer \cite{2010MNRAS.409..449P} to estimate
-the emission from decaying $\pi^0$:s that dominates over the inverse
-Compton emission from primary and secondary electrons above 100~MeV in
-clusters. The gamma-ray formalism was derived from high resolution
-simulations of clusters of galaxies that included radiative
-hydrodynamics, star formation, supernova feedback, and followed CRp
-physics using a novel formulation that trace the most important
-injection and loss processes self-consistently while accounting for
-the CRp pressure in the equation of motion
-\cite{2008A&A...481...33J,2007A&A...473...41E,2006MNRAS.367..113P}.
-We note that the overall normalization of the CRp and gamma-ray
-distribution scales with the maximum acceleration efficiency at
-structure formation shock waves. Following recent observations at
-supernova remnants \cite{2009Sci...325..719H} as well as theoretical
-studies \cite{2005ApJ...620...44K}, we adopt a realistic value of this
-parameter and assume that 50\% of the dissipated energy at strong
-shocks is injected into CRps while this efficiency rapidly decreases
-for weaker shocks \cite{2007A&A...473...41E}.
- 
 
 \subsection{Detecting Particle Dark Matter}
 \label{sect:PF}
 Besides the intrinsic interest in the gamma-ray flux from galaxy
 clusters generated by conventional hadronic and electromagnetic
 process - which should be close to observability with the Fermi-LAT
-data \cite{Berezinsky:1996wx,2007A&A...473...41E,2010MNRAS.409..449P}
+data \cite{1997ApJ...487..529B,2007A&A...473...41E,2010MNRAS.409..449P}
 - the possible contribution from WIMP dark matter is of greatest
 interest. A WIMP (Weakly Interactive Massive Particle) which fulfils
 the WMAP bounds on the relic density of cold dark matter (CDM) of
@@ -846,6 +550,349 @@ resulting bump caused by inner bremsstrahlung is clearly seen for
 benchmark models $I´$, $J´$, and $J^*$.
 
 
+\subsection{Astrophysics}
+\label{sect:AP}
+
+The differential photon flux within a given solid angle $\Delta
+\Omega$ along a line-of-sight (los) is given by
+\begin{equation}
+\label{eq:dflux}
+\frac{\dd \fg}{\dd \eg} \equiv \frac{\dd^3 \ngamma}{\dd A \,\dd t\, \dd
+  \egamma} = \frac{1}{2}\int_{\Delta\Omega} \dd\psi \sin\psi \frac{\dd \sg}{\dd \eg}(\psi,\eg)\,,
+\end{equation}
+where
+\begin{equation}
+\label{eq:dtildeflux}
+\frac{\dd \sg}{\dd \eg}(\psi,>\eg) = \int_{\Delta\Omega} \dd\Omega \int_{\rm los}
+\dd l\, q_{\rm sum}\left(\eg,r\right)\Lambda(\theta)\,,
+\end{equation}
+and $\sg(\psi, >\eg)$ denotes the surface brightness above the photon
+energy $\eg$.  The integration along the line-of-sight $l$, in the
+direction $\psi$ that the detector is pointing, is parameterized such
+that the radius of the source $r=\sqrt{l^2+D_\clu^2-2 D_\clu
+  l\cos\Psi}$, where $D_\clu$ is the distance to the source from the
+galactic center and
+$\cos\Psi\equiv\cos\theta\cos\psi-\cos\varphi\sin\theta\sin\psi$. The
+angular integration $\dd \Omega= \sin\theta\dd \theta \,\dd \varphi$
+is performed over a cone centered around $\psi$ and the opening angle
+$\Delta \Omega$ is typically taken to be a few times the point spread
+function (PSF) $\psf$. The limited angular resolution results in a
+probability that a photon coming from a direction $\psi$' is instead
+reconstructed to a direction $\psi$, where the underlying probability
+distribution follow a Gaussian:
+\begin{equation}
+\Lambda(\theta)=\frac{1}{2\pi\psf^2}
+\,\rmn{exp}\left[-\frac{\theta^2}{2\psf^2}\right]\,,
+\quad \rmn{where}\quad \theta=\psi'-\psi \,.
+\end{equation}
+We denote the total differential source function by $q_{\rm
+  sum}(\eg,r)$, where we include contributions from five main
+processes; leptophilic DM annihilating either indirectly through
+$\mu^+/\mu^-$ to $\rmn{e}^+/\rmn{e}^-$ or directly to
+$\rmn{e}^+/\rmn{e}^-$ pairs that inverse Compton upscatter background
+photons (LP-IC), leptophilic DM emitting final state radiation
+(LP-FSR), supersymmetric DM benchmark models where annihilating
+neutralinos generate $\rmn{e}^+/\rmn{e}^-$ pairs that upscatter
+background photons (BM-IC) and emit a continuum as well as final state
+radiation (BM-Cont), and CR proton induced $\pi^0$ that decays into
+gamma-rays (CR-$\pi^0$). The source function is given by
+\begin{equation}
+q_\rmn{sum} (\eg,r) = \qCR(\eg,r)+
+\sum_i \,q_{\rmn{sm},i}(\eg,r)\,\B_{\rmn{tot},i}(\sigv,r)
+\end{equation}
+the differential CR to gamma-ray source function is denoted by
+$\qCR(\eg,r)$ (see Sect.~\ref{sect:CRs} and \cite{2010MNRAS.409..449P}
+for further details). The subscript $i$ runs over the gamma-ray
+producing DM channels and the total differential boost factor for DM
+is given by:
+\begin{eqnarray}
+\B_{\rmn{tot},i}(r,\sigv) = \left\{\begin{array}{cc}
+\B_\sfe(\sigv)\,\B_{\sub,i}(r) &\rmn{for\,\,LP}\\
+\B_{\sub,i}(r) &\rmn{for\,\,BM\,.}\end{array}\right.
+\end{eqnarray}
+It is the product of enhancement factors from SFE $\B_\sfe(\sigv)$
+(see Sect.~\ref{sect:LP}) and from substructure enhancement over the
+smooth halo contribution $\B_{\sub,i}(r) =
+1+\rho_{\sub,i}^2(r)/\rho^2(r)$ (see Sect.~\ref{sect:subst}). The DM
+source function from the smooth halo for each process is written in
+the form:
+\begin{equation}
+\label{eq:q_sm}
+q_{\rmn{sm},i} (\egamma,r) = \sum_j
+\frac{\dd \ngammaj}{\dd E_\gamma} \Gamma_j(r)\,,
+\end{equation}
+where the annihilation rate density is given by 
+\begin{equation}
+\label{eq:ann_rate}
+\Gamma_j(r) = \frac{1}{2} \left[\frac{\rho(r)}{\mx}\right]^2 
+\, \sigmaannv_j\,.
+\end{equation}
+Here runs the subscript $j$ over all kinematically allowed gamma-ray
+producing channels, each with the spectrum $\frac{\dd
+  \ngammaj}{\dd\eg}$ and annihilation cross-section $\sigmaannv_j$. We
+denote the DM mass with $\mx$ and the DM density profile with
+$\rho(r)$. Typically the universal Navarro-Frenk-White (NFW) density
+profile provides a good fit to both the observed and simulated
+clusters. It can be considered as a special case of the more general
+5-parameter profile:
+\begin{equation}
+\rho(r) = \frac{\rhos}{\left(r/r_\s+\right)^\gamma
+  \left[1+\left(r/r_\s\right)^\alpha\right]^\delta}\,,\quad
+\delta=\frac{\beta-\gamma}{\alpha}\,,
+\label{eq:rho_nfw}
+\end{equation}
+where a cuspy NFW profile is given by
+$(\alpha,\beta,\gamma)=(1,3,1)$. The scaling radius is given by $r_\s$
+and the characteristic overdensity by 
+\begin{equation}
+\rhos(c)=\frac{\Delta\,\rhoc}{3}\,\frac{c^3}
+{\log\left(1+c\right)-c/(1+c)}\,,
+\label{eq:rho_s}
+\end{equation}
+ where the halo mass dependent concentration parameter $c$ is derived
+ from a power-law fit to cosmological simulations with $\mvir \gtrsim
+ 10^{10} \msun$ \cite{2008MNRAS.391.1940M},
+\begin{equation}
+\label{eq:cfit}
+  c=3.56 \times \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-0.098}\,.
+\end{equation}
+This mass scaling agrees well with \cite{2009ApJ...707..354Z} for
+cluster-mass halos after converting the concentration definitions
+according to \cite{2003ApJ...584..702H}. In this work we choose to
+model the DM density by an Einasto density profile
+\begin{equation}
+\label{eq:dens_ein}
+\rho_{\rm ein}(r) = \rho_{-2}\,\exp\left\{-\frac{2}{\alpha}
+  \left[\left(\frac{r}{r_{-2}}\right)^\alpha -1 \right] \right\},\,
+\alpha=0.17 \,,
+\end{equation}
+that is slightly shallower in the center than the conventional
+Navarro-Frenk-White (NFW) profile, but provide a better fit to recent
+simulated high resolution DM halos \cite{2010MNRAS.402...21N}. It
+should also be noted that a recent observations of the Abell 383
+galaxy cluster finds a core like density profile with an inner slope
+of $\beta=0.6$, where $\beta\gtrsim 1$ can be ruled out to a $>95$\%
+confidence \cite{2011ApJ...728L..39N}. These observations are based on
+lensing and X-ray measurements as well as the stellar velocity
+dispersion of the central galaxy. In Eq.~(\ref{eq:dens_ein}) we denote
+the density where the profile has a slope of $-2$ by $\rho_{-2}$, and
+the radius by $r_{-2}$.  Assuming that all the flux from an NFW profile
+originate from within the scale radius $\rs=\rvir/c$, and all the flux
+from an Einasto profile originate within $r_{-2}=\rvir/c$, it follows
+that $\rho_{-2} = \rhos/4$. [MIGHT REMOVE THIS, COULD NOT REPRODUCE IT, CAN
+MOTIVATE THE FACTOR 4 FROM MATCHING THE MASSES FROM THE EINSASTO WITH
+THE NFW INSTEAD] SHOW INTEGRATION, COMPUTE RMAX, DISCUSS
+FIG 1+2 SMOOTH COMPONENT
+
+%However, this finding is hard to reconcile with simulations that
+%typically prefere a steeper central profile.
+
+\subsubsection{Substructures}
+\label{sect:subst}
+High-resolution DM only simulations of Milky Way (MW) type halos find
+substantial amount of substructures in the periphery of DM halos,
+while the substructures in the center suffer from dynamical friction
+and tidal effects depleating their central number densities. Since
+the rate of which DM is annihilating depends on the density squared,
+the resulting flux from substructures is boosted compared to the
+smooth density distribution. Recent high resolution simulations
+suggest a flux enhancement from substructures of the order of ten up
+to a few 100 \cite{2008MNRAS.391.1685S, 2008JPhCS.125a2008K} for a MW
+size halo. We use a double power-law function to fit \footnote{Our
+  approach of fitting the scaling behavior of $\rmn{L_{sub}}(<r)$
+  directly from numerical simulations self-consistently accounts for
+  the radial dependence of the substructure concentration
+  \cite{2008MNRAS.391.1685S}.} the luminosity from the smooth
+component of substructures (i.e. substructures within substructures
+are not included) inside radius $r$ which is determined for the
+Aquarius simulations
+\cite{2008MNRAS.391.1685S,2008Natur.456...73S}. Our best fit is given
+by
+\begin{eqnarray}
+  {\rm L_{sub}}(<x) &=& a_0\,C(\mvir)\,{\rm L_{200sm}}(\mvir)\,x^{a_1
+    \displaystyle{x}^{a_2}}\,,\quad\rmn{where} \nonumber\\
+   a_0 &=& 0.76\,,\quad a_1 = 0.95\,,\quad  a_2 = -0.27\,, \quad 
+\rmn{and} \nonumber\\
+\label{eq:LSub} \\
+  C(\mvir) &=& 0.023\,\left(\frac{\mvir}{M_{\rm lim}}\right)^{0.226}\,.
+\label{eq:Csub}
+\end{eqnarray}
+Here $a_i$ denote our fitted variables, ${\rm L_{200sm}}$ is the
+luminosity from the smooth halo without substructures within $\rvir$
+and $x= \left(\frac{r}{\rvir}\right)$. The theoretical smallest mass
+of subhalos $M_{\rm lim}$ is determined from free streaming length of
+DM (CHECK), where we assume that the mass power-law scaling relation
+in Eq.~(\ref{eq:Csub}) is valid down to the free streaming mass of DM
+halos. This is conventionally in the cold dark matter universe
+\cite{2001PhRvD..64h3507H,2005JCAP...08..003G} taken to be
+$10^{-6}\msun$. Note that potentially the power-law could flatten
+towards smaller mass scales although current simulations show no hits
+of such a behavior and in addition we are approaching the asymptotic
+behavior in the power spectrum on these scales(CHECK). We derive the
+normalization function $C(\mvir)$ in Eq.~(\ref{eq:Csub}) from the
+simulations in \cite{2008Natur.456...73S}:
+\begin{equation}
+\left(\frac{\mvir\,M_{\rm res,sim}}
+{M_{\rm 200sim}\,M_{\rm lim}}\right)^{0.226}\,.
+ \label{eq:C2}
+\end{equation}
+Here $M_{\rm 200sim}=1.9\times10^{12}\msun$ is the mass of the MW halo
+in the simulation and $M_{\rm res,sim}=10^5\msun$ is the mass of the
+smallest resolved subhalos in the MW simulation. For DM halos more
+(less) massive than the MW we expect a larger (smaller) boost from
+substructures, simply because of the larger (smaller) mass range down
+to the minimum mass $M_\rmn{lim}$.
+
+Finally we derive the squared density profile for the substructures
+using
+\begin{eqnarray}
+\rho_\rmn{sub}^2(r) &=& \frac{\dd \rmn{L_{sub}}}{\dd V} \frac{1}{\rmn{L_{200sm}}}
+\int_{\rvir} \dd r' 4\pi r'^2 \rho^2(r')\qquad\rmn{where}\nonumber\\
+ \frac{\dd \rmn{L_{sub}}}{\dd V} &=& a_0\,a_1\,C(\mvir)\,x^{a_2+a_1\,x^{a_2}}\,
+\left[\frac{1+a_2\log(x)}{4\pi\,r^3}\right]\quad\rmn{and}\nonumber\\
+x &=& r/\rvir\,.
+\end{eqnarray} 
+
+The different density profiles have a large impact on the luminosity
+from annihilating DM, although the details of the density profile can
+be neglected compared to the dominating boost from substructures. In
+Fig.~\ref{fig:radial_lum} we compare the radial dependence of the
+accumulative luminosity from different smooth cluster density profiles
+to the substructure boosted luminosity at different mass scales. We
+recalculate the density contrast for the core like NFW density profile
+$\rhos$ and rescale the concentration parameter in Eq.~(\ref{eq:cfit})
+with $300/160$ \cite{2011ApJ...728L..39N} to account for the more
+centralized scale radius in cluster with a softer cusp. The emission
+coming from the core like NFW density profile ($\beta=0.6$) compared
+to a cuspy ($\beta=1.0$) is about 30\% larger within $\rvir$. This
+difference is build up within 10\% of $\rvir$ (i.e. close to
+$r_\s$). Hence the slope of the central part of a cluster is
+unimportant for the DM luminosity inside $\rvir$, instead the
+important factor is the scale radius. The emission from an Einasto
+density profile is about 50\% larger than the cuspy NFW profile in the
+periphery of the cluster, where the difference is mainly build up at a
+few percent of $\rvir$. The substructure boosted luminosities is
+neglible in the center of halos, but integrated out to $\rvir$ the
+boost is about; 10 for dwarf galaxies, $10^2$ for galaxies, and $10^3$
+for galaxy clusters.
+\begin{figure}%[t]
+ \includegraphics[width=0.99\columnwidth]{figures/dens.prof.eps}
+\caption{\it Radial dependence of various luminosity
+  contributions. The solid lines show the accumulative smooth
+  luminosity from a cluster with the mass $\mvir=10^{15}\,\msun$ for
+  three different density profiles; an Einasto profile with
+  $\alpha=0.17$ (light blue), a cuspy NFW profile with $\beta=1.0$
+  (dark blue), and a core NFW profile with $\beta=0.6$ (purple). The
+  dashed lines show the accumulative luminosity from substructures for
+  three different mass scales; an $\mvir=10^{15}\,\msun$ galaxy
+  cluster (red), an $\mvir=10^{12}\,\msun$ galaxy (orange), and an
+  $\mvir=10^{8}\,\msun$ dwarf galaxy (green). All luminosities have
+  been normalized with the luminosity within $\rvir$ from a cuspy NFW
+  profile. We have assumed the standard value for the limiting
+  substructure mass of $M_\rmn{lim}=10^{-6}\,\msun$. Note the large
+  expected boost from substructures in clusters ($\sim1000$), and the
+  relative small boost in dwarf galaxies ($\sim20$).}
+ \label{fig:radial_lum}
+\end{figure}
+
+In Fig.~\ref{fig:radial_emis} we show the radius with the maximum
+luminosity for substructures and smooth density profiles, both for
+three different mass scales. We find that the smooth luminosity per
+logarithmic radial bin peaks at $x \dd^2 L/\dd x^2+\dd L/\dd x = 0
+\rightarrow r \propto \rvir/3c$. Hence the main contribution to the
+luminosity for large mass scales, which are usually associated with a
+low concentrated DM halos, is focused to the regime around 10\% of
+$\rvir$.  It clearly shows how that the main contribution from the
+substructures is coming from outer parts of the DM halos, while the
+main contribution from the smooth density profiles peaks around the
+scale radius. Not that, even though the bulk of substructures have
+been erased in the central regions of DM halos, a cluster in
+projection has a significant enhancement due to substructures at a
+radius of just a few percent of $\rvir$.
+\begin{figure}
+  \includegraphics[width=0.99\columnwidth]{figures/emissiv.sub.eps}
+  \caption{\it Luminosity dominated radius for different mass
+    scales. We show the normalized luminosity per logaritmic radial
+    bin which corresponds to $x^3\rho^2/\rho^2_{200}$ where
+    $\rho_{200}$ is the density at $\rvir$. The solid lines represents
+    cuspy $\beta=1.0$ NFW density profiles for three different mass
+    scales; an $\mvir=10^{15}\,\msun$ galaxy cluster (red), an
+    $\mvir=10^{12}\,\msun$ galaxy (orange), and an
+    $\mvir=10^{8}\,\msun$ dwarf galaxy (green). The dashed lines show
+    the contribution from substructures for the same three mass
+    scales. All luminosities have been normalized with the luminosity
+    within $\rvir$ from a cuspy NFW profile. We have assumed the
+    standard value for the limiting substructure mass of
+    $M_\rmn{lim}=10^{-6}\,\msun$. The peaks show that the flux is not
+    dominated by the center of the halos, but instead by the core
+    region for the smooth density profile and by the outer parts for
+    the substructures.}
+  \label{fig:radial_emis}
+\end{figure}
+
+
+\subsubsection{Cosmic-ray induced gamma-ray emission}
+\label{sect:CRs}
+On small astrophysical scales, such as supernovae remnants and
+galaxies, there are convincing evidences of non-thermal
+populations. Especially, in the MW, the cosmic rays are observed
+directly as well as indirectly through radio, X-ray, and gamma-ray
+emission. On larger scales of the order of few 100~kpc up to Mpc,
+there are currently a vast number of observations of radio emission
+coming from radio mini halos in the center of cooling flow clusters,
+radio relics in the periphery of clusters \cite{2004rcfg.proc..335K}
+as well as smooth giant radio halos that have been observed in more
+than 50 clusters \cite{2003ASPC..301..143F,2008SSRv..134...93F}. This
+type of emission is expected in clusters since the formation process
+of a galaxy cluster is a very energetic processes that induces both
+turbulence as well as frequently occurring merging and accretion
+shocks which both are thought to accelerate large quantities of
+relativistic non-thermal protons and radio emitting electrons to high
+energies. Thus most of the observed radio emission in clusters is
+expected to emerge from cosmic-ray electron induced radio synchrotron
+emission. The precise origin of these electrons, in especially relics
+and giant radio halos, is still not settled. However, due to the
+smoothness of the extended emission and the observed power-law slope
+it seems quite natural that they are of hadronic origin. Especially
+since the long cooling time of cosmic ray protons (CRps) allows for
+both an extended and large population of CRps to build up over the
+cluster history \cite{1997ApJ...487..529B}.
+
+When the CRps interact with ambient gas protons, it results in the
+production of both charged and neutral pions that decay into
+electrons, neutrinos, and gamma-rays. The production of these
+secondaries depend both on the gas and CRp densities in the cluster,
+where the CRp density roughly trace the gas outside the core regime and
+is slightly enhanced in the center. This density scaling implies that
+clusters are great targets for Cherenkov telescopes with a high
+sensitivity for the central parts of close by clusters. Detecting the
+cluster gamma-ray emission is crucial in this respect as it
+potentially provides the unique and unambiguous evidence of CRp
+populations in clusters through observing the $\pi^0$ bump at about
+100~MeV in the spectra. 
+
+We adopt the universal spectral and spatial gamma-ray model developed
+by Pinzke \& Pfrommer \cite{2010MNRAS.409..449P} to estimate the
+emission from decaying $\pi^0$:s that dominates over the inverse
+Compton emission from primary and secondary electrons above 100~MeV in
+clusters. The gamma-ray formalism was derived from high resolution
+simulations of clusters of galaxies that included radiative
+hydrodynamics, star formation, supernova feedback, and followed CRp
+physics using a novel formulation that trace the most important
+injection and loss processes self-consistently while accounting for
+the CRp pressure in the equation of motion
+\cite{2008A&A...481...33J,2007A&A...473...41E,2006MNRAS.367..113P}.
+We note that the overall normalization of the CRp and gamma-ray
+distribution scales with the maximum acceleration efficiency at
+structure formation shock waves. Following recent observations at
+supernova remnants \cite{2009Sci...325..719H} as well as theoretical
+studies \cite{2005ApJ...620...44K}, we adopt a realistic value of this
+parameter and assume that 50\% of the dissipated energy at strong
+shocks is injected into CRps while this efficiency rapidly decreases
+for weaker shocks \cite{2007A&A...473...41E}.
+ 
+
+
 \subsection{Radiative processes}
 In this section we outline the basics of inverse Compton (IC)
 emission. As target radiation fields we consider both cosmic microwave
@@ -980,26 +1027,51 @@ the ICM (e.g. \cite{2006ApJ...648L..29P} and
 \cite{2009MNRAS.399.1694G}). Much of the radiation leaks out from the
 galaxy into the ICM, which give rise to similar spectral distributions
 for the galaxies and the ICM in these wavelengths. Hence, we use the
-accurately measured light from galactic dust and starlight for the ISM
-to model the ICM. We characterize the spectra through a fit to the
-galactic spectra presented in \cite{2006ApJ...648L..29P}. The spatial
-distribution of the SD light in clusters is extracted from a stacked
-emission analysis of Sloan Digital Sky Survey (SDSS) data at the
-redshift $\sim 0.25$ \cite{2005MNRAS.358..949Z}. Finally, we fix the
-normalization for the light from stars and dust individually in a
-galaxy cluster using using the IR to X-ray luminosity scaling relation
-found in \cite{2008A&A...490..547G}. The X-ray luminosities for the
-clusters used in this work are listed in the extended HIghest X-ray
-FLUx Galaxy Cluster Sample (HIFLUGCS) \cite{2002ApJ...567..716R} from
-the Rosat all-sky survey. Note that we have added the Virgo cluster to
-the sample that we nevertheless refer to as extended HIFLUGCS
-catalogue in the following.
+accurately measured light from galactic dust and starlight in the ISM
+to model the ICM. In Fig.~\ref{fig:SD_spectra} we characterize the
+spectral shape through a fit to the galactic spectra presented in
+\cite{2006ApJ...648L..29P}. We fix the normalization for the energy
+density of light from stars and dust in a galaxy cluster individually
+using observed luminosities from SD. In addition, we attach a mass
+scaling to the normalization which we adopt from a simple
+mass-to-starlight luminosity scaling relation derived from
+observations of the brightest cluster galaxy
+\cite{2010ApJ...713.1037H}. The figure is showing the spectra at
+$r=0.03\rvir$, which is the radius there the SD energy density equals
+the energy density of the CMB black-body distribution in a galaxy
+cluster. Inside this central radius the SD component is dominating,
+which is shown in Fig.~\ref{fig:SD_Edens} where we compare the energy
+densities from different radiation fields in a galaxy cluster with the
+mass $\mvir=10^{15}\msun$. For this figure we use two different
+profiles for the SD energy density, where the total profile includes
+the contribution from the ICL, the BCG and all the galaxies, while the
+galaxies are excluded in the smooth profile. We find that even for a
+cluster with a relative small mass the energy density of the SD
+components dominates over the CMB and the magnetic fields (with a
+central B field of 3~$\mu G$) within about 10\% of $\rvir$. Outside
+this radius the CMB is dominating the energy density of the cluster,
+hence the magnetic fields are always subdominant in the cluster and
+can safely be removed from cluster IC calculations for a reasonable
+central B-field and spectral index. Note that in this work we keep the
+contribution from B-fields to the total energy density for
+consistency. Also note that we extract the spatial distribution of the
+SD light in clusters from a stacked emission analysis of Sloan Digital
+Sky Survey (SDSS) data at the redshift $\sim 0.25$
+\cite{2005MNRAS.358..949Z} (c.f. Fig.~\ref{fig:SD_spatial}).
 
-\begin{figure}%[t]
- \includegraphics[width=0.99\columnwidth]{figures/lum.stars.eps}
-\caption{\it accumulative luminosity}
- \label{fig:SD_lum}
-\end{figure}
+ADD DISCUSSION ABOUT ACCUMILATIVE LUMINOSITY
+
+
+\del{
+found the IR to X-ray luminosity scaling relation found in
+\cite{2008A&A...490..547G}. The X-ray luminosities for the clusters
+used in this work are listed in the extended HIghest X-ray FLUx Galaxy
+Cluster Sample (HIFLUGCS) \cite{2002ApJ...567..716R} from the Rosat
+all-sky survey. Note that we have added the Virgo cluster to the
+sample that we nevertheless refer to as extended HIFLUGCS catalogue in
+the following.
+}
+
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/fit.porter.v2.eps}
 \caption{\it Spectral dependence of radiation fields in a cluster of
@@ -1010,12 +1082,12 @@ catalogue in the following.
   derived in \cite{2006ApJ...648L..29P} for a galaxy. We normalize the
   individual SD spectrum separately using the observed luminosity from
   SD in clusters. The SD luminosity is related to the cluster mass
-  through Eq, where we use have used the mass
-  $\mvir=4.0\times10^{13}\msun$ in this figure. Finally we renormalize
-  the SD spectra to the radius $r=0.071\rvir$, where the smooth energy
-  density of the SD light (see Fig.~\ref{fig:SD_Edens}) equals the
-  energy density of the CMB. The red dashed lines show the fitted SD
-  spectral model.}
+  through Eqns.~(\ref{eq:u_SD}-\ref{eq:N_stars}), where we use have
+  used the mass $\mvir=10^{15}\msun$ in this figure. Finally we
+  renormalize the SD spectra to the radius $r=0.03\rvir$, where the
+  smooth energy density of the SD light (see Fig.~\ref{fig:SD_Edens})
+  equals the energy density of the CMB. The red dashed lines show the
+  fitted SD spectral model.}
  \label{fig:SD_spectra}
 \end{figure}
 \begin{figure}%[t]
@@ -1027,16 +1099,38 @@ catalogue in the following.
    $u_\rmn{cmb}=0.26\,\rmn{eV}\,\rmn{cm}^{-3}$. The energy density of
    the light from stars and dust (SD) is denoted by the red dashed
    line and the solid purple line for the total SD light and the
-   smooth SD light, respectively. The SD light has been renormalized
-   to a cluster with the mass $\mvir=4.0\times10^{13}\msun$. Finally we
-   show the energy density two magnetic field models with a central
-   magnetic field of 3~$\mu G$. The magnetic field scales with the gas
-   density to the power $\alpha_\rmn{B}$; green dash-dotted line
-   ($\alpha_\rmn{B}=0.5$) and orange dash-dotted line
-   ($\alpha_\rmn{B}=0.7$). Note that the SD radiation is dominating
-   the energy density inside $\sim0.1\,\rvir$.}
+   smooth SD light, respectively. For comparison we show the energy
+   density of the stars and a low dust model (SLD) with the light blue
+   line. The SD light has been renormalized to a cluster with the mass
+   $\mvir=10^{15}\msun$. Finally we show the energy density two
+   magnetic field models with a central magnetic field of 3~$\mu
+   G$. The magnetic field scales with the gas density to the power
+   $\alpha_\rmn{B}$; green dash-dotted line ($\alpha_\rmn{B}=0.5$) and
+   orange dash-dotted line ($\alpha_\rmn{B}=0.7$). Note that the SD
+   radiation is dominating the energy density inside
+   $\sim0.1\,\rvir$.}
  \label{fig:SD_Edens}
 \end{figure}
+
+\begin{figure}%[t]
+ \includegraphics[width=0.99\columnwidth]{figures/lum.stars.eps}
+\caption{\it Accumulative luminosity as a function of radius. We show
+  the luminosity without substructures inside radius $r$. The solid
+  line show the emission from stars and dust (SD) and the IC
+  upscattered SD light is shown by the dashed lines. The red lines
+  show the total emission including the brightest cluster galaxy, the
+  intra cluster light and the additional intra cluster galaxies, while
+  these galaxies have been cut out in the smooth component shown by
+  the orange lines. We normalize the SD light and the IC upscattered
+  SD light with the luminosity from the smooth component within
+  $\rvir$ for each component. We find that the gamma-ray IC
+  luminosities are dominated by the central regime, while the SD light
+  is mainly build up in the outer parts of the cluster. In addition we
+  show that the SD light trace the cuspy NFW density profile (blue)
+  outside 10\% of $\rvir$.}
+ \label{fig:SD_lum}
+\end{figure}
+
 
 \section{Spectral gamma-ray distribution}
 \label{sect:spectral}
@@ -1044,7 +1138,7 @@ Spectrally resolved indirect DM searches have the advantage of probing
 different DM models through their characteristic spectral
 distributions. To make current and future DM searches more effective
 it is important to know in which energy band to focus the efforts in
-order to maximize potential DM signal over expected background.
+order to maximize potential DM signals over expected background.
 
 We dedicate this section to the spectral distribution of gamma-ray
 flux from clusters. The flux emerge from a leptophilic DM model that
@@ -1093,18 +1187,39 @@ CRps and DM continuum emission.
   BM model; upper left $\Ip$, lower left $\Kp$, upper right $\Jp$, and
   lower right $\Js$. The emission is calculated for the Fornax cluster
   using a point spread function of $0.1\deg$ and a boost from
-  substructures of 570. We find bright prospects for detecting the
-  continuum emission that is dominating the total emission in the GeV
-  energy range. Also note that, above 100~MeV the total inverse
-  Compton emission is at least a factor 10 smaller than the emission
-  expected from both the continuum emission and the emission coming
-  from CRps.}
+  substructures of 570 (ADD SUBBOOST ON SD MODEL, SHOULD BE ONLY FACTOR
+  FEW). We find bright prospects for detecting the continuum emission
+  that is dominating the total emission in the GeV energy range. Also
+  note that, above 100~MeV the total inverse Compton emission is at
+  least a factor 10 smaller than the emission expected from both the
+  continuum emission and the emission coming from CRps.}
  \label{fig:diff_BM}
 \end{minipage}
 \end{figure*}
 
 \del{CONSIDER REWRITING, START WITH PHYSICS, THEN DISCUSS DOMINATING
 CONTRIBUTIONS, PEAKS, AND SPECTRAL INDICES}
+
+One of the main contributions to the expected extended gamma-ray is
+coming from the IC upscattered photons on various photon background
+fields. Depending on the spatial and spectral distribution of
+electrons and positrons as well as the photon background field, the
+resulting spectral distributions of gamma-ray can differ
+greatly. Hence it is interesting to understand which spectral features
+and energy regimes that are dominating for the different DM models.
+
+If the substructure boost in clusters is significant, then the total
+electron and positron distribution is dominated by its radial profile
+outside the very center where the smooth density profile dominates
+over the substructures and the cooling from SD dominates over the
+CMB. Especially since the SD distribution is centrally peaked and the
+substructure distribution peaks in the outskirts around $\rvir$, the
+overlap is small. This results in a suppression of the IC upscattered
+SD photons relative to the IC upscattered CMB, the FSR and the
+continuum emission. However if substructures are only marginally
+dominating over the smooth distribution in a cluster, the SD component
+becomes more important, especially in the 100~GeV to 1~TeV energy
+regime where the IC on CMB photons is small. 
 
 In Fig.~\ref{fig:IR_comp} we show the total IC emission as well as its
 individual contributions from different IC upscattered radiation
@@ -1117,22 +1232,26 @@ upscattered CMB photons dominate the total DM IC emission in the
 energy regime below 100~GeV, while the SD dominate above this
 energy. For the BM models this transition is shifted towards a smaller
 energy since the electron and positron spectrum has a steep spectral
-distribution that suppresses low energy photon fields. This
-suppression is also seen in the relative normalization of the flux
-where the IC from both CMB and dust photons are lower compared to the
-starlight simply because the starlight has a higher energy, hence it
-is upscattered by more abundant low energy electrons and positrons
-(c.f. Fig.~\ref{fig:q_DM}). At the highest gamma-ray energies of about
-100~GeV and above, the IC from starlight steepens because it both
-probes the high energy tail of the electrons as well as suffer from
-the KN suppression. Even though the SD component seems to be
-suppressed compared to the CMB at energies around 100~MeV, it has a
-relative large impact on the steady state electron spectrum. If we
-remove the SD cooling, we find a factor two larger IC flux at low
-energies for a cluster of the size of Fornax. For more massive
-clusters we expect a larger IC flux from the SD component, but a
-smaller contribution from the CMB because of the more effective
-cooling.
+distribution that suppresses low energy photon fields. \del{This
+  suppression is also seen in the relative normalization of the flux
+  where the IC from both CMB and dust photons are lower compared to
+  the starlight simply because the starlight has a higher energy,
+  hence it is upscattered by more abundant low energy electrons and
+  positrons (c.f. Fig.~\ref{fig:q_DM}).} At the highest gamma-ray
+energies of about 100~GeV and above, the IC from starlight steepens
+because it both probes the high energy tail of the electrons as well
+as suffer from the KN suppression. It should be noted that if we
+remove the boost from substructures, the density profile of electrons
+and prositrons is more centrally peaked, and the relative importance
+of the IC upscattered SD increases. In addition the IC upscattered CMB
+light would suffer more from SD cooling in the center. \del{Even though
+the SD component seems to be suppressed compared to the CMB at
+energies around 100~MeV, it has a relative large impact on the steady
+state electron spectrum. If we remove the SD cooling, we find a factor
+two larger IC flux at low energies for a cluster of the size of
+Fornax. For more massive clusters we expect a larger IC flux from the
+SD component, but a smaller contribution from the CMB because of the
+more effective cooling.} EXPAND DISCUSSION
 
 Because of the large boost factor for the LP model ($\sim 10^4$), we
 overproduce the upper gamma-ray limit in the $1-10$~GeV energy
@@ -1203,8 +1322,8 @@ Cherenkov telescopes.
 \end{figure}
 
 We continue by comparing the estimated differential flux from Fornax
-to three other clusters in Fig.~\ref{fig:clu_comp}; the close by well
-studied Virgo cluster, the X-ray bright Perseus clusters, and the
+to three other clusters in Fig.~\ref{fig:clu_comp}; the close by and
+well studied Virgo cluster, the X-ray bright Perseus clusters, and the
 massive merging Coma cluster. We find high DM induced gamma-ray fluxes
 from both the Fornax and Virgo clusters, which highlight them as
 promising targets for indirect DM searches. Note, however, that we
@@ -1247,8 +1366,16 @@ B_\rmn{BM}&=&B_\sub \propto \mvir^{0.23}\,.
 \end{eqnarray}
 Hence increasing the mass with a factor two doubles the luminosity,
 but increasing the distance by a factor two decrease the flux with a
-factor four. It is also useful to relate the luminosities to a more
-model independent variable as the maximum circular velocity given by
+factor four. One should also note that the IC on SD photons scales
+slightly softer with mass, hence giving rise to a larger fraction of
+gamma-rays in low mass clusters compared to the total gamma-ray
+flux. In addition, considering that the brightest cluster galaxy
+constitute a relative larger contribution to the SD luminosity in low
+mass clusters which increase the importance of the SD component in low mass
+clusters even more (c.f. Fig.~\ref{fig:IR_comp}).
+
+It is also useful to relate the luminosities to a more model
+independent variable as the maximum circular velocity given by
 \begin{eqnarray}
 V_\rmn{max} &=& V_\rmn{circ}(r_\rmn{max})\qquad\,\,\,\,\,\,\,\,\,\rmn{where}\nonumber\\
 V_\rmn{circ}(r)&=& \sqrt{\frac{G_\rmn{N}\,M(<r)}{r}}\qquad\rmn{and}\nonumber\\
@@ -1282,16 +1409,15 @@ $L_{\gamma,\sub} \propto N\,M_\sub^A$, where $A<1$.
   models (LP) include both final state radiation and IC upscattered
   CMB, dust and starlight (green dash-dotted), and benchmark $\Kp$
   models (BM) include continuum emission, and IC upscattered CMB, dust
-  and starlight (blue dashed). The arrows have colors matching each
-  cluster and show the differential upper limits set by Fermi-LAT in
-  the energy ranges $0.2-1$~GeV, $1-10$~GeV, and $10-100$~GeV from
-  left to right. For visualization we offset the arrows by increasing
-  the mean energy by 30\% in the opposite order as they appear in the
-  figure, i.e. starting with Perseus. The flux from the clusters is
-  integrated out to $\rvir$ using a point spread function of $0.1\deg$
-  and includes the boost from substructures. We find that the lower
-  GeV energy regime is most constraining, and induce upper limits on
-  boost factors.}
+  and starlight (blue dashed). The arrows show the differential upper
+  limits set by Fermi-LAT in the energy ranges $0.2-1$~GeV,
+  $1-10$~GeV, and $10-100$~GeV from left to right. We show the
+  individual components for the BM model and LP model for Virgo and
+  Perseus, respectively. The flux from the clusters is integrated out
+  to $\rvir$ using a point spread function of $0.1\deg$ and includes
+  the boost from substructures. We find that the lower GeV energy
+  regime is most constraining, and impose upper limits on boost
+  factors.}
  \label{fig:clu_comp}
 \end{minipage}
 \end{figure*}
@@ -1316,10 +1442,10 @@ differential upper limits set by Fermi-LAT in the energy range
 $1-10$~GeV \footnote{We average the LP DM flux in the energy range
   $1-10$~GeV before we compare it to the upper limits.}  we can
 constrain the smallest mass of substructures to $M_\rmn{lim}\gtrsim
-10\,\msun$. Instead assuming the standard mass of the smallest
+100\,\msun$. Instead assuming the standard mass of the smallest
 substructures of $M_\rmn{lim}\gtrsim 10^{-6}\,\msun$, we can constrain
-the boost from SFE to about 4 in Fornax, corresponding to a maximum
-SFE in the MW of about 10.
+the boost from SFE to about 2 in Fornax, corresponding to a maximum
+SFE in the MW of about 5.
 
 
 \begin{figure}%[t]
@@ -1334,25 +1460,29 @@ SFE in the MW of about 10.
   from 300 (refer to equation) that is required to explain the
   electron and positron excess observed at Earth with LP DM (black
   arrow). If the DM interpretation is correct, we can constrain the
-  smallest size of halos to be larger than $10\,\msun$. However, if
+  smallest size of halos to be larger than $100\,\msun$. However, if
   the smallest size of DM halos is $10^{-6}\,\msun$, we can constrain
-  the SFE to about 4 in Fornax, corresponding to a maximum SFE in the
-  MW of about 10.}
+  the SFE to about 2 in Fornax, corresponding to a maximum SFE in the
+  MW of about 5.}
  \label{fig:boost_const}
 \end{figure}
 
 
+
 \section{Surface brightness profiles}
 \label{sect:spatial}
-The large angular extent of clusters on the sky in combination with
-the small PSF of most gamma-ray probes ($\sim 0.1$~deg) suggest that
-we would be able to probe the different spatial regimes of a
-cluster. Especially important is the spatial distribution of the
-gamma-ray emission as it bias upper limits derived for spatially
-extended clusters where a simple density profile is often assumed. In
-fact when DM substructures are included the total brightness profile
-is almost flat and very different from the smooth halo distribution
-with a steep outer brightness slope of $-5$.
+[ADD DUSTY STAR FORMING GALAXIES IN OUTERPARTS (LITTLE OVERLAP), DUST
+  WOULD NOT SURVIVE. IF DUST RAMPRESSURE STRIPPED, SPATIALLIATION
+  PROCESS IN THE HOT ICM FOR DYNAMICAL TIME] The large angular extent
+of clusters on the sky in combination with the small PSF of most
+gamma-ray probes ($\sim 0.1$~deg) suggest that we would be able to
+probe the different spatial regimes of a cluster. Especially important
+is the spatial distribution of the gamma-ray emission as it bias upper
+limits derived for spatially extended clusters where a simple density
+profile is often assumed. In fact when DM substructures are included
+the total brightness profile is almost flat and very different from
+the smooth halo distribution with a steep outer brightness slope of
+$-5$.
 
 In this section we investigate the gamma-ray surface brightness
 profiles induced by both CRps and different models of DM in more
@@ -1677,81 +1807,97 @@ spread function.
 \end{minipage}
 \end{figure*}
 
-In Fig.~\ref{fig15}, we compare Fermi-LAT flux upper limits to the flux
-predictions by the semi-analytical Pinzke and Pfrommer model
+In Fig.~\ref{fig15}, we compare Fermi-LAT flux upper limits to the
+flux predictions by the semi-analytical Pinzke and Pfrommer model
 \cite{2010MNRAS.409..449P} for CRp induced $\gamma$-rays that uses the
-X-ray-inferred density profiles of clusters as an input. For consistency, we use
-beta-model fits to ROSAT data of X-ray bright clusters for our $\gamma$-ray flux
-estimates \cite{2002ApJ...567..71}). Hence these predictions are superior to
-those that use luminosity-mass scaling relation to infer the expected
-$\gamma$-ray flux---a method used by reference \cite{2010ApJ...717L..71A} to
-compare to Fermi limits.  In this semi-analytic model, we employ the fact that
-CRs accelerated at structure formation shocks and transported over cosmic time
-exhibit a universal spectral form and an almost universal spatial
+X-ray-inferred density profiles of clusters as an input. For
+consistency, we use beta-model fits to ROSAT data of X-ray bright
+clusters for our $\gamma$-ray flux estimates
+\cite{2002ApJ...567..716R}). We derive the central gas densites for
+each cluster by following the approach outlined in
+\cite{1999ApJ...517..627M} which assumes that the ICM is
+isothermal. The central gas density is found by combining X-ray
+temperature with X-ray luminosity, X-ray detection radius, density
+core radius and density slope for each cluster. These predictions are
+superior to those that use luminosity-mass scaling relation to infer
+the expected $\gamma$-ray flux---a method used by reference
+\cite{2010ApJ...717L..71A} to compare to Fermi limits.  In this
+semi-analytic model, we employ the fact that CRs accelerated at
+structure formation shocks and transported over cosmic time exhibit a
+universal spectral form and an almost universal spatial
 distribution. Depending on whether or not we account for the bias of
-``artificial galaxies'' in cosmological simulations, we derive an optimistic or
-conservative limit of the expected $\gamma$-ray emission from decaying pions
-(bracketing our ignorance of the contribution of cluster galaxies to the overall
-$\gamma$-ray flux from a cluster). Note that both models assume the maximally
-allowed acceleration efficiency for strong shocks that transfer 50\% of the
-shock kinetic energy to CRs and most likely will have to be corrected down if
-this number is not realized at structure formation shocks. Secondly, these
-simulations neglect active CR transport such as streaming and diffusion relative
-to the gas, i.e. we assume that advective transport is the dominant one and CRs
-are tightly coupled to the gas via flux-frozen magnetic fields tangled on
-sufficiently small scales. Evidence from the statistics of radio halos suggests
-that this might not be the case for relaxed clusters, arguing that CR streaming
-in those objects could be responsible for a decrease in the central CR number
-density. This effect would also reduce the expected $\gamma$-ray flux by up to a
-factor of five \cite{2011A&A...527A..99E}. We note that the tightest Fermi
-limits are obtained in the 1-10 GeV regime due to the largest effective area of
-LAT there. In this energy band, the Fermi limits come close to the flux
-predictions of Virgo, Coma and Norma. Using integrated flux limits from Fermi,
-we arrive at very similar results.  We emphasize that by using our semi-analytic
-modeling, the slight discrepancy of the scaling relation-based prediction with
-the Fermi limit on Norma \cite{2010ApJ...717L..71A} is resolved: Norma simply
-seems to be less bright than an average cluster of the same mass as Norma. The
-insensitive limit on Perseus comes about since the central AGN in NGC1275 has
-turned on over the last years, making it hard to determine a comparable
-limit as obtained from the other clusters.
+``artificial galaxies'' in cosmological simulations, we derive an
+optimistic or conservative limit of the expected $\gamma$-ray emission
+from decaying pions (bracketing our ignorance of the contribution of
+cluster galaxies to the overall $\gamma$-ray flux from a
+cluster). Note that both models assume the maximally allowed
+acceleration efficiency for strong shocks that transfer 50\% of the
+shock kinetic energy to CRs and most likely will have to be corrected
+down if this number is not realized at structure formation
+shocks. Secondly, these simulations neglect active CR transport such
+as streaming and diffusion relative to the gas, i.e. we assume that
+advective transport is the dominant one and CRs are tightly coupled to
+the gas via flux-frozen magnetic fields tangled on sufficiently small
+scales. Evidence from the statistics of radio halos suggests that this
+might not be the case for relaxed clusters, arguing that CR streaming
+in those objects could be responsible for a decrease in the central CR
+number density. This effect would also reduce the expected
+$\gamma$-ray flux by up to a factor of five
+\cite{2011A&A...527A..99E}. We note that the tightest Fermi limits are
+obtained in the 1-10 GeV regime due to the largest effective area of
+LAT there. In this energy band, the Fermi limits come close to the
+flux predictions of Virgo, Coma and Norma. Using integrated flux
+limits from Fermi, we arrive at very similar results.  We emphasize
+that by using our semi-analytic modeling, the slight discrepancy of
+the scaling relation-based prediction with the Fermi limit on Norma
+\cite{2010ApJ...717L..71A} is resolved: Norma simply seems to be less
+bright than an average cluster of the same mass as Norma. The
+insensitive limit on Perseus comes about since the central AGN in
+NGC1275 has turned on over the last years, making it hard to determine
+a comparable limit as obtained from the other clusters.
 
 \begin{figure*}%[t]
 \begin{minipage}{2.0\columnwidth}
  \includegraphics[width=0.99\columnwidth]{figures/Flux.comp.CR.eps}
- \caption{\it Comparison of the gamma-ray flux induced by CRps for the 106
-   clusters included in the extended HIFLUGCS catalogue. The fluxes are
-   calculated within $\rvir$, and are derived using a single beta profile for
-   each cluster's gas density profile as obtained by ROSAT X-ray
-   observations. The CR distribution follows the semi-analytically model derived
-   by hydrodynamical cosmological cluster simulations \cite{2010MNRAS.409..449P}
-   (see text for details). The upper panel shows the energy integrated flux
-   above 100~MeV (left side) and above 100~GeV (right side), both as a function
-   of HIFLUGCS cluster ID. The eight brightest clusters are labelled. The lower
-   panel shows the relative difference between the $\gamma$-ray flux predicted by
-   the mass-luminosity scaling relation and to the flux computed using the
-   semi-analytical model \cite{2010MNRAS.409..449P}. The name of the clusters
-   with the largest positive offset are printed out; as expected, they all
+ \caption{\it Comparison of the gamma-ray flux induced by CRps for the
+   106 clusters included in the extended HIFLUGCS catalogue. The
+   fluxes are calculated within $\rvir$, and are derived using a
+   single beta profile for each cluster's gas density profile as
+   obtained by ROSAT X-ray observations. The CR distribution follows
+   the semi-analytically model derived by hydrodynamical cosmological
+   cluster simulations \cite{2010MNRAS.409..449P} (see text for
+   details). The upper panel shows the energy integrated flux above
+   100~MeV (left side) and above 100~GeV (right side), both as a
+   function of HIFLUGCS cluster ID. The eight brightest clusters are
+   labelled. The lower panel shows the relative difference between the
+   $\gamma$-ray flux predicted by the mass-luminosity scaling relation
+   and to the flux computed using the semi-analytical model
+   \cite{2010MNRAS.409..449P}. The name of the clusters with the
+   largest positive offset are printed out; as expected, they all
    correspond to cool core clusters.}
  \label{fig19}
 \end{minipage}
 \end{figure*}
 
-To complete this section, we present our semi-analytical model predictions for
-the CR-induced $\gamma$-ray flux for all clusters in the extended HIFLUGCS
-sample in Fig.~\ref{fig19}. In the lower panel of this figure, we show the
-relative difference between the $\gamma$-ray flux predicted by the
-mass-luminosity scaling relation and to the flux computed using the
-semi-analytical model. Using our semi-analytic modelling results in a scatter of
-the expected $\gamma$-ray flux at a given mass. Cool core clusters have a denser
-core which increases the target density of gas protons for the hadronic reaction
-which in turn biases the expected $\gamma$-ray fluxes systematically higher. We
-confirm this effect as all our outliers with increased flux in our semi-analytic
-model relative to the scaling relation expectation are in fact cool core
-clusters suggesting that the X-ray emission should be a good proxy for the
+To complete this section, we present our semi-analytical model
+predictions for the CR-induced $\gamma$-ray flux for all clusters in
+the extended HIFLUGCS sample in Fig.~\ref{fig19}. In the lower panel
+of this figure, we show the relative difference between the
+$\gamma$-ray flux predicted by the mass-luminosity scaling relation
+and to the flux computed using the semi-analytical model. Using our
+semi-analytic modelling results in a scatter of the expected
+$\gamma$-ray flux at a given mass. Cool core clusters have a denser
+core which increases the target density of gas protons for the
+hadronic reaction which in turn biases the expected $\gamma$-ray
+fluxes systematically higher. We confirm this effect as all our
+outliers with increased flux in our semi-analytic model relative to
+the scaling relation expectation are in fact cool core clusters
+suggesting that the X-ray emission should be a good proxy for the
 expected $\gamma$-ray emission. Note however that there could be the
-counter-acting effect of CR streaming in relaxed clusters which would tend to
-decrease the $\gamma$-ray luminosity \cite{2011A&A...527A..99E}. Future careful
-modelling is needed to quantify this effect.
+counter-acting effect of CR streaming in relaxed clusters which would
+tend to decrease the $\gamma$-ray luminosity
+\cite{2011A&A...527A..99E}. Future careful modelling is needed to
+quantify this effect.
 
 
 \del{
@@ -1960,6 +2106,7 @@ specific energy density is given by
 \begin{eqnarray} 
 u_\sd(\eph, r) &=& j(r)\,u_\sd(\eph) \nonumber\\
 &=& j(r)\,\sum_i N_i(\mvir) u_i^\gal(\eph)\,,
+\label{eq:u_SD}
 \end{eqnarray}
 where $j(r)$ describes the spatial distribution. We fix the unitless
 normalization $N_i(\mvir)$ using the total energy of the light in SD
@@ -1994,7 +2141,7 @@ and distance to the cluster $D_\clu=1.26\times10^9\,\rmn{pc}$. To
 account for different cluster masses in our analysis we adopt a simple
 mass scaling of the luminosity from the stars in clusters. Since a
 large contribution of the total starlight in a cluster comes from the
-brightest central galaxy (BCG), we assume that the total starlight has
+brightest cluster galaxy (BCG), we assume that the total starlight has
 the same halo mass scaling as the BCG \cite{2010ApJ...713.1037H}
 \begin{equation}
 L_\stars(\mvir)=L_\stars(M_{200\rmn{av}})\,
@@ -2066,7 +2213,7 @@ from B-fields to the total energy density for consistency.
 
 
 \subsection{Radial profiles}
-
+ADD CALCULATION ABOUT GALAXY OVERLAP WITH THE ICM
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/SB.photon.eps}
 \caption{\it Spatial dependence of light from stars and dust. We show
