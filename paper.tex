@@ -3,8 +3,8 @@
 
 \def\del#1{{}}
 %\def\del#1{{\bf (DELETED TEXT)}}
-\def\C#1{#1}
-%\def\C#1{{\bf #1}}
+%\def\C#1{#1}
+\def\C#1{{\bf #1}}
 
 
 % --- journals --- %
@@ -74,7 +74,7 @@
 \newcommand{\ngamma}{\ensuremath{N_{\gamma}}}
 \newcommand{\ngammaj}{\ensuremath{N_{\gamma,j}}}
 \newcommand{\sigmaannv}{\ensuremath{\langle\sigma v\rangle}}
-\newcommand{\sigv}{\ensuremath{\sigma_v}}
+\newcommand{\sigv}{v_\rmn{cl}}
 \newcommand{\ic}{\rmn{IC}}
 \newcommand{\egamma}{\ensuremath{E_{\gamma}}}
 \newcommand{\dic}{\rmn{dIC}}
@@ -129,34 +129,39 @@
   from a realistic spatial and spectral distribution of dust and
   stellar light. We predict the Virgo and Fornax clusters to be the
   brightest DM sources and find a particularly low CR induced
-  background for Fornax. For a given minimum substructure mass as
-  given by the DM free-streaming scale, one needs the largest DM halo
-  mass to maximize the substructure boost over the smoothly
-  distributed annihilation flux: for galaxy clusters as the largest
-  collapsed objects, we find a boost factor of more than 1000. Since
-  the annihilation flux of substructures is mostly contributed by the
-  regions around the virial radius, the resulting surface brightness
-  profiles are almost flat. This makes it very challenging to detect
-  this flux with imaging air Cherenkov telescopes since their
-  sensitivity drops linearly with radius and they typically have
-  $5-10$ linear resolution elements across a cluster; the gamma-ray
-  satellite Fermi is better suited. Assuming cold dark matter with a
-  substructure mass distribution down to an Earth mass and using Fermi
-  upper limits, we rule out the leptophilic models in their present
-  form in 14 clusters, and limit the boost from Sommerfeld enhancement
-  in Fornax to be less than 2 which corresponds to a value in the
-  Milky Way of less than 5. Alternatively, if the Sommerfeld
-  enhancement factor is realized in Nature, this would imply a
-  limiting substructure mass in Fornax of $\mlim > 10^2\,\msun$ which
-  would be a challenge for structure formation. We find that Fermi
-  three-year data will be able to constrain the smallest mass of
-  substructures for supersymmetric benchmark models or alternatively
-  constrain their cross sections for a given substructure boost. The
-  Fermi upper limits are closing in on our predictions for the CR flux
-  using an analytic model based on cosmological hydrodynamical cluster
-  simulations. We will soon start to constrain the underlying CR
-  physics such as shock acceleration efficiencies or CR transport
-  properties.
+  background for Fornax. \C{For a minimum substructure mass given by
+    the DM free-streaming scale, the largest DM halo mass maximizes
+    the substructure boost over the smoothly distributed annihilation
+    flux: for galaxy clusters as the largest collapsed objects, we
+    find a boost factor of more than 1000.} \del{For a given minimum
+    substructure mass as given by the DM free-streaming scale, one
+    needs the largest DM halo mass to maximize the substructure boost
+    over the smoothly distributed annihilation flux: for galaxy
+    clusters as the largest collapsed objects, we find a boost factor
+    of more than 1000.} Since the annihilation flux of substructures
+  is mostly contributed by the regions around the virial radius, the
+  resulting surface brightness profiles are almost flat. This makes it
+  very challenging to detect this flux with imaging air Cherenkov
+  telescopes since their sensitivity drops linearly with radius and
+  they typically have $5-10$ linear resolution elements across a
+  cluster; the gamma-ray satellite Fermi is better suited. Assuming
+  cold dark matter with a substructure mass distribution down to an
+  Earth mass and using Fermi upper limits, we rule out the leptophilic
+  models in their present form in 14 clusters, and limit the boost
+  from Sommerfeld enhancement in Fornax to be less than 2 which
+  corresponds to a value in the Milky Way of less than
+  5. Alternatively, if the Sommerfeld enhancement factor is realized
+  in Nature, this would imply a limiting substructure mass in Fornax
+  of $\mlim > 10^2\,\msun$ which would be a challenge for structure
+  formation. \C{In addition, we} \del{We} find that Fermi three-year
+  data will be able to constrain the smallest mass of substructures
+  for supersymmetric benchmark models or alternatively constrain their
+  cross sections for a given substructure boost. The Fermi upper
+  limits are closing in on our predictions for the CR flux using an
+  analytic model based on cosmological hydrodynamical cluster
+  simulations. \C{Thus we} \del{We} will soon start to constrain the
+  underlying CR physics such as shock acceleration efficiencies or CR
+  transport properties.
 \end{abstract}
 
 
@@ -168,7 +173,7 @@ Dark matter (DM) has been searched for in direct detection experiments
 \cite{Ellis:2001hv,Baer:2006ff,Khachatryan:2011tk} and also in
 indirect detection experiments looking for signals in the cosmic-ray
 spectra of antiprotons, positrons, neutrinos and all of the
-electromagnetic spectrum from radio waves to gamma rays
+electromagnetic spectrum from radio waves to gamma-rays
 \cite{Bergstrom:2009ib}. So far, the improvements in direct detection
 sensitivity have put this method into focus, but the situation may
 change considerably the coming few years as the CERN LHC experiments
@@ -500,9 +505,8 @@ of the theory. The effect is usually strongly velocity-dependent,
 depending on velocity as $1/v$ or, in the fine-tuning case of being
 very near resonance, as $1/v^2$. This means that in a virialised
 system (such as a galaxy cluster) with large velocity dispersion
-$v_{\rm cl}$ the SFE will be smaller than the one expected in a single
-galaxy such as the MW, roughly by a factor $v_{\rm MW}/v_{\rm
-  cl}$.
+$\sigv$ the SFE will be smaller than the one expected in a single
+galaxy such as the MW, roughly by a factor $v_{\rm MW}/\sigv$.
 
 
 As LP models, apart from being slightly contrived from the
@@ -525,20 +529,16 @@ sub-GeV force carriers is found to be \cite{Finkbeiner:2010sm} between
 the PAMELA and Fermi excess, given other astrophysical uncertainties.
 
 We adopt our benchmark LP model from \cite{Finkbeiner:2010sm} where we
-use a DM mass $m_\chi=1.6$~TeV and a branching ratio of ($1/2,\,1/2$)
-into ($\mu^+/\mu^-,\,\e^+/\e^-$).\footnote{This is an approximation to
-  the model found in \cite{Finkbeiner:2010sm} that has a branching
-  ratio of ($1/3,\,1/3,\,1/3$) into
-  ($\mu^+/\mu^-,\,\e^+/\e^-,\,\pi^+/\pi^-$).} The SFE
-$S=\B_\sfe(\sigv=200\,km/s)\approx 300$ for a MW halo in our LP model,
-which we appropriately scale down for cluster halos, using \del{To
-  connect easily to our previous work \cite{2009PhRvL.103r1302P}, we
-  choose as our benchmark LP model one with mass $1.6$~TeV and
-  Sommerfeld boost $S=\B_\sfe(\sigv=200\,km/s)\approx 300$ for a MW
-  halo and scale this appropriately down for cluster halos, using}
+use a DM mass $m_\chi=1.6$~TeV and a branching ratio of ($1/2:1/2$)
+into ($\mu^+\mu^-:\e^+e^-$).\footnote{This is an approximation to the
+  model found in \cite{Finkbeiner:2010sm} that has a branching ratio
+  of ($1/4:1/4:1/2$) into ($\mu^+\mu^-:\e^+\e^-:\pi^+\pi^-$).}  The
+SFE $S=\B_\sfe(\sigv=200\,\rmn{km}/\rmn{s})\approx 300$ for a MW halo
+in our LP model, which we appropriately scale down for cluster halos,
+using
 \begin{equation}
 \B_\sfe(\sigv) = 0.2\, \frac{c}{\sigv} = 
-49.4 \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-1/3}\,,
+62.6 \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-1/3}\,,
 \label{eq:B_sfe}
 \end{equation}
 where the velocity dispersion $\sigv$ for clusters is derived in
@@ -588,20 +588,19 @@ with
 the gaugino fraction of a given neutralino is $|a_1|^2+|a_2|^2$
 whereas $|a_3|^2+|a_4|^2$ is the higgsino fraction.
 
-
 We use the \ds package \cite{ds} to compute the mass, couplings and
 relic density for a given set of parameters.  Actually, we take
-advantage of so-called benchmark models, which have been proposed in
-different contexts (in particular in \cite{Bringmann:2008kj} giving
-predictions for imaging air Cherenkov telescopes, like  MAGIC II and CTA). They give a good
-representation of models with high enough gamma-ray rates to become
-the first candidates for DM indirect detection in imaging air
-Cherenkov telescopes. We use the following supersymmetric benchmark
-models:
+advantage of so-called benchmark (BM) models, which have been proposed
+in different contexts (in particular in \cite{Bringmann:2008kj} giving
+predictions for imaging air Cherenkov telescopes, like MAGIC II and
+CTA). They give a good representation of models with high enough
+gamma-ray rates to become the first candidates for DM indirect
+detection in imaging air Cherenkov telescopes. We use the following
+supersymmetric BM models:
 
 \begin{itemize}
 \item
- $I′$: This model was introduced in \cite{2004EPJC...33..273B}, where
+ $\Ip$: This model was introduced in \cite{2004EPJC...33..273B}, where
   its phenomenology at colliders was studied. Annihilation directly
   into lepton pairs is suppressed for neutralinos due to their
   Majorana nature and therefore helicity suppression for annihilation
@@ -611,17 +610,17 @@ models:
   \cite{1989PhLB..225..372B,2008JHEP...01..049B}, gives a considerable
   contribution due to light sleptons in this model.
 
-\item $J′$: This model, also from \cite{2004EPJC...33..273B} is in the
+\item $\Jp$: This model, also from \cite{2004EPJC...33..273B} is in the
   so-called coannihilation tail. The sleptons are nearly degenerate
   with the neutralino, which causes the large IB from the leptonic
   final states to give a high enhancement of the flux.
 
-\item $K′$: A representative model for the funnel region, where the
+\item $\Kp$: A representative model for the funnel region, where the
   annihilation dominantly occurs in the $s$-channel through exchange
   of the pseudoscalar Higgs boson \cite{2004EPJC...33..273B}. Here IB
   contributions are not important.
 
-\item $J^*$: Annihilation in the so-called coannihilation region,
+\item $\Js$: Annihilation in the so-called coannihilation region,
   introduced in \cite{2008JHEP...01..049B} as BM3, with a particularly
   large IB contribution.
 
@@ -650,12 +649,12 @@ $\Js$  & 234 & 0.09 & $8.9\times 10^{-29}$ \\
 
 \subsubsection{Final state radiation}
 There are two types of radiative processes which are important for our
-benchmark models, first the usual QED final state radiation (FSR) for
-both the LP model and for supersymmetric models with charged final
-states. In addition, there may be direct emission from a virtual,
-charged, exchanged particle (such as a spin-0 slepton or squark),
-internal bremsstrahlung, IB. The latter is essentially only important
-when there is a helicity suppression for the lowest order annihilation
+BM models, first the usual QED final state radiation for both the LP
+model and for supersymmetric models with charged final states. In
+addition, there may be direct emission from a virtual, charged,
+exchanged particle (such as a spin-0 slepton or squark), internal
+bremsstrahlung, IB. The latter is essentially only important when
+there is a helicity suppression for the lowest order annihilation
 process, which is the case for neutralinos, whose Majorana nature make
 the annihilation rate in the $s$ wave proportional to $m_f^2$, for
 final state fermion $f$. Interestingly, both the gamma-ray and fermion
@@ -663,9 +662,9 @@ energy spectra are peaked at the highest energy for this process,
 which can in some models cause a rather spectacular bump in the
 spectra for these models.
 
-The photon spectrum resulting from FSR is universal with only a
-weak dependence of the underlying particle physics model. The photon
-yield from this process is given by (see
+The photon spectrum resulting from final state radiation is universal
+with only a weak dependence of the underlying particle physics
+model. The photon yield from this process is given by (see
 e.g. \cite{2008JHEP...01..049B})
 \begin{equation}
 \frac{\dd N_{X \bar{X}}}{\dd x} \approx \frac{\alpha Q_X^2}{\pi}
@@ -685,16 +684,16 @@ for fermions.
 The differential energy spectrum for the IB process is more
 complicated (see \cite{1989PhLB..225..372B,2008JHEP...01..049B}), but
 can be computed using {\sc DarkSUSY}. The differential photon energy
-spectra for all our benchmark models are shown in Fig.~\ref{fig:q_DM}.
-The peaking at high photon energy and the resulting bump caused by
-inner bremsstrahlung is clearly seen for benchmark models $I´$, $J´$,
-and $J^*$. Despite the different particle masses and cross sections,
-the spectrum of the continuum emission shows a remarkably similar
-shape which suggests that a simple rescaling of particle masses
-(responsible for the exponential cutoff in the spectrum) and cross
-sections (spectral amplitude) should yield a roughly scale-invariant
-continuum emission spectrum except for the presence of the final state
-emission feature which depends on the details of the specific decay
+spectra for all our BM models are shown in Fig.~\ref{fig:q_DM}.  The
+peaking at high photon energy and the resulting bump caused by inner
+bremsstrahlung is clearly seen for BM models $\Ip$, $\Jp$, and
+$\Js$. Despite the different particle masses and cross sections, the
+spectrum of the continuum emission shows a remarkably similar shape
+which suggests that a simple rescaling of particle masses (responsible
+for the exponential cutoff in the spectrum) and cross sections
+(spectral amplitude) should yield a roughly scale-invariant continuum
+emission spectrum except for the presence of the final state emission
+feature which depends on the details of the specific decay
 channels. The right panel of Fig.~\ref{fig:q_DM} shows the cumulative
 number of leptons (electrons and positrons) above a given energy for
 our different DM models which is of interested for the high-energy IC
@@ -774,20 +773,20 @@ processes; leptophilic DM annihilating either indirectly through
 $\mu^+/\mu^-$ to $\rmn{e}^+/\rmn{e}^-$ or directly to
 $\rmn{e}^+/\rmn{e}^-$ pairs that IC upscatter background photons
 (LP-IC), leptophilic DM emitting final state radiation (LP-FSR),
-supersymmetric DM benchmark models where annihilating neutralinos
-generate $\rmn{e}^+/\rmn{e}^-$ pairs that upscatter background photons
-(BM-IC) and emit a continuum as well as final state radiation
-(BM-Cont), and CR proton induced $\pi^0$ that decays into gamma-rays
+supersymmetric DM BM models where annihilating neutralinos generate
+$\rmn{e}^+/\rmn{e}^-$ pairs that upscatter background photons (BM-IC)
+and emit a continuum as well as final state radiation (BM-Cont), and
+CR proton induced $\pi^0$ that decays into gamma-rays
 (CR-$\pi^0$). The source function is given by
 \begin{equation}
 q_\rmn{sum} (\eg,r) = \qCR(\eg,r)+
 \sum_i \,q_{\rmn{sm},i}(\eg,r)\,\B_{\rmn{tot},i}(\sigv,r)
 \end{equation}
-the differential CR to gamma-ray source function is denoted by
-$\qCR(\eg,r)$ (see Sect.~\ref{sect:CRs} and \cite{2010MNRAS.409..449P}
-for further details). The subscript $i$ runs over the gamma-ray
-producing DM channels and the total differential boost factor for DM
-is given by:
+\C{where} the differential CR to gamma-ray source function is denoted
+by $\qCR(\eg,r)$ (see Sect.~\ref{sect:CRs} and
+\cite{2010MNRAS.409..449P} for further details). The subscript $i$
+runs over the gamma-ray producing DM channels and the total
+differential boost factor for DM is given by:
 \begin{eqnarray}
 \B_{\rmn{tot},i}(r,\sigv) = \left\{\begin{array}{cc}
 \B_\sfe(\sigv)\,\B_{\sub,i}(r) &\rmn{for\,\,LP}\\
@@ -811,9 +810,9 @@ where the annihilation rate density is given by
 \Gamma_j(r) = \frac{1}{2} \left[\frac{\rho(r)}{\mx}\right]^2 
 \, \sigmaannv_j\,.
 \end{equation}
-Here,  the subscript $j$ runs over all kinematically allowed gamma-ray
+Here, the subscript $j$ runs over all kinematically allowed gamma-ray
 producing channels, each with the spectrum $\dd
-  \ngammaj /\dd\eg$ and annihilation cross-section $\sigmaannv_j$.
+  \ngammaj /\dd\eg$ and annihilation cross section $\sigmaannv_j$.
 We denote the DM mass with $\mx$ and the smooth DM density profile
 with $\rho(r)$.
 
@@ -994,7 +993,7 @@ as long as the degeneracy in the lensing mass measurements with $r_\s$
 account. The emission from an Einasto density profile is about 50\%
 larger than the cuspy NFW profile in the periphery of the cluster,
 where the difference is mainly built up at a few percent of
-$\rvir$. The increase in luminosity due to substructure is neglible in
+$\rvir$. The increase in luminosity due to substructures is neglible in
 the center of halos, but integrated out to $\rvir$ the boost relative
 to the smooth emission profile amounts to approximately 20 for dwarf
 galaxies, $200$ for galaxies, and $10^3$ for galaxy clusters.
@@ -1083,8 +1082,8 @@ The standard IC source function is given by
 \end{eqnarray}
 where $\ee$ is the energy of the upscattering electrons and $\eph$ is
 the energy of the background photon field. We represent the Thomson
-cross-section with $\sigma_\rmn{T}$ and the full differential
-Klein-Nishina (KN) cross-section is captured by
+cross section with $\sigma_\rmn{T}$ and the full differential
+Klein-Nishina (KN) cross section is captured by
 \cite{1970RvMP...42..237B}:
 \begin{equation}
 \label{eq:KN_spec}
@@ -1097,7 +1096,7 @@ where
 \Gamma_\e=\frac{4\eph \ee}{\left(m_\e c^2\right)^2}\,,\qquad \rmn{and} \qquad  
 q=\frac{\eg}{\Gamma_\e\left(\ee-\eg\right)}\,.
 \end{equation}
-The full KN cross-section accounts for the less efficient energy
+The full KN cross section accounts for the less efficient energy
 transfer between the photon and electron once the energy of the
 Lorentz-boosted photon in the electron rest frame comes close to $m_\e
 c^2$ such that the scattering electron experiences a significant
@@ -1111,11 +1110,12 @@ spectrum by $\alpha_\e$.
 We account for two major contributions to the number density of
 radiative background fields $n_\ph$; the CMB photons and the infra-red
 (IR) to ultra-violet (UV) light emitted by SD. The number density for
-the SD is given by $n_\ph\equiv\dd^2 N_\ph/ (\dd V \,\dd \eph) (\eph,r)=
-u_\sd(\eph,r) /\eph^2$ where the SD energy density $u_\sd(\eph,r)$ is
-given in the Appendix, Eq.~(\ref{eq:u_SD_er}). We model the CMB photon
-spectrum as a photon gas that is isotropically distributed and follows
-a black body spectrum with the temperature $T=2.73\,$~K:
+the SD is given by $n_\ph\equiv\dd^2 N_\ph/ (\dd V \,\dd \eph)
+(\eph,r)= u_\sd(\eph,r) /\eph^2$ where the \C{specific} SD energy
+density $u_\sd(\eph,r)$ is given in the Appendix,
+Eq.~(\ref{eq:u_SD_er}). We model the CMB photon spectrum as a photon
+gas that is isotropically distributed and follows a black body
+spectrum with the temperature $T=2.73\,$~K:
 \begin{equation}
 \label{eq:photon_gas}
   n_\rmn{ph}(\eph) = \frac{\dd^2 N_\ph}{\dd V \,\dd \eph} =
@@ -1189,22 +1189,22 @@ parameterize the magnetic field in the galaxy cluster by $B(r) =
 3\mu\rmn{G} \,[n_{\rm e}(r)/n_{\rm e}(0)]^{\alpha_\B}$. We adopt a
 magnetic decline of $\alpha_\B=0.7$ in this work which follows from
 flux frozen magnetic fields. (3) IC losses on starlight and dust with
-an energy density $u_\sd(r)$ given by Eq.~(\ref{eq:u_SD_r}), which we
-derive in the following.
+an energy density $u_\sd(r)$ given by Eq.~(\ref{eq:u_SD_r}), \C{where
+  we outline the derivation} \del{which we derive} in the following.
 
 The emission of galaxy clusters at infra-red (IR) and ultra-violet
 (UV) wavelengths emerges from dust and starlight in both the galaxies
 and the ICM (e.g. \cite{2006ApJ...648L..29P} and
 \cite{2009MNRAS.399.1694G}). Three distinctive components dominate
-these wavelengths: a central galaxy, the intra-cluster light, and
-individual cluster galaxies. We decided to use the accurately measured
-spectral shape of dust and starlight in the interstellar medium of our
-Galaxy to model the emission from clusters. We then normalize the two
-spectral components -- far IR dust and starlight at wavelengths
-ranging from the near IR to UV -- individually by using stacked
-cluster data and employ a measured mass-to-starlight luminosity
-scaling relation derived from observations of the brightest cluster
-galaxy \cite{2010ApJ...713.1037H}.
+these wavelengths: a central galaxy, the intra-cluster light (ICL),
+and individual cluster galaxies. We decided to use the accurately
+measured spectral shape of dust and starlight in the interstellar
+medium of our Galaxy to model the emission from clusters. We then
+normalize the two spectral components -- far IR dust and starlight at
+wavelengths ranging from the near IR to UV -- individually by using
+stacked cluster data and employ a measured mass-to-starlight
+luminosity scaling relation derived from observations of the brightest
+cluster galaxy (BCG) \cite{2010ApJ...713.1037H}.
 
 In Fig.~\ref{fig:SD_spectra} we characterize the spectral shape
 through a fit to the galactic spectra presented in
@@ -1234,7 +1234,9 @@ f_\rmn{IC-ol} = \frac{N_\rmn{gal} V_\rmn{gal} f_\rmn{light}}{V_\rmn{clu}}
 Here we assume that the exponential scale height of the stellar light
 is less than the scale radius of the galaxy halo, $f_\rmn{light}
 \lesssim (r_\rmn{s} / r_{200,~\rmn{gal}})^3 \sim c_\rmn{gal}^{-3} \sim
-10^{-3}$ and $N_\rmn{gal} M_\rmn{gal} \sim 0.1 M_\rmn{clu}$.
+10^{-3}$ and $N_\rmn{gal} M_\rmn{gal} \sim 0.1 M_\rmn{clu}$. \C{We
+  denote the number of galaxies within $\rvir$ with $N_\rmn{gal}$ and
+  the concentration of a galaxy with $c_\rmn{gal}$.}
 
 We find that even for a cluster with a relative small mass the energy
 density of the SD components dominates over the CMB and the magnetic
@@ -1268,12 +1270,6 @@ distribution that approaches a density square profile in the center.
 We also find that the luminosity within $\rvir$ from the total SD
 model is a factor three larger compared to the more realistic smooth
 SD model.
-
-
-\del{
-found the IR to X-ray luminosity scaling relation found in
-\cite{2008A&A...490..547G}. 
-}
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/fit.porter.v2.eps}
@@ -1368,7 +1364,7 @@ electrons, neutrinos, and gamma-rays (see
   \cite{1987A&A...182...21S,1993ApJ...406..399G,2004MNRAS.350.1174B,2005MNRAS.363.1173B,2007MNRAS.378..245B,2011MNRAS.410..127B,2009A&A...507..661B}}
 Supporting evidence comes from the smoothness of the extended radio
 emission that often resembles that observed in thermal X-rays. This
-can be easily achievd in the hadronic model since the long cooling
+can be easily achieve in the hadronic model since the long cooling
 time of cosmic ray protons (CRs) allows for an extended and large
 population of CRs to build up over the cluster history
 \citep{1996SSRv...75..279V, 1997ApJ...477..560E,
@@ -1428,10 +1424,10 @@ it is important to know in which energy band to focus the efforts in
 order to maximize potential DM signals over the expected background.
 
 We focus in this section on the spectral distribution of gamma-rays
-from clusters.  In the LP model, DM annihilation radiation includes
+from clusters. In the LP model, DM annihilation radiation includes
 final state radiation and gives rise to substantial amounts of
 electrons and positrons that IC upscatter background radiation fields
-to high energies. We also consider a few supersymmetric DM models with
+to high energies. We also consider a four supersymmetric DM models with
 a high gamma-ray yield in the form of continuum emission and IC
 induced emission. In addition to the annihilating DM, we estimate the
 gamma-ray flux induced by shock accelerated CRs.
@@ -1442,23 +1438,23 @@ searches due to its relative high DM induced fluxes and low CR induced
 fluxes. We show the emission for four different supersymmetric BM
 models and contrast it to the emission induced by CRs. Comparing this
 emission to the differential gamma-ray upper limits set by Fermi-LAT
-after 18 months of observations \cite{2010ApJ...717L..71A}, 
-we find
+after 18 months of observations \cite{2010ApJ...717L..71A}, we find
 that the upper limits are not violated. The predicted DM flux that is
 dominated by the continuum emission from $\Kp$ and $\Ip$ models (shown
 in the left panels) are close to the upper limits and can potentially
 be probed by the Fermi three-year data. Furthermore, the gamma-ray
-signal induced by CRs is expected to be about a factor 5--10 below
-the DM continuum flux from the $\Kp$ and $\Ip$ BM models at
+signal induced by CRs is expected to be about a factor 5--10 below the
+DM continuum flux from the $\Kp$ and $\Ip$ BM models at
 10~GeV. However, the IC emission from upscattered CMB and SD photons
-is at least a factor 10 lower than the expected flux from CRs above
-100~MeV, making it very hard to distinguish such a signal from the
-foreground due to the similar spectral index. For energies below
+is at least a factor \C{few lower for $\Kp$ and a factor 1000 lower
+  for $\Ip,\Jp,\Js$,} \del{10 lower} than the expected flux from CRs
+above 100~MeV, making it very hard to distinguish such a signal from
+the foreground due to the similar spectral index. For energies below
 100~MeV we expect IC emission by primary shock accelerated electrons
 to be dominating \cite{2010MNRAS.409..449P} over the supersymmetric DM
 induced leptons. Hence in clusters, the IC emission from
-supersymmetric DM benchmark models be  neglected compared to the
-CR pion and DM continuum emission.
+supersymmetric DM BM models be neglected compared to the CR pion and
+DM continuum emission.
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1485,14 +1481,14 @@ CR pion and DM continuum emission.
 \end{minipage}
 \end{figure*}
 
-
-One of the main contributions to the expected extended gamma-ray flux
-is coming from the IC upscattered photons on various photon background
-fields. Depending on the spatial and spectral distribution of
-electrons and positrons as well as the photon background field, the
-resulting spectral distributions of gamma-ray can differ
-greatly. Hence it is interesting to understand which spectral features
-and energy regimes  are dominating for the different DM models.
+\C{For the LP DM models, however,}\del{One of} the main contributions
+to the expected extended gamma-ray flux is coming from the IC
+upscattered photons on various photon background fields. Depending on
+the spatial and spectral distribution of electrons and positrons as
+well as the photon background field, the resulting spectral
+distributions of gamma-ray can differ greatly. Hence it is interesting
+to understand which spectral features and energy regimes are
+dominating.\del{for the different DM models.}
 
 If the enhancement due to substructures in clusters is significant,
 then the distribution of electrons and positrons follows the radial
@@ -1504,9 +1500,10 @@ centrally peaked and the substructure distribution peaks in the
 outskirts around $\rvir$, the overlap between electrons/positrons and
 SD photons is small. This results in a suppression of the IC
 upscattered SD photons relative to the IC upscattered CMB photons, the
-FSR, and the continuum emission. However, if substructures are only
-marginally dominating over the smooth distribution in a cluster, the
-SD component becomes relatively more important.
+final state radiation, and the continuum emission. However, if
+substructures are only marginally dominating over the smooth
+distribution in a cluster, the SD component becomes relatively more
+important.
 
 In Fig.~\ref{fig:IR_comp} we show the total IC emission as well as its
 individual contributions from different IC upscattered radiation
@@ -1531,26 +1528,15 @@ IC upscattered SD increases by a factor $\sim 30$.  A larger fraction
 of electrons (in the core) will now also cool by Compton-upscattering
 SD photons which suppresses the IC-upscattered CMB light.  For
 comparison, we include the contribution of IC upscattered SD photons
-and to bracket the uncertainty in the SD model, with a smaller amount of
-dust. In this low-dust model, we have reduced the energy in dust by a
-factor 10. However, we find that the IC SD flux only decreases by a
-factor 3 since the IC cooling of the electrons and positrons also
-decreases. Note that for a smaller boost from substructures, the
-effect from cooling is smaller.
-
- \del{This
-  suppression is also seen in the relative normalization of the flux
-  where the IC from both CMB and dust photons are lower compared to
-  the starlight simply because the starlight has a higher energy,
-  hence it is upscattered by more abundant low energy electrons and
-  positrons (c.f. Fig.~\ref{fig:q_DM}).}
-\del{Even though the SD component seems to be suppressed compared to
-  the CMB at energies around 100~MeV, it has a relative large impact
-  on the steady state electron spectrum. If we remove the SD cooling,
-  we find a factor two larger IC flux at low energies for a cluster of
-  the size of Fornax. For more massive clusters we expect a larger IC
-  flux from the SD component, but a smaller contribution from the CMB
-  because of the more effective cooling.}
+and to bracket the uncertainty in the SD model, with a smaller amount
+of dust. In this low-dust model, we have reduced the energy in dust by
+a factor 10. \C{However, the resulting flux from the IC upscattered
+  dust in this model only decreases with a factor that is slightly
+  smaller than 10 since the IC cooling of the electrons and positrons
+  also decreases.}\del{However, we find that the IC
+  SD flux only decreases by a factor 3 since the IC cooling of the
+  electrons and positrons also decreases. Note that for a smaller
+  boost from substructures, the effect from cooling is smaller.}
 
 Because of the large total boost factor for the LP model ($\sim
 10^4$), we overproduce the upper gamma-ray limit in the $1-10$~GeV
@@ -1579,8 +1565,8 @@ their sensitivity drops linearly with source extension.
   flux. The black arrow shows the differential upper limit from Fermi
   \protect \cite{2010ApJ...717L..71A} indicating that the model
   assumptions such as Sommerfeld and/or substructure boost are in
-  conflict with the upper limit. We also show projected CTA point
-  source sensitivities ($5\sigma$, 50h).  All fluxes are calculated
+  conflict with the upper limit. \del{We also show projected CTA point
+  source sensitivities ($5\sigma$, 50h).}  All fluxes are calculated
   for the Fornax cluster within $\rvir$ using a point spread function
   of $0.1\deg$. For this cluster, the boost from Sommerfeld is about
   130 and the enhancement due to substructures from IC upscattered CMB
@@ -1615,16 +1601,17 @@ of sensitivity.
 \begin{figure}
  \includegraphics[width=0.99\columnwidth]{figures/flux.int.v12.0.1deg.1.6T.SubMass.SF300.IR2.noMW.woGal.eps}
  \caption{\it Comparing the energy integrated flux from different
-   models. We show the emission from; CR induced emission (red
-   solid), leptophilic (LP) models that include both final state
-   radiation and IC upscattered CMB, dust and starlight (green
-   dash-dotted), and benchmark $\Kp$ models (BM) include continuum
-   emission, and IC upscattered CMB, dust and starlight (blue
-   dashed). The black arrow show the integrated flux upper limit set
-   by Fermi-LAT again indicating challenges for the assumptions
-   underlying the LP model. The emission is calculated for the Fornax
+   models. We show the emission from; CR induced emission (red solid),
+   leptophilic (LP) models that include both final state radiation and
+   IC upscattered CMB, dust and starlight (green dash-dotted), and
+   benchmark $\Kp$ models (BM) include continuum emission, and IC
+   upscattered CMB, dust and starlight (blue dashed). The black arrow
+   show the integrated flux upper limit set by Fermi-LAT again
+   indicating challenges for the assumptions underlying the LP
+   model. \C{We also show projected CTA point source sensitivities
+     ($5\sigma$, 50h).} The emission is calculated for the Fornax
    cluster using a point spread function of $0.1\deg$. The boost from
-   Sommerfeld and substructures is about 130 and 730, respectively. }
+   Sommerfeld and substructures is about 130 and 730, respectively.}
  \label{fig:flux_int}
 \end{figure}
 
@@ -1677,22 +1664,6 @@ $D_\rmn{lum}$, by a factor two decrease the flux by a factor four. One
 should also note that the IC upscattered SD photons scales slightly
 softer with mass, hence giving rise to a larger fraction of gamma-rays
 in low mass clusters compared to the total gamma-ray flux.
-
-\del{Furthermore, the low mass clusters have a higher flux from IC
-  upscattered SD photons than high mass clusters which increase the
-  importance of the SD component in low mass clusters even more
-  (c.f. Fig.~\ref{fig:IR_comp}).}
-
-
-\del{
-\begin{eqnarray}
-L_{\gamma,\rmn{sub tot}} \propto N\,L_{\gamma,\sub} \propto N\,M_\sub 
- \propto M_\sub^{\left(A+1\right)}\,\frac{\dd N_\sub}{\dd M} \propto  M^{A-0.9}
-\end{eqnarray}
-Assuming that the concentration $c$ decrease for increasing mass as it
-does for the mass range $10^{12}-10^{14}\,\msun$ where
-$L_{\gamma,\sub} \propto N\,M_\sub^A$, where $A<1$.
-}
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1768,7 +1739,7 @@ smallest mass of $M_\rmn{lim} = 10^{-6}\,\msun$.
    $10^{-6}\,\msun$, we can constrain the SFE to about 2 in Fornax,
    corresponding to a maximum SFE in the MW of about 5 which would be
    too small to support the DM annihilation hypothesis for the
-   Pamela/Fermi excess.}
+   PAMELA/Fermi excess.}
  \label{fig:boost_const}
 \end{figure}
 
@@ -1894,37 +1865,6 @@ brightness. Finally, we note that the flux from DM without
 substructures is dominated by the CR induced emission for all
 clusters.
 
-
-\del{The shape trace the underlying density slope of $-3$, which is
-  expected for IC upscattered CMB photons. This picture is confirmed
-  by the components study in the right panel that show the negligible
-  contribution at this energy from the IC upscattered SD photons that
-  follow a steeper distribution in the outer parts because of the
-  decreasing energy density of SD photons with radius. Since the
-  surface brightness from BM models are dominated by the continuum
-  emission at each radial bin in all clusters, we find that the total
-  DM BM emission follows the projected density profile over the entire
-  clusters. In addition, the sum of the IC upscattered photons for the
-  LP model approximately trace the same distribution, although with
-  the exception in the core regime where we find a transition from
-  centrally dominating IC SD light to the IC CMB light. The transition
-  is due to the IC upscattered CMB photons that trace the smooth
-  profile in the core and outer parts of the cluster, while the
-  electron and positron population suffers from efficient cooling on
-  light from SD in the center which flatten the IC CMB
-  profile. Conversely trace the LP IC emission from SD photons a
-  steeper distribution in the center that follows the projected
-  density profile. This is explained by the SD dominated cooling that
-  cancels the spatial dependence from the SD source function.
-%
-  In the left panel we also find some variation in the profiles for
-  the different clusters in the central parts. Especially in the
-  Fornax cluster, where we find a factor two larger flux compared to
-  the other clusters. This is due to more efficient SD cooling of the
-  dominating IC upscattered CMB photons in Fornax; a low X-ray
-  luminous cluster has a low energy density in starlight and dust in
-  our analytic SD model.}
-
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
   \includegraphics[width=0.49\columnwidth]{figures/SB.v12.1GeV.SF300.noSuB.elmu.eps}
@@ -1945,23 +1885,24 @@ clusters.
 
 In Sect.~\ref{sect:spatial} we saw that the spectral distribution of
 gamma-ray flux from the LP model was dominated at high energies of
-about $100\,$~GeV by FSR and IC upscattered starlight and dust, while
-the BM models were mainly dominated by the continuum emission. These
-high energies are observationally important for both Fermi-LAT and
-Cherenkov telescopes. In Fig.~\ref{fig:SB_IACTs}, we thus show the
-surface brightness above $100\,$~GeV for a realistic PSF of $0.1\deg$
-where we include the boost from substructures. We investigate two
-clusters with an expected high DM signal; the Fornax and Virgo
-cluster. Both clusters show a very flat brightness profile
-$r<0.1\rvir$, due to both the effect from substructures and the
-smoothing over the PSF. The CR induced emission also show a
-smoothing in the central parts due to the PSF. In the outer part of
-the Fornax cluster the CR flux is suppressed compared to the DM flux
-boosted by substructures, where the LP model gives rise to a gamma-ray
-flux that is more than three orders of magnitude larger. However, it
-should be noted that there are large uncertainties in the gas density
-profile which we use to estimate the CR induced gamma-ray surface
-brightness (see Fig.~\ref{fig:dens_fornax} for more details).
+about $100\,$~GeV by final state radiation and IC upscattered
+starlight and dust, while the BM models were mainly dominated by the
+continuum emission. These high energies are observationally important
+for both Fermi-LAT and Cherenkov telescopes. In
+Fig.~\ref{fig:SB_IACTs}, we thus show the surface brightness above
+$100\,$~GeV for a realistic PSF of $0.1\deg$ where we include the
+boost from substructures. We investigate two clusters with an expected
+high DM signal; the Fornax and Virgo cluster. Both clusters show a
+very flat brightness profile $r<0.1\rvir$, due to both the effect from
+substructures and the smoothing over the PSF. The CR induced emission
+also show a smoothing in the central parts due to the PSF. In the
+outer part of the Fornax cluster the CR flux is suppressed compared to
+the DM flux boosted by substructures, where the LP model gives rise to
+a gamma-ray flux that is more than three orders of magnitude
+larger. However, it should be noted that there are large uncertainties
+in the gas density profile which we use to estimate the CR induced
+gamma-ray surface brightness (see Fig.~\ref{fig:dens_fornax} for more
+details).
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -2011,15 +1952,15 @@ Fig.~\ref{fig:lum_mass_scaling}.
     substructure boost with cluster mass of Eq.~(\ref{eq:BM_scaling})
     (dashed). Note that the scaling of this particular benchmark model is
     indicative for all (non-Sommerfeld enhanced) DM annihilation models while
-    the normalization depends on the particular cross-section and neutralino
+    the normalization depends on the particular cross section and neutralino
     mass.}
 \label{fig:lum_mass_scaling}
 \end{figure*}
-The mass scaling of the substructure
-boost steepens the intrinsically shallower DM annihilation relation of
-benchmark models (Eq.~\ref{eq:BM_scaling}) while this steepening is in
-fact over-compensated by the inverse mass scaling of the Sommerfeld
-boost in LP models that prefers smaller halos with a larger ratio of
+The mass scaling of the substructure boost steepens the intrinsically
+shallower DM annihilation relation of BM models
+(Eq.~\ref{eq:BM_scaling}) while this steepening is in fact
+over-compensated by the inverse mass scaling of the Sommerfeld boost
+in LP models that prefers smaller halos with a larger ratio of
 $c/v_\mathrm{circ}$ (Eq.~\ref{eq:LP_scaling}). In contrast, the CR
 scaling relation is considerably steeper as shown by reference
 \cite{2010MNRAS.409..449P}:
@@ -2038,34 +1979,36 @@ include the IC gamma-ray contribution from shock accelerated electrons
 as well as secondary electrons created through CR-proton
 interactions. The gamma-ray flux from the electrons is, however,
 dominated by the decaying $\pi^0$ and only show up as a small
-flattening of the scaling relation at energies around $100\,\gev$. The
-steeper mass scaling of the CR compared to the DM implies already a
-general strategy to minimize the CR-induced foreground for DM
-annihilation and argues for very nearby groups. We note that these
-simulations do not include AGN feedback that is thought to furthermore
-reduce the baryon fraction in groups relative to that in clusters
-\cite{2008ApJ...687L..53P}. The resulting smaller target density for
-hadronic CR interactions will furthermore steepen the $L_\gamma-M$
-relation of CR induced emission, making the case for groups even
-stronger.
+flattening of the scaling relation at energies around
+$10-100\,\gev$. The steeper mass scaling of the CR compared to the DM
+implies already a general strategy to minimize the CR-induced
+foreground for DM annihilation and argues for very nearby groups. We
+note that these simulations do not include AGN feedback that is
+thought to furthermore reduce the baryon fraction in groups relative
+to that in clusters \cite{2008ApJ...687L..53P}. The resulting smaller
+target density for hadronic CR interactions will furthermore steepen
+the $L_\gamma-M$ relation of CR induced emission, making the case for
+groups even stronger.
 
 \subsection{DM annihilation}
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
   \includegraphics[width=0.99\columnwidth]{figures/Fermi.comp.DM.eps}
-  \caption{\it Fermi gamma-ray flux upper limits are contrasted to the predicted DM
-    gamma-ray flux. We show the mean differential flux in the energy range
-    $E_\gamma=1-10$~GeV for 32 clusters. The Fermi-LAT upper limits are shown
-    with black arrows. The predicted fluxes are derived from the dominant
-    inverse Compton-scattering of CMB photons in a leptophilic DM model (red),
-    and the continuum emission from the DM $\Kp$ benchmark model
-    (blue). Assuming a boost factor due to substructures that has a mass
-    spectrum extending down to Earth masses, the expected leptophilic fluxes are
-    ruled out by upper limits in 14 of the clusters, with the strongest
-    constraints set by Fornax and M49. We can not yet constrain the benchmark
-    models, although our predictions are approaching the upper limits and will
-    allow to test these in the upcoming years with better data.}
+  \caption{\it Fermi gamma-ray flux upper limits are contrasted to the
+    predicted DM gamma-ray flux. We show the mean differential flux in
+    the energy range $E_\gamma=1-10$~GeV for 32 clusters. The
+    Fermi-LAT upper limits are shown with black arrows. The predicted
+    fluxes are derived from the dominant inverse Compton-scattering of
+    CMB photons in a leptophilic DM model (red), and the continuum
+    emission from the DM $\Kp$ benchmark model (blue). Assuming a
+    boost factor due to substructures that has a mass spectrum
+    extending down to Earth masses, the expected leptophilic fluxes
+    are ruled out by upper limits in 14 of the clusters, with the
+    strongest constraints set by Fornax and M49. We can not yet
+    constrain the benchmark models, although our predictions are
+    approaching the upper limits and will allow to test these in the
+    upcoming years with better data.}
  \label{fig14}
 \end{minipage}
 \end{figure*}
@@ -2094,15 +2037,15 @@ stronger.
 \end{figure*}
 
 Figure~\ref{fig14} compares Fermi upper limits on the gamma-ray flux
-with predictions of DM annihilation fluxes in the LP and benchmark
-models.  To obtain the gamma-ray fluxes, we scale the virial mass of
-clusters in the extended HIFLUGCS catalogue \cite{2002ApJ...567..716R}
-with our scaling relations of Eqs.~(\ref{eq:BM_scaling}) and
+with predictions of DM annihilation fluxes in the LP and BM models.
+To obtain the gamma-ray fluxes, we scale the virial mass of clusters
+in the extended HIFLUGCS catalogue \cite{2002ApJ...567..716R} with our
+scaling relations of Eqs.~(\ref{eq:BM_scaling}) and
 (\ref{eq:LP_scaling}). In those, we assume a boost factor due to
 substructures that has a constant contribution per decade in
 substructure mass and has a mass spectrum extending down to Earth
 masses for our LP and BM DM annihilation models. In the LP models we
-additionally assume a cluster-mass dependent bost due to SFE. Fermi
+additionally assume a cluster-mass dependent boost due to SFE. Fermi
 limits rule out the LP models in their present form with the mentioned
 assumptions in 14 clusters, and limit the boost from SFE to less than
 2 in Fornax. Assuming universality, this limits the Sommerfeld boost
@@ -2250,7 +2193,7 @@ HIFLUGCS sample in Fig.~\ref{fig19}. In the lower panel of this
 figure, we show the relative difference between the gamma-ray flux
 predicted by the mass-luminosity scaling relation and to the flux
 computed using the analytical model. Statistically, one can view the
-analytical modeling as comtributing to the scatter of the expected
+analytical modeling as contributing to the scatter of the expected
 gamma-ray flux at a given mass. Cool core clusters have a denser core
 which increases the target density of gas protons for the hadronic
 reaction which in turn leads to a systematic increase of the expected
@@ -2264,73 +2207,51 @@ gamma-ray luminosity \cite{2011A&A...527A..99E}. Future careful
 modelling is needed to quantify this effect.
 
 
-\del{
-ANDERS: do you need this?
---) The dust turns up at about a factor 100 lower than the stars
---) The other figure show the spectral shape of the IC-star with the same
-spectral shape as the dust, it shows the same gamma-ray slope as the dust
---) The reason why there is only a factor 10 difference in the break in the
-gamma-ray emission between the star and dust is related to the KN. In our CR
-paper, the last figure shows that at $\eg=100\,\tev$, the spectra is suppressed
-with about a factor 10 (also depends on $\alpha_\e$). Since the dust photons
-have a factor 10 higher energy, I expect this suppression at about 10~TeV. For
-star photons the suppression should be at 100~GeV. So the star photons are
-definitely KN suppressed, which explains the earlier break and the steeper
-slope.
-}
-
-
-%-) Consider having one figure where we compare the Einasto profile, to
-%NFW, NFW w/ beta 0.6, and also the effect of a different concentration
-%mass-scaling relation
-%
-%-) also, plot BM flux vs. psf, for models w/ and w/o substructures
-
-
-
 \section{Conclusions}
 
 In this paper, we study the possibility for detecting gamma-ray
-emission in galaxy clusters. We consider benchmark and leptophilic
-(LP) models of supersymmetric dark matter (DM) as well as cosmic ray
-induced pion decay which is thought to dominate the astrophysical
-signal from clusters. Once supersymmetric cold dark matter decouples
-from the expanding universe it streams and erases any potentially
-present smaller scales. Once gravitational instabilities causes halos
-to collapse, this free-streaming scale imprints as a characteristic
-minimum halo mass $M_\mathrm{min}$ into the hierarchy of structure
-formation and should still survive until the present time as
-substructure within larger halos. It turns out that the boost due to
-substructures dominates over the smooth component for halo masses
-$\mvir>10^3 \msun$ and contributes a constant luminosity for each
-decade in halo mass. The ratio of halo-to-minimum subhalo mass
-$\mvir/M_\mathrm{min}$ is maximized for the largest systems that had
-time to collapse and virialise since the Big Bang -- galaxy
-clusters. The corresponding substructure boost can reach values
-exceeding $10^3$ which should make nearby clusters the brightest DM
-annihilation sources after the MW center and hypothetical very
-close-by DM substructures. Since the number density of substructures
-are distributed according to an Einasto profile, the contribution to
-the annihilation emission from substructures is dominated from radii
-close to the virial radius. This implies an almost flat surface
-brightness profile of the annihilation emission which makes it
-necessary to have the entire cluster in the field-of-view to take
-advantage of the entire substructure boost.  This property makes it
-difficult to detect DM annihilation emission without an enhancement of
-the particle physics cross section over its standard value of $\sigma
-v\sim 3\times 10^{-26} ~\mathrm{cm}^3~\mathrm{s}^{-1}$ with imaging
-air Cherenkov telescopes due to the spatially extended boost from
-substructures of angular extent $\sim 0.5-1\deg$ (as independently
-found by reference \cite{2011arXiv1104.3530S}). In contrast, the
-sensitivity of Cherenkov telescopes drops linearly with radius outside
-the point spread function $\sim 0.1\deg$, unless new background
-subtraction schemes can be found, e.g., for the survey mode of CTA.
+emission in galaxy clusters. We consider benchmark (BM) and
+leptophilic (LP) models of supersymmetric dark matter (DM) as well as
+cosmic ray induced pion decay which is thought to dominate the
+astrophysical signal from clusters. Once supersymmetric cold dark
+matter decouples from the expanding universe it streams and erases any
+potentially present smaller scales. \C{When} \del{Once} gravitational
+instabilities causes halos to collapse, this free-streaming scale
+imprints as a characteristic minimum halo mass $M_\mathrm{min}$ into
+the hierarchy of structure formation and should still survive until
+the present time as substructure within larger halos. It turns out
+that the boost due to substructures dominates over the smooth
+component for halo masses $\mvir>10^3 \msun$ and contributes a
+constant luminosity for each decade in halo mass. The ratio of
+halo-to-minimum subhalo mass $\mvir/M_\mathrm{min}$ is maximized for
+the largest systems that had time to collapse and virialise since the
+Big Bang -- galaxy clusters. The corresponding substructure boost can
+reach values exceeding $10^3$ which should make nearby clusters the
+brightest DM annihilation sources after the MW center and hypothetical
+very close-by DM substructures. \C{CHRISTOPH, I DO NOT THINK THAT AN
+  EINASTO PROFILE IMPLIES THAT THE FLUX IS DOMINATED AROUND RVIR?!?
+  Since the number density of substructures are distributed according
+  to an Einasto profile, the contribution to the annihilation emission
+  from substructures is dominated from radii close to the virial
+  radius.}  This implies an almost flat surface brightness profile of
+the annihilation emission which makes it necessary to have the entire
+cluster in the field-of-view to take advantage of the \C{total}
+\del{entire} substructure boost. This property makes it difficult to
+detect DM annihilation emission without an enhancement of the particle
+physics cross section over its standard value of $\sigma v\sim 3\times
+10^{-26} ~\mathrm{cm}^3~\mathrm{s}^{-1}$ with imaging air Cherenkov
+telescopes due to the spatially extended boost from substructures of
+angular extent $\sim 0.5-1\deg$ (as independently found by reference
+\cite{2011arXiv1104.3530S}). In contrast, the sensitivity of Cherenkov
+telescopes drops linearly with radius outside the point spread
+function $\sim 0.1\deg$, unless new background subtraction schemes can
+be found, e.g., for the survey mode of CTA.
 
 We identify Fornax to be the best cluster/group candidate for indirect
 DM studies as it is expected to emit the brightest annihilation flux
 and more importantly, has a comparably low CR induced gamma-ray flux.
-This in principle should allow to detect or constrain some benchmark
-models that have been chosen for the large gamma-ray flux yield with
+This in principle should allow to detect or constrain some BM models
+that have been chosen for the large gamma-ray flux yield with
 three-year Fermi data (or constrain the substructure boost
 factor). Other nearby bright sources of the extended HIFLUGCS sample
 of nearby bright X-ray cluster/groups are M49, Centaurus, and
@@ -2354,33 +2275,33 @@ In this work, we thoroughly study the spectral emission
 characteristics of the DM emission. In general there are different
 radiation mechanism that emit in the gamma-ray regime, namely (i)
 continuum emission following the hadronization of the annihilating
-neutralinos in benchmark models which leads to the production of
-charged and neutral mesons which decay finally into electrons,
-neutrinos, and gammas, (ii) inverse Compton (IC) emission by the
-leptons in the final state which up-scatter radiation fields from the
-cosmic microwave background (CMB), dust, and starlight, and (iii) final
-state radiation or internal bremsstrahlung which dominates the highest
-energy emission close to the rest mass of the self-annihilating
-neutralinos (if present in the model under consideration). While this
-final state radiation is sometimes not distinguished from the
-continuum emission contribution, we keep it separate as it dominates
-the very high-energy tail of the gamma-ray spectrum in LP models while
-there the continuum  emission is negligibly low.
+neutralinos in BM models which leads to the production of charged and
+neutral mesons which decay finally into electrons, neutrinos, and
+gammas, (ii) inverse Compton (IC) emission by the leptons in the final
+state which up-scatter radiation fields from the cosmic microwave
+background (CMB), dust, and starlight, and (iii) final state radiation
+or internal bremsstrahlung which dominates the highest energy emission
+close to the rest mass of the self-annihilating neutralinos (if
+present in the model under consideration). While this final state
+radiation is sometimes not distinguished from the continuum emission
+contribution, we keep it separate as it dominates the very high-energy
+tail of the gamma-ray spectrum in LP models while there the continuum
+emission is negligibly low.
 
 For the first time we compute the IC emission component not only from
 the upscattered CMB photons but also from a realistically modeled
-photon field due to dust and starlight extending from infra red to
+photon field due to dust and starlight extending from infra-red to
 optical wavelengths. To this end, we construct a rather simple
 analytic model for the spatial and spectral distribution of dust and
 starlight in clusters which can be used for the annihilation emission
-in galaxies with a different spatial profile.  We find that in
-benchmark models, the continuum emission dominates over the IC
-emission of any available radiation field. In the LP models, where the
-continuum emission is low, the IC up-scattering of the CMB dominates
-below 60 GeV. For large clusters, the final state radiation takes then
-over for energies up to the cutoff at $m_\chi c^2 \sim 1$~TeV. In
-small clusters, there is a window around $E_\gamma \sim
-100~\mathrm{GeV}$ where the IC up-scattering of the dust emission
+in galaxies with a different spatial profile.  We find that in BM
+models, the continuum emission dominates over the IC emission of any
+available radiation field. In the LP models, where the continuum
+emission is low, the IC up-scattering of the CMB dominates below 60
+GeV. For large clusters, the final state radiation \C{then takes}
+\del{takes then} over for energies up to the cutoff at $m_\chi c^2
+\sim 1$~TeV. In small clusters, there is a window around $E_\gamma
+\sim 100~\mathrm{GeV}$ where the IC up-scattering of the dust emission
 dominates over the CMB IC emission and the final state radiation. The
 IC emission of starlight remains always subdominant.  We stress, that
 the inclusion of the dust and starlight radiation fields are
@@ -2419,11 +2340,11 @@ cluster that do not show an extended diffuse radio(-mini) halo that
 might point to a centrally concentrated CR distribution
 \citep{2011A&A...527A..99E}. The CR spectrum $E^2 dN/dE$ shows the
 characteristic pion bump at energies around 1~GeV. It is expected to
-dominate the DM annihilation signal in the benchmark models for all
+dominate the DM annihilation signal in the BM models for all
 clusters/groups but Fornax. We conclude that it will be possible to
 rule out the LP model with six years of Fermi data and start to
-constrain some benchmark DM models. Hence this should nicely
-complement direct and accelerator searches for the nature of DM.
+constrain some BM DM models. Hence this should nicely complement
+direct and accelerator searches for the nature of DM.
 
 
 
@@ -2463,7 +2384,7 @@ In this section we present the details of our model of stars and dust
 spectral distribution of light from SD in a typical galaxy to derive a
 simple spectral model for SD in galaxy clusters. This is done by
 renormalizing the galactic SD light to match the observed luminosity
-from a cluster in the far infrared (IR) and ultraviolet (UV) bands. In
+from a cluster in the far infra-red (IR) and ultra-violet (UV) bands. In
 the second part we derive the spatial distribution of the SD light
 from a stacked sample of clusters.
 
@@ -2511,7 +2432,7 @@ where the spectral distribution of SD is given by
 \end{eqnarray}
 Here $\eph$ denotes the energy of the SD photons, $j(r)$ describes the
 unitless spatial distribution of SD (derived in
-sect.~\ref{sect:SD_radial}), and $N_i(\mvir)$ denotes the mass
+Sect.~\ref{sect:SD_radial}), and $N_i(\mvir)$ denotes the mass
 dependent normalization for the SD. This function is determined using
 the total energy of the light from SD within $\rvir$ which is
 represented by $E_{i,\vir}$. We relate this energy to the luminosity
@@ -2773,7 +2694,7 @@ $\Js$ & $30$ & $0.14$ & $5.0$ & $1.0$  & $1.5$ & $300$ & $5$ & $-1$     \\
 \hline
 \end{tabular}
 \caption{The best fit parameters to the electron and positron yield
-  above the electron energy $\ee$ from the dark matter benchmark
+  above the electron energy $\ee$ from the supersymmetric benchmark
   models.
  \label{tab:bm_elec}}
 \end{table} 
@@ -2790,8 +2711,8 @@ c_1&=&0.719,\,c_2=2.27,\,c_3=0.200\,.
 \label{eq:lp_elec}
 \end{eqnarray}
 It should be noted that the LP model that we are using in this work
-has a branching factor branching ratio of ($1/2,\,1/2$) into
-($\mu^+/\mu^-,\,\e^+/\e^-$). Hence the resulting electron and positron
+has a branching factor branching ratio of ($1/2:1/2$) into
+($\mu^+\mu^-:\e^+\e^-$). Hence the resulting electron and positron
 yield for the LP model is given by
 \begin{equation}
 N_{\e,\rmn{LP}}(>\ee) =
@@ -2857,7 +2778,7 @@ about $40\,\kpc$.
 \end{figure}
 
 \del{
-\section{Flux tables for the HIFLUGCS catalouge}
+\section{Flux tables for the HIFLUGCS catalogue}
 TO BE WRITTEN
 }
 \end{document}
