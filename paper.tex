@@ -745,7 +745,7 @@ where
 \end{equation}
 and $\sg(\psi, >\eg)$ denotes the surface brightness above the photon
 energy $\eg$.  The integration along the line-of-sight $l$, in the
-direction $\psi$ that the detector is pointing, is parameterized such
+direction $\psi$ that the detector is pointing, is parametrized such
 that the radius of the source $r=\sqrt{l^2+D_\clu^2-2 D_\clu
   l\cos\Psi}$, where $D_\clu$ is the distance from the Earth to the
 center of the cluster halo and
@@ -912,7 +912,7 @@ in one of the highest resolved MW halos ever simulated.\footnote{Note
   \cite{2008MNRAS.391.1685S, 2010ApJ...718..899A} after accounting for
   the tidal mass loss of subhalos. This effect causes a significantly
   flatter subhalo distribution compared to the smooth distribution and
-  errorously assuming an identical mass density distribution of smooth
+  erroneously assuming an identical mass density distribution of smooth
   DM and substructure biases the subhalo boost factor too low
   \cite{2008JPhCS.125a2008K, 2008JPhCS.125a2008K}.} We use a double
 power-law function to fit\footnote{Our approach of fitting the
@@ -2377,34 +2377,35 @@ Centre).
 
 \section{Detailed modelling of starlight and dust in clusters}
 \label{sect:SD}
-In this section we present the details of our model of stars and dust
-(SD) in clusters of galaxies. In the first part we use the measured
+In this section, we present the details of our model of stars and dust
+(SD) in clusters of galaxies. In the first part, we use the measured
 spectral distribution of light from SD in a typical galaxy to derive a
 simple spectral model for SD in galaxy clusters. This is done by
-renormalizing the galactic SD light to match the observed luminosity
-from a cluster in the far infra-red (IR) and ultra-violet (UV) bands. In
-the second part we derive the spatial distribution of the SD light
-from a stacked sample of clusters.
+renormalizing the galactic SD distribution to match the observed luminosity
+from a cluster in the far infra-red (IR) and ultra-violet (UV) bands
+separately. In the second part, we derive the spatial distribution of
+the SD light from a stacked sample of clusters.
 
 \subsection{Energy spectrum}
-The light from SD in clusters is dominated by the emission from
-galaxies. This radiation is expected to leak out into the much larger
-volume of the intra-cluster medium (ICM), hence we approximate the
-spectral distribution of the intra-cluster light (ICL) with the light
-from galaxies. We use the far IR to UV spectrum derived in reference
-\cite{2006ApJ...648L..29P} for a Milky Way (MW) type galaxy to
-characterize the spectral distribution of SD in a cluster. Note that
-we only keep the spectral shape, and renormalize the spectral
-distribution using the luminosity from SD in clusters.
+The cluster emission from far-IR to optical/UV is due to dust emission
+and stellar light, respectively. We distiguish three components: the
+brightest cluster galaxy (BCG), the intra-cluster light (ICL) and
+individual galaxies. While the latter distribution is highly clumped,
+the first two components are smoothly distributed.  We use the far-IR
+to UV spectrum derived in reference \cite{2006ApJ...648L..29P} for a
+Milky Way (MW)-type galaxy to characterize the spectral distribution
+of SD in a cluster. Note that we only keep the spectral shape, and
+renormalize the amplitude of the spectral distribution using the
+luminosity from SD in clusters.
 
-In Fig.~\ref{fig:SD_spectra} we show the spectral distribution of the
-light from SD together with the cosmic microwave background (CMB)
-black-body distribution in a $6\times10^{14}\,\msun$ galaxy
-cluster. We fit the spectral shape of SD individually; the dust that
-peaks at about $10^{-2}\,\ev$ is fitted using a double power-law,
-while the broader spectral distribution of the stars that peaks at
-about $1\,\ev$ is fitted using a tipple power-law. The best fit to the
-galactic spectrum is given by:
+In Fig.~\ref{fig:SD_spectra}, we show the cosmic microwave background
+(CMB) black-body distribution together with the spectral distribution
+of SD light of a $6\times10^{14}\,\msun$ galaxy cluster. We fit the
+spectral shape of SD individually; the dust that peaks at about
+$10^{-2}\,\ev$ is fitted using a double power-law, while the broader
+spectral distribution of the stars that peaks at about $1\,\ev$ is
+fitted using a tripple power-law. The best fit to the galactic spectrum
+is given by:
 \begin{eqnarray}
   u_\stars^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
   \left(\frac{1.23\,\rmn{eV}}{\eph}\right)^{1.9} \nonumber \\
@@ -2434,8 +2435,8 @@ Sect.~\ref{sect:SD_radial}), and $N_i(\mvir)$ denotes the mass
 dependent normalization for the SD. This function is determined using
 the total energy of the light from SD within $\rvir$ which is
 represented by $E_{i,\vir}$. We relate this energy to the luminosity
-$L_i$ in each respective wavelength band (optical and IR light for the
-dust, and UV light for the stars) using
+$L_i$ in each respective wavelength band (far-IR light for the
+dust, and optical/UV light for the stars) using
 \begin{eqnarray} 
   E_{i,\vir} &=& L_i \frac{\rvir}{c} \nonumber \\
   &=&N_i(\mvir)\int_{\rvir} \int_i \,j(r) 
@@ -2444,11 +2445,11 @@ dust, and UV light for the stars) using
 \label{eq:E_SD}
 \end{eqnarray}
 Here we approximate the total energy of the photons within $\rvir$
-with the SD luminosity multiplied the typical timescale it takes for a
-photon to propagate through the cluster (we assume that the cluster is
-optically thin).
+with the SD luminosity multiplied with the typical timescale that it
+takes for a photon to propagate through the cluster (we assume that
+the cluster is optically thin).
 
-We derive the {\em luminosity from the stars} using
+The {\em luminosity from star light} is given by
 \begin{eqnarray}
 L_\stars(M_{200\rmn{av}})&=&10^{\frac{m_\odot-m_\rmn{cl}-2.5\log\left(1+z\right)}{2.5}}
 \left(\frac{D_\clu}{D_\odot}\right)^2 L_\odot\nonumber\\
@@ -2463,12 +2464,12 @@ $M_{200\rmn{av}}=4.0\times10^{13}\msun$. We also use an apparent
 magnitude of the sun $m_\odot\approx -27.7$, distance to the sun
 $D_\odot=4.85\times10^{-6}\,\rmn{pc}$, luminosity of the sun
 $L_\odot=1.17\times10^{33}\,\rmn{erg\,s}^{-1}$, and distance to the
-cluster $D_\clu=1.26\times10^9\,\rmn{pc}$. Furthermore, to account for
-different cluster masses, we attach a simple mass scaling to the
-luminosity from the stars in Eq.~(\ref{eq:L_stars}). Here we assume
+cluster average of $D_\clu=1.26\times10^9\,\rmn{pc}$. Furthermore, to account for
+different cluster masses, we employ a simple mass scaling for the
+luminosity from  stars in Eq.~(\ref{eq:L_stars}). Here we assume
 that the total starlight has the same halo mass scaling as the
 brightest cluster galaxy (BCG) \cite{2010ApJ...713.1037H}, which is a
-reasonable assumption since a large contribution of the total
+reasonable assumption since a large contribution of the smoothly distributed
 starlight in a cluster comes from the BCG. The starlight luminosity as
 a function of mass is given by
 \begin{equation}
@@ -2482,25 +2483,25 @@ spectral distribution of the stars:
 \begin{equation}
  N_\stars(\mvir) = 
 \left(\frac{\mvir}{M_{200\rmn{av}}}\right)^{0.18}\,
-\frac{6.0\,\rvir\times10^{-9}\,\kpc^2}{\int_{\rvir} j(r) \,\dd V}\,.
+\frac{\rvir\, 6.0\times10^{-9}\,\kpc^2}{\int_{\rvir} j(r) \,\dd V}\,.
 \label{eq:N_stars}
 \end{equation}
 
-The {\em luminosity from the dust} is derived from the
+The {\em luminosity from  dust} is derived from the
 luminosity-richness scaling relation found in
 \cite{2008A&A...490..547G}
 $L_\dust=10^{44.8}\left(\frac{N_{200}}{10}\right)^{0.8}$. We pick a
 high richness cluster with $N_{200}=82$ to normalize the luminosity
 since these clusters are less likely biased by chance
-coincidences. This richness roughly correspond to a mass
+coincidences. This richness  corresponds to a virial mass of approximately
 $M_\rmn{200dust}=6.0\times10^{14}\,\msun$
 \cite{2010ApJ...713.1037H}. We assume that the dust scales with halo
 mass in the same way as the stars, and determine the normalization
 constant for the dust in Eq.~(\ref{eq:E_SD}) to
 \begin{equation}
- N_\stars(\mvir) = 
+ N_\dust(\mvir) = 
 \left(\frac{\mvir}{M_\rmn{200dust}}\right)^{0.18}\,
-\frac{4.0\,\rvir\times10^{-7}\,\kpc^2}{\int_{\rvir} j(r) \,\dd V}\,.
+\frac{\rvir\,4.0\times10^{-7}\,\kpc^2}{\int_{\rvir} j(r) \,\dd V}\,.
 \label{eq:N_dust}
 \end{equation}
 
@@ -2509,35 +2510,36 @@ constant for the dust in Eq.~(\ref{eq:E_SD}) to
 \label{sect:SD_radial}
 Our goal in this section is to derive a simple spatial model for the
 distribution of the light from SD in galaxy clusters. For this reason
-we use stacked cluster observations by Sloan in the $r$ and $i$-band
-that trace the stars and for simplicity we assume that the dust trace
-the stars in the clusters. This is justified if the dust is delivered
-alongside the stars in the same stripping process and got not
-destroyed by spallation thereafter. The stacked surface brightness
+we use stacked cluster observations from the Sloan Digital Sky Survey
+(SDSS) in the $r$ and $i$-band that trace the starlight. For
+simplicity we assume that the dust traces the stars in the
+clusters. This is justified for sufficiently young stellar populations
+(blue BCG and spiral galaxies) or, in the case of the ICL, if the dust
+got stripped alongside the stars without having been destroyed by
+spallation processes thereafter. The stacked surface brightness
 profiles in \cite{2005MNRAS.358..949Z} are measured at redshift $z
 \approx 0.25$ with an average mass of the clusters of
-$4.0\times10^{13}\,\msun$. The profiles are build up out of three
-components; diffuse ICL, galaxies, and the BCG in the center of
-clusters. However, the total volume overlap of the inter-stellar
-medium with a cluster is very small compared to the total overlap of
-the ICL- and BCG with a cluster, thus the relative contribution of the
-galaxies to the IC emission is suppressed
-(c.f. Eq.~\ref{eq:SD_overlap}). We remove this bias in our benchmark
-model for SD by cutting out the galaxies which roughly corresponds to
-$70$ percent of the total SD light. In Fig.~\ref{fig:SD_spatial} we
-show the SDSS stacked brightness profiles as well as the fitted
-profiles\footnote{The measured brightness is converted into units of
-  $\rmn{erg}\,\rmn{s}^{-1}$ using \cite{2010...book}
-  $S(\rmn{mag}\,''^{-2}) =
+$4.0\times10^{13}\,\msun$. As already mentioned, three components
+contribute to the SD: diffuse ICL, galaxies, and the BCG in the center
+of clusters.  However, the overlapping volume of the galactic light
+with the DM distribution of a cluster is very small compared to the
+overlaping volume of ICL- and BCG-light with the DM distribution;
+thus, the relative contribution of the galaxies to the IC emission is
+suppressed (c.f. Eq.~\ref{eq:SD_overlap}). In our benchmark model for
+SD, we remove the contribution from galaxies which corresponds to
+roughly $70$ percent of the total SD light. In
+Fig.~\ref{fig:SD_spatial} we show the SDSS stacked brightness profiles
+as well as the fitted profiles\footnote{The measured brightness is
+  converted into units of $\rmn{erg}\,\rmn{s}^{-1}$ using
+  \cite{2010...book} $S(\rmn{mag}\,''^{-2}) =
   \mathcal{M}_\odot+21.6-2.5\log_{10}[S(L_\odot\,\rmn{pc}^{-2})]$,
   where the sun's absolute magnitude in the $r$-band is given by
   $\mathcal{M}_\odot=27.1$ \cite{1998gaas.book.....B} and the
   luminosity of the sun by $L_\odot=3.85\times10^{33}\,
   \rmn{erg}\,\rmn{s}^{-1}$.}, where both the data and fits are
 normalized with the central surface brightness of the total SD
-component ($S_\sd^\rmn{tot}(0)$). Our spatial benchmark model is shown
-with the solid black line, and include the contribution from the ICL
-and BCG.
+component, $S_\sd^\rmn{tot}(0)$. Our spatial benchmark model is shown
+with the solid black line.
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/SB.photon.eps}
@@ -2545,32 +2547,30 @@ and BCG.
    1\,\ev)$ obtained from stacked clusters in the Sloan Digital Sky
    Survey (SDSS) at the redshift $z \sim 0.25$ \protect
    \cite{2005MNRAS.358..949Z}. The crosses show the total observed
-   starlight including the diffuse intracluster (ICL), the galaxies,
+   starlight including the diffuse intracluster light (ICL), galaxies,
    and the brightest cluster galaxy (BCG) in the center of the
    cluster. The diamonds denote the smooth part of the observed
-   starlight from the ICL and the BCG. The solid line show the fit to
-   the data of the total light including the ICL, the BCG, and the
-   galaxies, while the smooth component is represented by the dashed
-   line that is fitted to only the ICL and the BCG. Note that, we use
-   total SD brightness in the cluster center
-   $(S_\sd^\rmn{tot}(0))$ to normalize the SD surface
-   brightness profiles.}
+   starlight of the ICL and the BCG. The solid line shows the fit to
+   the data of the total light, while the smooth component is
+   represented by the dashed line. Note that we use total SD
+   brightness in the cluster center, $S_\sd^\rmn{tot}(0)$, to
+   normalize the SD surface brightness profiles.}
  \label{fig:SD_spatial}
 \end{figure}
 
 Instead of modelling the surface brightness with a de Vaucouleur
-profile with the addition of a power-law, we use a double beta profile
-model for simplicity of deprojection. It is given by
+profile and a power-law, we use a double beta profile model to
+simplify deprojection. It is given by
 \begin{equation}
 \tilde{S}_\sd (r_\bot) = \frac{S_\sd (r_\bot)}{S_\rmn{SD}^\rmn{tot}(0)} = 
 \sum_{i=1}^2 \,\tilde{S}_i\, 
 \left[1 + \left( \frac{r_\bot}{r_{\mathrm{c}_i}}\right)^2\right]
-^{-3\beta_i + 1/2}\,,
+^{-3\beta_i + 1/2}.
 \label{double_beta}
 \end{equation}
-where we found the following best fitted normalized central brightness
-($\tilde{S}_i$), core radius ($r_{\mathrm{c}_i}$), and slope
-($\beta_i$) for the total model:
+Our fit parameters for the normalized central brightness,
+$\tilde{S}_i$, the core radius, $r_{\mathrm{c}_i}$, and slope
+$\beta_i$ are given for the total model by
 \begin{align}
 &\tilde{S}_1^\rmn{tot} = 1.0\,,
 &&r_{\mathrm{c}_1}^\rmn{tot} = 1.8\,\rmn{kpc}\,,
@@ -2581,7 +2581,7 @@ where we found the following best fitted normalized central brightness
 & && &&&
 \label{fit_spatial_IR}
 \end{align}
-For the smooth model, which is also our benchmark SD model, we find:
+For the smooth model (our benchmark SD model), we find:
 \begin{align}
 &\tilde{S}_1^\rmn{sm}=0.47,\,
 &&r_{\mathrm{c}_1}^\rmn{sm}=3.9\,\rmn{kpc}\,,
@@ -2603,12 +2603,9 @@ e.g. \cite{2004A&A...413...17P} for details about the deprojection):
 where $\mathcal{B}(a,b)$ denotes the beta-function
 \cite{1965hmfw.book.....A}.
 
-The spatial distribution of the energy density of SD is an important
-quantity since it impacts the steady state electron and positron
-distribution through cooling; a high energy density of SD photons in
-a cluster suppresses the gamma-ray flux from IC upscattered
-photons. We derive the energy density from starlight and dust in a
-galaxy cluster through
+The radial distribution of the energy density of SD governs the seed
+photon distribution for IC emission (together with the CMB).  The
+energy density from starlight and dust in a galaxy cluster is given by
 \begin{eqnarray}
 \label{eq:u_SD_r}
 u_\sd(r) &=& \int \dd \eph \frac{\dd^2 N_\ph}{\dd \eph \dd V}\,\eph
@@ -2618,11 +2615,11 @@ u_\sd(r) &=& \int \dd \eph \frac{\dd^2 N_\ph}{\dd \eph \dd V}\,\eph
 N_i(\mvir) \frac{u_i^\gal(\eph)}{\eph}\,, \nonumber \\
 \end{eqnarray}
 where we have used the specific energy density of the light from SD
-given by Eq.~(\ref{eq:u_SD_er}). Note that we compare the energy
+given by Eq.~(\ref{eq:u_SD_er}). We compare the energy
 density $u_\sd(r)$ to other radiation background fields in
 Fig.~\ref{fig:SD_Edens} for a galaxy cluster with the mass
 $\mvir=6\times10^{14}\msun$. We find that inside a few percent of of
-$\rvir$ the total energy density is dominated by the light from SD,
+$\rvir$, the total energy density is dominated by the light from SD
 while the CMB is dominating elsewhere. This implies that if the boost
 from dark matter (DM) substructures is significant, then the overlap of
 light from SD with the electron and positron distribution that trace
@@ -2662,13 +2659,13 @@ $\Js$ & $2.1\times10^{-6}$ & $0.34$ & $0.51$ & $490$  \\
 \hline
 \hline
 \end{tabular}
-\caption{The best fit parameters to the continuum emission from our
+\caption{Fit parameters to the continuum emission from our
   supersymmetric benchmark models.
  \label{tab:bm_cont}}
 \end{table} 
 
-Once again we use {\sc DarkSUSY} to derive the number of electrons and
-positrons resulting from each annihilation. This spectra is shown in
+We also use {\sc DarkSUSY} to derive the number of electrons and
+positrons resulting from each annihilation. These spectra are shown in
 the right panel of Fig.~\ref{fig:q_DM}. The electron and positron
 yield resulting from our supersymmetric BM model is fitted using
 \begin{eqnarray}
@@ -2679,7 +2676,7 @@ N_{\e,\rmn{BM}}(>\ee) &=& \frac{b_1}{\eet^{b_2}}\times
 & &\rmn{where}\quad\eet=\frac{\ee}{\gev}\,.
 \label{eq:bm_elec}
 \end{eqnarray}
-The best fit parameters are given in Tab.~\ref{tab:bm_elec}.
+Fit parameters are given in Tab.~\ref{tab:bm_elec}.
 \begin{table}[h]
 \begin{tabular}{c c c c c c c c c}
 \hline
@@ -2693,7 +2690,7 @@ $\Js$ & $30$ & $0.14$ & $5.0$ & $1.0$  & $1.5$ & $300$ & $5$ & $-1$     \\
 \hline
 \hline
 \end{tabular}
-\caption{The best fit parameters to the electron and positron yield
+\caption{Fit parameters to the electron and positron yield
   above the electron energy $\ee$ from the supersymmetric benchmark
   models.
  \label{tab:bm_elec}}
@@ -2710,9 +2707,9 @@ x=\frac{\ee}{m_\chi\,c^2}\,\quad\rmn{and}\nonumber\\
 c_1&=&0.719,\,c_2=2.27,\,c_3=0.200\,.
 \label{eq:lp_elec}
 \end{eqnarray}
-It should be noted that the LP model that we are using in this work
+The LP model, that we are using in this work,
 has a branching factor branching ratio of ($1/2:1/2$) into
-($\mu^+\mu^-:\e^+\e^-$). Hence the resulting electron and positron
+($\mu^+\mu^-:\e^+\e^-$). Hence, the resulting electron and positron
 yield for the LP model is given by
 \begin{equation}
 N_{\e,\rmn{LP}}(>\ee) =
@@ -2758,8 +2755,8 @@ where
 \label{fit_fornax}
 \end{align}
 Note that we remove the contribution of the flat central component of
-the fit ($i=1$) in the outer parts of the cluster, thus we cut it at
-about $40\,\kpc$.
+the fit ($i=1$) in the outer parts of the cluster, thus we neglect the
+central contribution for $r>40\,\kpc$.
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/dens.fornax.eps}
