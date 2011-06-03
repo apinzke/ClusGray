@@ -916,7 +916,7 @@ in one of the highest resolved MW halos ever simulated.\footnote{Note
   DM and substructure biases the subhalo boost factor too low
   \cite{2008JPhCS.125a2008K, 2008JPhCS.125a2008K}.} We use a double
 power-law function to fit\footnote{Our approach of fitting the
-  scaling behavior of $L_\rmn{sub}(<r)$ directly from numerical
+  scaling behavior of $L_\sub(<r)$ directly from numerical
   simulations self-consistently accounts for the radial dependence of
   the substructure concentration \protect \cite{2008MNRAS.391.1685S}.}
 the luminosity from the smooth component of substructures
@@ -925,7 +925,7 @@ radius $r$ which is determined for the Aquarius simulations
 \cite{2008MNRAS.391.1685S,2008Natur.456...73S}. Our best fit is given
 by
 \begin{eqnarray}
-  L_\rmn{sub}(<x) &=& a_0\,C(\mvir)\,L_{200\sm}(\mvir)\,x^{a_1
+  L_\sub(<x) &=& a_0\,C(\mvir)\,L_{200\sm}(\mvir)\,x^{a_1
     \displaystyle{x}^{a_2}}\,,\label{eq:LSub}\\
    a_0 &=& 0.76\,,\quad a_1 = 0.95\,,\quad  a_2 = -0.27\,, \quad 
  \nonumber\\
@@ -958,13 +958,29 @@ either.  For DM halos more (less) massive than the MW we expect a
 larger (smaller) boost from substructures, simply because of the
 larger (smaller) mass range down to the minimum mass $M_\rmn{lim}$.
 
+\C{To further motivate the scaling of the substructure boost with
+  limiting substructure mass in Eqs.~(\ref{eq:LSub}-\ref{eq:CSub}), we
+  show how it relates to the substructure mass function, $\dd
+  N_\sub/\dd M \propto M^{-1.9}$ \cite{2008MNRAS.391.1685S}. Adopting
+  a mass dependence of the concentration parameter of $c\,(M)\propto
+  M$, as it is measured for dwarf halos \cite{}, the substructure
+  luminosity scales as $L_\sub\propto M^A$, where $A=0.674$. Hence we
+  find that the total luminosity of substructures scales as
+\begin{eqnarray}
+  L_\rmn{sub,tot} &=& L_\sub\,N_\sub = L_\sub 
+\int \dd M \frac{\dd N_\sub}{\dd M} \nonumber\\
+ &\propto& M^{A-0.9} \propto M^{-0.226}\,,
+\end{eqnarray}
+which is the result found by \cite{2008Natur.456...73S}.}
+
 We now derive the squared density profile for the substructures
 using
 \begin{eqnarray}
 \rho_\rmn{sub}^2(r) &=& \frac{\dd L_\rmn{sub}}{\dd V} \frac{1}{A_{\rmn{dm}}}\,,\label{eq:rho_sub}\\
 L_{200\sm} &=&  A_{\rmn{dm}} \int_{\rvir} \dd r' 4\pi r'^2 \rho^2(r')\,,\label{eq:Lsm}\\
  \frac{\dd L_\rmn{sub}}{\dd V} &=& a_0\,a_1\,C(\mvir)\,x^{a_2+a_1\,x^{a_2}}\,
-\left[\frac{1+a_2\log(x)}{4\pi\,r^3}\right]\,,\\
+\left[\frac{1+a_2\log(x)}{4\pi\,r^3}\right]\,,\nonumber\\
+\\
 x &=& r/\rvir\,.\label{eq:xvir}
 \end{eqnarray} 
 
@@ -1972,8 +1988,12 @@ L_{\gamma}(>10\,\gev)  = 1.4\times10^{43}
 Note that the CR luminosity scaling relations\footnote{The scaling
   relations show the flux inside $\rvir$ and do not include the
   contribution from galaxies. Also note that in this paper the scaling
-  relations are normalized with $10^{15}/h_{70}\,\msun$, in contrast
-  to $10^{15}/h\,\msun$ that was used in \cite{2010MNRAS.409..449P}.}
+  relations are normalized with $10^{15}/h_{70}\,\msun$. \C{In
+    contrast, is the corresponding scaling relations in Table 5 in
+    \cite{2010MNRAS.409..449P} normalized with $10^{15}/h\,\msun$
+    instead of the mentioned $10^{15}/h_{70}\,\msun$. However, all
+    figures/tables/equations including the scaling relation figures
+    are derived for masses in units of $10^{15}/h_{70}\,\msun$.}}
 include the IC gamma-ray contribution from shock-accelerated electrons
 as well as secondary electrons created in CR-proton interactions. The
 gamma-ray flux from the electrons is, however, dominated by the
@@ -2194,7 +2214,7 @@ HIFLUGCS sample in Fig.~\ref{fig19}. In the lower panel of this
 figure, we show the relative difference between the gamma-ray flux
 computed using the analytical CR model to the flux predicted by the
 mass-luminosity scaling relation. Statistically, one can view the
-analytical modeling as explicitely accounting for the scatter of the expected
+analytical modeling as explicitly accounting for the scatter of the expected
 gamma-ray flux at a given mass. Cool core clusters have a denser core
 which increases the target density of gas protons for the hadronic
 reaction which in turn leads to a systematic increase of the expected
@@ -2350,15 +2370,18 @@ direct and accelerator searches for the nature of DM.
 %------------------------------------------------------------------
 
 
-\smallskip We would like to thank Volker Springel for helpful
-discussions.  A.P. acknowledges NSF grant AST 0908480 for support. We
-would furthermore like to thank KITP for their hospitality during the
-galaxy cluster workshop.  This research was supported in part by the
-National Science Foundation under Grant No. NSF PHY05-51164.
-C.P. gratefully acknowledges financial support of the Klaus Tschira
-Foundation. The work of L.B. was supported by the Swedish Research
-Council (VR), under contracts no. 621-2009-3915 and 349-2007-8709 (the
-Oskar Klein Centre).
+\smallskip We would like to thank Volker Springel, Megan Donahue,
+Stefano Profumo, and Tesla Jeltema for helpful discussions.  In
+addition we thank Neal Weiner ans Tracy Slatyer for many comments and
+suggestions for improvements of a previous version of this
+paper. A.P. acknowledges NSF grant AST 0908480 for support. We would
+furthermore like to thank KITP for their hospitality during the galaxy
+cluster workshop.  This research was supported in part by the National
+Science Foundation under Grant No. NSF PHY05-51164.  C.P. gratefully
+acknowledges financial support of the Klaus Tschira Foundation. The
+work of L.B. was supported by the Swedish Research Council (VR), under
+contracts no. 621-2009-3915 and 349-2007-8709 (the Oskar Klein
+Centre).
 
 
 %-) Consider having one figure where we compare the Einasto profile, to
@@ -2389,7 +2412,7 @@ the SD light from a stacked sample of clusters.
 
 \subsection{Energy spectrum}
 The cluster emission from far-IR to optical/UV is due to dust emission
-and stellar light, respectively. We distiguish three components: the
+and stellar light, respectively. We distinguish three components: the
 brightest cluster galaxy (BCG), the intra-cluster light (ICL) and
 individual galaxies. While the latter distribution is highly clumped,
 the first two components are smoothly distributed.  We use the far-IR
@@ -2405,7 +2428,7 @@ of SD light of a $6\times10^{14}\,\msun$ galaxy cluster. We fit the
 spectral shape of SD individually; the dust that peaks at about
 $10^{-2}\,\ev$ is fitted using a double power-law, while the broader
 spectral distribution of the stars that peaks at about $1\,\ev$ is
-fitted using a tripple power-law. The best fit to the galactic spectrum
+fitted using a triple power-law. The best fit to the galactic spectrum
 is given by:
 \begin{eqnarray}
   u_\stars^\gal(\eph) &=& \frac{23\,\rmn{eV}}{\rmn{cm}^3} 
@@ -2524,7 +2547,7 @@ $4.0\times10^{13}\,\msun$. As already mentioned, three components
 contribute to the SD: diffuse ICL, galaxies, and the BCG in the center
 of clusters.  However, the overlapping volume of the galactic light
 with the DM distribution of a cluster is very small compared to the
-overlaping volume of ICL- and BCG-light with the DM distribution;
+overlapping volume of ICL- and BCG-light with the DM distribution;
 thus, the relative contribution of the galaxies to the IC emission is
 suppressed (c.f. Eq.~\ref{eq:SD_overlap}). In our benchmark model for
 SD, we remove the contribution from galaxies which corresponds to
@@ -2644,7 +2667,7 @@ q_\rmn{BM} (\eg,r)&=&\left[\frac{\rho(r)}{10^{-29}\rmn{g}\,\cm^{-3}}\right]^2
  \label{eq:bm_cont}
 \end{eqnarray}
 where the model specific parameters are given in
-Tab.~\ref{tab:bm_cont}.
+Table~\ref{tab:bm_cont}.
 
 \begin{table}[h]
 \begin{tabular}{c c c c c }
@@ -2677,7 +2700,7 @@ N_{\e,\rmn{BM}}(>\ee) &=& \frac{b_1}{\eet^{b_2}}\times
 & &\rmn{where}\quad\eet=\frac{\ee}{\gev}\,.
 \label{eq:bm_elec}
 \end{eqnarray}
-Fit parameters are given in Tab.~\ref{tab:bm_elec}.
+Fit parameters are given in Table~\ref{tab:bm_elec}.
 \begin{table}[h]
 \begin{tabular}{c c c c c c c c c}
 \hline
@@ -2698,8 +2721,8 @@ $\Js$ & $30$ & $0.14$ & $5.0$ & $1.0$  & $1.5$ & $300$ & $5$ & $-1$     \\
 \end{table} 
 
 Finally, we use {\sc DarkSUSY} to derive the electron and positron
-yield resulting from LP DM annihilating into decaying muons. We find
-the following best fit:
+yield resulting from leptophilic (LP) DM annihilating into decaying
+muons. We find the following best fit:
 \begin{eqnarray}
 N_{\e,\rmn{LP}\mu}(>\ee) &=& \exp\left(c_1+c_2\,y+c_3\,y^2\right)
 \,,\nonumber\\
@@ -2775,8 +2798,424 @@ central contribution for $r>40\,\kpc$.
  \label{fig:dens_fornax}
 \end{figure}
 
-\del{
+
 \section{Flux tables for the HIFLUGCS catalogue}
-TO BE WRITTEN
-}
+
+\C{In this section we present the gamma-ray flux predictions using the
+clusters in the extended HIFLUGCS catalogue. We show the brightest 50
+clusters in descending order; CR proton induced $\pi^0$ that decays
+into gamma-rays in Table~\ref{tab:flux_tab_CRs}, the supersymmetric DM
+BM-$\Kp$ model where the Neutralino emit a continuum as well as final
+state radiation in Table~\ref{tab:flux_tab_BM}, and LP DM that emit
+final state radiation and annihilate either indirectly through
+$\mu^+/\mu^-$ to $\rmn{e}^+/\rmn{e}^-$ or directly to
+$\rmn{e}^+/\rmn{e}^-$ that IC upscatter CMB photons in
+Table~\ref{tab:flux_tab_LP}. The flux from DM has been boosted by the
+substructures, where we in addition include the Sommerfeld enhancement
+for the LP model.  
+For completeness, we show in Table~\ref{tab:flux_tab_CLp} the
+parameters that we use to derive the fluxes for the clusters in the
+HIFLUGCS sample.}
+
+\begin{table*}
+\begin{minipage}{2.0\columnwidth}
+  \caption{Gamma-ray CR-$\pi^0$ flux within $\rvir$ from brightest 50 clusters in HIFLUGCS catalogue.}
+\begin{tabular}{l  c c c c c c c}
+\hline
+\hline
+ Cluster & ID$^{(1)}$ & $F_{\gamma}$$^{(2)}$ & $F_{\gamma}$$^{(3)}$& 
+ $F_{\gamma}$$^{(4)}$ & $\eg^2\,\dd F_{\gamma}/\dd \eg$$^{(5)}$ &
+ $\eg^2\,\dd F_{\gamma,0.1}/\dd \eg$$^{(5,6)}$ & 
+ $\eg^2\,\dd F_{\gamma,1.0}/\dd \eg$$^{(5,7)}$\\
+  & & $(>100\,\rmn{MeV})$ & $(>1\,\rmn{GeV})$ & $(>100\,\rmn{GeV})$ & 
+ $(5\,\rmn{GeV})$ & $(5\,\rmn{GeV})$ &  $(5\,\rmn{GeV})$\\
+ \hline
+PERSEUS  &  68 &  56.14 &  75.31 &  20.64 &  63.95 &  13.92 &  24.52 \\
+OPHIUCHUS &  96 &  23.31 &  31.27 &   8.57 &  26.55 &   5.88 &  10.28 \\
+COMA     &  34 &  17.50 &  23.48 &   6.43 &  19.94 &   2.62 &   7.56 \\
+NORMA    &  94 &  13.39 &  17.97 &   4.92 &  15.26 &   1.16 &   5.57 \\
+CENTAURUS &  30 &  12.06 &  16.17 &   4.43 &  13.73 &   2.45 &   5.04 \\
+AWM7     &  67 &   8.24 &  11.05 &   3.03 &   9.38 &   1.85 &   3.63 \\
+A3571    &  39 &   6.10 &   8.19 &   2.24 &   6.95 &   1.80 &   2.83 \\
+TRIANGULUM &  95 &   5.92 &   7.95 &   2.18 &   6.75 &   1.61 &   2.81 \\
+A2319    &  98 &   5.58 &   7.48 &   2.05 &   6.35 &   1.54 &   2.74 \\
+A2199    &  51 &   5.18 &   6.94 &   1.90 &   5.90 &   1.68 &   2.35 \\
+3C129    &  70 &   5.15 &   6.91 &   1.89 &   5.87 &   0.71 &   2.30 \\
+HYDRA    &  25 &   5.15 &   6.91 &   1.89 &   5.86 &   1.11 &   2.22 \\
+2A0335   &  11 &   4.91 &   6.59 &   1.81 &   5.59 &   1.94 &   2.33 \\
+FORNAX   &  10 &   4.09 &   5.48 &   1.50 &   4.66 &   0.33 &   1.65 \\
+A2029    &  43 &   3.73 &   5.00 &   1.37 &   4.25 &   1.45 &   1.80 \\
+A0496    &  18 &   3.59 &   4.81 &   1.32 &   4.09 &   1.13 &   1.84 \\
+A0085    &   1 &   3.54 &   4.75 &   1.30 &   4.04 &   1.20 &   1.79 \\
+A1795    &  40 &   3.52 &   4.73 &   1.29 &   4.01 &   1.37 &   1.66 \\
+A2256    &  54 &   3.45 &   4.63 &   1.27 &   3.93 &   1.11 &   1.55 \\
+PKS0745  &  77 &   3.28 &   4.40 &   1.20 &   3.73 &   1.39 &   1.57 \\
+A3266    &  17 &   3.18 &   4.27 &   1.17 &   3.63 &   0.92 &   1.45 \\
+A2142    &  48 &   3.09 &   4.14 &   1.13 &   3.52 &   1.16 &   1.50 \\
+NGC5044  &  35 &   2.97 &   3.98 &   1.09 &   3.38 &   1.01 &   1.34 \\
+A3558    &  37 &   2.89 &   3.88 &   1.06 &   3.29 &   0.82 &   1.44 \\
+A3667    &  56 &   2.85 &   3.82 &   1.05 &   3.25 &   0.73 &   1.55 \\
+A0262    &   5 &   2.76 &   3.70 &   1.01 &   3.14 &   0.57 &   1.41 \\
+A0478    &  14 &   2.72 &   3.64 &   1.00 &   3.09 &   1.11 &   1.30 \\
+A1367    &  26 &   2.65 &   3.55 &   0.97 &   3.02 &   0.40 &   1.19 \\
+A4038    &  62 &   2.56 &   3.43 &   0.94 &   2.91 &   0.83 &   1.22 \\
+HYDRA-A  &  24 &   2.46 &   3.30 &   0.90 &   2.80 &   0.98 &   1.19 \\
+A0401    &   8 &   2.39 &   3.21 &   0.88 &   2.72 &   0.82 &   1.16 \\
+A2052    &  44 &   2.25 &   3.02 &   0.83 &   2.57 &   0.81 &   1.11 \\
+A0644    &  78 &   2.17 &   2.91 &   0.80 &   2.47 &   0.84 &   0.98 \\
+NGC1550  &  15 &   2.06 &   2.76 &   0.76 &   2.35 &   0.59 &   0.93 \\
+NGC4636  &  29 &   2.06 &   2.76 &   0.76 &   2.34 &   0.55 &   0.86 \\
+A0754    &  23 &   2.03 &   2.73 &   0.75 &   2.32 &   0.69 &   0.92 \\
+ANTLIA   &  79 &   1.87 &   2.50 &   0.69 &   2.13 &   0.19 &   0.82 \\
+A3158    &  13 &   1.83 &   2.45 &   0.67 &   2.08 &   0.61 &   0.86 \\
+A2147    &  49 &   1.80 &   2.41 &   0.66 &   2.05 &   0.29 &   1.19 \\
+A0119    &   2 &   1.75 &   2.35 &   0.65 &   2.00 &   0.38 &   0.84 \\
+A2063    &  47 &   1.70 &   2.28 &   0.63 &   1.94 &   0.53 &   0.82 \\
+A3581    &  41 &   1.66 &   2.22 &   0.61 &   1.89 &   0.58 &   0.78 \\
+A1644    &  31 &   1.63 &   2.19 &   0.60 &   1.86 &   0.42 &   0.85 \\
+MKW3S    &  45 &   1.62 &   2.18 &   0.60 &   1.85 &   0.62 &   0.77 \\
+A2065    &  46 &   1.56 &   2.09 &   0.57 &   1.78 &   0.58 &   0.70 \\
+A0399    &   7 &   1.55 &   2.07 &   0.57 &   1.76 &   0.50 &   0.73 \\
+A3112    &   9 &   1.54 &   2.07 &   0.57 &   1.76 &   0.63 &   0.76 \\
+EXO0422  &  16 &   1.53 &   2.05 &   0.56 &   1.74 &   0.58 &   0.69 \\
+A4059    &  63 &   1.51 &   2.02 &   0.55 &   1.72 &   0.54 &   0.72 \\
+A0576    &  22 &   1.47 &   1.97 &   0.54 &   1.68 &   0.42 &   0.66 \\
+\hline
+\hline
+\end{tabular}
+\begin{quote}
+  Notes: 
+   (1) The HIFLUGCS cluster ID.
+   (2) In units of  $10^{-10} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (3) In units of  $10^{-11} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (4) In units of  $10^{-13} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (5) In units of  $10^{-11} \rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (6) The flux within $0.1$ degree. In addition, we smooth the flux with a point spread function of $0.1$ degree. 
+   (7) The flux within $1.0$ degree. In addition, we smooth the flux with a point spread function of $1.0$ degree. 
+ \label{tab:flux_tab_CRs}
+  \end{quote}
+\end{minipage}
+\end{table*} 
+
+\begin{table*}
+\begin{minipage}{2.0\columnwidth}
+  \caption{Gamma-ray BM-$\Kp$ Continuum flux within $\rvir$ from brightest 50 clusters in HIFLUGCS catalogue.}
+\begin{tabular}{l  c c c c c c c}
+\hline
+\hline
+ Cluster & ID$^{(1)}$ & $F_{\gamma}$$^{(2)}$ & $F_{\gamma}$$^{(3)}$& 
+ $F_{\gamma}$$^{(4)}$ & $\eg^2\,\dd F_{\gamma}/\dd \eg$$^{(5)}$ &
+ $\eg^2\,\dd F_{\gamma,0.1}/\dd \eg$$^{(5,6)}$ & 
+ $\eg^2\,\dd F_{\gamma,1.0}/\dd \eg$$^{(5,7)}$\\
+  & & $(>100\,\rmn{MeV})$ & $(>1\,\rmn{GeV})$ & $(>100\,\rmn{GeV})$ & 
+ $(5\,\rmn{GeV})$ & $(5\,\rmn{GeV})$ &  $(5\,\rmn{GeV})$\\
+ \hline
+FORNAX   &  10 &  12.71 &  80.57 &  44.45 &  12.76 &   0.09 &   2.61 \\
+OPHIUCHUS &  96 &   9.95 &  63.10 &  34.81 &   9.99 &   0.27 &   3.90 \\
+COMA     &  34 &   8.26 &  52.38 &  28.89 &   8.29 &   0.22 &   3.20 \\
+NORMA    &  94 &   7.48 &  47.43 &  26.16 &   7.51 &   0.17 &   2.68 \\
+CENTAURUS &  30 &   7.24 &  45.87 &  25.31 &   7.26 &   0.12 &   2.28 \\
+PERSEUS  &  68 &   7.15 &  45.30 &  24.99 &   7.17 &   0.18 &   2.67 \\
+HYDRA    &  25 &   6.75 &  42.81 &  23.61 &   6.78 &   0.12 &   2.23 \\
+M49      &  81 &   5.98 &  37.93 &  20.92 &   6.00 &   0.06 &   1.51 \\
+NGC4636  &  29 &   4.42 &  28.01 &  15.45 &   4.44 &   0.05 &   1.14 \\
+AWM7     &  67 &   4.30 &  27.24 &  15.03 &   4.31 &   0.13 &   1.76 \\
+3C129    &  70 &   4.06 &  25.74 &  14.20 &   4.08 &   0.15 &   1.79 \\
+A1367    &  26 &   2.51 &  15.92 &   8.78 &   2.52 &   0.11 &   1.20 \\
+NGC5846  &  92 &   2.48 &  15.73 &   8.68 &   2.49 &   0.05 &   0.86 \\
+A0754    &  23 &   2.14 &  13.57 &   7.49 &   2.15 &   0.17 &   1.26 \\
+TRIANGULUM &  95 &   1.85 &  11.72 &   6.47 &   1.86 &   0.16 &   1.10 \\
+A3571    &  39 &   1.84 &  11.68 &   6.45 &   1.85 &   0.14 &   1.05 \\
+NGC5813  &  91 &   1.59 &  10.06 &   5.55 &   1.59 &   0.04 &   0.62 \\
+ANTLIA   &  79 &   1.58 &  10.03 &   5.53 &   1.59 &   0.06 &   0.71 \\
+A2199    &  51 &   1.54 &   9.73 &   5.37 &   1.54 &   0.11 &   0.85 \\
+A3266    &  17 &   1.50 &   9.49 &   5.24 &   1.50 &   0.15 &   0.94 \\
+A2877    &  65 &   1.48 &   9.40 &   5.18 &   1.49 &   0.09 &   0.79 \\
+NGC5044  &  35 &   1.42 &   9.00 &   4.97 &   1.43 &   0.05 &   0.61 \\
+A3395n   &  75 &   1.35 &   8.57 &   4.73 &   1.36 &   0.13 &   0.83 \\
+A3395s   &  21 &   1.35 &   8.56 &   4.72 &   1.36 &   0.13 &   0.83 \\
+A2256    &  54 &   1.34 &   8.49 &   4.68 &   1.34 &   0.14 &   0.85 \\
+A0576    &  22 &   1.31 &   8.28 &   4.57 &   1.31 &   0.11 &   0.77 \\
+NGC1550  &  15 &   1.30 &   8.25 &   4.55 &   1.31 &   0.06 &   0.62 \\
+A2319    &  98 &   1.25 &   7.92 &   4.37 &   1.25 &   0.13 &   0.80 \\
+A3376    &  19 &   1.24 &   7.85 &   4.33 &   1.24 &   0.12 &   0.76 \\
+A0119    &   2 &   1.19 &   7.54 &   4.16 &   1.19 &   0.11 &   0.73 \\
+A2634    &  60 &   1.11 &   7.07 &   3.90 &   1.12 &   0.09 &   0.65 \\
+A0262    &   5 &   1.02 &   6.46 &   3.57 &   1.02 &   0.06 &   0.53 \\
+A2065    &  46 &   0.98 &   6.21 &   3.42 &   0.98 &   0.13 &   0.67 \\
+A0539    &  71 &   0.90 &   5.70 &   3.14 &   0.90 &   0.08 &   0.53 \\
+MKW8     &  42 &   0.89 &   5.65 &   3.12 &   0.89 &   0.07 &   0.52 \\
+A1795    &  40 &   0.87 &   5.50 &   3.03 &   0.87 &   0.11 &   0.58 \\
+A0644    &  78 &   0.85 &   5.42 &   2.99 &   0.86 &   0.11 &   0.59 \\
+A4038    &  62 &   0.82 &   5.23 &   2.88 &   0.83 &   0.07 &   0.49 \\
+A0496    &  18 &   0.80 &   5.09 &   2.81 &   0.81 &   0.08 &   0.49 \\
+IIIZw54  &  12 &   0.80 &   5.05 &   2.79 &   0.80 &   0.07 &   0.49 \\
+A2147    &  49 &   0.78 &   4.97 &   2.74 &   0.79 &   0.08 &   0.49 \\
+A3558    &  37 &   0.77 &   4.88 &   2.69 &   0.77 &   0.09 &   0.51 \\
+A3667    &  56 &   0.75 &   4.74 &   2.62 &   0.75 &   0.09 &   0.51 \\
+A0085    &   1 &   0.73 &   4.64 &   2.56 &   0.73 &   0.09 &   0.50 \\
+A2063    &  47 &   0.72 &   4.58 &   2.52 &   0.72 &   0.07 &   0.46 \\
+A0399    &   7 &   0.69 &   4.39 &   2.42 &   0.69 &   0.10 &   0.49 \\
+UGC03957 &  76 &   0.69 &   4.35 &   2.40 &   0.69 &   0.07 &   0.43 \\
+A2029    &  43 &   0.68 &   4.34 &   2.39 &   0.69 &   0.10 &   0.49 \\
+A0400    &   6 &   0.68 &   4.31 &   2.38 &   0.68 &   0.06 &   0.41 \\
+A3158    &  13 &   0.67 &   4.26 &   2.35 &   0.67 &   0.09 &   0.46 \\
+\hline
+\hline
+\end{tabular}
+\begin{quote}
+  Notes: 
+   (1) The HIFLUGCS cluster ID.
+   (2) In units of  $10^{-11} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (3) In units of  $10^{-12} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (4) In units of  $10^{-14} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (5) In units of  $10^{-11} \rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (6) The flux within $0.1$ degree. In addition, we smooth the flux with a point spread function of $0.1$ degree. 
+   (7) The flux within $1.0$ degree. In addition, we smooth the flux with a point spread function of $1.0$ degree. 
+  \label{tab:flux_tab_BM}
+  \end{quote}
+\end{minipage}
+\end{table*} 
+
+
+\begin{table*}
+\begin{minipage}{2.0\columnwidth}
+  \caption{Gamma-ray LP-IC-CMB and LP-BS flux within $\rvir$ from brightest 50 clusters in HIFLUGCS catalogue.}
+\begin{tabular}{l  c c c c c c c}
+\hline
+\hline
+ Cluster & ID$^{(1)}$ & $F_{\gamma}$$^{(2)}$ & $F_{\gamma}$$^{(2)}$& 
+ $F_{\gamma}$$^{(3)}$ & $\eg^2\,\dd F_{\gamma}/\dd \eg$$^{(4)}$ &
+ $\eg^2\,\dd F_{\gamma,0.1}/\dd \eg$$^{(4,5)}$ & 
+ $\eg^2\,\dd F_{\gamma,1.0}/\dd \eg$$^{(4,6)}$\\
+  & & $(>100\,\rmn{MeV})$ & $(>1\,\rmn{GeV})$ & $(>100\,\rmn{GeV})$ & 
+ $(5\,\rmn{GeV})$ & $(5\,\rmn{GeV})$ &  $(5\,\rmn{GeV})$\\
+ \hline
+FORNAX   &  10 &  50.40 &  93.76 &  50.96 &  11.56 &   0.06 &   2.30 \\
+M49      &  81 &  31.16 &  57.97 &  31.12 &   7.15 &   0.06 &   1.77 \\
+NGC4636  &  29 &  28.06 &  52.20 &  28.26 &   6.44 &   0.05 &   1.63 \\
+CENTAURUS &  30 &  21.23 &  39.50 &  20.93 &   4.87 &   0.07 &   1.53 \\
+HYDRA    &  25 &  19.00 &  35.36 &  18.80 &   4.36 &   0.07 &   1.43 \\
+NORMA    &  94 &  15.74 &  29.28 &  16.09 &   3.61 &   0.07 &   1.29 \\
+PERSEUS  &  68 &  14.84 &  27.60 &  14.57 &   3.40 &   0.08 &   1.27 \\
+OPHIUCHUS &  96 &  14.27 &  26.54 &  14.07 &   3.27 &   0.08 &   1.28 \\
+COMA     &  34 &  13.81 &  25.70 &  13.86 &   3.17 &   0.07 &   1.22 \\
+NGC5846  &  92 &  13.80 &  25.67 &  13.82 &   3.16 &   0.05 &   1.09 \\
+AWM7     &  67 &  10.67 &  19.84 &  10.61 &   2.45 &   0.07 &   1.00 \\
+NGC5813  &  91 &   9.81 &  18.25 &   9.87 &   2.25 &   0.05 &   0.87 \\
+3C129    &  70 &   8.54 &  15.88 &   8.70 &   1.96 &   0.06 &   0.86 \\
+NGC5044  &  35 &   7.40 &  13.76 &   7.39 &   1.70 &   0.05 &   0.73 \\
+ANTLIA   &  79 &   6.28 &  11.68 &   6.79 &   1.44 &   0.04 &   0.66 \\
+A1367    &  26 &   6.12 &  11.39 &   6.34 &   1.40 &   0.05 &   0.68 \\
+NGC1550  &  15 &   5.72 &  10.63 &   5.70 &   1.31 &   0.05 &   0.62 \\
+A0262    &   5 &   4.10 &   7.62 &   4.09 &   0.94 &   0.05 &   0.49 \\
+A2877    &  65 &   4.08 &   7.59 &   4.13 &   0.94 &   0.05 &   0.50 \\
+A2199    &  51 &   3.70 &   6.89 &   3.67 &   0.85 &   0.06 &   0.47 \\
+A3571    &  39 &   3.54 &   6.59 &   3.50 &   0.81 &   0.06 &   0.46 \\
+A0754    &  23 &   3.29 &   6.13 &   3.25 &   0.76 &   0.06 &   0.44 \\
+TRIANGULUM &  95 &   3.00 &   5.59 &   2.99 &   0.69 &   0.06 &   0.41 \\
+A0576    &  22 &   2.80 &   5.21 &   2.83 &   0.64 &   0.05 &   0.38 \\
+A2634    &  60 &   2.76 &   5.14 &   2.87 &   0.63 &   0.04 &   0.38 \\
+MKW8     &  42 &   2.69 &   5.00 &   2.69 &   0.62 &   0.05 &   0.36 \\
+A0539    &  71 &   2.60 &   4.84 &   2.61 &   0.60 &   0.05 &   0.36 \\
+NGC499   &  66 &   2.51 &   4.67 &   2.51 &   0.58 &   0.04 &   0.33 \\
+A4038    &  62 &   2.50 &   4.65 &   2.47 &   0.57 &   0.05 &   0.34 \\
+A3581    &  41 &   2.43 &   4.52 &   2.41 &   0.56 &   0.04 &   0.33 \\
+A3395s   &  21 &   2.40 &   4.47 &   2.45 &   0.55 &   0.05 &   0.35 \\
+A3395n   &  75 &   2.38 &   4.43 &   2.44 &   0.55 &   0.05 &   0.34 \\
+A0400    &   6 &   2.36 &   4.38 &   2.41 &   0.54 &   0.04 &   0.33 \\
+A3376    &  19 &   2.35 &   4.37 &   2.44 &   0.54 &   0.04 &   0.34 \\
+A0119    &   2 &   2.33 &   4.34 &   2.43 &   0.53 &   0.04 &   0.34 \\
+A3266    &  17 &   2.31 &   4.30 &   2.35 &   0.53 &   0.05 &   0.34 \\
+IIIZw54  &  12 &   2.25 &   4.19 &   2.28 &   0.52 &   0.04 &   0.32 \\
+A0496    &  18 &   2.25 &   4.19 &   2.22 &   0.52 &   0.05 &   0.32 \\
+NGC507   &   4 &   2.18 &   4.05 &   2.18 &   0.50 &   0.04 &   0.30 \\
+A2319    &  98 &   2.14 &   3.99 &   2.15 &   0.49 &   0.05 &   0.32 \\
+A2256    &  54 &   2.14 &   3.97 &   2.16 &   0.49 &   0.05 &   0.32 \\
+MKW4     &  27 &   2.03 &   3.78 &   2.02 &   0.47 &   0.04 &   0.29 \\
+A2147    &  49 &   2.00 &   3.72 &   2.09 &   0.46 &   0.04 &   0.29 \\
+A2063    &  47 &   1.98 &   3.68 &   1.96 &   0.45 &   0.04 &   0.29 \\
+UGC03957 &  76 &   1.96 &   3.65 &   1.95 &   0.45 &   0.04 &   0.29 \\
+2A0335   &  11 &   1.70 &   3.17 &   1.68 &   0.39 &   0.04 &   0.25 \\
+A3558    &  37 &   1.68 &   3.13 &   1.69 &   0.39 &   0.04 &   0.26 \\
+EXO0422  &  16 &   1.64 &   3.05 &   1.63 &   0.38 &   0.04 &   0.25 \\
+A1795    &  40 &   1.60 &   2.98 &   1.57 &   0.37 &   0.05 &   0.25 \\
+A2052    &  44 &   1.54 &   2.87 &   1.52 &   0.35 &   0.04 &   0.23 \\
+\hline
+\hline
+\end{tabular}
+\begin{quote}
+  Notes: 
+   (1) The HIFLUGCS cluster ID.
+   (2) In units of  $10^{-9} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (3) In units of  $10^{-13} \rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (4) In units of  $10^{-13} \rmn{erg}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$.
+   (5) The flux within $0.1$ degree that have in addition been smoothed over with a point spread function of $0.1$ degree. 
+   (6) The flux within $1.0$ degree that have in addition been smoothed over with a point spread function of $1.0$ degree. 
+ \label{tab:flux_tab_LP}
+  \end{quote}
+\end{minipage}
+\end{table*} 
+
+\begin{table*}
+\begin{minipage}{2.0\columnwidth}
+  \caption{Galaxy cluster parameters for to all clusters in the HIFLUGCS catalogue.}
+\begin{tabular}{l  c c c c c c c c c c c}
+\hline
+\hline
+Cluster & ID$^{(1)}$ & $D_\clu$$^{(1)}$ & $\rvir$$^{(1)}$ & $\rvir$ & 
+$\mvir$$^{(1)}$ & $\rho_\rmn{gas}(0)$$^{(2)}$ & $r_\rmn{core}$$^{(2)}$ & 
+$\beta$$^{(2)}$ & $r_\rmn{hlr,CR}$$^{(3)}$ & $r_\rmn{hlr,DM}$  $^{(4)}$ \\
+& & [Mpc] & [Mpc] & [deg] & [$10^{14}\,\msun$] & 
+[$10^{-27}\,\rmn{g}\,\rmn{cm}^{-3}$] & [kpc] &  & [deg] & [deg] \\
+ \hline
+A0085    &   1 & 248.29 &   1.90 &   0.44 &   7.71 &  24.54 &  59.29 &   0.53 &   0.04 &   0.20 \\
+A0119    &   2 & 194.82 &   1.90 &   0.56 &   7.69 &   1.93 & 357.86 &   0.68 &   0.13 &   0.26 \\
+A0133    &   3 & 254.34 &   1.41 &   0.32 &   3.15 &  35.76 &  32.14 &   0.53 &   0.02 &   0.15 \\
+NGC507   &   4 &  71.57 &   0.74 &   0.59 &   0.46 &  23.05 &  13.57 &   0.44 &   0.07 &   0.28 \\
+A0262    &   5 &  69.81 &   0.96 &   0.79 &   1.01 &  14.38 &  30.00 &   0.44 &   0.14 &   0.37 \\
+A0400    &   6 & 104.69 &   1.09 &   0.60 &   1.48 &   3.40 & 110.00 &   0.53 &   0.12 &   0.28 \\
+A0399    &   7 & 323.00 &   2.19 &   0.39 &  11.89 &   3.40 & 321.43 &   0.71 &   0.07 &   0.18 \\
+A0401    &   8 & 338.70 &   2.19 &   0.37 &  11.85 &   7.84 & 175.71 &   0.61 &   0.05 &   0.17 \\
+A3112    &   9 & 339.66 &   1.74 &   0.29 &   5.87 &  43.07 &  43.57 &   0.58 &   0.02 &   0.14 \\
+FORNAX   &  10 &  19.77 &   0.96 &   2.79 &   1.01 &   2.48 & 124.29 &   0.80 &   0.31 &   1.30 \\
+2A0335   &  11 & 153.49 &   1.31 &   0.49 &   2.51 &  93.06 &  23.57 &   0.57 &   0.02 &   0.23 \\
+IIIZw54  &  12 & 136.39 &   1.35 &   0.57 &   2.81 &   3.86 & 206.43 &   0.89 &   0.07 &   0.26 \\
+A3158    &  13 & 264.13 &   1.92 &   0.42 &   8.06 &   5.96 & 192.14 &   0.66 &   0.06 &   0.19 \\
+A0478    &  14 & 411.96 &   2.24 &   0.31 &  12.78 &  35.47 &  70.00 &   0.61 &   0.02 &   0.14 \\
+NGC1550  &  15 &  53.18 &   0.88 &   0.95 &   0.78 &  15.86 &  32.14 &   0.55 &   0.07 &   0.44 \\
+EXO0422  &  16 & 172.04 &   1.43 &   0.48 &   3.31 &  11.91 & 101.43 &   0.72 &   0.04 &   0.22 \\
+A3266    &  17 & 266.00 &   2.46 &   0.53 &  16.97 &   3.17 & 402.86 &   0.80 &   0.08 &   0.25 \\
+A0496    &  18 & 144.03 &   1.40 &   0.56 &   3.11 &  51.30 &  21.43 &   0.48 &   0.05 &   0.26 \\
+A3376    &  19 & 201.69 &   1.96 &   0.56 &   8.54 &   1.70 & 539.29 &   1.05 &   0.10 &   0.26 \\
+A3391    &  20 & 236.69 &   1.74 &   0.42 &   6.01 &   3.93 & 167.14 &   0.58 &   0.07 &   0.20 \\
+A3395s   &  21 & 221.45 &   2.14 &   0.55 &  10.96 &   2.07 & 431.43 &   0.96 &   0.08 &   0.26 \\
+A0576    &  22 & 167.96 &   1.79 &   0.61 &   6.40 &   2.97 & 281.43 &   0.82 &   0.08 &   0.28 \\
+A0754    &  23 & 235.31 &   2.55 &   0.62 &  18.71 &   5.98 & 170.71 &   0.70 &   0.05 &   0.29 \\
+HYDRA-A  &  24 & 239.94 &   1.55 &   0.37 &   4.24 &  53.04 &  35.71 &   0.57 &   0.02 &   0.17 \\
+HYDRA    &  25 &  49.25 &   1.39 &   1.62 &   3.03 &   8.20 &  67.14 &   0.61 &   0.13 &   0.75 \\
+A1367    &  26 &  94.05 &   1.53 &   0.93 &   4.06 &   2.02 & 273.57 &   0.69 &   0.19 &   0.43 \\
+MKW4     &  27 &  86.98 &   0.86 &   0.56 &   0.71 &  50.43 &   7.86 &   0.44 &   0.06 &   0.26 \\
+ZwCl1215 &  28 & 339.66 &   2.09 &   0.35 &  10.37 &   4.07 & 307.86 &   0.82 &   0.05 &   0.16 \\
+NGC4636  &  29 &  15.89 &   0.61 &   2.19 &   0.25 &  55.18 &   4.29 &   0.49 &   0.07 &   1.02 \\
+CENTAURU &  30 &  44.46 &   1.34 &   1.72 &   2.70 &  24.45 &  26.43 &   0.49 &   0.14 &   0.80 \\
+A1644    &  31 & 210.40 &   1.62 &   0.44 &   4.81 &   3.49 & 214.29 &   0.58 &   0.10 &   0.21 \\
+A1650    &  32 & 385.28 &   2.15 &   0.32 &  11.14 &   6.77 & 200.71 &   0.70 &   0.04 &   0.15 \\
+A1651    &  33 & 392.54 &   1.96 &   0.29 &   8.51 &  11.72 & 129.29 &   0.64 &   0.03 &   0.13 \\
+COMA     &  34 & 101.14 &   2.30 &   1.30 &  13.84 &   4.34 & 245.71 &   0.65 &   0.20 &   0.60 \\
+NGC5044  &  35 &  38.81 &   0.74 &   1.10 &   0.46 &  81.77 &   7.86 &   0.52 &   0.03 &   0.51 \\
+A1736    &  36 & 204.44 &   1.34 &   0.37 &   2.70 &   2.10 & 267.14 &   0.54 &   0.12 &   0.17 \\
+A3558    &  37 & 213.16 &   1.76 &   0.47 &   6.17 &   6.51 & 160.00 &   0.58 &   0.08 &   0.22 \\
+A3562    &  38 & 221.91 &   1.54 &   0.40 &   4.16 &   8.30 &  70.71 &   0.47 &   0.08 &   0.18 \\
+A3571    &  39 & 175.22 &   2.04 &   0.67 &   9.51 &  10.39 & 129.29 &   0.61 &   0.07 &   0.31 \\
+A1795    &  40 & 276.29 &   2.14 &   0.44 &  10.99 &  35.96 &  55.71 &   0.60 &   0.02 &   0.21 \\
+A3581    &  41 &  93.17 &   0.99 &   0.61 &   1.09 &  31.10 &  25.00 &   0.54 &   0.03 &   0.28 \\
+MKW8     &  42 & 118.04 &   1.28 &   0.62 &   2.38 &   5.06 &  76.43 &   0.51 &   0.10 &   0.29 \\
+A2029    &  43 & 347.78 &   2.29 &   0.38 &  13.42 &  38.80 &  59.29 &   0.58 &   0.02 &   0.17 \\
+A2052    &  44 & 153.04 &   1.25 &   0.47 &   2.21 &  44.71 &  26.43 &   0.53 &   0.03 &   0.22 \\
+MKW3S    &  45 & 199.40 &   1.45 &   0.42 &   3.46 &  26.57 &  47.14 &   0.58 &   0.02 &   0.19 \\
+A2065    &  46 & 325.85 &   2.45 &   0.43 &  16.69 &   3.31 & 492.86 &   1.16 &   0.05 &   0.20 \\
+A2063    &  47 & 155.75 &   1.42 &   0.52 &   3.24 &  10.17 &  78.57 &   0.56 &   0.06 &   0.24 \\
+A2142    &  48 & 411.47 &   2.36 &   0.33 &  15.03 &  18.05 & 110.00 &   0.59 &   0.03 &   0.15 \\
+A2147    &  49 & 154.39 &   1.45 &   0.54 &   3.46 &   2.41 & 170.00 &   0.44 &   0.18 &   0.25 \\
+A2163    &  50 & 990.91 &   3.21 &   0.19 &  37.14 &   6.43 & 370.71 &   0.80 &   0.02 &   0.09 \\
+A2199    &  51 & 132.35 &   1.62 &   0.70 &   4.81 &  13.66 &  99.29 &   0.66 &   0.06 &   0.33 \\
+A2204    &  52 & 727.47 &   2.06 &   0.16 &   9.85 &  73.26 &  47.86 &   0.60 &   0.01 &   0.08 \\
+A2244    &  53 & 446.19 &   2.06 &   0.27 &   9.84 &  17.26 &  90.00 &   0.61 &   0.02 &   0.12 \\
+A2256    &  54 & 269.27 &   2.40 &   0.51 &  15.58 &   3.90 & 419.29 &   0.91 &   0.07 &   0.24 \\
+A2255    &  55 & 363.60 &   2.27 &   0.36 &  13.32 &   2.40 & 423.57 &   0.80 &   0.06 &   0.17 \\
+\end{tabular}
+\end{minipage}
+\end{table*} 
+\newpage
+\begin{table}
+\begin{minipage}{2.0\columnwidth}
+\begin{tabular}{l  c c c c c c c c c c c}
+\hline
+\hline
+Cluster & ID$^{(1)}$ & $D_\clu$$^{(1)}$ & $\rvir$$^{(1)}$ & $\rvir$ & 
+$\mvir$$^{(1)}$ & $\rho_\rmn{gas}(0)$$^{(2)}$ & $r_\rmn{core}$$^{(2)}$ & 
+$\beta$$^{(2)}$ & $r_\rmn{hlr,CR}$$^{(3)}$ & $r_\rmn{hlr,DM}$  $^{(4)}$ \\
+& & [Mpc] & [Mpc] & [deg] & [$10^{14}\,\msun$] & 
+[$10^{-27}\,\rmn{g}\,\rmn{cm}^{-3}$] & [kpc] &  & [deg] & [deg] \\
+ \hline
+A3667    &  56 & 250.15 &   1.92 &   0.44 &   7.99 &   4.64 & 199.29 &   0.54 &   0.10 &   0.20 \\
+S1101    &  57 & 259.46 &   1.37 &   0.30 &   2.91 &  48.52 &  40.00 &   0.64 &   0.01 &   0.14 \\
+A2589    &  58 & 183.87 &   1.47 &   0.46 &   3.58 &  10.07 &  84.29 &   0.60 &   0.04 &   0.21 \\
+A2597    &  59 & 388.66 &   1.65 &   0.24 &   5.10 &  59.06 &  41.43 &   0.63 &   0.01 &   0.11 \\
+A2634    &  60 & 136.84 &   1.50 &   0.63 &   3.82 &   1.70 & 260.00 &   0.64 &   0.14 &   0.29 \\
+A2657    &  61 & 178.41 &   1.42 &   0.46 &   3.23 &   8.16 &  85.00 &   0.56 &   0.06 &   0.21 \\
+A4038    &  62 & 123.85 &   1.29 &   0.59 &   2.44 &  22.03 &  42.14 &   0.54 &   0.05 &   0.28 \\
+A4059    &  63 & 203.98 &   1.59 &   0.45 &   4.50 &  16.44 &  64.29 &   0.58 &   0.03 &   0.21 \\
+A2734    &  64 & 278.16 &   1.53 &   0.31 &   4.05 &   5.24 & 151.43 &   0.62 &   0.05 &   0.15 \\
+A2877    &  65 & 105.13 &   1.39 &   0.76 &   3.03 &   2.30 & 135.71 &   0.57 &   0.13 &   0.35 \\
+NGC499   &  66 &  63.67 &   0.71 &   0.64 &   0.41 &  28.76 &  17.14 &   0.72 &   0.02 &   0.30 \\
+AWM7     &  67 &  74.64 &   1.56 &   1.20 &   4.34 &   7.70 & 123.57 &   0.67 &   0.12 &   0.56 \\
+PERSEUS  &  68 &  79.48 &   1.90 &   1.37 &   7.71 &  45.94 &  45.71 &   0.54 &   0.10 &   0.64 \\
+S405     &  69 & 274.88 &   1.62 &   0.34 &   4.82 &   2.13 & 327.86 &   0.66 &   0.08 &   0.16 \\
+3C129    &  70 &  97.15 &   1.81 &   1.07 &   6.64 &   2.61 & 227.14 &   0.60 &   0.21 &   0.49 \\
+A0539    &  71 & 126.08 &   1.34 &   0.61 &   2.67 &   5.11 & 105.71 &   0.56 &   0.09 &   0.28 \\
+S540     &  72 & 157.55 &   1.23 &   0.45 &   2.09 &   7.70 &  92.86 &   0.64 &   0.04 &   0.21 \\
+A0548w   &  73 & 187.52 &   0.88 &   0.27 &   0.76 &   2.30 & 141.43 &   0.67 &   0.05 &   0.12 \\
+A0548e   &  74 & 181.14 &   1.20 &   0.38 &   1.98 &   4.44 &  84.29 &   0.48 &   0.08 &   0.18 \\
+A3395n   &  75 & 221.45 &   2.14 &   0.55 &  11.05 &   1.61 & 480.00 &   0.98 &   0.09 &   0.26 \\
+UGC03957 &  76 & 149.43 &   1.36 &   0.52 &   2.87 &   8.93 & 101.43 &   0.74 &   0.04 &   0.24 \\
+PKS0745  &  77 & 474.79 &   2.08 &   0.25 &  10.09 &  72.11 &  50.71 &   0.61 &   0.01 &   0.12 \\
+A0644    &  78 & 317.77 &   2.31 &   0.42 &  14.16 &  11.21 & 145.00 &   0.70 &   0.03 &   0.19 \\
+ANTLIA   &  79 &  50.13 &   0.90 &   1.03 &   0.83 &   1.64 & 245.71 &   0.75 &   0.26 &   0.48 \\
+A1413    &  80 & 677.27 &   2.18 &   0.18 &  11.64 &  14.19 & 127.86 &   0.66 &   0.02 &   0.09 \\
+M49      &  81 &  18.91 &   0.74 &   2.25 &   0.46 &  34.18 &   7.86 &   0.59 &   0.04 &   1.04 \\
+A3528n   &  82 & 240.86 &   1.43 &   0.34 &   3.32 &   5.61 & 127.14 &   0.62 &   0.04 &   0.16 \\
+A3528s   &  83 & 245.97 &   1.19 &   0.28 &   1.93 &   7.70 &  72.14 &   0.46 &   0.06 &   0.13 \\
+A3530    &  84 & 242.72 &   1.69 &   0.40 &   5.46 &   2.07 & 300.71 &   0.77 &   0.07 &   0.18 \\
+A3532    &  85 & 240.40 &   1.70 &   0.41 &   5.56 &   3.63 & 201.43 &   0.65 &   0.06 &   0.19 \\
+A1689    &  86 & 897.29 &   2.50 &   0.16 &  17.63 &  23.21 & 116.43 &   0.69 &   0.01 &   0.07 \\
+A3560    &  87 & 220.07 &   1.31 &   0.34 &   2.56 &   2.80 & 182.86 &   0.57 &   0.08 &   0.16 \\
+A1775    &  88 & 343.00 &   1.55 &   0.26 &   4.22 &   5.19 & 185.71 &   0.67 &   0.04 &   0.12 \\
+A1800    &  89 & 338.70 &   1.71 &   0.29 &   5.69 &   3.32 & 280.00 &   0.77 &   0.05 &   0.13 \\
+A1914    &  90 & 827.98 &   2.77 &   0.19 &  24.28 &  14.68 & 165.00 &   0.75 &   0.01 &   0.09 \\
+NGC5813  &  91 &  27.55 &   0.62 &   1.29 &   0.27 &  22.37 &  17.86 &   0.77 &   0.03 &   0.60 \\
+NGC5846  &  92 &  26.25 &   0.69 &   1.51 &   0.38 &  66.64 &   5.00 &   0.60 &   0.02 &   0.70 \\
+A2151w   &  93 & 162.53 &   1.15 &   0.41 &   1.73 &  14.20 &  48.57 &   0.56 &   0.03 &   0.19 \\
+NORMA    &  94 &  70.69 &   1.79 &   1.45 &   6.57 &   2.88 & 213.57 &   0.56 &   0.33 &   0.67 \\
+TRIANGUL &  95 & 226.98 &   2.39 &   0.60 &  15.39 &   6.47 & 199.29 &   0.61 &   0.09 &   0.28 \\
+OPHIUCHU &  96 & 122.51 &   2.74 &   1.28 &  23.16 &   9.08 & 199.29 &   0.75 &   0.10 &   0.59 \\
+ZwCl1742 &  97 & 343.00 &   1.91 &   0.32 &   7.89 &   7.76 & 165.71 &   0.72 &   0.03 &   0.15 \\
+A2319    &  98 & 252.01 &   2.26 &   0.51 &  12.91 &   6.66 & 203.57 &   0.59 &   0.09 &   0.24 \\
+A3695    &  99 & 407.09 &   1.81 &   0.25 &   6.66 &   3.28 & 285.00 &   0.64 &   0.05 &   0.12 \\
+IIZw108  & 100 & 219.60 &   1.47 &   0.38 &   3.60 &   2.47 & 260.71 &   0.66 &   0.08 &   0.18 \\
+A3822    & 101 & 344.43 &   1.74 &   0.29 &   5.90 &   3.48 & 250.71 &   0.64 &   0.06 &   0.13 \\
+A3827    & 102 & 451.10 &   2.59 &   0.33 &  19.60 &   3.95 & 423.57 &   0.99 &   0.04 &   0.15 \\
+A3888    & 103 & 720.64 &   2.83 &   0.22 &  25.53 &   7.16 & 286.43 &   0.93 &   0.02 &   0.10 \\
+A3921    & 104 & 429.52 &   2.06 &   0.28 &   9.86 &   5.23 & 234.29 &   0.76 &   0.03 &   0.13 \\
+HCG94    & 105 & 184.32 &   1.31 &   0.41 &   2.59 &   8.77 &  61.43 &   0.51 &   0.06 &   0.19 \\
+RXJ2344  & 106 & 356.88 &   1.92 &   0.31 &   8.05 &   5.89 & 215.00 &   0.81 &   0.03 &   0.14 \\
+\hline
+\hline
+\end{tabular}
+\begin{quote}
+  Notes: 
+  (1) The HIFLUGCS cluster ID, luminosity distance
+  ($D_\rmn{lum}$), virial radius ($\rvir$), and virial mass ($\mvir$),
+  are taken from \cite{2002ApJ...567..716R}.
+  (2) We parametrize the
+  gas density profile of each cluster with a single beta profile;
+  $\rho_\rmn{gas}=\rho_\rmn{gas}(0)(1+r^2/r_\rmn{c}^2)^{3\beta/2}$
+  where the core radius $r_\rmn{c}$ and the slop of the surface
+  brightness profile $\beta$ are taken from
+  \cite{2002ApJ...567..716R}. The central gas density
+  $\rho_\rmn{gas}(0)$ is determined through he procedure outlined in
+  \cite{1999ApJ...517..627M}.
+   (3) Half light radius ($r_\rmn{hlr,CR}$) of the flux from CR-$\pi^0$.
+   (4) Half light radius ($r_\rmn{hlr,DM}$) of the flux from the BM-$\Kp$ 
+  continuum and LP-IC-CMB emission. The flux has been
+  boosted by substructures and in addition include the
+  Sommerfeld enhancement for the LP model. 
+ \label{tab:flux_tab_CLp}
+  \end{quote}
+\end{minipage}
+\end{table} 
+
+
+
 \end{document}
