@@ -1746,9 +1746,9 @@ targets for indirect DM searches. \C{Note, however, that the angular
   Fermi-LAT is calculated assuming a $\sigma=1.2$ degree extension. In
   fact, the ratio of the virial radius to the assumed extension for
   the upper limits $\rvir/\sigma$ for $($Fornax, Coma, Virgo$)$ are
-  $(2.79,\,1.3,\,5.8)$, respectively. Similarly, it is interesting to
+  $(2.8,\,1.6,\,5.3)$, respectively. Similarly, it is interesting to
   compare the radius that contain 68\% of the flux to the assumed
-  extension, $r_\sigma/\sigma$, which is given by $(,\,,\,)$ for
+  extension, $r_\sigma/\sigma$, which is given by $(1.7,\,1.0,\,3.3)$ for
   $($Fornax,Coma,Virgo$)$, respectively. It is quite striking how
   constraining the upper limits are for some of the clusters.}
 \del{Note, however, that we have used spatially unresolved upper
@@ -2338,6 +2338,44 @@ recent gamma-ray observations of the head-tail radio galaxy IC310 in
 the cluster outskirts \cite{2010ApJ...723L.207A,2010A&A...519L...6N}.}
 
 
+\C{A quantity that is of great scientific interest is the CR pressure
+  ($P_\CR$) relative to the thermal pressure ($P_\rmn{th}$), $X_\CR =
+  P_\CR/P_\rmn{th}$, as it directly bias galaxy cluster observables
+  and the resulting cosmological constraints, such as the hydrostatic
+  mass bias or the Sunyaev-Zel’dovich signal measured by Planck, South
+  Pole Telescope, or Atacama Cosmology Telescope. In the following we
+  estimate the mass scaling of the relative CR pressure using the CR
+  formalism outlined in
+  \cite{2007A&A...473...41E,2010MNRAS.409..449P}.  First we calculate
+  the CR distribution function $f = C\,p^{-\alpha}$, where $C$ is the
+  normalization of each power-law, $p=P/m_\rmn{p} c$ is the normalized
+  CR proton momentum, and $\alpha$ is the spectral index. The CR
+  pressure $P_\CR \propto C=\tilde{C}/\rho_\rmn{gas}$, where
+  $\tilde{C}\propto M^{0.44}$ for clusters with a mass $\mvir\gtrsim
+  10^{14}\,\msun$. We determine the mass scaling of the gas density
+  through its relation to the enclosed gas fraction $f_\rmn{gas}$, and
+  find that $\rho_\rmn{gas}\propto f_\rmn{gas} \propto M^{0.135}$
+  \cite{2009ApJ...693.1142S}. The thermal pressure is derived from the
+  temperature in virial equilibrium, and scales as $P_\rmn{th}\propto
+  k_\B T \propto G M/R \propto M^{0.67}$. Finally we can derive the
+  mass scaling of the relative CR pressure from,
+\begin{equation}
+ X_\CR = \frac{P_\CR}{P_\rmn{th}} \propto \frac{\rho_\rmn{gas}\,
+   \tilde{C}}{k_\B T} \propto M^{-0.06}\,,
+\end{equation}
+which is roughly a constant, i.e. almost independent on mass. Since
+the CRs that build up the bulk of the CR pressure also give rise to
+gamma-ray emission through the production of decaying pions, we can
+use gamma-ray upper limits from Fermi-LAT to constrain $X_\CR$. These
+upper limits are 95 percent confidence limits and assume a spectral
+index of 2. EXPAND DISCUSSION, ADD VOLUME WEIGHT, HOW TO GO FROM
+GAMMA->XCR.}
+
+\C{In Fig.~\ref{fig:XCR} we show the volume weighted relative CR
+  pressure for 32 clusters, for which Fermi-LAT gamma-ray upper limits
+  are derived. We find that the most constraining clusters are the
+  Norma and Coma clusters of $X_\CR < 0.07$.} 
+
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
   \includegraphics[width=0.99\columnwidth]{figures/XCR.Fermi.eps}
@@ -2348,7 +2386,7 @@ the cluster outskirts \cite{2010ApJ...723L.207A,2010A&A...519L...6N}.}
     extension of the thermal X-ray emission (black) and for comparison with
     Fermi-LAT point-source limits (grey) \cite{2010ApJ...717L..71A}. In
     computing those limits, we adopted our (conservative) analytic model
-    \cite{2010MNRAS.409..449P} and a averaged relative CR flux as obtained from
+    \cite{2010MNRAS.409..449P} and an averaged relative CR flux as obtained from
     our simulations.}
  \label{fig:XCR}
 \end{minipage}
