@@ -6,6 +6,8 @@
 %\def\C#1{#1}
 \def\C#1{{\bf #1}}
 
+%\voffset-.6in 
+\voffset.3in 
 
 % --- journals --- %
 \newcommand{\aap}{A{\&}A}
@@ -1543,14 +1545,15 @@ gamma-ray flux induced by shock accelerated CRs.
 \frac{\dd F_\gamma}{\dd \eg} &=& K\,\eg^{-\alpha}\,,\quad F_\gamma = 
 K\,\eg^{1-\alpha}\,,\nonumber\\
 <\eg \,F_\gamma> &=& K\,\frac{\sum \dd \eg^{2-\alpha}}{\sum \dd \eg}
-= K\,\frac{\sum \dd \eg^{2-\alpha}}{E_{\gamma,2}-E_{\gamma,1}}\,,\nonumber
+= K\,\frac{\sum \dd \eg^{2-\alpha}}{E_{\gamma,2}-E_{\gamma,1}}\,,\nonumber\\
+\label{eq:spec_ind_UL}
 \end{eqnarray}
 where $E_{\gamma,1}$ and $E_{\gamma,2}$ are the upper and lower energy
 limits, respectively. In the 1-10~GeV energy range we find that the
 upper limits for $($LP,BM,CR$)$ change by a factor
 $(1.10,\,0.71,\,1.15)$ where we have used the spectral indices
-$(2.20,\,1.22,\,2.24)$, respectively. See Fig.~\ref{fig:clu_comp} for
-additional spectral indices.}
+$(2.20,\,1.22,\,2.24)$, respectively. See
+Tab.~\ref{tab:spectral_index} for additional spectral indices.}
 
 In Fig.~\ref{fig:diff_BM} we show the differential flux from the
 Fornax cluster which is one of the best clusters for indirect DM
@@ -1771,7 +1774,7 @@ targets for indirect DM searches. \C{Especially in the $1-10$~GeV
   account for the full extension of the galaxy clusters.}  \del{Note,
   however, that we have used spatially unresolved upper limits, which
   is quite optimistic for the Virgo cluster which has an angular
-  extended of 7 degrees.  It is quite striking how constraining the
+  extended of 7 degrees. It is quite striking how constraining the
   upper limits are for the Fornax cluster are compared to the other
   clusters, especially in the $1-10$~GeV energy regime.}  \C{We also
   find that the high CR-induced flux in Coma and Perseus is making it
@@ -1824,15 +1827,16 @@ note that the IC from upscattered SD photons scales slightly softer
 with mass, hence gives rise to a larger fraction of gamma-rays in low
 mass clusters compared to the total gamma-ray flux. Also note that we
 have not included the SFE for the LP model in
-Eq.~(\ref{eq:DM_scaling}) since it is a constant when substructures
-are included. If only a small fraction of the DM resides in the
-subhalos, the scaling of the LP DM becomes slightly steeper due to the
-mass dependence inferred from the velocity dispersion:
+Eq.~(\ref{eq:DM_scaling}) since it saturates to a constant value in
+the substructures. However, if only a small fraction of the DM resides
+in the subhalos, the scaling of the LP DM becomes slightly steeper due
+to the mass dependence inferred from the velocity dispersion:
 \begin{eqnarray}
 L_{\gamma,LPnosub} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe} 
 \propto \frac{\mvir^{0.5}}{D_\rmn{lum}^2},\\
 \rmn{where} &\quad&\B_\rmn{sfe} \propto \mvir^{-1/3}.
 \end{eqnarray}}
+
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -1841,17 +1845,20 @@ L_{\gamma,LPnosub} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe}
 \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Virgo.v13.0.1deg.1.6T.SubMass.SF700.IR2.noMW.woGal.eps}
 \includegraphics[width=0.49\columnwidth]{figures/flux.cluster.Perseus.v13.0.1deg.1.6T.SubMass.SF700.IR2.noMW.woGal.eps}
 \caption{\it Comparing the gamma-ray emission from different
-  clusters. We show the differential flux of clusters: Fornax (upper
-  left), Coma (upper right), Virgo (lower left), and Perseus (lower
-  right). We show CR induced emission (red solid), a leptophilic (LP)
-  model that includes both final state radiation and IC upscattered
-  CMB, dust and starlight (green dash-dotted), and the benchmark $\Kp$
-  model (BM) that includes continuum emission, and IC upscattered CMB,
-  dust and starlight (blue dashed). The arrows show the spatially
-  extended differential upper limits set by Fermi-LAT in the energy
-  ranges $0.2-1$~GeV, $1-10$~GeV, and $10-100$~GeV from left to
-  right. We show the individual components for the BM model and LP
-  model for Virgo and Perseus, respectively. The flux from the
+  clusters. We show the differential flux of clusters \C{in the upper
+    panel of each figure}: Fornax (upper left), Coma (upper right),
+  Virgo (lower left), and Perseus (lower right). We show CR induced
+  emission (red solid), a leptophilic (LP) model that includes both
+  final state radiation and IC upscattered CMB, dust and starlight
+  (green dash-dotted), and the benchmark $\Kp$ model (BM) that
+  includes continuum emission, and IC upscattered CMB, dust and
+  starlight (blue dashed). The arrows show the spatially extended
+  differential upper limits set by Fermi-LAT in the energy ranges
+  $0.2-1$~GeV, $1-10$~GeV, and $10-100$~GeV from left to right. We
+  show the individual components for the BM model and LP model for
+  Virgo and Perseus, respectively. \C{In the lower panel of each
+    figure we show differential spectral index where $\dd F_\gamma/\dd
+    E_\gamma \sim E_\gamma^{-\alpha_\gamma}$.} The flux from the
   clusters is integrated out to $\rvir$ using a point spread function
   of $0.1\deg$ and includes the boost from substructures. We find that
   the lower GeV energy regime is most constraining due to the peak
@@ -1861,6 +1868,57 @@ L_{\gamma,LPnosub} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe}
 \end{minipage}
 \end{figure*}
 
+\C{For consistency we provide in addition the differential spectral
+  indices $\alpha_\gamma=-\frac{\dd \log(\dd F/\dd E)}{\dd \log(E)}$
+  for the different emission models in the lower panels of
+  Fig.~\ref{fig:clu_comp}. We find very similar spectral indices for
+  different clusters when the boost from substructures is substantial,
+  while for models without substructures the relative contribution
+  from the upscattered dust and starlight breaks the spectral
+  universality for the DM models. In the $1~\gev-1~\tev$ energy regime
+  the CR spectral index is approximately constant $\sim (2.1-2.3)$,
+  while the spectral index for the LP model has a large spread and
+  varies between $1.2-4.0$, hence implying that gamma-ray upper limits
+  are more sensitive to the specific energy regime for these
+  models. Similarly, the index for the BM $\Kp$ model is about 1.0 at
+  1~GeV and increases monotonically for higher energies, which also
+  suggests that the flux upper limits contrasted to this model are
+  sensitive to the specific energy range, and where a small energy
+  range would be preferred. In experiments is the spectral index often
+  fixed over an energy range, hence we show in
+  Tab.~\ref{tab:spectral_index} the indices for our emission models in
+  four different energy bands. We find that these spectral indices
+  have a much smaller spread, hence reducing the importance of the
+  specific energy regimes. For further discussion about the impact of
+  different spectral indices on the gamma-ray upper limits see
+  Eq.~(\ref{sect:spectral}) and related text.}
+
+\begin{table}
+\begin{tabular}{ccccc}
+\hline\hline
+      Model & $\alpha_{100\,\rmn{MeV}}^{1\,\rmn{GeV}}$  & 
+              $\alpha_{1\,\rmn{GeV}}^{10\,\rmn{GeV}}$   & 
+              $\alpha_{10\,\rmn{GeV}}^{100\,\rmn{GeV}}$ &
+              $\alpha_{100\,\rmn{GeV}}^{1\,\rmn{TeV}}$  \\
+\hline
+CR-$\pi^0$      & 1.44 & 2.24 & 2.30 & 2.26 \\
+DM-LP Sum       & 1.74 & 2.20 & 3.06 & 1.30 \\
+DM-BM-$\Kp$ Sum  & 1.28 & 1.22 & 2.23 & -    \\
+\hline\hline
+\end{tabular}
+ \caption{\C{Gamma-ray spectral indices $\alpha_{E_1}^{E_2}$ between
+     energies $E_1$ and $E_2$. We show the spectral index for three
+     different emission models where the boost from substructures is
+     included; the CR induced emission, the leptophilic (LP) model
+     that includes both final state radiation and IC upscattered CMB,
+     dust and starlight, and the benchmark (BM) $\Kp$ model that
+     includes continuum emission, and IC upscattered CMB, dust and
+     starlight. The indices are derived for the Fornax cluster,
+     although the variance between clusters is very small when the
+     enhancement from substructures is included which suppresses the
+     relative contribution from the upscattered dust and starlight
+     component that is cluster dependent. \label{tab:spectral_index}}}
+\end{table}
 
 In this section, we have found that the LP DM models overproduces both
 the spatially extended differential and integrated gamma-ray flux
@@ -2335,7 +2393,7 @@ responsible for a decrease in the central CR number density. This
 effect would also reduce the expected gamma-ray flux by up to a factor
 of five \cite{2011A&A...527A..99E}. We note that the tightest Fermi
 limits are obtained in the 1-10 GeV regime due to the highest
-sensitivity of Fermi-LAT there. While the effective area of Fermi-LAT
+sensitivity of Fermi-LAT there. While the effective area of LAT
 increases up to these energies, the typical photon spectra decrease as
 a function of energy: combining those effects selects this energy
 range to be most sensitive.  In this energy band, the Fermi limits
@@ -2354,40 +2412,58 @@ Norma. The insensitive limit on Perseus \C{is due to the bright
   \cite{2010ApJ...723L.207A,2010A&A...519L...6N}.}
 
 \C{A quantity that is of great scientific interest is the CR pressure
-  ($P_\CR$) relative to the thermal pressure ($P_\rmn{th}$), $X_\CR =
-  P_\CR/P_\rmn{th}$, as it directly bias galaxy cluster observables
-  and the resulting cosmological constraints, such as the hydrostatic
-  mass bias or the Sunyaev-Zel’dovich signal measured by Planck, South
-  Pole Telescope, or Atacama Cosmology Telescope. In the following we
-  estimate the mass scaling of the relative CR pressure using the CR
-  formalism outlined in
+  ($P_\CR$) relative to the thermal pressure ($P_\rmn{th}$) as it
+  directly bias galaxy cluster observables and the resulting
+  cosmological constraints, such as the hydrostatic mass bias or the
+  Sunyaev-Zel’dovich signal measured by Planck, South Pole Telescope,
+  or Atacama Cosmology Telescope. In the following we estimate the
+  mass scaling of the relative CR pressure, $X_\CR =
+  P_\CR/P_\rmn{th}$, using the CR formalism outlined in
   \cite{2007A&A...473...41E,2010MNRAS.409..449P}.  First we calculate
   the CR distribution function $f = C\,p^{-\alpha}$, where $C$ is the
   normalization of each power-law, $p=P/m_\rmn{p} c$ is the normalized
   CR proton momentum, and $\alpha$ is the spectral index. The CR
   pressure $P_\CR \propto C=\tilde{C}/\rho_\rmn{gas}$, where
   $\tilde{C}\propto M^{0.44}$ for clusters with a mass $\mvir\gtrsim
-  10^{14}\,\msun$. We determine the mass scaling of the gas density
-  through its relation to the enclosed gas fraction $f_\rmn{gas}$, and
-  find that $\rho_\rmn{gas}\propto f_\rmn{gas} \propto M^{0.135}$
-  \cite{2009ApJ...693.1142S}. The thermal pressure is derived from the
-  temperature in virial equilibrium, and scales as $P_\rmn{th}\propto
-  k_\B T \propto G M/R \propto M^{0.67}$. Finally we can derive the
-  mass scaling of the volume weighted relative CR pressure from
+  10^{14}\,\msun$ \cite{2010MNRAS.409..449P}. We determine the
+  mass scaling of the gas density through its relation to the enclosed
+  gas fraction $f_\rmn{gas}$, and find that $\rho_\rmn{gas}\propto
+  f_\rmn{gas} \propto M^{0.135}$ \cite{2009ApJ...693.1142S}. The
+  thermal pressure is derived from the temperature in virial
+  equilibrium, and scales as $P_\rmn{th}\propto k_\B T \propto G M/R
+  \propto M^{0.67}$. Finally we can derive the mass scaling of the
+  volume weighted relative CR pressure from
 \begin{equation}
  <X_\CR> = \frac{<P_\CR>}{<P_\rmn{th}>} \propto \frac{<\rho_\rmn{gas}\,
    \tilde{C}>}{<k_\B T>} \propto M^{-0.06}\,,
 \end{equation}
 which is roughly a constant, i.e. almost independent on mass. Hence we
 adopt a constant $<X_\CR>\approx 0.02$ derived from a representative
-simulated cluster \cite{2008MNRAS.385.1211P}.  Since the CRs that
-build up the bulk of the CR pressure also give rise to gamma-ray
-emission through the production of decaying pions, we use gamma-ray
-upper limits from Fermi-LAT to constrain $X_\CR$. In
+simulated cluster \cite{2008MNRAS.385.1211P}. Since the CRs that build
+up the bulk of the CR pressure also give rise to gamma-ray emission
+through the production of decaying pions, we use gamma-ray upper
+limits from Fermi-LAT to constrain the volume weighted $X_\CR$. In
 Fig.~\ref{fig:XCR} we show the volume weighted relative CR pressure
 for 32 clusters, for which LAT upper limits that assume King profiles
-are derived. We find that the most constraining clusters are the Norma
-and Coma clusters of $<X_\CR> < 0.07$.}
+are derived. For most of the clusters in the sample we can constrain
+$X_\CR < (0.1-0.2)$ using the extended gamma-ray upper limits, where
+the most constraining clusters are Norma and Coma with $X_\CR <
+0.07$. Most of the 32 clusters have $X_\CR$ upper limits within a
+factor few from the best constraining clusters, which suggests that
+stacking of clusters will be able to improve these limits. This might
+even be improved further using a scaled stacking with our model as a
+prior. In previous work \cite{2010ApJ...717L..71A} where the 1.5 year
+Fermi data was used to derive limits on $X_\CR$ they found on average
+more constraining limits on the most massive clusters, while we find
+better limits on the low mass clusters. This difference is explained
+by the different modelling of $P_\CR$; they assumed a mass
+independent CR pressure while we assume that $P_\CR\sim
+M^{0.44}$. Furthermore, the gamma-ray flux predictions that we use in
+this work to constrain $X_\CR$ assumes the true gas density
+distribution for each cluster \footnote{Derived from the parameters in
+  the extended HIFLUGCS catalogue.} that accounts for
+cluster-to-cluster scatter, in contrast to the mass-to-luminosity
+scaling relations that was used in previous works.}
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -2587,7 +2663,7 @@ dominate the DM annihilation signal of BM models for all
 clusters/groups but Fornax. \C{We conclude that due to the large
   spatial extension of the brightest clusters it is not possible for
   Fermi to rule out the LP model nor to constrain the BM DM models
-  without improved modelling. However, we can put tight constrints on
+  without improved modelling. However, we can put tight constraints on
   the boost from substructures and Sommerfeld enhancement using the LP
   model. Hence, clusters are a nice complement to direct and
   accelerator searches for the nature of DM.}\del{We conclude that it
