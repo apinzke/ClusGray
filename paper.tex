@@ -1516,11 +1516,11 @@ a high gamma-ray yield in the form of continuum emission and IC
 induced emission. In addition to the annihilating DM, we estimate the
 gamma-ray flux induced by shock accelerated CRs.
 
-\C{We compare the calculated fluxes to 95\% c.l. gamma-ray upper
-  limits set by Fermi-LAT after 18 months of observations
+\C{We compare the calculated fluxes to gamma-ray upper limits (95\%
+  c.l.) set by Fermi-LAT after 18 months of observations
   \cite{2010ApJ...717L..71A}. In particular, to achieve a more
-  reliable comparison we adopt the maximal spatially extended limits
-  (if nothing else is stated) since the gamma-ray flux from our
+  reliable comparison we adopt, if nothing else is stated, the maximal
+  spatially extended limits since the gamma-ray flux from our
   brightest clusters all have an angular extent above 1 degree on the
   sky when the boost from substructures is included. In fact, current
   Fermi flux upper limits are not derived for the kind of extended
@@ -1857,13 +1857,13 @@ L_{\gamma,LPnosub} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe}
   $0.2-1$~GeV, $1-10$~GeV, and $10-100$~GeV from left to right. We
   show the individual components for the BM model and LP model for
   Virgo and Perseus, respectively. \C{In the lower panel of each
-    figure we show differential spectral index where $\dd F_\gamma/\dd
-    E_\gamma \sim E_\gamma^{-\alpha_\gamma}$.} The flux from the
-  clusters is integrated out to $\rvir$ using a point spread function
-  of $0.1\deg$ and includes the boost from substructures. We find that
-  the lower GeV energy regime is most constraining due to the peak
-  sensitivity of Fermi at these energies and use this regime to get
-  upper limits on boost factors.}
+    figure we show differential spectral indices, $\alpha_\gamma$,
+    where $\dd F_\gamma/\dd E_\gamma \sim E_\gamma^{-\alpha_\gamma}$.}
+  The flux from the clusters is integrated out to $\rvir$ using a
+  point spread function of $0.1\deg$ and includes the boost from
+  substructures. We find that the lower GeV energy regime is most
+  constraining due to the peak sensitivity of Fermi at these energies
+  and use this regime to get upper limits on boost factors.}
  \label{fig:clu_comp}
 \end{minipage}
 \end{figure*}
@@ -2419,23 +2419,24 @@ Norma. The insensitive limit on Perseus \C{is due to the bright
   or Atacama Cosmology Telescope. In the following we estimate the
   mass scaling of the relative CR pressure, $X_\CR =
   P_\CR/P_\rmn{th}$, using the CR formalism outlined in
-  \cite{2007A&A...473...41E,2010MNRAS.409..449P}.  First we calculate
-  the CR distribution function $f = C\,p^{-\alpha}$, where $C$ is the
-  normalization of each power-law, $p=P/m_\rmn{p} c$ is the normalized
-  CR proton momentum, and $\alpha$ is the spectral index. The CR
-  pressure $P_\CR \propto C=\tilde{C}/\rho_\rmn{gas}$, where
-  $\tilde{C}\propto M^{0.44}$ for clusters with a mass $\mvir\gtrsim
-  10^{14}\,\msun$ \cite{2010MNRAS.409..449P}. We determine the
-  mass scaling of the gas density through its relation to the enclosed
-  gas fraction $f_\rmn{gas}$, and find that $\rho_\rmn{gas}\propto
-  f_\rmn{gas} \propto M^{0.135}$ \cite{2009ApJ...693.1142S}. The
-  thermal pressure is derived from the temperature in virial
-  equilibrium, and scales as $P_\rmn{th}\propto k_\B T \propto G M/R
-  \propto M^{0.67}$. Finally we can derive the mass scaling of the
-  volume weighted relative CR pressure from
+  \cite{2007A&A...473...41E,2010MNRAS.409..449P}. We derive the CR
+  pressure from the CR distribution function $f = C\,p^{-\alpha}$,
+  where $C$ is the normalization of each power-law, $p=P/m_\rmn{p} c$
+  is the normalized CR proton momentum, and $\alpha$ is the CR
+  spectral index. The pressure is given by $P_\CR \propto
+  C=\tilde{C} \,\rho_\rmn{gas}$, where $\tilde{C}\propto M^{0.44}$ for
+  clusters with a mass $\mvir\gtrsim 10^{14}\,\msun$
+  \cite{2010MNRAS.409..449P}. We determine the mass scaling of the gas
+  density through its relation to the enclosed gas fraction
+  $f_\rmn{gas}$, and find that $\rho_\rmn{gas}\propto f_\rmn{gas}
+  \propto M^{0.135}$ \cite{2009ApJ...693.1142S}. The thermal pressure
+  is derived from the temperature in virial equilibrium, and scales as
+  $P_\rmn{th}\propto k_\B T \propto G M/R \propto M^{0.67}$. Finally
+  we can derive the mass scaling of the volume weighted relative CR
+  pressure from
 \begin{equation}
  <X_\CR> = \frac{<P_\CR>}{<P_\rmn{th}>} \propto \frac{<\rho_\rmn{gas}\,
-   \tilde{C}>}{<k_\B T>} \propto M^{-0.06}\,,
+   \tilde{C}>}{<k_\B T>} \propto M^{-0.1}\,,
 \end{equation}
 which is roughly a constant, i.e. almost independent on mass. Hence we
 adopt a constant $<X_\CR>\approx 0.02$ derived from a representative
@@ -2452,18 +2453,21 @@ the most constraining clusters are Norma and Coma with $X_\CR <
 factor few from the best constraining clusters, which suggests that
 stacking of clusters will be able to improve these limits. This might
 even be improved further using a scaled stacking with our model as a
-prior. In previous work \cite{2010ApJ...717L..71A} where the 1.5 year
-Fermi data was used to derive limits on $X_\CR$ they found on average
-more constraining limits on the most massive clusters, while we find
-better limits on the low mass clusters. This difference is explained
-by the different modelling of $P_\CR$; they assumed a mass
-independent CR pressure while we assume that $P_\CR\sim
+prior. In the recent work \cite{2010ApJ...717L..71A} where the 1.5
+year Fermi data was used to derive limits on $X_\CR$, they found that
+the most massive clusters are on average more constraining, while we
+find better limits on the low mass clusters. This difference is
+explained by the different priors of $P_\CR$; they assumed a mass
+independent CR pressure derived from a single CR power-law
+distribution function, while we adopt a prior infered from cosmological
+simulations that dynamically trace the CRs during cluster assembly and
+allow for a varyning spectral index where $P_\CR\sim
 M^{0.44}$. Furthermore, the gamma-ray flux predictions that we use in
 this work to constrain $X_\CR$ assumes the true gas density
 distribution for each cluster \footnote{Derived from the parameters in
   the extended HIFLUGCS catalogue.} that accounts for
 cluster-to-cluster scatter, in contrast to the mass-to-luminosity
-scaling relations that was used in previous works.}
+scaling relations that was used in previous work.}
 
 \begin{figure*}
 \begin{minipage}{2.0\columnwidth}
@@ -2662,7 +2666,7 @@ characteristic pion bump at energies around 1~GeV. It is expected to
 dominate the DM annihilation signal of BM models for all
 clusters/groups but Fornax. \C{We conclude that due to the large
   spatial extension of the brightest clusters it is not possible for
-  Fermi to rule out the LP model nor to constrain the BM DM models
+  Fermi to rule out the LP model or to constrain the BM DM models
   without improved modelling. However, we can put tight constraints on
   the boost from substructures and Sommerfeld enhancement using the LP
   model. Hence, clusters are a nice complement to direct and
