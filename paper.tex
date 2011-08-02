@@ -127,50 +127,40 @@
 
 
 \begin{abstract}
-  We study the possibility for detecting gamma-ray emission in galaxy
-  clusters. We consider 1) cosmic ray (CR) induced pion decay which is
-  thought to dominate the astrophysical signal from clusters, 2)
-  different representative benchmark models of supersymmetric dark
-  matter (DM), and 3) leptophilic models of DM annihilation that
-  recently have been proposed to explain the positron excess seen by
-  PAMELA and include a Sommerfeld enhancement of the particle physics
-  cross section over its standard value. To model DM annihilation, we
-  consider continuum emission as a result of the hadronization of
-  annihilating neutralinos, internal bremsstrahlung, and inverse
-  Compton emission from the cosmic microwave background as well as
-  from a realistic spatial and spectral distribution of dust and
-  stellar light. We predict the Virgo, Fornax and \C{M49} clusters to
-  be the brightest DM sources and find a particularly low CR induced
-  background for Fornax. For a minimum substructure mass given by the
-  DM free-streaming scale, the largest DM halo mass maximizes the
-  substructure boost over the smoothly distributed annihilation flux:
-  for galaxy clusters as the largest collapsed objects, we find a
-  boost factor of more than 1000. Since the annihilation flux of
-  substructures is mostly contributed by the regions around the virial
-  radius, the resulting surface brightness profiles are almost
-  flat. This makes it very challenging to detect this flux with
-  imaging air Cherenkov telescopes since their sensitivity drops
-  linearly with radius and they typically have $5-10$ linear
-  resolution elements across a cluster; the gamma-ray satellite \Fermi
-  is better suited. Assuming cold dark matter with a substructure mass
-  distribution down to an Earth mass and using \Fermi upper limits, we
-  rule out the leptophilic models in their present form in 28
-  clusters, and limit the boost from Sommerfeld enhancement in the
-  most constraining clusters, \C{M49 and Fornax, } to be less than 5. This
-  corresponds to a Sommerfeld enhancement in the Milky Way of less
-  than 5. Alternatively, if the Sommerfeld enhancement factor is
-  realized in Nature, this would imply a limiting substructure mass of
-  $\mlim > 10^4\,\msun$ which would be a challenge for structure
-  formation. We find it challenging for \Fermi to constrain our
-  selection of DM benchmark models in the \C{near future} using clusters
-  without improved modelling of extended sources in addition to a
-  stacked likelihood analysis. The \Fermi upper limits are, however,
-  closing in on our predictions for the CR flux using an analytic
-  model based on cosmological hydrodynamical cluster simulations. Thus
-  we will soon start to constrain the underlying CR physics such as
-  shock acceleration efficiencies or CR transport properties.
+  We study the possibility for detecting gamma-ray emission from galaxy
+  clusters. We consider 1) cosmic ray (CR) induced pion decay, 2) different
+  representative benchmark models of supersymmetric dark matter (DM), and 3)
+  leptophilic models of DM annihilation that include a Sommerfeld enhancement
+  (SFE). To model DM annihilation, we consider continuum emission as a result of
+  the hadronization of annihilating neutralinos, internal bremsstrahlung, and
+  inverse Compton emission from the cosmic microwave background as well as from
+  a realistic spatial and spectral distribution of dust and stellar light. Among
+  all clusters/groups, we predict Virgo, Fornax and M49 to be the brightest DM
+  sources and find a particularly low CR-induced background for Fornax.  For a
+  minimum substructure mass given by the DM free-streaming scale, cluster halos
+  maximize the substructure boost for which we find a factor of $\gtrsim 1000$.
+  Since the annihilation flux of substructures is mostly contributed by the
+  regions around the virial radius, the resulting surface brightness profiles
+  are almost flat. This makes it very challenging to detect this flux with
+  imaging atmospheric Cherenkov telescopes since their sensitivity drops
+  linearly with radius and they typically have $5-10$ linear resolution elements
+  across a cluster; the gamma-ray satellite \Fermi is better suited.  Assuming
+  cold dark matter with a substructure mass distribution down to an Earth mass
+  and using \Fermi upper limits, we rule out the leptophilic models in their
+  present form in 28 clusters, and limit the boost from SFE in M49 and Fornax to
+  be $\lesssim 5$. This corresponds to a limit on SFE in the Milky Way of
+  $\lesssim 3$. Alternatively, if the SFE is realized in Nature, this
+  would imply a limiting substructure mass of $\mlim > 10^4\,\msun$---a
+  challenge for structure formation. Without improved modelling of extended
+  sources or stacked likelihood analyses, \Fermi will face difficulties in
+  constraining our selection of DM benchmark models in the near future. The
+  \Fermi upper limits are, however, closing in on our predictions for the CR
+  flux using an analytic model based on cosmological hydrodynamical cluster
+  simulations. We limit the CR-to-thermal pressure in nearby bright galaxy
+  clusters of the \Fermi sample to $\lesssim 10\%$ and in Norma and Coma to
+  $\lesssim 3\%$.  Thus we will soon start to constrain the underlying CR
+  physics such as shock acceleration efficiencies or CR transport properties.
 \end{abstract}
-
 
 \maketitle
 \section{Introduction}
@@ -192,7 +182,7 @@ the other methods, depending on presently unknown parameters in the
 particle physics models for DM.
 
 Among the astrophysical systems which will be very interesting to detect, and
-study, with coming gamma-ray detectors (\Fermi, H.E.S.S., MAGIC, VERITAS, and
+study, with gamma-ray detectors (\Fermi, H.E.S.S., MAGIC, VERITAS, and
 eventually large detectors like CTA)\footnote{{High Energy Stereoscopic System,
     Major Atmospheric Gamma Imaging Cerenkov Telescope, Very Energetic Radiation
     Imaging Telescope Array System, Cerenkov Telescope Array.}} belong galaxy
@@ -264,16 +254,17 @@ removed \cite{2004MNRAS.355..819G}.
 In this paper, we will investigate in some more detail the potential
 of several of the most promising galaxy clusters to produce an
 annihilation gamma-ray yield which could be observable with present
-and planned gamma-ray detectors. For convenience, we summarize already
-in Table~\ref{tab:flux_tab} our results for the gamma-ray flux from
-four promising clusters with a high gamma-ray yield. We will in the
+and planned gamma-ray detectors. For convenience, we summarize in
+Table~\ref{tab:flux_tab} our results for the gamma-ray flux from four
+promising clusters with a high gamma-ray yield. We will in the
 following derive the emission from two different DM models and a
 hadronic CR model to show that Virgo has the highest gamma-ray flux
-from annihilating DM. If the boost from Sommerfeld enhancement (SFE)
-is small, however, then the gamma-ray emission induced by CRs is
-dominating most clusters with the exception of a few clusters where
-Fornax had the highest flux from DM. In particular, we find Fornax and
-Virgo as the prime targets for DM observations, Perseus for CR induced
+from annihilating DM. \C{However, if the boost from Sommerfeld
+  enhancement (SFE) is small then the gamma-ray emission induced by
+  CRs is dominating most clusters with the exception of a few
+  clusters; most notably Fornax that shows the largest ratio of DM
+  annihilation-to-CR flux. In particular, we identify Fornax and Virgo
+  as prime targets for DM observations,} Perseus for CR induced
 emission and we additionally decide in favor of the well studied
 cluster Coma for comparison. While studying these four clusters in
 great detail, we complement the analysis by calculating the expected
@@ -322,10 +313,11 @@ $\mvir$ $^{(1)}$ & $\B_\rmn{sfe} $$^{(2)}$ &  $\B_\rmn{sub} $$^{(3)}$ \\
   while the mass of Virgo is derived from \cite{1984ApJ...281...31T}.\\
   (2) The boost due to Sommerfeld enhancement. The first value shows the saturated 
   Sommerfeld boost realized when substructures are present, the latter is the Sommerfeld 
-  boost without substructures. See Section II A 1.\\
-  (3) We integrate the emission in a cylinder with a radial extent of $2.5
-  R_{200}$ along the line-of-sight and an angular size corresponding to $\rvir$
-  (both measured from the cluster center).\\
+  boost without substructures (see Section II A 1).\\
+  (3) \C{The boost due to substructures relative a the smooth DM
+  distribution.} We integrate the emission in a cylinder with a radial
+  extent of $2.5 R_{200}$ along the line-of-sight and an angular size
+  corresponding to $\rvir$  (both measured from the cluster center).\\
   (4) The total gamma-ray flux from leptophilic (LP) DM where both the
   boost from substructures and Sommerfeld enhancement are
   included. Note that all these values are in conflict with upper limits from
@@ -552,14 +544,15 @@ the PAMELA and \Fermi excess, given other astrophysical uncertainties.
 
 We adopt our benchmark LP model from \cite{Finkbeiner:2010sm} where we
 use a DM mass $m_\chi=1.6$~TeV and a branching ratio of
-($1/4:1/4:1/2$) into ($\mu^+\mu^-:\e^+\e^-:\pi^+\pi^-$). Furthermore,
-since most of gamma-ray flux is expected from come from dense subhalos
-at which the velocity dispersion is close to the velocity limit
+($1/4:1/4:1/2$) into ($\mu^+\mu^-:\e^+\e^-:\pi^+\pi^-$). \C{Furthermore,
+since most of the gamma-ray flux is expected to come from dense
+subhalos within clusters which have 
+a velocity dispersion}  close to the velocity limit
 $v_\rmn{sat}$ where the SFE saturates, we use
-$S=\B_\sfe(\sigv=v_\rmn{sat})\approx 530$ for the cluster
-halos.\footnote{Note that, $S$ is strictly speaking the Sommerfeld
-  enhanced annihilation cross-section, but here we have in addition
-  included the order unity constraint that make sure that the relic
+$S=\B_\sfe(v_\rmn{sat})\approx 530$ for the cluster
+halos.\footnote{Note that $S$ is strictly speaking the Sommerfeld
+  enhanced annihilation cross-section, but here we have additionally
+  included the order unity constraint that ensures that the relic
   density is not over-depleted at freeze-out.} However, for figures
 where we neglect the substructure boost, we adopt a velocity dependent
 SFE that is normalized to fit the electron and positron excess at
@@ -573,7 +566,7 @@ Earth observed by the PAMELA and \Fermi satellites,
 \end{equation}
 \C{Here the boost factor needed to explain the PAMELA/\Fermi excess of
   electrons and positrons $\B_\rmn{sfe,MW}=300$, the velocity
-  dispersion for the MW $v_\rmn{MW} \approx 220\,$~km/s and the
+  dispersion for the MW $v_\rmn{MW} \approx 220\,\rmn{km\,s}^{-1}$, and the
   velocity dispersion $\sigv$ for clusters is derived in
   \cite{2005RvMP...77..207V}.} Clusters have a larger velocity
 dispersion and an accordingly smaller Sommerfeld boost factor.
@@ -941,37 +934,36 @@ while the substructures in the center suffer from dynamical friction
 and tidal effects depleting their central number densities. Since the
 DM annihilation rate depends on the density squared, the resulting
 flux from substructures is boosted compared to the smooth density
-distribution. Recent high resolution simulations suggest a flux
-enhancement from substructures of more than 100
-\cite{2008MNRAS.391.1685S, 2010ApJ...718..899A} for a MW size halo.
-We adopt a boost from substructures of 230 which is the enhancement
-found in one of the highest resolved MW halos ever simulated. While
-there is still a discrepancy in the literature of the exact value of
-the predicted boost factor of the DM annihilation luminosity from
-substructures in DM halos, this inconsistency starts to become
-resolved, apparently converging toward predictions at the high end,
-e.g. those by the Aquarius simulations \protect
-\cite{2008MNRAS.391.1685S, 2008Natur.456...73S}. The initial
-suggestions of a small {\em total} boost ($<R_{200}$) of order unity
-by the Via Lactea simulations \cite{2008JPhCS.125a2008K} made
-assumptions of computing the boost assuming that the substructure
+distribution.  While there is still a discrepancy in the literature of
+the exact value of the predicted boost factor of the DM annihilation
+luminosity from substructures in DM halos, this inconsistency starts
+to become resolved, apparently converging toward predictions at the
+high end \protect \cite{2008MNRAS.391.1685S, 2008Natur.456...73S,
+  2010ApJ...718..899A}. \C{Following recent high-resolution
+  simulations of Galaxy-sized halos, we adopt a boost factor due to
+  substructures of 230 for such a halo \cite{2008MNRAS.391.1685S}
+  (which needs to be scaled to cluster halos as we will discuss
+  below).}
+
+The initial suggestions of a small {\em total} boost ($<R_{200}$) of
+order unity by the Via Lactea simulations \cite{2008JPhCS.125a2008K}
+made assumptions of computing the boost assuming that the substructure
 luminosity follows that of the smooth DM distribution. Physically,
 this would imply substructure to follow the smooth DM distribution and
-a radially independent concentration parameter of substructures; both
-following from neglecting tidal mass loss of satellites. Tidal losses,
-however, are at work in simulations and cause the radial number
-density to be anti-biased with respect to the host's mass density
-profile yielding a significantly flatter subhalo distribution compared
-to the smooth DM distribution \cite{2010ApJ...718..899A}. This
-increases the substructure boost preferentially in the outer parts of
-DM halos with a factor that ranges between 20 and 1000 (for dwarfs and
-galaxy clusters), hence depending sensitively on the host halo mass
-(see Figure~\ref{fig:radial_lum}). \C{It should be noted that the very
-  recent {\it Phoenix} simulations by Chen et
-  al. \cite{2011arXiv1107.1916G} confirms the large enhancement due to
-  substructures in clusters. In fact they find a boost of 1125 for a
-  Coma like cluster which agrees within 10\% with our estimated boost
-  (see e.g. Table~\ref{tab:flux_tab}).}
+a radially independent concentration parameter of substructures. Both
+assumptions are in conflict with tidal mass loss of satellites which
+is at work in simulations and cause the radial number density to be
+anti-biased with respect to the host's mass density profile yielding a
+significantly flatter subhalo distribution compared to the smooth DM
+distribution \cite{2010ApJ...718..899A}.  This increases the
+substructure boost preferentially in the outer parts of DM halos with
+a factor that ranges between 20 and 1000 (for dwarfs and galaxy
+clusters), hence depending sensitively on the host halo mass (see
+Figure~\ref{fig:radial_lum}). \C{Recent {\it Phoenix} simulations by
+  Gao et al. \cite{2011arXiv1107.1916G} confirm the large enhancement
+  due to substructures in clusters. In fact they find a boost of 1125
+  for a Coma like cluster which agrees within 10\% with our estimated
+  boost (see e.g. Table~\ref{tab:flux_tab}).}
 
 We use a double power-law function to fit the luminosity from the
 smooth component of substructures (i.e. substructures within
@@ -1073,7 +1065,7 @@ L_{200\sm} &=&  A_{\rmn{dm}} \int_{\rvir} \dd r' 4\pi r'^2 \rho^2(r')\,,\label{e
 x &=& r/\rvir\,,\quad g(x) = a_2+a_1\,x^{a_2}\,.\label{eq:xvir}
 \end{eqnarray} 
 Here, $A_{\rmn{dm}} = q_{\rmn{sm},i}(\eg,R) / \rho(R)^2$ represents
-the particle physics, where $q_{\rmn{sm},i}(\eg,R)$ is defined by
+the particle physics factor, where $q_{\rmn{sm},i}(\eg,R)$ is defined by
 Eq.~(\ref{eq:q_sm}). The different density profiles have some impact
 on the luminosity from annihilating DM, although the details of the
 density profile can be neglected compared to the dominating boost from
@@ -1841,8 +1833,8 @@ L_{\gamma,\rmn{LP~nosub}} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe}
   dashed). The arrows show the spatially extended differential upper
   limits set by \Fermi-LAT in the energy ranges $0.2-1$~GeV,
   $1-10$~GeV, and $10-100$~GeV from left to right (using Gauss
-  profiles for the source extension with $\sigma=\{1.2,1.0,0.8\}$ for
-  \{Virgo, Coma, Fornax\} and an X-ray-inferred King profile for
+  profiles for the source extension with $\sigma=(1.2,1.0,0.8)$ for
+  (Virgo, Coma, Fornax) and an X-ray-inferred King profile for
   Perseus) \cite{2010ApJ...717L..71A}. We show the individual
   components for the BM model and LP model for Virgo and Perseus,
   respectively. In the lower panel of each figure we show differential
@@ -1850,11 +1842,11 @@ L_{\gamma,\rmn{LP~nosub}} &=& L_{\gamma,\rmn{sm}} \B_\rmn{sfe}
   \sim E_\gamma^{-\alpha_\gamma}$. The flux from the clusters is
   integrated out to $\rvir$ using a point spread function of $0.1\deg$
   and includes the boost from substructures. We find that the lower
-  GeV energy regime is most constraining due to the peak sensitivity
+  GeV-energy regime is most constraining due to the peak sensitivity
   of \Fermi at these energies and use this regime to get upper limits
-  on boost factors. \C{Also notice that the CR induced emission in
+  on boost factors. \C{Note that the CR-induced emission in
     Coma is close to the upper limits set by \Fermi and will be tested
-    in the coming years.}}
+    in the upcoming years.}}
  \label{fig:clu_comp}
 \end{minipage}
 \end{figure*}
@@ -1932,10 +1924,11 @@ in order not to overproduce the differential upper limits set by
 substructures to $M_\rmn{lim}\gtrsim 10^4\,\msun$. Instead, assuming
 the standard mass of the smallest substructures of $M_\rmn{lim}\approx
 10^{-6}\,\msun$, we can constrain the saturated boost from SFE to
-about \C{5 in M49 and Fornax}, which corresponds to a maximum SFE in the
-MW of about 3. Hence, we conclude that without substantial improvement
-in the modelling of these extended sources, \Fermi-LAT will not be
-able to rule out LP models in their current form using clusters.
+\C{$\lesssim 5$ in M49 and Fornax}, which corresponds to a maximum SFE
+in the MW of $\lesssim3$. Hence, we conclude that without substantial
+improvement in the modelling of these extended sources, \Fermi-LAT
+will not be able to rule out LP models in their current form using
+clusters but can put impressive constraints on them.
 
 \begin{figure}%[t]
  \includegraphics[width=0.99\columnwidth]{figures/LP.const.diff.v14.0.1deg.1.6T.SubMass.SF700.IR2.noMW.woGal.eps}
@@ -1952,8 +1945,8 @@ able to rule out LP models in their current form using clusters.
    Earth with LP DM (left black arrow). If the DM interpretation is
    correct, we can constrain the smallest size of halos to be larger
    than $10^4\,\msun$. Contrarily, if the smallest size of DM halos is
-   $10^{-6}\,\msun$, we can constrain the SFE to about 5 in M49 and
-   Fornax. This corresponds to a maximum SFE in the MW of about 3,
+   $10^{-6}\,\msun$, we can constrain the SFE to $\lesssim 5$ in M49 and
+   Fornax. This corresponds to a maximum SFE in the MW of $\lesssim 3$,
    which would be too small to support the DM annihilation hypothesis
    for the PAMELA/\Fermi excess.}
  \label{fig:boost_const}
@@ -1985,20 +1978,21 @@ substructures due to the projection of their peaked distribution the
 outer cluster regions (see Sect.~\ref{sect:subst} for a longer
 discussion). This implies that the spatial distribution of
 annihilating DM is independent of the type of DM model, and can not be
-used to separate different models. \C{The surface brightness, $S_\gamma$,
-of the DM scales as $S_\gamma\propto L_{\gamma,\rmn{sm}}\bsub\mvir^{-2/3}
-\propto \mvir^{0.40}$}, which explains the factor \C{two} difference in
-normalization between the most massive cluster Coma and the least
-massive cluster Fornax with a mass ratio of about 10. The surface
-brightness induced by CRs is proportional to the projected squared gas
-profile with an additional enhancement in the center of cool core
-clusters due to the adiabatic compression of CRs during the formation
-of the cool core. Hence, we see a much larger variation in these
-profiles driven by the large variation of the gas mass fraction. It is
-noticeable that Fornax shows such a small surface brightness. This is
-explained by the low gas density outside the BCG and the less abundant
-CR population in a small cluster compared to a massive cluster
-\cite{2010MNRAS.409..449P}.  This is the reason why Fornax is such a
+used to separate different models. \C{The surface brightness,
+  $S_\gamma$, of the DM scales as $S_\gamma\propto
+  L_{\gamma,\rmn{sm}}\bsub\mvir^{-2/3} \propto \mvir^{0.40}$}, which
+explains the factor \C{two} difference in normalization between the
+most massive cluster Coma and the least massive cluster Fornax with a
+mass ratio of about 10. The surface brightness induced by CRs is
+proportional to the projected squared gas profile with an additional
+enhancement in the center of cool core clusters due to the adiabatic
+compression of CRs during the formation of the cool core. Hence, we
+see a much larger variation in these profiles driven by the large
+variation of the gas mass fraction. It is noticeable that Fornax shows
+a small surface brightness. \C{This is explained by the low gas
+  density outside the BCG and the expected small abundance of CRs in a
+  small cluster in comparison} to a massive cluster
+\cite{2010MNRAS.409..449P}.  This is the reason why Fornax is  a
 good target for indirect DM searches, and superior to DM searches in
 dwarf galaxies.
 
@@ -2010,10 +2004,11 @@ dwarf galaxies.
    emission from the $\Kp$ benchmark model (blue). The different line
    styles each represent a cluster; Fornax (solid), Coma (dotted),
    Virgo (dashed), and Perseus (dash-dotted). We include the boost
-   from both substructures and Sommerfeld effect. Notice the very
-   similar shape and normalization of the DM models, while the CRs
-   have a much larger scatter in the profiles due to the large
-   variation of the gas fraction in these clusters.}
+   from both substructures and Sommerfeld effect. The shape and
+   normalization of the different DM models are very similar. In
+   contrast, the CR-induced emission profiles have a much larger
+   scatter due to the large variation of the gas fraction and expected
+   CR fraction in these clusters.}
  \label{fig:SB_clu}
 \end{figure}
 
@@ -2039,7 +2034,7 @@ ratios of DM to CR induced gamma-ray brightness.
    lines. The dashed lines show the brightness profiles where the
    boost from substructures is included while the substructures are
    excluded for the dotted lines. The boost from Sommerfeld
-   enhancement with and without substructures is 110 and 530
+   enhancement with and without substructures is 110 and 530,
    respectively. The boost due to substructures is about 890. Notice
    the nearly flat profiles when substructures are included, and the
    relative large boost at $0.01\rvir$ that is due to projection of
@@ -2179,21 +2174,26 @@ L_{\gamma}(>100\,\mev) = 1.8\times10^{45}
 L_{\gamma}(>10\,\gev)  = 1.4\times10^{43}
 \left(\frac{\mvir}{10^{15}\,\msun}\right)^{1.34}\mbox{erg~s}^{-1}\,.\nonumber\\
 \end{eqnarray}
-Note that the CR luminosity scaling relations\footnote{The scaling
-  relations show the flux inside $\rvir$ and do not include the
-  contribution from galaxies. Also note that in this paper the scaling
-  relations are normalized at $10^{15}\,h_{70}^{-1}\,\msun$. In
-  contrast, the corresponding scaling relations in Table 5 in
+The CR luminosity scaling relations\footnote{The scaling relations
+  show the flux inside $\rvir$ and do not include the contribution
+  from galaxies. Also note that in this paper the scaling relations
+  are normalized at $10^{15}\,h_{70}^{-1}\,\msun$. In contrast, the
+  corresponding scaling relations in Table 5 in
   \cite{2010MNRAS.409..449P} are normalized at
   $10^{15}\,h^{-1}\,\msun$ instead of the mentioned
   $10^{15}\,h_{70}^{-1}\,\msun$ in the caption. However, all
-  figures/tables/equations including the scaling relation figures are
-  derived for masses in units of $10^{15}\,h_{70}^{-1}\,\msun$.}
-include the IC gamma-ray contribution from shock-accelerated electrons
-as well as secondary electrons created in CR-proton interactions. The
-gamma-ray flux from the electrons is, however, dominated by the
-decaying neutral pions and only shows up as a small flattening of the
-scaling relation at energies around $10-100\,\gev$. The steeper mass
+  figures/tables/equations including the scaling relation figures in
+  \cite{2010MNRAS.409..449P} are derived for masses in units of
+  $10^{15}\,h_{70}^{-1}\,\msun$.}  include the IC gamma-ray
+contribution from shock-accelerated primary electrons as well as
+secondary electrons created in CR-proton interactions. \C{However, the
+  gamma-ray flux is dominated by the decaying neutral pions. The
+  difference in the mass scaling arises from the larger contribution
+  of primary IC emission for higher-mass clusters at 100~MeV that have
+  a larger fraction of radio relics due to their greater mass
+  accretion rates in comparison to galaxy groups---a direct
+  consequence of hierarchical growth of structure \protect
+  \cite{2009ApJ...707..354Z,2011arXiv1106.5505P}.}  The steeper mass
 scaling of CR emission compared to DM annihilation already implies a
 general strategy to minimize the CR-induced foreground for DM
 annihilation and argues for very nearby groups. We note that these
@@ -2220,11 +2220,11 @@ induced emission, making the case for groups even stronger.
     mass spectrum extending down to an Earth mass, the expected
     leptophilic fluxes are ruled out by upper limits in 28 of the
     clusters, with the strongest constraints set by M49 and
-    Fornax. \C{We can not yet constrain the benchmark models, although
-      \Fermi-LAT start to probe these models within its lifetime. In
-      particular, improved modelling of extended sources as well as
-      stacking of clusters will push these test into the near
-      future.}}
+    Fornax. \C{At the present time, we cannot constrain the benchmark
+      models, although \Fermi-LAT will soon start to probe these
+      models. In particular, improved modelling of extended sources as
+      well as stacking of clusters appears promising in testing
+      benchmark models.}}
  \label{fig14}
 \end{minipage}
 \end{figure*}
@@ -2287,9 +2287,9 @@ constraints.
 In Figure~\ref{fig21}, we show the DM annihilation flux predictions of
 the entire sample.  Assuming the projected point source sensitivity
 ($5\sigma$, 50h) of the future Cherenkov telescope array (CTA) of
-$F_\gamma(>E_\gamma) = \{4\times10^{-11}, 2\times10^{-12},
-2\times10^{-14}\}\,\rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$ at energies
-of $E_\gamma=\{10~\rmn{GeV}, 100~\rmn{GeV}, 1~\rmn{TeV}\}$
+$F_\gamma(>E_\gamma) = (4\times10^{-11}, 2\times10^{-12},
+2\times10^{-14})\,\rmn{ph}\,\rmn{cm}^{-2}\,\rmn{s}^{-1}$ at energies
+of $E_\gamma=(10~\rmn{GeV}, 100~\rmn{GeV}, 1~\rmn{TeV})$
 \cite{Doro:2009qs}, we note that it will be very challenging to detect
 the DM annihilation signal from clusters without a Sommerfeld boost by
 Cherenkov telescopes.  This is because the boost from substructures is
@@ -2388,16 +2388,19 @@ which trace the X-ray emitting gas. \C{For consistency, we use single-
   \cite{2007A&A...466..805C}. The deprojection is performed following
   the formalism developed in e.g. \cite{2004A&A...413...17P}. These
   gamma-ray flux predictions are superior to those that use
-  luminosity-mass scaling relation---a method used by reference
-  \cite{2010ApJ...717L..71A} to compare to \Fermi limits.}  In this CR
-analytic model, we model CR-acceleration at structure formation shocks
-and their transport over cosmic time. This leads to a CR distribution
-with a universal spectral form and an almost universal spatial
-distribution. Depending on whether or not we account for the bias of
-``artificial galaxies'' in cosmological simulations, we derive an
-optimistic or conservative limit of the expected gamma-ray emission
-from decaying pions (bracketing our ignorance of the contribution of
-cluster galaxies to the overall gamma-ray flux from a cluster).
+  luminosity-mass scaling relation (a method used by reference
+  \cite{2010ApJ...717L..71A} to compare to \Fermi limits) which do not
+  account for the substantial scatter in the scaling relation.}  The
+analytic CR model that we employ here follows CR-acceleration at
+structure formation shocks and their advective transport over cosmic
+time. This leads to a CR distribution with a universal spectral form
+and an almost universal spatial distribution. Depending on whether or
+not we account for the bias of ``artificial galaxies'' in cosmological
+simulations, we derive an optimistic or conservative limit of the
+expected gamma-ray emission from decaying pions (bracketing our
+ignorance of the contribution of cluster galaxies \C{and ram-pressure
+  stripped gas parcels from infalling galaxies} to the overall
+gamma-ray flux from a cluster).
 
 We highlight two main uncertainties of the models, namely the
 acceleration efficiency at formation shocks and CR transport
@@ -2408,7 +2411,7 @@ adiabatic compressional heating at the shock) to CRs. These
 efficiencies drop quickly for weaker shocks \cite{2007A&A...473...41E}
 which dominate the gravitational energy dissipation inside galaxy
 clusters \cite{2006MNRAS.367..113P}. These efficiencies will have to
-be corrected down if this value is not realized at structure formation
+be corrected down if this value is not realized at strong structure formation
 shocks. Second, these simulations (and by extension the analytic
 model) neglect active CR transport such as streaming and diffusion
 relative to the gas, i.e., we assume that advective transport
@@ -2420,12 +2423,12 @@ those objects could be responsible for a decrease in the central CR
 number density. This effect would also reduce the expected gamma-ray
 flux by up to a factor of five \cite{2011A&A...527A..99E}.
 
-We note that the tightest \Fermi limits are obtained in the 1-10 GeV
+The tightest \Fermi limits are obtained in the 1-10 GeV
 regime due to the highest sensitivity of \Fermi-LAT there. While the
 effective area of LAT increases up to these energies, the typical
 photon spectra decrease as a function of energy: combining those
 effects selects this energy range to be most sensitive.  In this
-energy band, the \Fermi limits come close to the \C{conservative flux
+energy band, the \Fermi limits close in on the \C{conservative flux
   predictions of Virgo, Coma and Norma}. Using integrated flux limits
   from \Fermi, we arrive at very similar results.  \del{We emphasize that
   by using our analytic modeling, the slight discrepancy of the
@@ -2435,15 +2438,15 @@ energy band, the \Fermi limits come close to the \C{conservative flux
   insensitive limit on Perseus is due to the bright central source
   NGC1275 with an AGN in the center \cite{2010ATel.2916....1M} making
   it hard to determine a comparable limit as obtained for the other
-  clusters. In addition, there are recent gamma-ray observations of
-  the head-tail radio galaxy IC310 in the cluster outskirts
+  clusters. Additionally, recent gamma-ray observations of
+  the head-tail radio galaxy IC310 complicate matters furthermore
   \cite{2010ApJ...723L.207A,2010A&A...519L...6N}.
 
 A quantity that is of great scientific interest is the CR pressure
 ($P_\CR$) relative to the thermal pressure ($P_\rmn{th}$) as it may
 bias galaxy cluster observables, e.g., the Sunyaev-Zel’dovich signal
 or hydrostatic mass estimates, and the resulting cosmological
-constraints if the analysis do not marginalize over a potential
+constraints if the analysis does not marginalize over a potential
 pressure contribution from CRs. Before we turn to the newly derived
 constraints on the relative CR pressure, $X_\CR = P_\CR/P_\rmn{th}$,
 we study the Bayesian prior that different models (a simulation based
@@ -2451,12 +2454,12 @@ and a simple analytic model) impose on the scaling of $X_\CR$ with
 cluster mass.
 
 In the simulation based analytic CR model \cite{2010MNRAS.409..449P},
-the CR pressure derives from the CR distribution function, $f\dd p =
+the CR pressure derives from the CR distribution function, $f(p)\dd p =
 C\,p^{-\alpha}\dd p$, where $C$ is the normalization, $p=P/m_\rmn{p}
 c$ is the normalized CR proton momentum, and $\alpha$ is the CR
 spectral index. The pressure is given by $P_\CR \propto C\propto
 \tilde{C} \,\rho_\rmn{gas}$, where the volume weighted, dimensionless
-normalization, $\bra\tilde{C}\ket\propto \mvir^{0.44}$ for clusters
+normalization scales as $\bra\tilde{C}\ket\propto \mvir^{0.44}$ for clusters
 with a mass $\mvir\gtrsim 10^{14}\,\msun$
 \cite{2010MNRAS.409..449P}. The thermal pressure $P_\rmn{th} =
 n_\rmn{gas} k_\B T$ and is derived from the temperature in virial
@@ -2469,11 +2472,12 @@ as
       T\ket} \propto M^{-0.22}\,,
 \end{equation}
 which depends only weakly on cluster virial mass. This suggests that
-CRs are accelerated at the strongest formation shocks, i.e. during
-proto-cluster formation at high$-z$ or in between voids and
-pre-collapsed IGM. These CRs experience then a similar transport
-history in the form of adiabatic compression or encounter shocks of
-similar (weak) strength.
+CRs, which end up in a cluster, are accelerated at the strongest
+formation shocks, i.e. during proto-cluster formation at high$-z$ or
+in between voids and pre-collapsed IGM. \C{These CRs experience a
+similar transport history in the form of adiabatic compression or
+encounter shocks of similarly (weak) strength so that their
+distribution becomes only weakly dependent upon cluster mass.}
 
 In contrast, the analytic (isobaric) CR model
 \cite{2004A&A...413...17P}, that was used by the \Fermi collaboration
@@ -2496,21 +2500,22 @@ for 32 clusters, for which extended \Fermi-LAT upper limits are
 derived (that assume King profiles). We adopt a constant $\bra
 X_\CR\ket\approx 0.02$ derived from the average of the large clusters
 in our simulation sample \cite{2008MNRAS.385.1211P,
-  2010MNRAS.409..449P}. We can constrain $X_\CR < 0.1$ using the
-extended gamma-ray upper limits on most of the clusters in the \Fermi
-sample. The most constraining clusters are Norma, Ophiuchus, and Coma
-with $X_\CR < 0.03$. Most of the 32 clusters have limits on $X_\CR$
-within a factor few from the best constraining clusters suggesting
-that stacking of clusters will be able to improve these limits.  These
-limits may improved upon by using a stacking approach that adopts our
-simulation-based analytic model as a prior.
+  2010MNRAS.409..449P}. Using the extended gamma-ray upper limits on
+most of the clusters in the \Fermi sample, we can constrain $\bra
+X_\CR \ket< 0.1$. The most constraining clusters are Norma, Ophiuchus,
+and Coma with $\bra X_\CR\ket < 0.03$. Most of the 32 clusters have
+limits on $\bra X_\CR\ket$ within a factor few from the best
+constraining clusters suggesting that stacking of clusters will be
+able to improve these limits \C{(provided these analyses adopt the
+simulation-based analytic model \cite{2010MNRAS.409..449P} as a
+prior).}
 
 In a recent work by the \Fermi collaboration
 \cite{2010ApJ...717L..71A}, where the 1.5 year \Fermi data was used to
 derive limits on $X_\CR$, they found that the most massive clusters
 are on average more constraining yielding the best constraints of the
 order of 5\% (by adopting, however, point-like upper limits). \C{In
-  this work we find in addition that medium size clusters provide
+  this work we find that medium-sized clusters provide similarly
   strong constraints.}  This difference is explained by the different
 priors on $P_\CR$.  We adopt a prior inferred from cosmological
 simulations that dynamically trace the CRs during cluster assembly
@@ -2563,7 +2568,7 @@ substructures dominates over the smooth component for halo masses
 $\mvir>10^3 \msun$ and contributes a constant luminosity for each
 decade in halo mass. The ratio of halo-to-minimum subhalo mass
 $\mvir/M_\mathrm{min}$ is maximized for the largest virialized systems
-in the Universe -- galaxy clusters. The corresponding substructure
+in the Universe---galaxy clusters. The corresponding substructure
 boost can reach values exceeding $10^3$ which should make nearby
 clusters the brightest DM annihilation sources after the MW center and
 hypothetical very close-by DM substructures. We stress that this
@@ -2573,11 +2578,11 @@ of cold DM, i.e., the density fluctuation power spectrum extends down
 to the DM free streaming scale of about an Earth mass, and (ii) assume
 that structure formation at scales smaller than currently resolved
 ones ($\sim 10^5\,\msun$) proceeds scale-invariant, i.e., there is no
-non-linear mode coupling between different scales that could
-potentially erase structure smaller than a characteristic one as the
+non-linear mode coupling between different scales. This could
+potentially erase structures smaller than a characteristic one as the
 linear power spectrum approaches $\Delta^2(k) \propto k^3
-P(k)=\rmn{const.}$ and structure on different scales forms not any
-more hierarchically, but collapses at the same time.
+P(k)=\rmn{const.}$ implying that structure on different scales may not
+form any more hierarchically, but may collapse at the same time.
 
 Since the mass density of substructures peaks at radii close to
 $\rvir$, the contribution to the annihilation emission from
@@ -2651,8 +2656,8 @@ which were introduced to explain the increasing positron-to-lepton
 ratio beyond 10 GeV. Assuming that the minimum DM substructure mass
 extends down to an Earth mass and that the DM annihilation flux is
 dominated by small scale substructure, \C{we limit the saturated
-Sommerfeld enhancement factor in M49 and Fornax to about 5. This
-corresponds to a value in the Milky Way (MW) of less than 3}, due to
+Sommerfeld enhancement factor in M49 and Fornax to $\lesssim 5$. This
+corresponds to a value in the Milky Way (MW) of $\lesssim3$}, due to
 the larger Sommerfeld boost factor in smaller mass halos which have a
 lower velocity dispersion that enhances the particle cross section
 (while assuming universality of the DM model). This would rule out LP
@@ -2665,23 +2670,21 @@ Fornax.
 {\em Cosmic ray induced emission.} We substantially improve the
 modelling of the expected gamma-ray signal from pion-decay resulting
 from hadronic CR interactions with gas protons over previous work
-\citep{2010ApJ...717L..71A}. We employ the analytic model of the CR
+\cite{2010ApJ...717L..71A}. We employ the analytic model of the CR
 spectrum and spatial distribution that is based on cosmological
 hydrodynamical simulations of galaxy clusters that self-consistently
 follow the evolution of CRs in cosmic structure formation
-\citet{2010MNRAS.409..449P}. Adopting the model for all clusters in
-the HIFLUGCS sample of flux-limited X-ray clusters, we compare the
+\cite{2010MNRAS.409..449P}. Adopting the model for all clusters in the
+HIFLUGCS sample of flux-limited X-ray clusters, we compare the
 expected gamma-ray emission to that inferred from using
 $L_\gamma$-cluster mass scaling relation. \C{We note that the
-  predictions of our ``optimistic'' model are in tension with \Fermi
-  upper limits for Norma, Coma, and Ophiuchus. In the next 2-3 years
-  \Fermi will be able to probe the predictions of our ``conservative''
-  CR model, hence start to put realistic limits on the acceleration
-  efficency of CRs in structure formation shocks.}  \del{agreement
-  with \Fermi upper limits for all clusters. The hint of a tension
-  that the scaling relation modeling showed for Norma
-  \citep{2010ApJ...717L..71A} could not be confirmed due to the lower
-  gas density of this cluster relative to the average.  }
+  predictions of the ``optimistic'' model in
+  \cite{2010MNRAS.409..449P} are in tension with \Fermi upper limits
+  for Norma, Coma, and Ophiuchus. In the next 2-3 years \Fermi will be
+  able to probe the predictions of their ``conservative'' CR
+  model. This will enable to put realistic limits on a combination of
+  the acceleration efficiency of CRs in structure formation shocks and
+  CR transport coefficients in clusters.} 
 
 As expected, the analytical CR model accounts for the ``scatter'' to
 the scaling relation and biases the gamma-ray flux high for prominent
@@ -2697,26 +2700,23 @@ diffuse radio(-mini) halo that might point to a centrally concentrated
 CR distribution \citep{2011A&A...527A..99E}. The CR spectrum $E^2
 dN/dE$ shows the characteristic pion bump at energies around
 1~GeV. \C{It is expected to dominate the DM annihilation signal of BM
-  models for clusters/groups, although we find that the gamma-ray
-  flux induced by the BM is higher for about 1/5 of the clusters in the
-  HIFLUGCS catalouge, where Fornax and M49 have the highest signal to
+  models for clusters/groups, although we find that the gamma-ray flux
+  induced by the BM is higher for about 1/5 of the clusters in the
+  HIFLUGCS catalogue, where Fornax and M49 have the highest signal to
   noise. We find that \Fermi-LAT will be able to start constraining
-  these DM models within the coming five years using clusters of
-  galaxies.} \del{It is expected to dominate the DM annihilation
-  signal of BM models for all clusters/groups but Fornax.}
+  these DM models within five years using clusters of galaxies.}
+\del{It is expected to dominate the DM annihilation signal of BM
+  models for all clusters/groups but Fornax.}
 
 Combining extended \Fermi upper limits and our model flux predictions,
 we limit the relative CR pressure, $X_\CR = P_\CR/P_\rmn{th}$, in 32
 nearby bright galaxy clusters of the \Fermi sample. \C{The best limits
   are found in Norma and Coma of the order of 3\%, with typical limits
   around 10\%. This is comparable to those inferred by the \Fermi
-  collaboration \citep{2010ApJ...717L..71A} and mainly due to two
-  different effects that cancel; the differently assumed Bayesian
-  prior on the CR pressure which implies a different cluster mass
-  dependence of the resulting limits on $X_\CR$ and the different
-  masses in our cluster sample which is based on a more recent and
-  more detailed analisys of the clusters in the HIFLUGCS
-  catalouge \cite{2007A&A...466..805C}.}
+  collaboration \citep{2010ApJ...717L..71A} and mainly due to the
+  differently assumed Bayesian prior on the CR pressure which implies
+  a different cluster mass dependence of the resulting limits on
+  $X_\CR$.}
 
 We conclude that due to the large spatial extension of the brightest
 clusters it is not possible for \Fermi to rule out the LP model or to
@@ -3113,7 +3113,7 @@ which roughly trace the gas outside the core regime and is slightly
 enhanced in the center. These gas density profile of galaxy clusters
 are derived from X-ray observations, where the measurements are mainly
 sensitive to the central parts of the clusters where there X-ray flux
-is high, while the core and outerparts are more difficult to measure
+is high, while the core and outer parts are more difficult to measure
 due to the low signal to noise and often involves extrapolation from
 the center. The uncertainties in measurements and modelling, in
 combination with different specifications of active X-ray satellites,
