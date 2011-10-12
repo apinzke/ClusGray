@@ -130,47 +130,45 @@
 
 
 \begin{abstract}
-  \C{We study the possibility for detecting gamma-ray emission from
-  galaxy clusters. We consider 1) leptophilic models of dark matter
-  (DM) annihilation that include a Sommerfeld enhancement (SFE), 2)
-  different representative benchmark models of supersymmetric DM, and
-  3) cosmic ray (CR) induced pion decay. To model DM annihilation, we
-  consider continuum emission as a result of the hadronization of
-  annihilating neutralinos, internal bremsstrahlung, and inverse
-  Compton emission from the cosmic microwave background as well as
-  from a realistic spatial and spectral distribution of dust and
-  stellar light. Among all clusters/groups of a flux-limited X-ray
-  sample, we predict Virgo, Fornax and M49 to be the brightest DM
-  sources and find a particularly low CR-induced background for
-  Fornax. For a minimum substructure mass given by the DM
-  free-streaming scale, cluster halos maximize the substructure boost
-  for which we find a factor of $\gtrsim 1000$. Since regions around
-  the virial radius dominate the annihilation flux of substructures,
-  the resulting surface brightness profiles are almost flat. This
-  makes it very challenging to detect this flux with imaging
-  atmospheric Cherenkov telescopes since their sensitivity drops
-  approximately linearly with radius and they typically have $5-10$
-  linear resolution elements across a cluster. Assuming cold dark
-  matter with a substructure mass distribution down to an Earth mass
-  and using extended \Fermi upper limits, we rule out the leptophilic
-  models in their present form in 28 clusters, and limit the boost
-  from SFE in M49 and Fornax to be $\lesssim 5$. This corresponds to a
-  limit on SFE in the Milky Way of $\lesssim 3$ which is too small to
-  account for the increasing positron fraction with energy as seen by
-  PAMELA. Alternatively, if SFE is realized in Nature, this would
-  imply a limiting substructure mass of $\mlim > 10^4\,\msun$---a
-  problem for structure formation in most particle physics
-  models. Using individual cluster observations, it will be
-  challenging for \Fermi to constrain our selection of DM benchmark
-  models without SFE. The \Fermi upper limits are, however, closing in
-  on our predictions for the CR flux using an analytic model based on
-  cosmological hydrodynamical cluster simulations. We limit the
-  CR-to-thermal pressure in nearby bright galaxy clusters of the
-  \Fermi sample to $\lesssim 10\%$ and in Norma and Coma to $\lesssim
-  3\%$. Thus we will soon start to constrain the underlying CR physics
-  such as shock acceleration efficiencies or CR transport properties.}
+  \C{We study the possibility for detecting gamma-ray emission from galaxy
+    clusters. We consider 1) leptophilic models of dark matter (DM) annihilation
+    that include a Sommerfeld enhancement (SFE), 2) different representative
+    benchmark models of supersymmetric DM, and 3) cosmic ray (CR) induced pion
+    decay. Among all clusters/groups of a flux-limited X-ray sample, we predict
+    Virgo, Fornax and M49 to be the brightest DM sources and find a particularly
+    low CR-induced background for Fornax. For a minimum substructure mass given
+    by the DM free-streaming scale, cluster halos maximize the substructure
+    boost for which we find a factor of $\gtrsim 1000$. Since regions around the
+    virial radius dominate the annihilation flux of substructures, the resulting
+    surface brightness profiles are almost flat. This makes it very challenging
+    to detect this flux with imaging atmospheric Cherenkov telescopes since
+    their sensitivity drops approximately linearly with radius and they
+    typically have $5-10$ linear resolution elements across a cluster. Assuming
+    cold dark matter with a substructure mass distribution down to an Earth mass
+    and using extended \Fermi upper limits, we rule out the leptophilic models
+    in their present form in 28 clusters, and limit the boost from SFE in M49
+    and Fornax to be $\lesssim 5$. This corresponds to a limit on SFE in the
+    Milky Way of $\lesssim 3$ which is too small to account for the increasing
+    positron fraction with energy as seen by PAMELA and challenges the DM
+    interpretation. Alternatively, if SFE is realized in Nature, this would
+    imply a limiting substructure mass of $\mlim > 10^4\,\msun$---a problem for
+    structure formation in most particle physics models. Using individual
+    cluster observations, it will be challenging for \Fermi to constrain our
+    selection of DM benchmark models without SFE. The \Fermi upper limits are,
+    however, closing in on our predictions for the CR flux using an analytic
+    model based on cosmological hydrodynamical cluster simulations. We limit the
+    CR-to-thermal pressure in nearby bright galaxy clusters of the \Fermi sample
+    to $\lesssim 10\%$ and in Norma and Coma to $\lesssim 3\%$. Thus we will
+    soon start to constrain the underlying CR physics such as shock acceleration
+    efficiencies or CR transport properties.}
 \end{abstract}
 
+% To model DM annihilation, we
+%   consider continuum emission as a result of the hadronization of
+%   annihilating neutralinos, internal bremsstrahlung, and inverse
+%   Compton emission from the cosmic microwave background as well as
+%   from a realistic spatial and spectral distribution of dust and
+%   stellar light.
 
 \maketitle
 \section{Introduction}
@@ -271,7 +269,7 @@
   arguments that need to be considered for maximizing the expected
   signal-to-noise ratio of a promising target cluster. First, we need
   to maximize the DM annihilation flux of an unresolved cluster,
-  $F=A_\rmn{dm} \int dV \rho^2 / D^2 \sim \mvir^\alpha/D^2$, where
+  $F=A_\rmn{dm} \int dV \rho^2 / D^2 \propto \mvir^\alpha/D^2$, where
   $A_\rmn{dm}$ depends on the particle physics model of DM, $\rho$ is
   the smooth DM density profile, $D$ is the luminosity distance, and
   $\alpha=1$ if we assume universality of the DM density profile. The
@@ -284,14 +282,14 @@
   velocities \cite{ArkaniHamed:2008qn} may furthermore modify the
   scaling parameter $\alpha$ and shall be one of the focus points of
   this work. Second, we need to minimize the expected noise which is a
-  sum of galactic and cluster-intrinsic foreground. While the galactic
-  foreground varies across the sky, it is typically lower for
-  increasing latitude (away from the galactic plane). It is thought
-  that the gamma-ray foreground from clusters is dominated by CRs
-  which are accelerated at cosmological formation shocks and
-  transported over time although there could be a substantial
-  contribution of CRs from AGNs and supernova-driven galactic
-  winds. In this work we will also study (and constrain) the
+  sum of instrumental noise, galactic and cluster-intrinsic
+  foreground. While the galactic foreground varies across the sky, it
+  is typically lower for increasing latitude (away from the galactic
+  plane). It is thought that the gamma-ray foreground from clusters is
+  dominated by CRs which are accelerated at cosmological formation
+  shocks and transported over time although there could be a
+  substantial contribution of CRs from AGNs and supernova-driven
+  galactic winds. In this work we will also study (and constrain) the
   CR-induced emission from clusters to identify those objects that are
   expected to be especially dim which would imply a low CR-induced
   background.  Since the CR-induced emission is expected to scale with
@@ -406,7 +404,7 @@ non-observation of an enhanced antiproton flux by PAMELA
 be suppressed. This has led to the postulate of a whole class of
 {\em leptophilic} models with mainly or exclusively annihilation to
 leptons and antileptons. In addition, one has to have a sizeable
-fraction to final states containing muons or tau leptons as the shape
+fraction of final states containing muons or tau leptons as the shape
 of the spectrum disfavors direct annihilation to electrons and
 positrons only. A large enhancement, of the order of at least several
 hundred, of the annihilation rate is also needed, something that may
@@ -520,14 +518,14 @@ Earth\del{observed by the PAMELA and \Fermi satellites},
 70 \left(\frac{\mvir}{10^{15}\,\msun}\right)^{-1/3}\,,
 \label{eq:B_sfe}
 \end{equation}
-\C{where the local boost factor required to explain the data
+\C{where the local boost factor required to explain the data is
   $\B_\rmn{sfe,MW}=300$.} \del{Here the boost factor needed to explain
   the PAMELA/\Fermi excess of electrons and positrons
-  $\B_\rmn{sfe,MW}=300$,} The velocity dispersion for the MW
+  $\B_\rmn{sfe,MW}=300$,} The velocity dispersion for the MW,
 $v_\rmn{MW} \approx 220\,\rmn{km\,s}^{-1}$, and the \C{mass dependent}
 velocity dispersion $\sigv$ for clusters is derived in
-\cite{2005RvMP...77..207V}. Note that, clusters have a larger velocity
-dispersion and an accordingly smaller Sommerfeld boost factor.
+\cite{2005RvMP...77..207V}. \del{Note that, clusters have a larger velocity
+dispersion and an accordingly smaller Sommerfeld boost factor.}
 
 \subsubsection{Supersymmetric dark matter}
 The most studied models for DM are supersymmetric ones, especially
@@ -1052,11 +1050,11 @@ relative to the smooth emission profile amounts to approximately 20
 for dwarf galaxies, $200$ for galaxies, and $10^3$ for galaxy
 clusters. \C{We stress that these boost factors are only realized in
   the region around the virial radius of each respective halo which
-  are mostly stripped for dwarf substructures in the MW. Hence a more
-  realistic boost from substructures is probably much smaller in Dwarf
-  galaxies. In addition,} these boost factors are only realized for
-direct annihilation emission (continuum emission or final state
-radiation) or IC scattering off homogeneous seed photon fields
+  is mostly tidally stripped for dwarfs in the MW. Hence a more
+  realistic boost from substructures is probably much smaller in
+  satellite dwarf galaxies. In addition,} these boost factors are only
+realized for direct annihilation emission (continuum emission or final
+state radiation) or IC scattering off homogeneous seed photon fields
 (CMB). For IC scattering of SD photons, the overlap of final state
 leptons and SD photons is smaller which causes the substructure boost
 over the smooth emission to be reduced by roughly two orders of
@@ -1410,87 +1408,82 @@ SD model.
 \subsection{Cosmic-ray induced gamma-ray emission}
 \label{sect:CRs}
 
-In supernovae remnants and on scales of galaxies, there are convincing
-evidences of non-thermal populations. Especially, in the MW, the
-cosmic rays are observed directly as well as indirectly through radio,
-X-ray, and gamma-ray emission. On larger scales of the order of few
-100~kpc up to Mpc, there are currently a vast number of observations
-of radio emission coming from radio mini halos in the center of
-cooling flow clusters, radio relics in the periphery of clusters
-\cite{2004rcfg.proc..335K} as well as smooth giant radio halos that
-have been observed in more than 50 clusters
-\cite{2003ASPC..301..143F,2008SSRv..134...93F}. This type of emission
-is expected in clusters since the formation process of a galaxy
-cluster is a very energetic processes that induces both turbulence as
-well as frequently occurring merging and accretion shocks which both
-are thought to accelerate relativistic non-thermal protons and radio
-emitting electrons to high energies. Thus most of the observed radio
-emission in clusters is expected to emerge from cosmic-ray electron
-induced radio synchrotron emission. The precise origin of these
-electrons, in especially relics and giant radio halos, is still not
-settled. One possible scenario for the production of these electrons
-are hadronic CR interactions with ambient gas protons which results in
-the production of both charged and neutral pions that decay into
-electrons, neutrinos, and gamma-rays (see
+In supernovae remnants and on scales of galaxies, there are convincing evidences
+of non-thermal populations. Especially, in the MW, the cosmic rays are observed
+directly as well as indirectly through radio, X-ray, and gamma-ray emission. On
+larger scales of the order of few 100~kpc up to Mpc, there are currently a vast
+number of observations of radio emission coming from radio mini halos in the
+centers of cooling flow clusters, radio relics in the periphery of clusters
+\cite{2004rcfg.proc..335K}, as well as giant radio halos amounting to a total
+number of more than 50 diffuse radio sources in clusters
+\cite{2003ASPC..301..143F,2008SSRv..134...93F}. This type of emission is
+expected in clusters since the formation process of a galaxy cluster is a very
+energetic processes that induces both turbulence as well as frequently occurring
+merging and accretion shocks which both are thought to accelerate relativistic
+non-thermal protons and radio emitting electrons to high energies. The precise
+origin of these electrons, in especially relics and giant radio halos, is still
+not settled. One possible scenario for the production of these electrons are
+hadronic CR interactions with ambient gas protons which results in charged and
+neutral pions that decay into electrons, neutrinos, and gamma-rays (see
 \cite{1980ApJ...239L..93D,1982AJ.....87.1266V,1999APh....12..169B,2000A&A...362..151D,2001ApJ...559...59M,2003MNRAS.342.1009M,2004A&A...413...17P,2004MNRAS.352...76P,2008MNRAS.385.1211P,2008MNRAS.385.1242P,2009JCAP...09..024K,2010MNRAS.401...47D,2010MNRAS.407.1565D,2010ApJ...722..737K,2011A&A...527A..99E}
 ).\footnote{An alternative scenario is the second order turbulent
-  re-acceleration through the interaction of a previously injected
-  relativistic population of electrons by supernova driven winds or
-  active galactic nuclei with plasma waves and
-  magneto-turbulence. \protect
+  re-acceleration through the interaction of a previously injected relativistic
+  population of electrons by supernova driven winds or active galactic nuclei
+  with plasma waves and magneto-turbulence. \protect
   \cite{1987A&A...182...21S,1993ApJ...406..399G,2004MNRAS.350.1174B,2005MNRAS.363.1173B,2007MNRAS.378..245B,2011MNRAS.410..127B,2009A&A...507..661B}}
-Supporting evidence comes from the smoothness of the extended radio
-emission that often resembles that observed in thermal X-rays. This
-can be easily achieve in the hadronic model since the long cooling
-time of cosmic ray protons (CRs) allows for an extended and large
-population of CRs to build up over the cluster history
-\cite{1996SSRv...75..279V, 1997ApJ...477..560E,
-  1997ApJ...487..529B}. The production of these secondaries depend
-both on the gas and CR densities in the cluster, where the CR
-density roughly traces the gas outside the core regime and is slightly
-enhanced in the center. This density scaling implies that clusters
-are great targets for Cherenkov telescopes with a high sensitivity for
-the central parts of nearby clusters. Detecting the cluster gamma-ray
-emission is crucial in this respect as it potentially provides the
-unique and unambiguous evidence of CR populations in clusters through
-observing the $\pi^0$ bump at about 100~MeV in the spectra.
+Supporting evidence comes from the smoothness of the extended radio emission
+that often resembles that observed in thermal X-rays. This can be easily
+explained in the hadronic model since the long cooling time of cosmic ray
+protons (CRs) of order the Hubble time allows for a cluster-filling population
+of CRs to build up over the formation history \cite{1996SSRv...75..279V,
+  1997ApJ...477..560E, 1997ApJ...487..529B}. The production of these secondaries
+depend both on the gas and CR densities in the cluster, where the CR density
+roughly traces the gas outside the core regime and is slightly enhanced in the
+center. This density scaling implies that clusters are great targets for
+Cherenkov telescopes with a high sensitivity for the central parts of nearby
+clusters. Detecting the cluster gamma-ray emission is crucial in this respect as
+it potentially provides the unique and unambiguous evidence of CR populations in
+clusters through observing the $\pi^0$ bump at about 100~MeV in the spectra.
 
-We adopt the universal spectral and spatial gamma-ray model developed
-by Pinzke \& Pfrommer \cite{2010MNRAS.409..449P} to estimate the
-emission from decaying $\pi^0$:s that dominates over the IC emission
-from primary and secondary electrons above 100~MeV in clusters. The
-gamma-ray formalism was derived from high resolution simulations of
-clusters of galaxies that included radiative hydrodynamics, star
-formation, supernova feedback, and followed CR physics using a novel
-formulation that trace the most important injection and loss processes
-self-consistently while accounting for the CR pressure in the
-equation of motion
-\cite{2008A&A...481...33J,2007A&A...473...41E,2006MNRAS.367..113P}.
-We note that the overall normalization of the CR and gamma-ray
-distribution scales with the maximum acceleration efficiency at
-structure formation shock waves. Following recent observations at
-supernova remnants \cite{2009Sci...325..719H} as well as theoretical
-studies \cite{2005ApJ...620...44K}, we adopt a realistic value of this
-parameter and assume that 50\% of the dissipated energy at strong
-shocks is injected into CRs while this efficiency rapidly decreases
-for weaker shocks \cite{2007A&A...473...41E}. As a caveat we note that
-the analytic model is based on simulations that only considered
-advective transport of CRs by turbulent gas motions which produces
-centrally enhanced profiles. However active CR transport such as CR
-diffusion and streaming tends to drive the CR radial profiles towards
-being flat, with equal CR number density everywhere. While the CR
-streaming is then usually larger than typical advection velocities and
-becomes comparable or lower than this only for periods with trans- and
-supersonic cluster turbulence during a cluster merger. As a
-consequence a bimodality of the CR spatial distribution results with
-merging (relaxed) clusters showing a centrally concentrated (flat) CR
-energy density profile \cite{2011A&A...527A..99E}. This translates
-into a bimodality of the expected diffuse radio and gamma-ray emission
-of clusters, since more centrally concentrated CR will find higher
-target densities for hadronic CR proton interactions
-\cite{2011A&A...527A..99E}. As a result of this, relaxed clusters
+We adopt the universal spectral and spatial gamma-ray model developed by Pinzke
+\& Pfrommer \cite{2010MNRAS.409..449P} to estimate the emission from decaying
+$\pi^0$:s that dominates over the IC emission from primary and secondary
+electrons above 100~MeV in clusters. The gamma-ray formalism was derived from
+high-resolution simulations of clusters of galaxies that included radiative
+hydrodynamics, star formation, supernova feedback, and followed CR physics using
+a novel formulation that trace the most important injection and loss processes
+self-consistently while accounting for the CR pressure in the equation of motion
+\cite{2008A&A...481...33J,2007A&A...473...41E,2006MNRAS.367..113P}.  We
+highlight two main uncertainties of the models, namely the acceleration
+efficiency at formation shocks and CR transport parameters. First, we note that
+the overall normalization of the CR and gamma-ray distribution scales with the
+maximum acceleration efficiency at structure formation shock waves. Following
+recent observations at supernova remnants \cite{2009Sci...325..719H} as well as
+theoretical studies \cite{2005ApJ...620...44K}, we assume the maximally allowed
+acceleration efficiency for {\em strong} shocks that transfers 50\% of the
+shock-dissipated energy (kinetic energy corrected for adiabatic compressional
+heating at the shock) to CRs. These efficiencies drop quickly for weaker shocks
+\cite{2007A&A...473...41E} which dominate the gravitational energy dissipation
+inside galaxy clusters \cite{2006MNRAS.367..113P}. These efficiencies will have
+to be corrected down if this value is not realized at strong structure formation
+shocks. Second, these simulations (and by extension the analytic model) neglect
+active CR transport such as streaming and diffusion relative to the gas, i.e.,
+we assume that advective transport dominates and CRs are tightly coupled to the
+gas via magnetic fields tangled on sufficiently small scales which produces
+centrally enhanced profiles. However, CR diffusion and streaming tends to drive
+the CR radial profiles towards being flat, with equal CR number density
+everywhere. While the CR streaming velocity is usually larger than typical
+advection velocities and becomes comparable or lower than this only for periods
+with trans- and supersonic cluster turbulence during a cluster merger. As a
+consequence a bimodality of the CR spatial distribution may result with merging
+(relaxed) clusters showing a centrally concentrated (flat) CR energy density
+profile \cite{2011A&A...527A..99E}. This translates into a bimodality of the
+expected diffuse radio and gamma-ray emission of clusters, since more centrally
+concentrated CR will find higher target densities for hadronic CR proton
+interactions \cite{2011A&A...527A..99E}. As a result of this, relaxed clusters
 could have a reduced gamma-ray luminosity by up to a factor of five.
- 
+
+
 
 \section{Gamma-ray spectra}
 \label{sect:spectral}
@@ -1509,7 +1502,7 @@ a high gamma-ray yield in the form of continuum emission and IC
 induced emission. In addition to the annihilating DM, we estimate the
 gamma-ray flux induced by shock-accelerated CRs. \C{Note that all
   fluxes in this section are derived within an angle corresponding to
-  $\rvir$ and are smoothed over using a PSF of $0.1\deg$.}
+  $\rvir$ and are convolved with a PSF of $0.1\deg$.}
 
 We compare the calculated fluxes to gamma-ray upper limits (95\% c.l.)
 set by \Fermi-LAT after 18 months of observations
@@ -2130,8 +2123,8 @@ $100\,$~GeV for a realistic PSF of $0.1\deg$ where we include the
 boost from substructures. We investigate two clusters with an expected
 high DM signal; the Fornax and Virgo cluster. Both clusters show a
 very flat brightness profile $r<0.1\rvir$, due to both the effect from
-substructures and the smoothing over the PSF. The CR induced emission
-also show a smoothing in the central parts due to the PSF. In the
+substructures and the convolution with the PSF. The CR induced emission
+also show a smoothing of the central parts due to the PSF. In the
 outer part of the Fornax cluster the CR flux is suppressed compared to
 the DM flux boosted by substructures, where the LP model gives rise to
 a gamma-ray flux that is more than three orders of magnitude
@@ -2166,8 +2159,8 @@ details).
 In this section, we compute the expected gamma-ray fluxes from DM
 annihilation and CR interactions of the brightest clusters of the
 X-ray flux-complete sample in the local universe. \C{All fluxes in
-  this section are derived within an angle corresponding to $\rvir$,
-  in addition we neglegt the smoothing over the PSF if nothing else is
+  this section are derived within an angle corresponding to $\rvir$;
+  in addition we neglect the convolution with the PSF if nothing else is
   stated.}  We confront these predictions to upper limits obtained by
 \Fermi 1.5-year data and conclude on the viability of the underlying
 models and perspectives for the next years of \Fermi observations.
@@ -2427,29 +2420,10 @@ simulations, we derive an optimistic or conservative limit of the
 expected gamma-ray emission from decaying pions (bracketing our
 ignorance of the contribution of cluster galaxies and ram-pressure
 stripped gas parcels from infalling galaxies to the overall gamma-ray
-flux from a cluster).
-
-\del{We highlight two main uncertainties of the models, namely the
-  acceleration efficiency at formation shocks and CR transport
-  parameters. First, we note that both models assume the maximally
-  allowed acceleration efficiency for {\em strong} shocks that
-  transfers 50\% of the shock-dissipated energy (kinetic energy
-  corrected for adiabatic compressional heating at the shock) to
-  CRs. These efficiencies drop quickly for weaker shocks
-  \cite{2007A&A...473...41E} which dominate the gravitational energy
-  dissipation inside galaxy clusters \cite{2006MNRAS.367..113P}. These
-  efficiencies will have to be corrected down if this value is not
-  realized at strong structure formation shocks. Second, these
-  simulations (and by extension the analytic model) neglect active CR
-  transport such as streaming and diffusion relative to the gas, i.e.,
-  we assume that advective transport dominates and CRs are tightly
-  coupled to the gas via flux-frozen magnetic fields tangled on
-  sufficiently small scales. Evidence from the statistics of radio
-  halos suggests that this might not be the case for relaxed clusters,
-  arguing that CR streaming (and diffusion) in those objects could be
-  responsible for a decrease in the central CR number density. This
-  effect would also reduce the expected gamma-ray flux by up to a
-  factor of five \cite{2011A&A...527A..99E}.}
+flux from a cluster). As discussed in Sect.~\ref{sect:CRs}, the model
+predictions are subject to two main uncertainties, the acceleration
+efficiency at formation shocks and CR transport parameters and hence
+may be scaled down depending on specific values realized in clusters.
 
 The tightest \Fermi limits are obtained in the 1-10 GeV regime due to
 the highest sensitivity of \Fermi-LAT there. While the effective area
@@ -2737,7 +2711,9 @@ modelling is needed to quantify this effect.
   clusters in the HIFLUGCS catalogue, where Fornax and M49 have the
   highest signal-to-noise ratio. (Note that we only include the
   cluster-intrinsic CR foreground and do not consider the dominant
-  galactic and instrumental noise sources here.) We find that
+  galactic and instrumental noise sources here.)}
+
+\del{ We find that
   \Fermi-LAT will be able to start constraining these DM models within
   five years using clusters of galaxies.}
 
