@@ -9,9 +9,9 @@ default: paper.ps
 
 %.ps :  $(FIGURES) %.tex
 	$(LATEX) $*.tex
-#	TEXINPUTS=:.// BSTINPUTS=:.// bibtex $*
-#	cat $*.bbl | sed 's/, \\&/, /' > tmp.bbl
-#	mv tmp.bbl $*.bbl
+	TEXINPUTS=:.// BSTINPUTS=:.// bibtex $*
+	cat $*.bbl | sed 's/, \\&/, /' > tmp.bbl
+	mv tmp.bbl $*.bbl
 	$(LATEX) $*.tex
 	$(LATEX) $*.tex
 	$(LATEX) $*.tex
@@ -31,7 +31,7 @@ clean:
 
 realclean:
 	rm -f *.log *.toc *.aux *.dvi *.obj *.bak  *.blg *.brf \
-              *.ps */*.ps *~ */*~ *.bak */*.bak
+              *.ps */*.ps *~ */*~ *.bak */*.bak *.bbl
 
 
 
